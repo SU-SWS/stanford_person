@@ -24,3 +24,20 @@ function stanford_person_ctools_plugin_api() {
 function stanford_person_views_api() {
   return array("version" => "3.0");
 }
+
+/**
+ * Implements hook_node_info().
+ */
+function stanford_person_node_info() {
+  $items = array(
+    'stanford_person' => array(
+      'name' => t('Person'),
+      'base' => 'node_content',
+      'description' => t('The person content type maintains information about a person. A person can be staff, faculty, student, and alumni.'),
+      'has_title' => '1',
+      'title_label' => t('Display Name'),
+      'help' => t('This form captures information about a person. First and last name are required.'),
+    ),
+  );
+  return $items;
+}
