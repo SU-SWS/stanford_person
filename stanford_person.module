@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Stanford Person feature.
+ */
+
+include_once 'stanford_person.features.inc';
