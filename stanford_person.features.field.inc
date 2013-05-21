@@ -153,60 +153,6 @@ function stanford_person_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-stanford_person-field_s_person_email'.
-  $fields['node-stanford_person-field_s_person_email'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_s_person_email',
-      'foreign keys' => array(),
-      'indexes' => array(),
-      'locked' => '0',
-      'module' => 'email',
-      'settings' => array(),
-      'translatable' => '0',
-      'type' => 'email',
-    ),
-    'field_instance' => array(
-      'bundle' => 'stanford_person',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => 'This email field displays the primary email address (e.g. "hennessy@stanford.edu").',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'email',
-          'settings' => array(),
-          'type' => 'email_default',
-          'weight' => 1,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_s_person_email',
-      'label' => 'Email',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'email',
-        'settings' => array(
-          'size' => '60',
-        ),
-        'type' => 'email_textfield',
-        'weight' => '33',
-      ),
-    ),
-  );
 
   // Exported field: 'node-stanford_person-field_s_person_faculty_title'.
   $fields['node-stanford_person-field_s_person_faculty_title'] = array(
