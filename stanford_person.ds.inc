@@ -67,10 +67,9 @@ function stanford_person_ds_layout_settings_info() {
         5 => 'body',
         6 => 'field_s_person_student_type',
         7 => 'field_s_person_education',
-        8 => 'field_s_person_email',
-        9 => 'field_s_person_since',
-        10 => 'group_s_postcard_col1',
-        11 => 'group_s_postcard_col2',
+        8 => 'field_s_person_since',
+        9 => 'group_s_postcard_col1',
+        10 => 'group_s_postcard_col2',
       ),
     ),
     'fields' => array(
@@ -82,7 +81,6 @@ function stanford_person_ds_layout_settings_info() {
       'body' => 'ds_content',
       'field_s_person_student_type' => 'ds_content',
       'field_s_person_education' => 'ds_content',
-      'field_s_person_email' => 'ds_content',
       'field_s_person_since' => 'ds_content',
       'group_s_postcard_col1' => 'ds_content',
       'group_s_postcard_col2' => 'ds_content',
@@ -122,7 +120,6 @@ function stanford_person_ds_layout_settings_info() {
         19 => 'group_s_postcard_col2',
       ),
       'contact' => array(
-        1 => 'field_s_person_email',
         8 => 'field_s_person_phone_display',
         11 => 'field_test_email',
         12 => 'field_s_person_office_location',
@@ -137,7 +134,6 @@ function stanford_person_ds_layout_settings_info() {
     ),
     'fields' => array(
       'title' => 'ds_content',
-      'field_s_person_email' => 'contact',
       'group_s_postcard' => 'ds_content',
       'field_s_person_faculty_type' => 'ds_content',
       'field_s_person_interests' => 'research_interests',

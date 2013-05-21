@@ -128,7 +128,6 @@ function stanford_person_views_default_views() {
     'field_s_person_type' => 'field_s_person_type',
     'field_s_person_faculty_type' => 'field_s_person_faculty_type',
     'field_s_person_student_type' => 'field_s_person_student_type',
-    'field_s_person_email' => 'field_s_person_email',
     'field_s_person_office_location' => 'field_s_person_office_location',
     'field_s_person_mail_code' => 'field_s_person_mail_code',
     'nid' => 'nid',
@@ -203,13 +202,6 @@ function stanford_person_views_default_views() {
     'field_s_person_student_type' => array(
       'align' => '',
       'separator' => ' | ',
-      'empty_column' => 0,
-    ),
-    'field_s_person_email' => array(
-      'sortable' => 1,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
       'empty_column' => 0,
     ),
     'field_s_person_office_location' => array(

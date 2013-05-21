@@ -167,6 +167,7 @@ function stanford_person_field_default_fields() {
     ),
   );
 
+
   // Exported field: 'node-stanford_person-field_s_person_faculty_title'.
   $fields['node-stanford_person-field_s_person_faculty_title'] = array(
     'field_config' => array(
@@ -1485,6 +1486,7 @@ function stanford_person_field_default_fields() {
   t('At Stanford Since');
   t('Degrees / Education');
   t('Each link provides a URL about the person. The required title provides a human readable name (e.g., "Web page," "StanfordWho," or "Facebook"). For each title enter the URL which corresponds to the person (e.g.,  "http://www.stanford.edu/~hennessy/").');
+  t('Email');
   t('Faculty Status');
   t('Faculty Title and Department');
   t('Fax');
@@ -1504,6 +1506,7 @@ function stanford_person_field_default_fields() {
   t('Profile Picture');
   t('Select each field of interest.');
   t('Student Type');
+  t('This email field displays the primary email address (e.g. "hennessy@stanford.edu").');
   t('This identifies the type of person. ');
   t('This text area displays a biography or profile of the person. To enter a summary to be displayed when a shorter amount of text is needed, click on "Edit summary" above.');
   t('This text area displays the mailing address. Enter the address as you want it to appear.');
