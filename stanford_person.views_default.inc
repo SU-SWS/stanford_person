@@ -107,7 +107,7 @@ function stanford_person_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Manage Person';
+  $handler->display->display_options['title'] = 'Directory';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -292,8 +292,8 @@ function stanford_person_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_profile_picture']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_s_person_profile_picture']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_s_person_profile_picture']['settings'] = array(
-    'image_style' => 'thumbnail',
-    'image_link' => '',
+    'image_style' => 'thmb-profile',
+    'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_s_person_profile_picture']['field_api_classes'] = 0;
   /* Field: Content: Title */
@@ -744,8 +744,8 @@ function stanford_person_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_profile_picture']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_s_person_profile_picture']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_s_person_profile_picture']['settings'] = array(
-    'image_style' => 'thumbnail',
-    'image_link' => '',
+    'image_style' => 'thmb-square',
+    'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_s_person_profile_picture']['field_api_classes'] = 0;
   /* Field: Content: Title */
@@ -824,8 +824,6 @@ function stanford_person_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_office_location']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_s_person_office_location']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_s_person_office_location']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['field_s_person_office_location']['click_sort_column'] = 'url';
-  $handler->display->display_options['fields']['field_s_person_office_location']['type'] = 'link_default';
   $handler->display->display_options['fields']['field_s_person_office_location']['group_column'] = '';
   $handler->display->display_options['fields']['field_s_person_office_location']['field_api_classes'] = 0;
   /* Field: Content: Office Hours */
@@ -910,6 +908,31 @@ function stanford_person_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_interests']['delta_first_last'] = 0;
   $handler->display->display_options['fields']['field_s_person_interests']['separator'] = ' ';
   $handler->display->display_options['fields']['field_s_person_interests']['field_api_classes'] = 0;
+  /* Field: Content: Email */
+  $handler->display->display_options['fields']['field_s_person_email']['id'] = 'field_s_person_email';
+  $handler->display->display_options['fields']['field_s_person_email']['table'] = 'field_data_field_s_person_email';
+  $handler->display->display_options['fields']['field_s_person_email']['field'] = 'field_s_person_email';
+  $handler->display->display_options['fields']['field_s_person_email']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['alter_text'] = 1;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['text'] = '<div><span class="descriptor">Email: </span>[field_s_person_email]</div>';
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['field_s_person_email']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_s_person_email']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_s_person_email']['field_api_classes'] = 0;
   /* Field: Node: Edit link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
@@ -943,15 +966,16 @@ function stanford_person_views_default_views() {
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="postcard-left">
 <div class="postcard-col1">
-<div> [field_s_person_profile_picture]</div>
+  <div> [field_s_person_profile_picture]</div>
 </div>
 
 <div class="postcard-col2">
-<div>[title] <span class="descriptor">[field_s_person_faculty_type]</span></div>
-[field_s_person_office_location]
-[field_s_person_office_hours]
-[field_s_person_phone_display]
-[edit_node]
+  <div>[title] <span class="descriptor">[field_s_person_faculty_type]</span></div>
+  [field_s_person_office_location]
+  [field_s_person_office_hours]
+  [field_s_person_phone_display]
+  [field_s_person_email]
+  [edit_node]
 </div>
 
 <div class="postcard-col3">
@@ -1384,8 +1408,8 @@ function stanford_person_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_profile_picture']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_s_person_profile_picture']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_s_person_profile_picture']['settings'] = array(
-    'image_style' => 'thumbnail',
-    'image_link' => '',
+    'image_style' => 'thmb-square',
+    'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_s_person_profile_picture']['field_api_classes'] = 0;
   /* Field: Content: Title */
@@ -1829,8 +1853,8 @@ function stanford_person_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_profile_picture']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_s_person_profile_picture']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_s_person_profile_picture']['settings'] = array(
-    'image_style' => 'thumbnail',
-    'image_link' => '',
+    'image_style' => 'thmb-square',
+    'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_s_person_profile_picture']['field_api_classes'] = 0;
   /* Field: Content: Title */
@@ -2182,8 +2206,8 @@ function stanford_person_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_profile_picture']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_s_person_profile_picture']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_s_person_profile_picture']['settings'] = array(
-    'image_style' => 'thumbnail',
-    'image_link' => '',
+    'image_style' => 'thmb-square',
+    'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_s_person_profile_picture']['field_api_classes'] = 0;
   /* Field: Content: Title */
@@ -2236,8 +2260,6 @@ function stanford_person_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_office_location']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_s_person_office_location']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_s_person_office_location']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['field_s_person_office_location']['click_sort_column'] = 'url';
-  $handler->display->display_options['fields']['field_s_person_office_location']['type'] = 'link_default';
   $handler->display->display_options['fields']['field_s_person_office_location']['group_column'] = '';
   $handler->display->display_options['fields']['field_s_person_office_location']['field_api_classes'] = 0;
   /* Field: Content: Office Hours */
@@ -2292,6 +2314,31 @@ function stanford_person_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_phone_display']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_s_person_phone_display']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_s_person_phone_display']['field_api_classes'] = 0;
+  /* Field: Content: Email */
+  $handler->display->display_options['fields']['field_s_person_email']['id'] = 'field_s_person_email';
+  $handler->display->display_options['fields']['field_s_person_email']['table'] = 'field_data_field_s_person_email';
+  $handler->display->display_options['fields']['field_s_person_email']['field'] = 'field_s_person_email';
+  $handler->display->display_options['fields']['field_s_person_email']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['alter_text'] = 1;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['text'] = '<div><span class="descriptor">Email: </span>[field_s_person_email]</div>';
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['field_s_person_email']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_s_person_email']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_s_person_email']['field_api_classes'] = 0;
   /* Field: Node: Edit link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
@@ -2333,6 +2380,7 @@ function stanford_person_views_default_views() {
 [field_s_person_office_location]
 [field_s_person_office_hours]
 [field_s_person_phone_display]
+[field_s_person_email]
 [edit_node]
 </div>
 
@@ -2520,8 +2568,8 @@ function stanford_person_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_profile_picture']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_s_person_profile_picture']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_s_person_profile_picture']['settings'] = array(
-    'image_style' => 'thumbnail',
-    'image_link' => '',
+    'image_style' => 'thmb-square',
+    'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_s_person_profile_picture']['field_api_classes'] = 0;
   /* Field: Content: Title */
@@ -2574,8 +2622,6 @@ function stanford_person_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_office_location']['hide_empty'] = 0;
   $handler->display->display_options['fields']['field_s_person_office_location']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_s_person_office_location']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['field_s_person_office_location']['click_sort_column'] = 'url';
-  $handler->display->display_options['fields']['field_s_person_office_location']['type'] = 'link_default';
   $handler->display->display_options['fields']['field_s_person_office_location']['group_column'] = '';
   $handler->display->display_options['fields']['field_s_person_office_location']['field_api_classes'] = 0;
   /* Field: Content: Office Hours */
@@ -2630,6 +2676,32 @@ function stanford_person_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_phone_display']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_s_person_phone_display']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_s_person_phone_display']['field_api_classes'] = 0;
+  /* Field: Content: Email */
+  $handler->display->display_options['fields']['field_s_person_email']['id'] = 'field_s_person_email';
+  $handler->display->display_options['fields']['field_s_person_email']['table'] = 'field_data_field_s_person_email';
+  $handler->display->display_options['fields']['field_s_person_email']['field'] = 'field_s_person_email';
+  $handler->display->display_options['fields']['field_s_person_email']['label'] = '';
+  $handler->display->display_options['fields']['field_s_person_email']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['alter_text'] = 1;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['text'] = '<div><span class="descriptor">Email: </span>[field_s_person_email]</div>';
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_person_email']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_s_person_email']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_s_person_email']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_s_person_email']['field_api_classes'] = 0;
   /* Field: Node: Edit link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
@@ -2671,6 +2743,7 @@ function stanford_person_views_default_views() {
 [field_s_person_office_location]
 [field_s_person_office_hours]
 [field_s_person_phone_display]
+[field_s_person_email]
 [edit_node]
 </div>
 

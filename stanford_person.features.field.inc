@@ -167,6 +167,67 @@ function stanford_person_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-stanford_person-field_s_person_email'.
+  $fields['node-stanford_person-field_s_person_email'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_s_person_email',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'email',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'email',
+    ),
+    'field_instance' => array(
+      'bundle' => 'stanford_person',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'This email field displays the primary email address (e.g. "mysunetid@stanford.edu").',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'email',
+          'settings' => array(),
+          'type' => 'email_default',
+          'weight' => 28,
+        ),
+        'full' => array(
+          'label' => 'inline',
+          'module' => 'email',
+          'settings' => array(),
+          'type' => 'email_default',
+          'weight' => '3',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_s_person_email',
+      'label' => 'Email',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'email',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'email_textfield',
+        'weight' => '45',
+      ),
+    ),
+  );
 
   // Exported field: 'node-stanford_person-field_s_person_faculty_title'.
   $fields['node-stanford_person-field_s_person_faculty_title'] = array(
@@ -289,13 +350,14 @@ function stanford_person_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 4,
+          'weight' => '4',
         ),
         'full' => array(
           'label' => 'above',
+          'module' => 'taxonomy',
           'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -366,7 +428,7 @@ function stanford_person_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '17',
+          'weight' => '16',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -390,7 +452,7 @@ function stanford_person_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '44',
+        'weight' => '47',
       ),
     ),
   );
@@ -440,7 +502,7 @@ function stanford_person_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '19',
+          'weight' => '18',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -516,7 +578,7 @@ function stanford_person_field_default_fields() {
           'module' => 'link',
           'settings' => array(),
           'type' => 'link_default',
-          'weight' => '6',
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -553,7 +615,7 @@ function stanford_person_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '50',
+        'weight' => '52',
       ),
     ),
   );
@@ -600,16 +662,16 @@ function stanford_person_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'taxonomy',
           'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => 5,
+          'type' => 'hidden',
+          'weight' => '5',
         ),
         'full' => array(
           'label' => 'above',
+          'module' => 'taxonomy',
           'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '7',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -680,7 +742,7 @@ function stanford_person_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '21',
+          'weight' => '20',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -744,16 +806,15 @@ function stanford_person_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => 3,
+          'type' => 'hidden',
+          'weight' => '3',
         ),
         'full' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '15',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -777,7 +838,7 @@ function stanford_person_field_default_fields() {
           'rows' => '4',
         ),
         'type' => 'text_textarea',
-        'weight' => '37',
+        'weight' => '50',
       ),
     ),
   );
@@ -815,7 +876,7 @@ function stanford_person_field_default_fields() {
       'bundle' => 'stanford_person',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'This text field displays the inter-departmental mail code (e.g., "5230").',
+      'description' => 'This text field displays the 4-digit inter-departmental mail code (e.g., "5230").',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -827,7 +888,7 @@ function stanford_person_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '18',
+          'weight' => '17',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -841,6 +902,32 @@ function stanford_person_field_default_fields() {
       'label' => 'Mail Code',
       'required' => 0,
       'settings' => array(
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'content_editor_text_format' => 'content_editor_text_format',
+            'filtered_html' => 'filtered_html',
+            'full_html' => 'full_html',
+            'plain_text' => 'plain_text',
+          ),
+          'allowed_formats_toggle' => 0,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'content_editor_text_format' => array(
+                'weight' => '-10',
+              ),
+              'filtered_html' => array(
+                'weight' => '0',
+              ),
+              'full_html' => array(
+                'weight' => '1',
+              ),
+              'plain_text' => array(
+                'weight' => '10',
+              ),
+            ),
+          ),
+        ),
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -851,7 +938,7 @@ function stanford_person_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '47',
+        'weight' => '51',
       ),
     ),
   );
@@ -901,7 +988,7 @@ function stanford_person_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '20',
+          'weight' => '19',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -976,7 +1063,7 @@ function stanford_person_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '7',
+          'weight' => '6',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1000,7 +1087,7 @@ function stanford_person_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '45',
+        'weight' => '48',
       ),
     ),
   );
@@ -1038,7 +1125,7 @@ function stanford_person_field_default_fields() {
       'bundle' => 'stanford_person',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'This text field provides a description of the person\'s office location.',
+      'description' => 'This text field provides a description of the person\'s office location (e.g. "Bldg. 460, rm 317," or "460-317").',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -1051,7 +1138,7 @@ function stanford_person_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '5',
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1065,6 +1152,32 @@ function stanford_person_field_default_fields() {
       'label' => 'Office',
       'required' => 0,
       'settings' => array(
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'content_editor_text_format' => 'content_editor_text_format',
+            'filtered_html' => 'filtered_html',
+            'full_html' => 'full_html',
+            'plain_text' => 'plain_text',
+          ),
+          'allowed_formats_toggle' => 0,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'content_editor_text_format' => array(
+                'weight' => '-10',
+              ),
+              'filtered_html' => array(
+                'weight' => '0',
+              ),
+              'full_html' => array(
+                'weight' => '1',
+              ),
+              'plain_text' => array(
+                'weight' => '10',
+              ),
+            ),
+          ),
+        ),
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -1075,7 +1188,7 @@ function stanford_person_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '46',
+        'weight' => '49',
       ),
     ),
   );
@@ -1126,7 +1239,7 @@ function stanford_person_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '3',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1150,7 +1263,7 @@ function stanford_person_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '43',
+        'weight' => '46',
       ),
     ),
   );
@@ -1290,7 +1403,7 @@ function stanford_person_field_default_fields() {
       'bundle' => 'stanford_person',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'This text field displays date(s) when this person joined Stanford (e.g., "1891").',
+      'description' => 'This text field displays a phrase and date(s) indicating when this person joined Stanford (e.g., "At Stanford since 1891").',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -1318,6 +1431,32 @@ function stanford_person_field_default_fields() {
       'label' => 'At Stanford Since',
       'required' => 0,
       'settings' => array(
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'content_editor_text_format' => 'content_editor_text_format',
+            'filtered_html' => 'filtered_html',
+            'full_html' => 'full_html',
+            'plain_text' => 'plain_text',
+          ),
+          'allowed_formats_toggle' => 0,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'content_editor_text_format' => array(
+                'weight' => '-10',
+              ),
+              'filtered_html' => array(
+                'weight' => '0',
+              ),
+              'full_html' => array(
+                'weight' => '1',
+              ),
+              'plain_text' => array(
+                'weight' => '10',
+              ),
+            ),
+          ),
+        ),
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -1446,16 +1585,15 @@ function stanford_person_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'list',
           'settings' => array(),
-          'type' => 'list_default',
-          'weight' => 2,
+          'type' => 'hidden',
+          'weight' => '2',
         ),
         'full' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '14',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1506,21 +1644,21 @@ function stanford_person_field_default_fields() {
   t('Profile Picture');
   t('Select each field of interest.');
   t('Student Type');
-  t('This email field displays the primary email address (e.g. "hennessy@stanford.edu").');
+  t('This email field displays the primary email address (e.g. "mysunetid@stanford.edu").');
   t('This identifies the type of person. ');
   t('This text area displays a biography or profile of the person. To enter a summary to be displayed when a shorter amount of text is needed, click on "Edit summary" above.');
   t('This text area displays the mailing address. Enter the address as you want it to appear.');
-  t('This text field displays date(s) when this person joined Stanford (e.g., "1891").');
+  t('This text field displays a phrase and date(s) indicating when this person joined Stanford (e.g., "At Stanford since 1891").');
   t('This text field displays education information (e.g. "B.A., Stanford University, 1972"). Enter one degree per line.');
+  t('This text field displays the 4-digit inter-departmental mail code (e.g., "5230").');
   t('This text field displays the fax number (e.g., "(555) 555-555" or  for international numbers: "+31 42 123 4567").');
-  t('This text field displays the inter-departmental mail code (e.g., "5230").');
   t('This text field displays the office hours in a single line (e.g., "Fri 10:00-11:00am and Tue 11:00-12:00pm").');
   t('This text field displays the primary phone number (e.g., "(555) 555-555" or  for international numbers: "+31 42 123 4567").');
   t('This text field displays title and department information. Ex. Professor of English.');
   t('This text field is used for sorting by and displaying the first name, and optionally to populate the "Display Name" field.');
   t('This text field is used for sorting by and displaying the last name, and optionally to populate the "Display Name" field.');
   t('This text field is used for the middle name.');
-  t('This text field provides a description of the person\'s office location.');
+  t('This text field provides a description of the person\'s office location (e.g. "Bldg. 460, rm 317," or "460-317").');
   t('Type');
   t('Upload an image of this person.');
 
