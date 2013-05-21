@@ -50,7 +50,14 @@ function stanford_person_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 0,
+          'weight' => '6',
+        ),
+        'full' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '6',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -124,7 +131,14 @@ function stanford_person_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 25,
+          'weight' => '8',
+        ),
+        'full' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -148,11 +162,10 @@ function stanford_person_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '9',
+        'weight' => '7',
       ),
     ),
   );
-
 
   // Exported field: 'node-stanford_person-field_s_person_faculty_title'.
   $fields['node-stanford_person-field_s_person_faculty_title'] = array(
@@ -196,6 +209,13 @@ function stanford_person_field_default_fields() {
           'type' => 'text_default',
           'weight' => '3',
         ),
+        'full' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '3',
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -218,7 +238,7 @@ function stanford_person_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '4',
+        'weight' => '21',
       ),
     ),
   );
@@ -269,6 +289,12 @@ function stanford_person_field_default_fields() {
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
           'weight' => 4,
+        ),
+        'full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -335,6 +361,12 @@ function stanford_person_field_default_fields() {
           'type' => 'hidden',
           'weight' => '14',
         ),
+        'full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '17',
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -357,7 +389,7 @@ function stanford_person_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '35',
+        'weight' => '44',
       ),
     ),
   );
@@ -399,10 +431,15 @@ function stanford_person_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => 28,
+          'type' => 'hidden',
+          'weight' => '21',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '19',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -469,10 +506,16 @@ function stanford_person_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '24',
+        ),
+        'full' => array(
+          'label' => 'hidden',
           'module' => 'link',
           'settings' => array(),
           'type' => 'link_default',
-          'weight' => 33,
+          'weight' => '6',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -509,7 +552,7 @@ function stanford_person_field_default_fields() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '39',
+        'weight' => '50',
       ),
     ),
   );
@@ -560,6 +603,12 @@ function stanford_person_field_default_fields() {
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
           'weight' => 5,
+        ),
+        'full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -622,10 +671,15 @@ function stanford_person_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => 30,
+          'type' => 'hidden',
+          'weight' => '23',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '21',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -693,6 +747,12 @@ function stanford_person_field_default_fields() {
           'settings' => array(),
           'type' => 'text_default',
           'weight' => 3,
+        ),
+        'full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -762,6 +822,12 @@ function stanford_person_field_default_fields() {
           'type' => 'hidden',
           'weight' => '17',
         ),
+        'full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '18',
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -784,7 +850,7 @@ function stanford_person_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '38',
+        'weight' => '47',
       ),
     ),
   );
@@ -826,10 +892,15 @@ function stanford_person_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => 29,
+          'type' => 'hidden',
+          'weight' => '22',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '20',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -899,6 +970,13 @@ function stanford_person_field_default_fields() {
           'type' => 'hidden',
           'weight' => '11',
         ),
+        'full' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '7',
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -921,7 +999,7 @@ function stanford_person_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '36',
+        'weight' => '45',
       ),
     ),
   );
@@ -963,10 +1041,16 @@ function stanford_person_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '27',
+        ),
+        'full' => array(
+          'label' => 'inline',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 27,
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -977,7 +1061,7 @@ function stanford_person_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_s_person_office_location',
-      'label' => 'Office Location',
+      'label' => 'Office',
       'required' => 0,
       'settings' => array(
         'text_processing' => '0',
@@ -990,7 +1074,7 @@ function stanford_person_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '37',
+        'weight' => '46',
       ),
     ),
   );
@@ -1036,6 +1120,13 @@ function stanford_person_field_default_fields() {
           'type' => 'hidden',
           'weight' => '13',
         ),
+        'full' => array(
+          'label' => 'inline',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '3',
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -1058,7 +1149,7 @@ function stanford_person_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '34',
+        'weight' => '43',
       ),
     ),
   );
@@ -1099,14 +1190,24 @@ function stanford_person_field_default_fields() {
       'description' => 'Upload an image of this person.',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => '',
+            'image_style' => 'medium',
           ),
           'type' => 'image',
-          'weight' => 31,
+          'weight' => '1',
+        ),
+        'full' => array(
+          'label' => 'hidden',
+          'module' => 'image',
+          'settings' => array(
+            'image_link' => 'content',
+            'image_style' => 'med-square',
+          ),
+          'type' => 'image',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1195,7 +1296,14 @@ function stanford_person_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 26,
+          'weight' => '10',
+        ),
+        'full' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '6',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1219,7 +1327,7 @@ function stanford_person_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '10',
+        'weight' => '8',
       ),
     ),
   );
@@ -1266,9 +1374,17 @@ function stanford_person_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
+          'module' => 'taxonomy',
           'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '20',
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '7',
+        ),
+        'full' => array(
+          'label' => 'hidden',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1289,7 +1405,7 @@ function stanford_person_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '5',
+        'weight' => '23',
       ),
     ),
   );
@@ -1334,6 +1450,12 @@ function stanford_person_field_default_fields() {
           'type' => 'list_default',
           'weight' => 2,
         ),
+        'full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -1363,7 +1485,6 @@ function stanford_person_field_default_fields() {
   t('At Stanford Since');
   t('Degrees / Education');
   t('Each link provides a URL about the person. The required title provides a human readable name (e.g., "Web page," "StanfordWho," or "Facebook"). For each title enter the URL which corresponds to the person (e.g.,  "http://www.stanford.edu/~hennessy/").');
-  t('Email');
   t('Faculty Status');
   t('Faculty Title and Department');
   t('Fax');
@@ -1375,15 +1496,14 @@ function stanford_person_field_default_fields() {
   t('Mail Code');
   t('Mailing Address');
   t('Middle name');
+  t('Office');
   t('Office Hours');
-  t('Office Location');
   t('Personal info Links');
   t('Phone');
   t('Profile / Bio');
   t('Profile Picture');
   t('Select each field of interest.');
   t('Student Type');
-  t('This email field displays the primary email address (e.g. "hennessy@stanford.edu").');
   t('This identifies the type of person. ');
   t('This text area displays a biography or profile of the person. To enter a summary to be displayed when a shorter amount of text is needed, click on "Edit summary" above.');
   t('This text area displays the mailing address. Enter the address as you want it to appear.');
