@@ -18,7 +18,7 @@ function stanford_person_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '4',
+      'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -36,6 +36,11 @@ function stanford_person_ds_field_settings_info() {
       'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '0',
+        'wrapper' => 'h1',
+        'class' => '',
+      ),
     ),
   );
   $export['node|stanford_person|full'] = $ds_fieldsetting;
@@ -60,23 +65,25 @@ function stanford_person_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'group_s_postcard',
-        1 => 'field_s_person_profile_picture',
-        2 => 'field_s_person_faculty_title',
-        3 => 'title',
-        4 => 'field_s_person_faculty_type',
-        5 => 'body',
-        6 => 'field_s_person_student_type',
-        7 => 'field_s_person_education',
-        8 => 'field_s_person_since',
-        9 => 'group_s_postcard_col1',
-        10 => 'group_s_postcard_col2',
+        1 => 'title',
+        2 => 'group_s_person_about',
+        3 => 'field_s_person_profile_picture',
+        4 => 'field_s_person_faculty_title',
+        5 => 'field_s_person_faculty_type',
+        6 => 'body',
+        7 => 'field_s_person_student_type',
+        8 => 'field_s_person_education',
+        9 => 'field_s_person_since',
+        10 => 'group_s_postcard_col1',
+        11 => 'group_s_postcard_col2',
       ),
     ),
     'fields' => array(
       'group_s_postcard' => 'ds_content',
+      'title' => 'ds_content',
+      'group_s_person_about' => 'ds_content',
       'field_s_person_profile_picture' => 'ds_content',
       'field_s_person_faculty_title' => 'ds_content',
-      'title' => 'ds_content',
       'field_s_person_faculty_type' => 'ds_content',
       'body' => 'ds_content',
       'field_s_person_student_type' => 'ds_content',
@@ -105,51 +112,59 @@ function stanford_person_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_s_person_faculty_type',
-        1 => 'group_s_postcard',
-        2 => 'title',
-        3 => 'group_s_person_about',
+        0 => 'group_s_postcard',
+        1 => 'title',
+        2 => 'group_s_person_about',
+        3 => 'field_s_person_faculty_type',
         4 => 'field_s_person_profile_picture',
-        6 => 'field_s_person_student_type',
-        8 => 'field_s_person_faculty_title',
-        10 => 'field_s_person_education',
-        12 => 'group_s_person_since_style',
-        13 => 'field_s_person_since',
-        14 => 'body',
-        17 => 'group_s_postcard_col1',
-        18 => 'group_s_postcard_col2',
-      ),
-      'contact' => array(
-        5 => 'field_s_person_phone_display',
-        7 => 'field_s_person_email',
-        9 => 'field_s_person_office_location',
-        11 => 'field_s_person_info_links',
+        6 => 'field_s_person_faculty_title',
+        7 => 'field_s_person_education',
+        10 => 'group_s_person_since_style',
+        12 => 'body',
+        14 => 'field_s_person_since',
+        20 => 'group_s_postcard_col1',
+        21 => 'group_s_postcard_col2',
       ),
       'office_hours' => array(
-        15 => 'field_s_person_office_hours',
+        5 => 'field_s_person_office_hours',
+      ),
+      'contact' => array(
+        8 => 'field_s_person_phone_display',
+        9 => 'field_s_person_email',
+        11 => 'field_s_person_office_location',
+        13 => 'group_morelink_group',
+        15 => 'field_s_person_info_links',
       ),
       'research_interests' => array(
-        16 => 'field_s_person_interests',
+        16 => 'group_s_person_style_interests',
+        17 => 'field_s_person_interests',
+      ),
+      'specializations' => array(
+        18 => 'field_s_person_specialize',
+        19 => 'group_s_person_style_specialize',
       ),
     ),
     'fields' => array(
-      'field_s_person_faculty_type' => 'ds_content',
       'group_s_postcard' => 'ds_content',
       'title' => 'ds_content',
       'group_s_person_about' => 'ds_content',
+      'field_s_person_faculty_type' => 'ds_content',
       'field_s_person_profile_picture' => 'ds_content',
-      'field_s_person_phone_display' => 'contact',
-      'field_s_person_student_type' => 'ds_content',
-      'field_s_person_email' => 'contact',
-      'field_s_person_faculty_title' => 'ds_content',
-      'field_s_person_office_location' => 'contact',
-      'field_s_person_education' => 'ds_content',
-      'field_s_person_info_links' => 'contact',
-      'group_s_person_since_style' => 'ds_content',
-      'field_s_person_since' => 'ds_content',
-      'body' => 'ds_content',
       'field_s_person_office_hours' => 'office_hours',
+      'field_s_person_faculty_title' => 'ds_content',
+      'field_s_person_education' => 'ds_content',
+      'field_s_person_phone_display' => 'contact',
+      'field_s_person_email' => 'contact',
+      'group_s_person_since_style' => 'ds_content',
+      'field_s_person_office_location' => 'contact',
+      'body' => 'ds_content',
+      'group_morelink_group' => 'contact',
+      'field_s_person_since' => 'ds_content',
+      'field_s_person_info_links' => 'contact',
+      'group_s_person_style_interests' => 'research_interests',
       'field_s_person_interests' => 'research_interests',
+      'field_s_person_specialize' => 'specializations',
+      'group_s_person_style_specialize' => 'specializations',
       'group_s_postcard_col1' => 'ds_content',
       'group_s_postcard_col2' => 'ds_content',
     ),
@@ -160,8 +175,76 @@ function stanford_person_ds_layout_settings_info() {
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
     'layout_attributes_merge' => 1,
+    'hide_page_title' => '1',
+    'page_option_title' => '',
   );
   $export['node|stanford_person|full'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|stanford_person|taxonomy';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'stanford_person';
+  $ds_layout->view_mode = 'taxonomy';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'group_s_postcard',
+        1 => 'group_s_postcard_image',
+        2 => 'group_s_postcard_content',
+        3 => 'group_s_postcard_col3',
+        4 => 'title',
+        5 => 'field_s_person_profile_picture',
+        6 => 'field_s_person_faculty_type',
+        7 => 'field_s_person_office_location',
+        8 => 'field_s_person_office_hours',
+        9 => 'field_s_person_interests',
+        10 => 'field_s_person_phone_display',
+        11 => 'field_s_person_email',
+      ),
+    ),
+    'fields' => array(
+      'group_s_postcard' => 'ds_content',
+      'group_s_postcard_image' => 'ds_content',
+      'group_s_postcard_content' => 'ds_content',
+      'group_s_postcard_col3' => 'ds_content',
+      'title' => 'ds_content',
+      'field_s_person_profile_picture' => 'ds_content',
+      'field_s_person_faculty_type' => 'ds_content',
+      'field_s_person_office_location' => 'ds_content',
+      'field_s_person_office_hours' => 'ds_content',
+      'field_s_person_interests' => 'ds_content',
+      'field_s_person_phone_display' => 'ds_content',
+      'field_s_person_email' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+  );
+  $export['node|stanford_person|taxonomy'] = $ds_layout;
+
+  return $export;
+}
+
+/**
+ * Implements hook_ds_view_modes_info().
+ */
+function stanford_person_ds_view_modes_info() {
+  $export = array();
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'taxonomy';
+  $ds_view_mode->label = 'Taxonomy';
+  $ds_view_mode->entities = array(
+    'node' => 'node',
+  );
+  $export['taxonomy'] = $ds_view_mode;
 
   return $export;
 }

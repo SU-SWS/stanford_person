@@ -14,7 +14,7 @@ function stanford_person_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'ant_pattern_stanford_person';
-  $strongarm->value = '';
+  $strongarm->value = '[node:field_s_person_first_name] [node:field_s_person_last_name]';
   $export['ant_pattern_stanford_person'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -28,7 +28,7 @@ function stanford_person_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'ant_stanford_person';
-  $strongarm->value = '0';
+  $strongarm->value = '2';
   $export['ant_stanford_person'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -36,16 +36,28 @@ function stanford_person_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'ds_extras_region_blocks';
   $strongarm->value = array(
-    'contact' => array(
-      'title' => 'Contact',
-      'info' => 'node_stanford_person_full',
+    's_news_image' => array(
+      'title' => 'News Image',
+      'info' => 'node_stanford_news_item_full',
     ),
     'office_hours' => array(
       'title' => 'Office Hours',
       'info' => 'node_stanford_person_full',
     ),
+    'contact' => array(
+      'title' => 'Contact',
+      'info' => 'node_stanford_person_full',
+    ),
     'research_interests' => array(
       'title' => 'Research Interests',
+      'info' => 'node_stanford_person_full',
+    ),
+    'stanford_interests_specialize' => array(
+      'title' => 'Research Interests and Specializations',
+      'info' => 'node_stanford_person_full',
+    ),
+    'specializations' => array(
+      'title' => 'Specializations',
       'info' => 'node_stanford_person_full',
     ),
   );
@@ -64,10 +76,10 @@ function stanford_person_strongarm() {
   $strongarm->name = 'field_bundle_settings_node__stanford_person';
   $strongarm->value = array(
     'view_modes' => array(
-      'full' => array(
+      'teaser' => array(
         'custom_settings' => TRUE,
       ),
-      'teaser' => array(
+      'full' => array(
         'custom_settings' => TRUE,
       ),
       'rss' => array(
@@ -85,8 +97,23 @@ function stanford_person_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'stanford_8_col_banner' => array(
+        'custom_settings' => FALSE,
+      ),
       'revision' => array(
         'custom_settings' => FALSE,
+      ),
+      'stanford_taxonomy' => array(
+        'custom_settings' => FALSE,
+      ),
+      'stanford_medium_icon' => array(
+        'custom_settings' => FALSE,
+      ),
+      '300_flexwidth' => array(
+        'custom_settings' => FALSE,
+      ),
+      'taxonomy' => array(
+        'custom_settings' => TRUE,
       ),
     ),
     'extra_fields' => array(
@@ -98,6 +125,9 @@ function stanford_person_strongarm() {
           'weight' => '-5',
         ),
         'path' => array(
+          'weight' => '30',
+        ),
+        'redirect' => array(
           'weight' => '30',
         ),
       ),
@@ -162,8 +192,15 @@ function stanford_person_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_taxonomy_term_stanford_interests_pattern';
+  $strongarm->name = 'pathauto_taxonomy_term_stanford_field_of_study_pattern';
   $strongarm->value = '';
+  $export['pathauto_taxonomy_term_stanford_field_of_study_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_stanford_interests_pattern';
+  $strongarm->value = 'people/faculty/[term:name]';
   $export['pathauto_taxonomy_term_stanford_interests_pattern'] = $strongarm;
 
   $strongarm = new stdClass();

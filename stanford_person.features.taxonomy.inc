@@ -13,6 +13,30 @@ function stanford_person_taxonomy_default_vocabularies() {
       'name' => 'Stanford Faculty Type',
       'machine_name' => 'stanford_faculty_type',
       'description' => '',
+      'hierarchy' => '1',
+      'module' => 'taxonomy',
+      'weight' => '0',
+      'metatags' => array(),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'stanford_field_of_study' => array(
+      'name' => 'Stanford Field of Study',
+      'machine_name' => 'stanford_field_of_study',
+      'description' => '',
       'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '0',
@@ -37,6 +61,30 @@ function stanford_person_taxonomy_default_vocabularies() {
       'name' => 'Stanford Research Interests',
       'machine_name' => 'stanford_interests',
       'description' => '',
+      'hierarchy' => '1',
+      'module' => 'taxonomy',
+      'weight' => '0',
+      'metatags' => array(),
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
+    'stanford_other_specializations' => array(
+      'name' => 'Other Specializations',
+      'machine_name' => 'stanford_other_specializations',
+      'description' => 'Free tagging. Allows faculty to describe other interests and specializations.',
       'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '0',
