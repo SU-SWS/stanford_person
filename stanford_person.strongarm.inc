@@ -13,6 +13,13 @@ function stanford_person_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'additional_settings__active_tab_stanford_person';
+  $strongarm->value = 'edit-auto-nodetitle';
+  $export['additional_settings__active_tab_stanford_person'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'ant_pattern_stanford_person';
   $strongarm->value = '[node:field_s_person_first_name] [node:field_s_person_last_name]';
   $export['ant_pattern_stanford_person'] = $strongarm;
@@ -30,6 +37,27 @@ function stanford_person_strongarm() {
   $strongarm->name = 'ant_stanford_person';
   $strongarm->value = '2';
   $export['ant_stanford_person'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_stanford_person';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_stanford_person'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_stanford_person';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_stanford_person'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_stanford_person';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_stanford_person'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -202,6 +230,13 @@ function stanford_person_strongarm() {
   $strongarm->name = 'pathauto_taxonomy_term_stanford_interests_pattern';
   $strongarm->value = 'people/faculty/[term:name]';
   $export['pathauto_taxonomy_term_stanford_interests_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_stanford_other_specializations_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_stanford_other_specializations_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

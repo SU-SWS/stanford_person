@@ -45,6 +45,26 @@ function stanford_person_ds_field_settings_info() {
   );
   $export['node|stanford_person|full'] = $ds_fieldsetting;
 
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|stanford_person|taxonomy';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'stanford_person';
+  $ds_fieldsetting->view_mode = 'taxonomy';
+  $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '9',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '1',
+        'wrapper' => 'h3',
+        'class' => '',
+      ),
+    ),
+  );
+  $export['node|stanford_person|taxonomy'] = $ds_fieldsetting;
+
   return $export;
 }
 

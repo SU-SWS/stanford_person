@@ -10,6 +10,90 @@
 function stanford_person_field_default_fields() {
   $fields = array();
 
+  // Exported field: 'field_collection_item-field_s_course_section_info-field_s_course_person'.
+  $fields['field_collection_item-field_s_course_section_info-field_s_course_person'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_s_course_person',
+      'foreign keys' => array(
+        'node' => array(
+          'columns' => array(
+            'target_id' => 'nid',
+          ),
+          'table' => 'node',
+        ),
+      ),
+      'indexes' => array(
+        'target_id' => array(
+          0 => 'target_id',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'entityreference',
+      'settings' => array(
+        'handler' => 'base',
+        'handler_settings' => array(
+          'behaviors' => array(
+            'views-select-list' => array(
+              'status' => 0,
+            ),
+          ),
+          'sort' => array(
+            'direction' => 'ASC',
+            'field' => 'body:value',
+            'property' => 'nid',
+            'type' => 'none',
+          ),
+          'target_bundles' => array(
+            'stanford_person' => 'stanford_person',
+          ),
+        ),
+        'handler_submit' => 'Change handler',
+        'target_type' => 'node',
+      ),
+      'translatable' => '0',
+      'type' => 'entityreference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'field_s_course_section_info',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'This field shows the instructor for this course section.  Start typing the person\'s name and select from the auto-complete list that appears. (e.g., Jane Stanford).',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'entityreference',
+          'settings' => array(
+            'link' => FALSE,
+          ),
+          'type' => 'entityreference_label',
+          'weight' => 7,
+        ),
+      ),
+      'entity_type' => 'field_collection_item',
+      'field_name' => 'field_s_course_person',
+      'label' => 'Instructor',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'entityreference',
+        'settings' => array(
+          'match_operator' => 'CONTAINS',
+          'path' => '',
+          'size' => '60',
+        ),
+        'type' => 'entityreference_autocomplete',
+        'weight' => '1',
+      ),
+    ),
+  );
+
   // Exported field: 'node-stanford_person-body'.
   $fields['node-stanford_person-body'] = array(
     'field_config' => array(
@@ -2359,6 +2443,7 @@ function stanford_person_field_default_fields() {
   t('First name');
   t('If applicable, select the faculty status (e.g., "Professor").');
   t('If applicable, select the student type (e.g., "Undergraduate").');
+  t('Instructor');
   t('Last Name');
   t('Mail Code');
   t('Mailing Address');
@@ -2373,6 +2458,7 @@ function stanford_person_field_default_fields() {
   t('Select each field of interest.');
   t('Student Type');
   t('This email field displays the primary email address (e.g. "mysunetid@stanford.edu").');
+  t('This field shows the instructor for this course section.  Start typing the person\'s name and select from the auto-complete list that appears. (e.g., Jane Stanford).');
   t('This free tagging field allows further terms describing specializations.  ');
   t('This identifies the type of person. ');
   t('This text area displays a biography or profile of the person. To enter a summary to be displayed when a shorter amount of text is needed, click on "Edit summary" above.');
