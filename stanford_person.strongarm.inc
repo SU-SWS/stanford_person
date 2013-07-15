@@ -234,13 +234,6 @@ function stanford_person_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_taxonomy_term_stanford_other_specializations_pattern';
-  $strongarm->value = '';
-  $export['pathauto_taxonomy_term_stanford_other_specializations_pattern'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_stanford_student_type_pattern';
   $strongarm->value = '';
   $export['pathauto_taxonomy_term_stanford_student_type_pattern'] = $strongarm;
