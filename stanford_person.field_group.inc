@@ -601,7 +601,8 @@ function stanford_person_field_group_info() {
       2 => 'field_s_person_office_hours',
       3 => 'field_s_person_office_location',
       4 => 'field_s_person_phone_display',
-      5 => 'title',
+      5 => 'field_s_person_student_type',
+      6 => 'title',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -760,9 +761,9 @@ function stanford_person_field_group_info() {
     'label' => 'Postcard',
     'weight' => '0',
     'children' => array(
-      0 => 'group_s_postcard_content',
-      1 => 'group_s_postcard_image',
-      2 => 'group_s_postcard_col3',
+      0 => 'group_s_postcard_col3',
+      1 => 'group_s_postcard_content',
+      2 => 'group_s_postcard_image',
     ),
     'format_type' => 'div',
     'format_settings' => array(

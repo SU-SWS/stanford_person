@@ -3,7 +3,7 @@ description = Content type and views for the Stanford Person
 core = 7.x
 package = Stanford
 php = 5.2.4
-version = 7.x-2.0-alpha12
+version = 7.x-2.0-alpha13
 project = stanford_person
 dependencies[] = auto_nodetitle
 dependencies[] = context
@@ -141,4 +141,5 @@ features_exclude[field_instance][node-stanford_person-field_s_person_specialize]
 features_exclude[field_group][group_s_person_since_style|node|stanford_person|full] = group_s_person_since_style|node|stanford_person|full
 features_exclude[field_group][group_s_person_style_specialize|node|stanford_person|full] = group_s_person_style_specialize|node|stanford_person|full
 features_exclude[taxonomy][stanford_other_specializations] = stanford_other_specializations
+no autodetect = 1
 project status url = http://drupalfeatures.stanford.edu/fserver/stanford_person/7.x
