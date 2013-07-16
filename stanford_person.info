@@ -22,10 +22,7 @@ dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = views
 dependencies[] = views_bulk_operations
-features[context][] = stanford_people_all_pages
-features[context][] = stanford_people_faculty_pages
-features[context][] = stanford_people_staff_pages
-features[context][] = stanford_people_student_pages
+features[context][] = stanford_person
 features[ctools][] = context:context:3
 features[ctools][] = ds:ds:1
 features[ctools][] = field_group:field_group:1
@@ -141,5 +138,4 @@ features_exclude[field_instance][node-stanford_person-field_s_person_specialize]
 features_exclude[field_group][group_s_person_since_style|node|stanford_person|full] = group_s_person_since_style|node|stanford_person|full
 features_exclude[field_group][group_s_person_style_specialize|node|stanford_person|full] = group_s_person_style_specialize|node|stanford_person|full
 features_exclude[taxonomy][stanford_other_specializations] = stanford_other_specializations
-no autodetect = 1
 project status url = http://drupalfeatures.stanford.edu/fserver/stanford_person/7.x
