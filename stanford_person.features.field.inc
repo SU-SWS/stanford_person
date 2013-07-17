@@ -1876,212 +1876,6 @@ function stanford_person_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-stanford_person-field_s_person_since'.
-  $fields['node-stanford_person-field_s_person_since'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_s_person_since',
-      'foreign keys' => array(
-        'format' => array(
-          'columns' => array(
-            'format' => 'format',
-          ),
-          'table' => 'filter_format',
-        ),
-      ),
-      'indexes' => array(
-        'format' => array(
-          0 => 'format',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'text',
-      'settings' => array(
-        'max_length' => '255',
-      ),
-      'translatable' => '0',
-      'type' => 'text',
-    ),
-    'field_instance' => array(
-      'bundle' => 'stanford_person',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => 'This text field displays a phrase and date(s) indicating when this person joined Stanford (e.g., "At Stanford since 1891").',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '10',
-        ),
-        'full' => array(
-          'label' => 'inline',
-          'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '6',
-        ),
-        'stanford_taxonomy' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '9',
-        ),
-        'taxonomy' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '12',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_s_person_since',
-      'label' => 'At Stanford Since',
-      'required' => 0,
-      'settings' => array(
-        'better_formats' => array(
-          'allowed_formats' => array(
-            'content_editor_text_format' => 'content_editor_text_format',
-            'filtered_html' => 'filtered_html',
-            'full_html' => 'full_html',
-            'plain_text' => 'plain_text',
-          ),
-          'allowed_formats_toggle' => 0,
-          'default_order_toggle' => 0,
-          'default_order_wrapper' => array(
-            'formats' => array(
-              'content_editor_text_format' => array(
-                'weight' => '-10',
-              ),
-              'filtered_html' => array(
-                'weight' => '0',
-              ),
-              'full_html' => array(
-                'weight' => '1',
-              ),
-              'plain_text' => array(
-                'weight' => '10',
-              ),
-            ),
-          ),
-        ),
-        'text_processing' => '0',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'text',
-        'settings' => array(
-          'size' => '60',
-        ),
-        'type' => 'text_textfield',
-        'weight' => '10',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-stanford_person-field_s_person_specialize'.
-  $fields['node-stanford_person-field_s_person_specialize'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '-1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_s_person_specialize',
-      'foreign keys' => array(
-        'tid' => array(
-          'columns' => array(
-            'tid' => 'tid',
-          ),
-          'table' => 'taxonomy_term_data',
-        ),
-      ),
-      'indexes' => array(
-        'tid' => array(
-          0 => 'tid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'taxonomy',
-      'settings' => array(
-        'allowed_values' => array(
-          0 => array(
-            'vocabulary' => 'stanford_other_specializations',
-            'parent' => '0',
-          ),
-        ),
-      ),
-      'translatable' => '0',
-      'type' => 'taxonomy_term_reference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'stanford_person',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => 'This free tagging field allows further terms describing specializations.  ',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '24',
-        ),
-        'full' => array(
-          'label' => 'hidden',
-          'module' => 'taxonomy',
-          'settings' => array(),
-          'type' => 'taxonomy_term_reference_plain',
-          'weight' => '9',
-        ),
-        'stanford_taxonomy' => array(
-          'label' => 'hidden',
-          'module' => 'taxonomy',
-          'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '12',
-        ),
-        'taxonomy' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '24',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_s_person_specialize',
-      'label' => 'Other Specializations',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 0,
-        'module' => 'taxonomy',
-        'settings' => array(
-          'autocomplete_path' => 'taxonomy/autocomplete',
-          'size' => 60,
-        ),
-        'type' => 'taxonomy_autocomplete',
-        'weight' => '41',
-      ),
-    ),
-  );
 
   // Exported field: 'node-stanford_person-field_s_person_student_type'.
   $fields['node-stanford_person-field_s_person_student_type'] = array(
@@ -2346,7 +2140,6 @@ function stanford_person_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('At Stanford Since');
   t('Cohort');
   t('Degrees / Education');
   t('Dissertation Title');
@@ -2366,7 +2159,6 @@ function stanford_person_field_default_fields() {
   t('Middle name');
   t('Office');
   t('Office Hours');
-  t('Other Specializations');
   t('Personal info Links');
   t('Phone');
   t('Profile / Bio');
@@ -2375,11 +2167,9 @@ function stanford_person_field_default_fields() {
   t('Student Type');
   t('This email field displays the primary email address (e.g. "mysunetid@stanford.edu").');
   t('This field shows the instructor for this course section.  Start typing the person\'s name and select from the auto-complete list that appears. (e.g., Jane Stanford).');
-  t('This free tagging field allows further terms describing specializations.  ');
   t('This identifies the type of person. ');
   t('This text area displays a biography or profile of the person. To enter a summary to be displayed when a shorter amount of text is needed, click on "Edit summary" above.');
   t('This text area displays the mailing address. Enter the address as you want it to appear.');
-  t('This text field displays a phrase and date(s) indicating when this person joined Stanford (e.g., "At Stanford since 1891").');
   t('This text field displays education information (e.g. "B.A., Stanford University, 1972"). Enter one degree per line.');
   t('This text field displays the 4-digit inter-departmental mail code (e.g., "5230").');
   t('This text field displays the fax number (e.g., "(555) 555-555" or  for international numbers: "+31 42 123 4567").');

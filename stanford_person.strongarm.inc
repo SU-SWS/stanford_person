@@ -80,14 +80,6 @@ function stanford_person_strongarm() {
       'title' => 'Research Interests',
       'info' => 'node_stanford_person_full',
     ),
-    'stanford_interests_specialize' => array(
-      'title' => 'Research Interests and Specializations',
-      'info' => 'node_stanford_person_full',
-    ),
-    'specializations' => array(
-      'title' => 'Specializations',
-      'info' => 'node_stanford_person_full',
-    ),
   );
   $export['ds_extras_region_blocks'] = $strongarm;
 

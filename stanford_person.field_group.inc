@@ -151,7 +151,6 @@ function stanford_person_field_group_info() {
       0 => 'body',
       1 => 'field_s_person_education',
       2 => 'field_s_person_faculty_title',
-      3 => 'field_s_person_since',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -214,7 +213,6 @@ function stanford_person_field_group_info() {
     'children' => array(
       0 => 'field_s_person_faculty_type',
       1 => 'field_s_person_interests',
-      2 => 'field_s_person_specialize',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -429,7 +427,6 @@ function stanford_person_field_group_info() {
       0 => 'field_s_person_education',
       1 => 'field_s_person_faculty_title',
       2 => 'field_s_person_faculty_type',
-      3 => 'field_s_person_since',
       4 => 'field_s_person_student_type',
       5 => 'title',
     ),
@@ -466,7 +463,6 @@ function stanford_person_field_group_info() {
       1 => 'field_s_person_faculty_title',
       2 => 'field_s_person_faculty_type',
       3 => 'title',
-      4 => 'group_s_person_since_style',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -535,7 +531,6 @@ function stanford_person_field_group_info() {
     'weight' => '11',
     'children' => array(
       0 => 'field_s_person_interests',
-      1 => 'field_s_person_specialize',
     ),
     'format_type' => 'div',
     'format_settings' => array(
