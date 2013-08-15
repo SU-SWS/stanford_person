@@ -1876,7 +1876,6 @@ function stanford_person_field_default_fields() {
     ),
   );
 
-
   // Exported field: 'node-stanford_person-field_s_person_student_type'.
   $fields['node-stanford_person-field_s_person_student_type'] = array(
     'field_config' => array(
@@ -2152,7 +2151,6 @@ function stanford_person_field_default_fields() {
   t('First name');
   t('If applicable, select the faculty status (e.g., "Professor").');
   t('If applicable, select the student type (e.g., "Undergraduate").');
-  t('Instructor');
   t('Last Name');
   t('Mail Code');
   t('Mailing Address');
@@ -2166,7 +2164,6 @@ function stanford_person_field_default_fields() {
   t('Select each field of interest.');
   t('Student Type');
   t('This email field displays the primary email address (e.g. "mysunetid@stanford.edu").');
-  t('This field shows the instructor for this course section.  Start typing the person\'s name and select from the auto-complete list that appears. (e.g., Jane Stanford).');
   t('This identifies the type of person. ');
   t('This text area displays a biography or profile of the person. To enter a summary to be displayed when a shorter amount of text is needed, click on "Edit summary" above.');
   t('This text area displays the mailing address. Enter the address as you want it to appear.');
