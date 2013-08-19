@@ -122,7 +122,7 @@ function stanford_person_field_group_info() {
       4 => 'field_s_person_type',
       5 => 'title',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'fieldset',
     'format_settings' => array(
       'label' => 'Basic Info',
       'instance_settings' => array(
@@ -152,14 +152,15 @@ function stanford_person_field_group_info() {
       1 => 'field_s_person_education',
       2 => 'field_s_person_faculty_title',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Bio',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => '',
         'required_fields' => 1,
+        'classes' => '',
+        'description' => '',
       ),
+      'formatter' => 'collapsed',
     ),
   );
   $export['group_s_person_bio|node|stanford_person|form'] = $field_group;
@@ -186,14 +187,15 @@ function stanford_person_field_group_info() {
       6 => 'field_s_person_office_location',
       7 => 'field_s_person_phone_display',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Contact',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => '',
         'required_fields' => 1,
+        'classes' => '',
+        'description' => '',
       ),
+      'formatter' => 'collapsed',
     ),
   );
   $export['group_s_person_contact|node|stanford_person|form'] = $field_group;
@@ -214,17 +216,46 @@ function stanford_person_field_group_info() {
       0 => 'field_s_person_faculty_type',
       1 => 'field_s_person_interests',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Faculty Info',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => '',
         'required_fields' => 1,
+        'classes' => '',
+        'description' => '',
       ),
+      'formatter' => 'collapsed',
     ),
   );
   $export['group_s_person_faculty|node|stanford_person|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_s_person_staff|node|stanford_person|form';
+  $field_group->group_name = 'group_s_person_staff';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Staff Info',
+    'weight' => '5',
+    'children' => array(
+      0 => 'field_s_person_staff_type',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Staff Info',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'classes' => '',
+        'description' => '',
+      ),
+      'formatter' => 'collapsed',
+    ),
+  );
+  $export['group_s_person_staff|node|stanford_person|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -270,17 +301,19 @@ function stanford_person_field_group_info() {
     'children' => array(
       0 => 'field_s_person_dissertatn_title',
       1 => 'field_s_person_student_type',
-      2 => 'field_cohort',
-      3 => 'field_s_person_study',
+      2 => 'field_s_person_study',
+      3 => 'field_s_person_cohort',
+      4 => 'field_s_person_graduation_year',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Student Info',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => '',
         'required_fields' => 1,
+        'classes' => '',
+        'description' => '',
       ),
+      'formatter' => 'collapsed',
     ),
   );
   $export['group_s_person_student|node|stanford_person|form'] = $field_group;
@@ -427,8 +460,8 @@ function stanford_person_field_group_info() {
       0 => 'field_s_person_education',
       1 => 'field_s_person_faculty_title',
       2 => 'field_s_person_faculty_type',
-      4 => 'field_s_person_student_type',
-      5 => 'title',
+      3 => 'field_s_person_student_type',
+      4 => 'title',
     ),
     'format_type' => 'div',
     'format_settings' => array(

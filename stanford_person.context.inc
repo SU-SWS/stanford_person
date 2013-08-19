@@ -32,8 +32,26 @@ function stanford_person_context_default_contexts() {
         'views-8116868180a8a203a7d1a990228283dc' => array(
           'module' => 'views',
           'delta' => '8116868180a8a203a7d1a990228283dc',
-          'region' => 'content_bottom',
+          'region' => 'content_lower',
           'weight' => '-10',
+        ),
+        'ds_extras-contact' => array(
+          'module' => 'ds_extras',
+          'delta' => 'contact',
+          'region' => 'sidebar_second',
+          'weight' => '-10',
+        ),
+        'ds_extras-office_hours' => array(
+          'module' => 'ds_extras',
+          'delta' => 'office_hours',
+          'region' => 'sidebar_second',
+          'weight' => '-9',
+        ),
+        'ds_extras-research_interests' => array(
+          'module' => 'ds_extras',
+          'delta' => 'research_interests',
+          'region' => 'sidebar_second',
+          'weight' => '-8',
         ),
       ),
     ),
