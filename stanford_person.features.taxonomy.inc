@@ -78,6 +78,29 @@ function stanford_person_taxonomy_default_vocabularies() {
         ),
       ),
     ),
+    'stanford_staff_type' => array(
+      'name' => 'Stanford Staff Type',
+      'machine_name' => 'stanford_staff_type',
+      'description' => '',
+      'hierarchy' => '0',
+      'module' => 'taxonomy',
+      'weight' => '0',
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'stanford_student_type' => array(
       'name' => 'Stanford Student Type',
       'machine_name' => 'stanford_student_type',
