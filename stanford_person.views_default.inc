@@ -109,7 +109,7 @@ function stanford_person_views_default_views() {
     'delete_node' => 'edit_node',
     'field_s_person_first_name' => 'field_s_person_first_name',
   );
-  $handler->display->display_options['style_options']['default'] = 'field_s_person_last_name';
+  $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
     'counter' => array(
       'align' => '',
@@ -208,6 +208,9 @@ function stanford_person_views_default_views() {
       'empty_column' => 0,
     ),
   );
+  $handler->display->display_options['style_options']['override'] = 1;
+  $handler->display->display_options['style_options']['sticky'] = 0;
+  $handler->display->display_options['style_options']['empty_table'] = 0;
   /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
@@ -436,14 +439,14 @@ function stanford_person_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_first_name']['label'] = '';
   $handler->display->display_options['fields']['field_s_person_first_name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_person_first_name']['element_label_colon'] = FALSE;
-  /* Sort criterion: Content: First name (field_s_person_first_name) */
-  $handler->display->display_options['sorts']['field_s_person_first_name_value']['id'] = 'field_s_person_first_name_value';
-  $handler->display->display_options['sorts']['field_s_person_first_name_value']['table'] = 'field_data_field_s_person_first_name';
-  $handler->display->display_options['sorts']['field_s_person_first_name_value']['field'] = 'field_s_person_first_name_value';
   /* Sort criterion: Content: Last Name (field_s_person_last_name) */
   $handler->display->display_options['sorts']['field_s_person_last_name_value']['id'] = 'field_s_person_last_name_value';
   $handler->display->display_options['sorts']['field_s_person_last_name_value']['table'] = 'field_data_field_s_person_last_name';
   $handler->display->display_options['sorts']['field_s_person_last_name_value']['field'] = 'field_s_person_last_name_value';
+  /* Sort criterion: Content: First name (field_s_person_first_name) */
+  $handler->display->display_options['sorts']['field_s_person_first_name_value']['id'] = 'field_s_person_first_name_value';
+  $handler->display->display_options['sorts']['field_s_person_first_name_value']['table'] = 'field_data_field_s_person_first_name';
+  $handler->display->display_options['sorts']['field_s_person_first_name_value']['field'] = 'field_s_person_first_name_value';
   /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';

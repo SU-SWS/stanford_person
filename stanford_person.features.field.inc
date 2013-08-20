@@ -104,80 +104,58 @@ function stanford_person_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-stanford_person-field_cohort'.
-  $fields['node-stanford_person-field_cohort'] = array(
+  // Exported field: 'node-stanford_person-field_s_person_cohort'.
+  $fields['node-stanford_person-field_s_person_cohort'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_cohort',
+      'field_name' => 'field_s_person_cohort',
       'foreign keys' => array(),
-      'indexes' => array(
-        'value' => array(
-          0 => 'value',
-        ),
-      ),
+      'indexes' => array(),
       'locked' => '0',
-      'module' => 'list',
+      'module' => 'date',
       'settings' => array(
-        'allowed_values' => array(
-          2020 => '2020',
-          2019 => '2019',
-          2018 => '2018',
-          2017 => '2017',
-          2016 => '2016',
-          2015 => '2015',
-          2014 => '2014',
-          2013 => '2013',
-          2012 => '2012',
-          2011 => '2011',
-          2010 => '2010',
-          2009 => '2009',
-          2008 => '2008',
-          2007 => '2007',
-          2006 => '2006',
-          2005 => '2005',
-          2004 => '2004',
-          2003 => '2003',
-          2002 => '2002',
-          2001 => '2001',
-          2000 => '2000',
+        'cache_count' => '4',
+        'cache_enabled' => 0,
+        'granularity' => array(
+          'day' => 0,
+          'hour' => 0,
+          'minute' => 0,
+          'month' => 0,
+          'second' => 0,
+          'year' => 'year',
         ),
-        'allowed_values_function' => '',
+        'timezone_db' => '',
+        'todate' => '',
+        'tz_handling' => 'none',
       ),
       'translatable' => '0',
-      'type' => 'list_text',
+      'type' => 'datetime',
     ),
     'field_instance' => array(
       'bundle' => 'stanford_person',
-      'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Select the year this person started studies at Stanford.',
       'display' => array(
         'default' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '23',
+          'weight' => '25',
         ),
         'full' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '18',
-        ),
-        'stanford_taxonomy' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '20',
+          'weight' => 0,
         ),
         'taxonomy' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '23',
+          'weight' => 0,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -187,19 +165,28 @@ function stanford_person_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_cohort',
+      'field_name' => 'field_s_person_cohort',
       'label' => 'Cohort',
       'required' => 0,
       'settings' => array(
+        'default_value' => 'now',
+        'default_value2' => 'same',
+        'default_value_code' => '',
+        'default_value_code2' => '',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'options',
+        'module' => 'date',
         'settings' => array(
-          'apply_chosen' => 0,
+          'increment' => '30',
+          'input_format' => 'm/d/Y - H:i:s',
+          'input_format_custom' => '',
+          'label_position' => 'within',
+          'text_parts' => array(),
+          'year_range' => '-10:+2',
         ),
-        'type' => 'options_select',
+        'type' => 'date_select',
         'weight' => '24',
       ),
     ),
@@ -867,6 +854,94 @@ function stanford_person_field_default_fields() {
         ),
         'type' => 'text_textfield',
         'weight' => '18',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-stanford_person-field_s_person_graduation_year'.
+  $fields['node-stanford_person-field_s_person_graduation_year'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_s_person_graduation_year',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'date',
+      'settings' => array(
+        'cache_count' => '4',
+        'cache_enabled' => 0,
+        'granularity' => array(
+          'day' => 0,
+          'hour' => 0,
+          'minute' => 0,
+          'month' => 0,
+          'second' => 0,
+          'year' => 'year',
+        ),
+        'timezone_db' => '',
+        'todate' => '',
+        'tz_handling' => 'none',
+      ),
+      'translatable' => '0',
+      'type' => 'datetime',
+    ),
+    'field_instance' => array(
+      'bundle' => 'stanford_person',
+      'deleted' => '0',
+      'description' => 'Select the year this person graduates.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '26',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'taxonomy' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_s_person_graduation_year',
+      'label' => 'Graduation Year',
+      'required' => 0,
+      'settings' => array(
+        'default_value' => 'now',
+        'default_value2' => 'same',
+        'default_value_code' => '',
+        'default_value_code2' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'date',
+        'settings' => array(
+          'increment' => '30',
+          'input_format' => 'm/d/Y - H:i:s',
+          'input_format_custom' => '',
+          'label_position' => 'above',
+          'text_parts' => array(),
+          'year_range' => '-10:+10',
+        ),
+        'type' => 'date_select',
+        'weight' => '27',
       ),
     ),
   );
@@ -1761,7 +1836,7 @@ function stanford_person_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => 'medium',
+            'image_style' => 'med-square',
           ),
           'type' => 'image',
           'weight' => '1',
@@ -1872,6 +1947,88 @@ function stanford_person_field_default_fields() {
         ),
         'type' => 'image_image',
         'weight' => '22',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-stanford_person-field_s_person_staff_type'.
+  $fields['node-stanford_person-field_s_person_staff_type'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_s_person_staff_type',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'stanford_staff_type',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'stanford_person',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'If applicable, select the staff type (e.g., "Department Administrator").',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '24',
+        ),
+        'full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'taxonomy' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_s_person_staff_type',
+      'label' => 'Staff Type',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_buttons',
+        'weight' => '7',
       ),
     ),
   );
@@ -2075,8 +2232,8 @@ function stanford_person_field_default_fields() {
       'settings' => array(
         'allowed_values' => array(
           'faculty' => 'Faculty',
-          'administrator' => 'Administrator',
           'student' => 'Student',
+          'staff' => 'Staff',
         ),
         'allowed_values_function' => '',
       ),
@@ -2149,7 +2306,9 @@ function stanford_person_field_default_fields() {
   t('Field of Study');
   t('Fields of Interest');
   t('First name');
+  t('Graduation Year');
   t('If applicable, select the faculty status (e.g., "Professor").');
+  t('If applicable, select the staff type (e.g., "Department Administrator").');
   t('If applicable, select the student type (e.g., "Undergraduate").');
   t('Last Name');
   t('Mail Code');
@@ -2162,6 +2321,9 @@ function stanford_person_field_default_fields() {
   t('Profile / Bio');
   t('Profile Picture');
   t('Select each field of interest.');
+  t('Select the year this person graduates.');
+  t('Select the year this person started studies at Stanford.');
+  t('Staff Type');
   t('Student Type');
   t('This email field displays the primary email address (e.g. "mysunetid@stanford.edu").');
   t('This identifies the type of person. ');
