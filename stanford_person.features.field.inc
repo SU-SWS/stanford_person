@@ -155,7 +155,7 @@ function stanford_person_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -344,7 +344,7 @@ function stanford_person_field_default_fields() {
       'description' => 'This text field displays education information (e.g. "B.A., Stanford University, 1972"). Enter one degree per line.',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
@@ -443,7 +443,7 @@ function stanford_person_field_default_fields() {
           'module' => 'email',
           'settings' => array(),
           'type' => 'email_default',
-          'weight' => '14',
+          'weight' => '16',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -635,7 +635,7 @@ function stanford_person_field_default_fields() {
       'description' => 'If applicable, select the faculty status (e.g., "Professor").',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
@@ -660,7 +660,7 @@ function stanford_person_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_plain',
-          'weight' => '10',
+          'weight' => '12',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -909,7 +909,7 @@ function stanford_person_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1255,7 +1255,7 @@ function stanford_person_field_default_fields() {
       'bundle' => 'stanford_person',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'This text area displays the mailing address. Enter the address as you want it to appear.',
+      'description' => 'This text area displays the mailing address. Enter the address as you want it to appear. Hint: Use control+enter to enter a new line.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -1565,7 +1565,7 @@ function stanford_person_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '12',
+          'weight' => '14',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1653,7 +1653,7 @@ function stanford_person_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '11',
+          'weight' => '13',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1767,7 +1767,7 @@ function stanford_person_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '13',
+          'weight' => '15',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -2007,7 +2007,7 @@ function stanford_person_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -2074,7 +2074,7 @@ function stanford_person_field_default_fields() {
       'description' => 'If applicable, select the student type (e.g., "Undergraduate").',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
@@ -2095,8 +2095,9 @@ function stanford_person_field_default_fields() {
         ),
         'taxonomy' => array(
           'label' => 'hidden',
+          'module' => 'taxonomy',
           'settings' => array(),
-          'type' => 'hidden',
+          'type' => 'taxonomy_term_reference_link',
           'weight' => '9',
         ),
         'teaser' => array(
@@ -2328,7 +2329,7 @@ function stanford_person_field_default_fields() {
   t('This email field displays the primary email address (e.g. "mysunetid@stanford.edu").');
   t('This identifies the type of person. ');
   t('This text area displays a biography or profile of the person. To enter a summary to be displayed when a shorter amount of text is needed, click on "Edit summary" above.');
-  t('This text area displays the mailing address. Enter the address as you want it to appear.');
+  t('This text area displays the mailing address. Enter the address as you want it to appear. Hint: Use control+enter to enter a new line.');
   t('This text field displays education information (e.g. "B.A., Stanford University, 1972"). Enter one degree per line.');
   t('This text field displays the 4-digit inter-departmental mail code (e.g., "5230").');
   t('This text field displays the fax number (e.g., "(555) 555-555" or  for international numbers: "+31 42 123 4567").');

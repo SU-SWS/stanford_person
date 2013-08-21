@@ -58,15 +58,16 @@ function stanford_person_field_group_info() {
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'About',
       'instance_settings' => array(
+        'classes' => '',
         'description' => '',
-        'show_label' => 1,
+        'show_label' => '1',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
-        'classes' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $export['group_s_person_about|node|stanford_person|default'] = $field_group;
@@ -265,11 +266,13 @@ function stanford_person_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'stanford_person';
   $field_group->mode = 'taxonomy';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_s_postcard_content';
   $field_group->data = array(
     'label' => 'Faculty Status Style',
-    'weight' => '2',
-    'children' => array(),
+    'weight' => '11',
+    'children' => array(
+      0 => 'field_s_person_faculty_type',
+    ),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Faculty Status Style',
@@ -625,12 +628,12 @@ function stanford_person_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'field_s_person_email',
-      1 => 'field_s_person_faculty_type',
-      2 => 'field_s_person_office_hours',
-      3 => 'field_s_person_office_location',
-      4 => 'field_s_person_phone_display',
-      5 => 'field_s_person_student_type',
-      6 => 'title',
+      1 => 'field_s_person_office_hours',
+      2 => 'field_s_person_office_location',
+      3 => 'field_s_person_phone_display',
+      4 => 'field_s_person_student_type',
+      5 => 'title',
+      6 => 'group_s_person_status_style',
     ),
     'format_type' => 'div',
     'format_settings' => array(
