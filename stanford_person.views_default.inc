@@ -515,6 +515,11 @@ function stanford_person_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['path'] = 'admin/manage/people';
+  $handler->display->display_options['menu']['type'] = 'normal';
+  $handler->display->display_options['menu']['title'] = 'Manage People';
+  $handler->display->display_options['menu']['weight'] = '';
+  $handler->display->display_options['menu']['name'] = 'menu-manage-content-by-type';
+  $handler->display->display_options['menu']['context'] = 0;
   $export['stanford_person_manage'] = $view;
 
   return $export;
