@@ -145,7 +145,7 @@ function stanford_person_strongarm() {
           'weight' => '-5',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '8',
         ),
         'redirect' => array(
           'weight' => '30',

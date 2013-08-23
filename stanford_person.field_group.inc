@@ -106,6 +106,33 @@ function stanford_person_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_s_person_advanced|node|stanford_person|form';
+  $field_group->group_name = 'group_s_person_advanced';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Advanced',
+    'weight' => '6',
+    'children' => array(
+      0 => 'field_s_person_weight',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_s_person_advanced|node|stanford_person|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_s_person_basic|node|stanford_person|form';
   $field_group->group_name = 'group_s_person_basic';
   $field_group->entity_type = 'node';
@@ -302,11 +329,11 @@ function stanford_person_field_group_info() {
     'label' => 'Student Info',
     'weight' => '4',
     'children' => array(
-      0 => 'field_s_person_dissertatn_title',
-      1 => 'field_s_person_student_type',
-      2 => 'field_s_person_study',
-      3 => 'field_s_person_cohort',
-      4 => 'field_s_person_graduation_year',
+      0 => 'field_s_person_cohort',
+      1 => 'field_s_person_dissertatn_title',
+      2 => 'field_s_person_graduation_year',
+      3 => 'field_s_person_student_type',
+      4 => 'field_s_person_study',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

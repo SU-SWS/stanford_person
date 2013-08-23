@@ -2295,6 +2295,84 @@ function stanford_person_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-stanford_person-field_s_person_weight'.
+  $fields['node-stanford_person-field_s_person_weight'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_s_person_weight',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'number',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'number_integer',
+    ),
+    'field_instance' => array(
+      'bundle' => 'stanford_person',
+      'default_value' => array(
+        0 => array(
+          'value' => '0',
+        ),
+      ),
+      'deleted' => '0',
+      'description' => 'This integer field is used to control the sort order in views displays. Larger numbers are "heavier" and sink lower in the list.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'number',
+          'settings' => array(
+            'decimal_separator' => '.',
+            'prefix_suffix' => TRUE,
+            'scale' => 0,
+            'thousand_separator' => ' ',
+          ),
+          'type' => 'number_integer',
+          'weight' => 27,
+        ),
+        'full' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'taxonomy' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_s_person_weight',
+      'label' => 'Sorting Weight',
+      'required' => 0,
+      'settings' => array(
+        'max' => '',
+        'min' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'number',
+        'settings' => array(),
+        'type' => 'number',
+        'weight' => '7',
+      ),
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Cohort');
@@ -2324,10 +2402,12 @@ function stanford_person_field_default_fields() {
   t('Select each field of interest.');
   t('Select the year this person graduates.');
   t('Select the year this person started studies at Stanford.');
+  t('Sorting Weight');
   t('Staff Type');
   t('Student Type');
   t('This email field displays the primary email address (e.g. "mysunetid@stanford.edu").');
   t('This identifies the type of person. ');
+  t('This integer field is used to control the sort order in views displays. Larger numbers are "heavier" and sink lower in the list.');
   t('This text area displays a biography or profile of the person. To enter a summary to be displayed when a shorter amount of text is needed, click on "Edit summary" above.');
   t('This text area displays the mailing address. Enter the address as you want it to appear. Hint: Use control+enter to enter a new line.');
   t('This text field displays education information (e.g. "B.A., Stanford University, 1972"). Enter one degree per line.');

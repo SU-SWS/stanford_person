@@ -103,6 +103,8 @@ function stanford_person_views_default_views() {
     'field_s_person_type' => 'field_s_person_type',
     'field_s_person_faculty_type' => 'field_s_person_faculty_type',
     'field_s_person_student_type' => 'field_s_person_student_type',
+    'field_s_person_staff_type' => 'field_s_person_staff_type',
+    'field_s_person_weight' => 'field_s_person_weight',
     'nid' => 'nid',
     'edit_node' => 'edit_node',
     'view_node' => 'edit_node',
@@ -176,6 +178,18 @@ function stanford_person_views_default_views() {
     'field_s_person_student_type' => array(
       'align' => '',
       'separator' => ' | ',
+      'empty_column' => 0,
+    ),
+    'field_s_person_staff_type' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_s_person_weight' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
       'empty_column' => 0,
     ),
     'nid' => array(
@@ -413,6 +427,61 @@ function stanford_person_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_student_type']['id'] = 'field_s_person_student_type';
   $handler->display->display_options['fields']['field_s_person_student_type']['table'] = 'field_data_field_s_person_student_type';
   $handler->display->display_options['fields']['field_s_person_student_type']['field'] = 'field_s_person_student_type';
+  /* Field: Content: Staff Type */
+  $handler->display->display_options['fields']['field_s_person_staff_type']['id'] = 'field_s_person_staff_type';
+  $handler->display->display_options['fields']['field_s_person_staff_type']['table'] = 'field_data_field_s_person_staff_type';
+  $handler->display->display_options['fields']['field_s_person_staff_type']['field'] = 'field_s_person_staff_type';
+  $handler->display->display_options['fields']['field_s_person_staff_type']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_s_person_staff_type']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_s_person_staff_type']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_s_person_staff_type']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_s_person_staff_type']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_s_person_staff_type']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_s_person_staff_type']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_s_person_staff_type']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_s_person_staff_type']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_s_person_staff_type']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['field_s_person_staff_type']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_s_person_staff_type']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_s_person_staff_type']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_s_person_staff_type']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['field_s_person_staff_type']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_s_person_staff_type']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_s_person_staff_type']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_s_person_staff_type']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_s_person_staff_type']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_s_person_staff_type']['group_rows'] = 1;
+  $handler->display->display_options['fields']['field_s_person_staff_type']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_s_person_staff_type']['delta_reversed'] = 0;
+  $handler->display->display_options['fields']['field_s_person_staff_type']['delta_first_last'] = 0;
+  $handler->display->display_options['fields']['field_s_person_staff_type']['field_api_classes'] = 0;
+  /* Field: Content: Sorting Weight */
+  $handler->display->display_options['fields']['field_s_person_weight']['id'] = 'field_s_person_weight';
+  $handler->display->display_options['fields']['field_s_person_weight']['table'] = 'field_data_field_s_person_weight';
+  $handler->display->display_options['fields']['field_s_person_weight']['field'] = 'field_s_person_weight';
+  $handler->display->display_options['fields']['field_s_person_weight']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_s_person_weight']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_s_person_weight']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_s_person_weight']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_s_person_weight']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_s_person_weight']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_s_person_weight']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_s_person_weight']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_s_person_weight']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_s_person_weight']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['field_s_person_weight']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_s_person_weight']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_s_person_weight']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_s_person_weight']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['field_s_person_weight']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_s_person_weight']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_s_person_weight']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_s_person_weight']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_s_person_weight']['settings'] = array(
+    'thousand_separator' => ',',
+    'prefix_suffix' => 0,
+  );
+  $handler->display->display_options['fields']['field_s_person_weight']['field_api_classes'] = 0;
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
