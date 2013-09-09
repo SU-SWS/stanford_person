@@ -75,62 +75,6 @@ function stanford_person_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-stanford_person-field_cohort'
-  $field_instances['node-stanford_person-field_cohort'] = array(
-    'bundle' => 'stanford_person',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 23,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 18,
-      ),
-      'stanford_taxonomy' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 20,
-      ),
-      'taxonomy' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 23,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_cohort',
-    'label' => 'Cohort',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => 0,
-      ),
-      'type' => 'options_select',
-      'weight' => 24,
-    ),
-  );
-
   // Exported field_instance: 'node-stanford_person-field_s_person_dissertatn_title'
   $field_instances['node-stanford_person-field_s_person_dissertatn_title'] = array(
     'bundle' => 'stanford_person',
