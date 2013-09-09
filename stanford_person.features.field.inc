@@ -1898,6 +1898,7 @@ function stanford_person_field_default_fields() {
         'module' => 'image',
         'settings' => array(
           'insert' => 0,
+          'insert_absolute' => FALSE,
           'insert_class' => '',
           'insert_default' => 'auto',
           'insert_styles' => array(
@@ -1955,7 +1956,7 @@ function stanford_person_field_default_fields() {
   $fields['node-stanford_person-field_s_person_staff_type'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '-1',
+      'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_s_person_staff_type',
@@ -2037,7 +2038,7 @@ function stanford_person_field_default_fields() {
   $fields['node-stanford_person-field_s_person_student_type'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '-1',
+      'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_s_person_student_type',
