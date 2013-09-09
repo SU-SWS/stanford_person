@@ -1,5 +1,5 @@
-Stanford Person Views from English
+Stanford Person
 ==================
 
-This module provides the Stanford Person views from the English Website.
+This module provides the Stanford Person content type and associated views.
 
