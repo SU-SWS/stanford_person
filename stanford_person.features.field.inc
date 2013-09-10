@@ -137,7 +137,7 @@ function stanford_person_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'stanford_person',
       'deleted' => '0',
-      'description' => 'Select the year this person started studies at Stanford.',
+      'description' => 'Cohort typically applies to graduate students. If applicable, select the year this person started studies at Stanford; if not applicable, select "-Year."',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -2377,6 +2377,7 @@ function stanford_person_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Cohort');
+  t('Cohort typically applies to graduate students. If applicable, select the year this person started studies at Stanford; if not applicable, select "-Year."');
   t('Degrees / Education');
   t('Dissertation Title');
   t('Each link provides a URL about the person. The required title provides a human readable name (e.g., "Web page," "StanfordWho," or "Facebook"). For each title enter the URL which corresponds to the person (e.g.,  "http://www.stanford.edu/~hennessy/").');
@@ -2402,7 +2403,6 @@ function stanford_person_field_default_fields() {
   t('Profile Picture');
   t('Select each field of interest.');
   t('Select the year this person graduates.');
-  t('Select the year this person started studies at Stanford.');
   t('Sorting Weight');
   t('Staff Type');
   t('Student Type');
