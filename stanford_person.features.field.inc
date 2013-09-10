@@ -719,7 +719,7 @@ function stanford_person_field_default_fields() {
       'bundle' => 'stanford_person',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'This text field displays the fax number (e.g., "(555) 555-555" or  for international numbers: "+31 42 123 4567").',
+      'description' => 'This text field displays the fax number (e.g., "(555) 555-5555" or  for international numbers: "+31 42 123 4567").',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -1741,7 +1741,7 @@ function stanford_person_field_default_fields() {
       'bundle' => 'stanford_person',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'This text field displays the primary phone number (e.g., "(555) 555-555" or  for international numbers: "+31 42 123 4567").',
+      'description' => 'This text field displays the primary phone number (e.g., "(555) 555-5555" or  for international numbers: "+31 42 123 4567").',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -2413,9 +2413,9 @@ function stanford_person_field_default_fields() {
   t('This text area displays the mailing address. Enter the address as you want it to appear. Hint: Use control+enter to enter a new line.');
   t('This text field displays education information (e.g. "B.A., Stanford University, 1972"). Enter one degree per line.');
   t('This text field displays the 4-digit inter-departmental mail code (e.g., "5230").');
-  t('This text field displays the fax number (e.g., "(555) 555-555" or  for international numbers: "+31 42 123 4567").');
+  t('This text field displays the fax number (e.g., "(555) 555-5555" or  for international numbers: "+31 42 123 4567").');
   t('This text field displays the office hours in a single line (e.g., "Fri 10:00-11:00am and Tue 11:00-12:00pm").');
-  t('This text field displays the primary phone number (e.g., "(555) 555-555" or  for international numbers: "+31 42 123 4567").');
+  t('This text field displays the primary phone number (e.g., "(555) 555-5555" or  for international numbers: "+31 42 123 4567").');
   t('This text field displays title and optionally department information. Ex. Professor of English. Enter one per line.');
   t('This text field is used for sorting by and displaying the first name, and optionally to populate the "Display Name" field.');
   t('This text field is used for sorting by and displaying the last name, and optionally to populate the "Display Name" field.');

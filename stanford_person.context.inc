@@ -32,7 +32,7 @@ function stanford_person_context_default_contexts() {
         'views-8116868180a8a203a7d1a990228283dc' => array(
           'module' => 'views',
           'delta' => '8116868180a8a203a7d1a990228283dc',
-          'region' => 'content_lower',
+          'region' => 'content_bottom',
           'weight' => '-10',
         ),
         'ds_extras-contact' => array(
