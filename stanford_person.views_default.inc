@@ -229,12 +229,6 @@ function stanford_person_views_default_views() {
       'empty_column' => 0,
     ),
   );
-  /* Header: Global: Text area */
-  $handler->display->display_options['header']['area']['id'] = 'area';
-  $handler->display->display_options['header']['area']['table'] = 'views';
-  $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h3><a href="https://sites.stanford.edu/english/admin/manage">Back to Manage All Content</a></h3>';
-  $handler->display->display_options['header']['area']['format'] = 'content_editor_text_format';
   /* Field: Global: View result counter */
   $handler->display->display_options['fields']['counter']['id'] = 'counter';
   $handler->display->display_options['fields']['counter']['table'] = 'views';
