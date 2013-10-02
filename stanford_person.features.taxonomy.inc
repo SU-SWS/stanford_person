@@ -10,7 +10,7 @@
 function stanford_person_taxonomy_default_vocabularies() {
   return array(
     'stanford_faculty_type' => array(
-      'name' => 'Stanford Faculty Type',
+      'name' => 'Faculty Type',
       'machine_name' => 'stanford_faculty_type',
       'description' => '',
       'hierarchy' => '1',
@@ -33,7 +33,7 @@ function stanford_person_taxonomy_default_vocabularies() {
       ),
     ),
     'stanford_field_of_study' => array(
-      'name' => 'Stanford Field of Study',
+      'name' => 'Field of Study',
       'machine_name' => 'stanford_field_of_study',
       'description' => '',
       'hierarchy' => '0',
@@ -56,7 +56,7 @@ function stanford_person_taxonomy_default_vocabularies() {
       ),
     ),
     'stanford_interests' => array(
-      'name' => 'Stanford Research Interests',
+      'name' => 'Research Interests',
       'machine_name' => 'stanford_interests',
       'description' => '',
       'hierarchy' => '1',
@@ -79,7 +79,7 @@ function stanford_person_taxonomy_default_vocabularies() {
       ),
     ),
     'stanford_staff_type' => array(
-      'name' => 'Stanford Staff Type',
+      'name' => 'Staff Type',
       'machine_name' => 'stanford_staff_type',
       'description' => '',
       'hierarchy' => '0',
@@ -102,7 +102,7 @@ function stanford_person_taxonomy_default_vocabularies() {
       ),
     ),
     'stanford_student_type' => array(
-      'name' => 'Stanford Student Type',
+      'name' => 'Student Type',
       'machine_name' => 'stanford_student_type',
       'description' => '',
       'hierarchy' => '0',
