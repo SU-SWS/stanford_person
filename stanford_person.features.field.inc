@@ -149,7 +149,7 @@ function stanford_person_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '0',
         ),
         'taxonomy' => array(
           'label' => 'above',
@@ -903,7 +903,7 @@ function stanford_person_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '0',
         ),
         'taxonomy' => array(
           'label' => 'above',
@@ -2002,7 +2002,7 @@ function stanford_person_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '0',
         ),
         'taxonomy' => array(
           'label' => 'above',
@@ -2072,7 +2072,7 @@ function stanford_person_field_default_fields() {
       'bundle' => 'stanford_person',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'If applicable, select the student type (e.g., "Undergraduate").',
+      'description' => 'If applicable, select the group to which this person belongs (e.g., "Graduate Students").',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -2338,7 +2338,7 @@ function stanford_person_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '0',
         ),
         'taxonomy' => array(
           'label' => 'above',
@@ -2389,8 +2389,8 @@ function stanford_person_field_default_fields() {
   t('First name');
   t('Graduation Year');
   t('If applicable, select the faculty status (e.g., "Professor").');
+  t('If applicable, select the group to which this person belongs (e.g., "Graduate Students").');
   t('If applicable, select the staff type (e.g., "Department Administrator").');
-  t('If applicable, select the student type (e.g., "Undergraduate").');
   t('Last Name');
   t('Mail Code');
   t('Mailing Address');

@@ -430,7 +430,7 @@ function stanford_person_field_group_info() {
     'format_settings' => array(
       'label' => 'Postcard Column 1',
       'instance_settings' => array(
-        'classes' => '',
+        'classes' => 'postcard-image',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
