@@ -44,6 +44,37 @@ function stanford_person_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_s_image_border_style|node|stanford_person|full';
+  $field_group->group_name = 'group_s_image_border_style';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_s_postcard_col1';
+  $field_group->data = array(
+    'label' => 'Image Border Style',
+    'weight' => '29',
+    'children' => array(
+      0 => 'field_s_person_profile_picture',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Image Border Style',
+      'instance_settings' => array(
+        'classes' => 'border-simple-nowidth border-shadow',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_s_image_border_style|node|stanford_person|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_s_person_about|node|stanford_person|default';
   $field_group->group_name = 'group_s_person_about';
   $field_group->entity_type = 'node';
@@ -424,13 +455,13 @@ function stanford_person_field_group_info() {
     'label' => 'Postcard Column 1',
     'weight' => '28',
     'children' => array(
-      0 => 'field_s_person_profile_picture',
+      0 => 'group_s_image_border_style',
     ),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Postcard Column 1',
       'instance_settings' => array(
-        'classes' => '',
+        'classes' => 'postcard-image',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
