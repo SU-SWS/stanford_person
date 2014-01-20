@@ -37,7 +37,6 @@ features[ds_layout_settings][] = node|stanford_person|full
 features[ds_layout_settings][] = node|stanford_person|taxonomy
 features[ds_view_modes][] = taxonomy
 features[features_api][] = api:2
-features[field_base][] = body
 features[field_base][] = field_s_person_cohort
 features[field_base][] = field_s_person_dissertatn_title
 features[field_base][] = field_s_person_education
