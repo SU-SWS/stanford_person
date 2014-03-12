@@ -208,9 +208,10 @@ function stanford_person_field_group_info() {
     'label' => 'Bio',
     'weight' => '1',
     'children' => array(
-      0 => 'body',
-      1 => 'field_s_person_education',
-      2 => 'field_s_person_faculty_title',
+      0 => 'field_s_person_education',
+      1 => 'field_s_person_faculty_title',
+      2 => 'body',
+      3 => 'field_s_person_file',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -523,7 +524,8 @@ function stanford_person_field_group_info() {
       1 => 'field_s_person_faculty_title',
       2 => 'field_s_person_faculty_type',
       3 => 'field_s_person_student_type',
-      4 => 'title',
+      4 => 'field_s_person_file',
+      5 => 'title',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -557,7 +559,8 @@ function stanford_person_field_group_info() {
       0 => 'field_s_person_education',
       1 => 'field_s_person_faculty_title',
       2 => 'field_s_person_faculty_type',
-      3 => 'title',
+      3 => 'field_s_person_file',
+      4 => 'title',
     ),
     'format_type' => 'div',
     'format_settings' => array(

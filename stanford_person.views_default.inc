@@ -485,41 +485,6 @@ function stanford_person_views_default_views() {
   $handler->display->display_options['menu']['weight'] = '';
   $handler->display->display_options['menu']['name'] = 'menu-manage-content-by-type';
   $handler->display->display_options['menu']['context'] = 0;
-  $translatables['stanford_person_manage'] = array(
-    t('Master'),
-    t('Manage Person'),
-    t('more'),
-    t('Filter'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Row'),
-    t('Content'),
-    t('Profile Picture'),
-    t('Display Name'),
-    t('Published'),
-    t('Updated date'),
-    t('Last Name'),
-    t('Type'),
-    t('Faculty Status'),
-    t('Student Type'),
-    t('Staff Type'),
-    t('Sorting Weight'),
-    t('Node ID'),
-    t('Actions'),
-    t('Link'),
-    t('Delete link'),
-    t('Person Type'),
-    t('Page'),
-  );
   $export['stanford_person_manage'] = $view;
 
   return $export;

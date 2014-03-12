@@ -14,7 +14,7 @@ function stanford_person_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_stanford_person';
-  $strongarm->value = 'edit-menu';
+  $strongarm->value = 'edit-display';
   $export['additional_settings__active_tab_stanford_person'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -190,7 +190,7 @@ function stanford_person_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_stanford_person';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['node_submitted_stanford_person'] = $strongarm;
 
   $strongarm = new stdClass();
