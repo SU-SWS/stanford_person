@@ -298,6 +298,334 @@ function stanford_person_views_views_default_views() {
   $export['stanford_person_faculty'] = $view;
 
   $view = new view();
+  $view->name = 'stanford_person_faculty_with_program';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Stanford Person: Faculty with Program';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Faculty';
+  $handler->display->display_options['css_class'] = 'views-row-lines view-stanford-person';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['distinct'] = TRUE;
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Go';
+  $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_s_person_faculty_type',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  /* Relationship: Content: Taxonomy terms on node */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['label'] = 'Faculty Type term';
+  $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
+    'stanford_faculty_type' => 'stanford_faculty_type',
+    's_destination' => 0,
+    'news_categories' => 0,
+    'publication_type' => 0,
+    'stanford_slide_category' => 0,
+    'stanford_event_audience' => 0,
+    'stanford_event_categories' => 0,
+    'stanford_field_of_study' => 0,
+    'stanford_interests' => 0,
+    'stanford_student_type' => 0,
+    'tags' => 0,
+  );
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Field: Content: Profile Picture */
+  $handler->display->display_options['fields']['field_s_person_profile_picture']['id'] = 'field_s_person_profile_picture';
+  $handler->display->display_options['fields']['field_s_person_profile_picture']['table'] = 'field_data_field_s_person_profile_picture';
+  $handler->display->display_options['fields']['field_s_person_profile_picture']['field'] = 'field_s_person_profile_picture';
+  $handler->display->display_options['fields']['field_s_person_profile_picture']['label'] = '';
+  $handler->display->display_options['fields']['field_s_person_profile_picture']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_profile_picture']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_person_profile_picture']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_s_person_profile_picture']['settings'] = array(
+    'image_style' => 'sm-square',
+    'image_link' => 'content',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: Title and Department */
+  $handler->display->display_options['fields']['field_s_person_faculty_title']['id'] = 'field_s_person_faculty_title';
+  $handler->display->display_options['fields']['field_s_person_faculty_title']['table'] = 'field_data_field_s_person_faculty_title';
+  $handler->display->display_options['fields']['field_s_person_faculty_title']['field'] = 'field_s_person_faculty_title';
+  $handler->display->display_options['fields']['field_s_person_faculty_title']['label'] = '';
+  $handler->display->display_options['fields']['field_s_person_faculty_title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_person_faculty_title']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_s_person_faculty_title']['delta_offset'] = '1';
+  /* Field: Content: Faculty Status */
+  $handler->display->display_options['fields']['field_s_person_faculty_type']['id'] = 'field_s_person_faculty_type';
+  $handler->display->display_options['fields']['field_s_person_faculty_type']['table'] = 'field_data_field_s_person_faculty_type';
+  $handler->display->display_options['fields']['field_s_person_faculty_type']['field'] = 'field_s_person_faculty_type';
+  $handler->display->display_options['fields']['field_s_person_faculty_type']['label'] = '';
+  $handler->display->display_options['fields']['field_s_person_faculty_type']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_faculty_type']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_person_faculty_type']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['field_s_person_faculty_type']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_s_person_faculty_type']['type'] = 'taxonomy_term_reference_plain';
+  /* Field: Content: Office */
+  $handler->display->display_options['fields']['field_s_person_office_location']['id'] = 'field_s_person_office_location';
+  $handler->display->display_options['fields']['field_s_person_office_location']['table'] = 'field_data_field_s_person_office_location';
+  $handler->display->display_options['fields']['field_s_person_office_location']['field'] = 'field_s_person_office_location';
+  $handler->display->display_options['fields']['field_s_person_office_location']['label'] = '';
+  $handler->display->display_options['fields']['field_s_person_office_location']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_office_location']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_office_location']['alter']['text'] = '<div><span class="descriptor">Office: </span>[field_s_person_office_location] </div>';
+  $handler->display->display_options['fields']['field_s_person_office_location']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_person_office_location']['group_column'] = '';
+  /* Field: Content: Office Hours */
+  $handler->display->display_options['fields']['field_s_person_office_hours']['id'] = 'field_s_person_office_hours';
+  $handler->display->display_options['fields']['field_s_person_office_hours']['table'] = 'field_data_field_s_person_office_hours';
+  $handler->display->display_options['fields']['field_s_person_office_hours']['field'] = 'field_s_person_office_hours';
+  $handler->display->display_options['fields']['field_s_person_office_hours']['label'] = '';
+  $handler->display->display_options['fields']['field_s_person_office_hours']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_office_hours']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_office_hours']['alter']['text'] = '<div><span class="descriptor">Office Hours: </span>[field_s_person_office_hours] </div>';
+  $handler->display->display_options['fields']['field_s_person_office_hours']['element_label_colon'] = FALSE;
+  /* Field: Content: Phone */
+  $handler->display->display_options['fields']['field_s_person_phone_display']['id'] = 'field_s_person_phone_display';
+  $handler->display->display_options['fields']['field_s_person_phone_display']['table'] = 'field_data_field_s_person_phone_display';
+  $handler->display->display_options['fields']['field_s_person_phone_display']['field'] = 'field_s_person_phone_display';
+  $handler->display->display_options['fields']['field_s_person_phone_display']['label'] = 'Office Phone';
+  $handler->display->display_options['fields']['field_s_person_phone_display']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_phone_display']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_phone_display']['alter']['text'] = '<div><span class="descriptor">Phone: </span>[field_s_person_phone_display]</div>';
+  /* Field: Content: Fields of Interest */
+  $handler->display->display_options['fields']['field_s_person_interests']['id'] = 'field_s_person_interests';
+  $handler->display->display_options['fields']['field_s_person_interests']['table'] = 'field_data_field_s_person_interests';
+  $handler->display->display_options['fields']['field_s_person_interests']['field'] = 'field_s_person_interests';
+  $handler->display->display_options['fields']['field_s_person_interests']['label'] = '';
+  $handler->display->display_options['fields']['field_s_person_interests']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_interests']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_person_interests']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_s_person_interests']['separator'] = ' ';
+  /* Field: Content: Associated Program */
+  $handler->display->display_options['fields']['field_s_person_program']['id'] = 'field_s_person_program';
+  $handler->display->display_options['fields']['field_s_person_program']['table'] = 'field_data_field_s_person_program';
+  $handler->display->display_options['fields']['field_s_person_program']['field'] = 'field_s_person_program';
+  $handler->display->display_options['fields']['field_s_person_program']['label'] = '';
+  $handler->display->display_options['fields']['field_s_person_program']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_program']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_person_program']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_s_person_program']['delta_offset'] = '0';
+  /* Field: Content: Email */
+  $handler->display->display_options['fields']['field_s_person_email']['id'] = 'field_s_person_email';
+  $handler->display->display_options['fields']['field_s_person_email']['table'] = 'field_data_field_s_person_email';
+  $handler->display->display_options['fields']['field_s_person_email']['field'] = 'field_s_person_email';
+  $handler->display->display_options['fields']['field_s_person_email']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['text'] = '<div><span class="descriptor">Email: </span>[field_s_person_email]</div>';
+  /* Field: Content: Edit link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['label'] = '';
+  $handler->display->display_options['fields']['edit_node']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['edit_node']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['edit_node']['alter']['text'] = '<div class="edit-link">Edit</div>';
+  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['edit_node']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['edit_node']['element_wrapper_class'] = 'edit-link';
+  $handler->display->display_options['fields']['edit_node']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['edit_node']['text'] = 'Edit';
+  /* Field: Global: View Rewrite */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Global: View Rewrite';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="postcard-left">
+<div class="postcard-col1">
+  <div> [field_s_person_profile_picture]</div>
+</div>
+
+<div class="postcard-col2">
+  <h3>[title]</h3>
+ <div class="faculty-type"> [field_s_person_faculty_title] </div>
+ <div class="faculty-type">[field_s_person_program]</div>
+  [field_s_person_office_location]
+  [field_s_person_office_hours]
+  [field_s_person_phone_display]
+  [field_s_person_email]
+ 
+  <span class="edit-link">[edit_node]</span>
+</div>
+
+<div class="postcard-col3">
+  <div class="descriptor descriptor-btn">[field_s_person_interests]</div>
+</div>
+
+</div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Sort criterion: Taxonomy term: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['relationship'] = 'term_node_tid';
+  /* Sort criterion: Content: Sorting Weight (field_s_person_weight) */
+  $handler->display->display_options['sorts']['field_s_person_weight_value']['id'] = 'field_s_person_weight_value';
+  $handler->display->display_options['sorts']['field_s_person_weight_value']['table'] = 'field_data_field_s_person_weight';
+  $handler->display->display_options['sorts']['field_s_person_weight_value']['field'] = 'field_s_person_weight_value';
+  /* Sort criterion: Content: Last Name (field_s_person_last_name) */
+  $handler->display->display_options['sorts']['field_s_person_last_name_value']['id'] = 'field_s_person_last_name_value';
+  $handler->display->display_options['sorts']['field_s_person_last_name_value']['table'] = 'field_data_field_s_person_last_name';
+  $handler->display->display_options['sorts']['field_s_person_last_name_value']['field'] = 'field_s_person_last_name_value';
+  /* Sort criterion: Content: First name (field_s_person_first_name) */
+  $handler->display->display_options['sorts']['field_s_person_first_name_value']['id'] = 'field_s_person_first_name_value';
+  $handler->display->display_options['sorts']['field_s_person_first_name_value']['table'] = 'field_data_field_s_person_first_name';
+  $handler->display->display_options['sorts']['field_s_person_first_name_value']['field'] = 'field_s_person_first_name_value';
+  /* Contextual filter: Content: Has taxonomy term ID (with depth) */
+  $handler->display->display_options['arguments']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['table'] = 'node';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['default_argument_type'] = 'php';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['default_argument_skip_url'] = TRUE;
+  $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['term_node_tid_depth']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['validate_options']['vocabularies'] = array(
+    'stanford_faculty_type' => 'stanford_faculty_type',
+  );
+  $handler->display->display_options['arguments']['term_node_tid_depth']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['validate_options']['transform'] = TRUE;
+  $handler->display->display_options['arguments']['term_node_tid_depth']['depth'] = '0';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'stanford_person' => 'stanford_person',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Title */
+  $handler->display->display_options['filters']['title']['id'] = 'title';
+  $handler->display->display_options['filters']['title']['table'] = 'node';
+  $handler->display->display_options['filters']['title']['field'] = 'title';
+  $handler->display->display_options['filters']['title']['operator'] = 'contains';
+  $handler->display->display_options['filters']['title']['group'] = 1;
+  $handler->display->display_options['filters']['title']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
+  $handler->display->display_options['filters']['title']['expose']['label'] = 'Search faculty by name';
+  $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
+  $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
+  /* Filter criterion: Content: Faculty Status (field_s_person_faculty_type) */
+  $handler->display->display_options['filters']['field_s_person_faculty_type_tid']['id'] = 'field_s_person_faculty_type_tid';
+  $handler->display->display_options['filters']['field_s_person_faculty_type_tid']['table'] = 'field_data_field_s_person_faculty_type';
+  $handler->display->display_options['filters']['field_s_person_faculty_type_tid']['field'] = 'field_s_person_faculty_type_tid';
+  $handler->display->display_options['filters']['field_s_person_faculty_type_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_s_person_faculty_type_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_s_person_faculty_type_tid']['expose']['operator_id'] = 'field_s_person_faculty_type_tid_op';
+  $handler->display->display_options['filters']['field_s_person_faculty_type_tid']['expose']['label'] = 'Filter by faculty status';
+  $handler->display->display_options['filters']['field_s_person_faculty_type_tid']['expose']['operator'] = 'field_s_person_faculty_type_tid_op';
+  $handler->display->display_options['filters']['field_s_person_faculty_type_tid']['expose']['identifier'] = 'field_s_person_faculty_type_tid';
+  $handler->display->display_options['filters']['field_s_person_faculty_type_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_s_person_faculty_type_tid']['vocabulary'] = 'stanford_faculty_type';
+  /* Filter criterion: Content: Fields of Interest (field_s_person_interests) */
+  $handler->display->display_options['filters']['field_s_person_interests_tid_1']['id'] = 'field_s_person_interests_tid_1';
+  $handler->display->display_options['filters']['field_s_person_interests_tid_1']['table'] = 'field_data_field_s_person_interests';
+  $handler->display->display_options['filters']['field_s_person_interests_tid_1']['field'] = 'field_s_person_interests_tid';
+  $handler->display->display_options['filters']['field_s_person_interests_tid_1']['group'] = 1;
+  $handler->display->display_options['filters']['field_s_person_interests_tid_1']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_s_person_interests_tid_1']['expose']['operator_id'] = 'field_s_person_interests_tid_1_op';
+  $handler->display->display_options['filters']['field_s_person_interests_tid_1']['expose']['label'] = 'View by field of interest';
+  $handler->display->display_options['filters']['field_s_person_interests_tid_1']['expose']['operator'] = 'field_s_person_interests_tid_1_op';
+  $handler->display->display_options['filters']['field_s_person_interests_tid_1']['expose']['identifier'] = 'field_s_person_interests_tid_1';
+  $handler->display->display_options['filters']['field_s_person_interests_tid_1']['type'] = 'select';
+  $handler->display->display_options['filters']['field_s_person_interests_tid_1']['vocabulary'] = 'stanford_interests';
+  $handler->display->display_options['filters']['field_s_person_interests_tid_1']['hierarchy'] = 1;
+  /* Filter criterion: Content: Type (field_s_person_type) */
+  $handler->display->display_options['filters']['field_s_person_type_value']['id'] = 'field_s_person_type_value';
+  $handler->display->display_options['filters']['field_s_person_type_value']['table'] = 'field_data_field_s_person_type';
+  $handler->display->display_options['filters']['field_s_person_type_value']['field'] = 'field_s_person_type_value';
+  $handler->display->display_options['filters']['field_s_person_type_value']['value'] = array(
+    'faculty' => 'faculty',
+  );
+  $handler->display->display_options['filters']['field_s_person_type_value']['group'] = 1;
+  /* Filter criterion: Content: Associated Program (field_s_person_program) */
+  $handler->display->display_options['filters']['field_s_person_program_tid']['id'] = 'field_s_person_program_tid';
+  $handler->display->display_options['filters']['field_s_person_program_tid']['table'] = 'field_data_field_s_person_program';
+  $handler->display->display_options['filters']['field_s_person_program_tid']['field'] = 'field_s_person_program_tid';
+  $handler->display->display_options['filters']['field_s_person_program_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_s_person_program_tid']['expose']['operator_id'] = 'field_s_person_program_tid_op';
+  $handler->display->display_options['filters']['field_s_person_program_tid']['expose']['label'] = 'View by program';
+  $handler->display->display_options['filters']['field_s_person_program_tid']['expose']['operator'] = 'field_s_person_program_tid_op';
+  $handler->display->display_options['filters']['field_s_person_program_tid']['expose']['identifier'] = 'field_s_person_program_tid';
+  $handler->display->display_options['filters']['field_s_person_program_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    6 => 0,
+    5 => 0,
+    4 => 0,
+    3 => 0,
+    9 => 0,
+    7 => 0,
+    8 => 0,
+  );
+  $handler->display->display_options['filters']['field_s_person_program_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_s_person_program_tid']['vocabulary'] = 'stanford_program_type';
+  $handler->display->display_options['filters']['field_s_person_program_tid']['hierarchy'] = 1;
+
+  /* Display: Faculty Page */
+  $handler = $view->new_display('page', 'Faculty Page', 'page');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['path'] = 'people/faculty';
+  $handler->display->display_options['menu']['title'] = 'Faculty';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'main-menu';
+  $handler->display->display_options['menu']['context'] = 0;
+
+  /* Display: Faculty Block - ajax */
+  $handler = $view->new_display('block', 'Faculty Block - ajax', 'block_faculty_ajax');
+  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+  $handler->display->display_options['use_ajax'] = TRUE;
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+
+  /* Display: Faculty Block */
+  $handler = $view->new_display('block', 'Faculty Block', 'block_faculty');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $export['stanford_person_faculty_with_program'] = $view;
+
+  $view = new view();
   $view->name = 'stanford_person_people';
   $view->description = '';
   $view->tag = 'default';
