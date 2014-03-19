@@ -212,6 +212,7 @@ function stanford_person_field_group_info() {
       1 => 'field_s_person_faculty_title',
       2 => 'body',
       3 => 'field_s_person_file',
+      4 => 'field_s_person_program',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
