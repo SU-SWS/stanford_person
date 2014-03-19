@@ -71,7 +71,7 @@ function stanford_person_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 7,
+      'weight' => 60,
     ),
   );
 
@@ -277,7 +277,7 @@ function stanford_person_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 9,
+      'weight' => 62,
     ),
   );
 
@@ -429,7 +429,7 @@ function stanford_person_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 8,
+      'weight' => 61,
     ),
   );
 
@@ -643,7 +643,7 @@ function stanford_person_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 10,
+      'weight' => 63,
     ),
   );
 
@@ -1474,6 +1474,55 @@ function stanford_person_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-stanford_person-field_s_person_program'
+  $field_instances['node-stanford_person-field_s_person_program'] = array(
+    'bundle' => 'stanford_person',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Select the program(s) with which this person is associated.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 29,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'taxonomy' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_s_person_program',
+    'label' => 'Associated Program',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 58,
+    ),
+  );
+
   // Exported field_instance: 'node-stanford_person-field_s_person_staff_type'
   $field_instances['node-stanford_person-field_s_person_staff_type'] = array(
     'bundle' => 'stanford_person',
@@ -1747,6 +1796,7 @@ function stanford_person_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Associated Program');
   t('Cohort');
   t('Cohort typically applies to graduate students. If applicable, select the year this person started studies at Stanford; if not applicable, select "-Year."');
   t('Degrees / Education');
@@ -1774,6 +1824,7 @@ function stanford_person_field_default_field_instances() {
   t('Profile / Bio');
   t('Profile Picture');
   t('Select each field of interest.');
+  t('Select the program(s) with which this person is associated.');
   t('Select the year this person graduates.');
   t('Sorting Weight');
   t('Staff Type');

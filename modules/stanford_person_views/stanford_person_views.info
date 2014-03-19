@@ -22,6 +22,7 @@ features[ctools][] = context:context:3
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features[views_view][] = stanford_person_faculty
+features[views_view][] = stanford_person_faculty_with_program
 features[views_view][] = stanford_person_people
 features[views_view][] = stanford_person_staff
 features[views_view][] = stanford_person_student
