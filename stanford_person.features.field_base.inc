@@ -745,7 +745,6 @@ function stanford_person_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         'faculty' => 'Faculty',
-        'postdoc' => 'Postdoc',
         'student' => 'Student',
         'staff' => 'Staff',
       ),
