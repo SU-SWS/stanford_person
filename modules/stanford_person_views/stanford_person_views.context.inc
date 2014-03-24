@@ -60,11 +60,11 @@ function stanford_person_views_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-4a54a1e216ed5b6c5804d9d75ae09910' => array(
+        'views-b38da907588eed2d09c10bdb381e5aaf' => array(
           'module' => 'views',
-          'delta' => '4a54a1e216ed5b6c5804d9d75ae09910',
+          'delta' => 'b38da907588eed2d09c10bdb381e5aaf',
           'region' => 'sidebar_first',
-          'weight' => '-10',
+          'weight' => '0',
         ),
       ),
     ),

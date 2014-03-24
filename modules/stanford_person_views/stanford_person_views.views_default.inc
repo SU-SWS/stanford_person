@@ -300,7 +300,7 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['filters']['field_s_person_program_tid']['field'] = 'field_s_person_program_tid';
   $handler->display->display_options['filters']['field_s_person_program_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_s_person_program_tid']['expose']['operator_id'] = 'field_s_person_program_tid_op';
-  $handler->display->display_options['filters']['field_s_person_program_tid']['expose']['label'] = 'Filter by Program';
+  $handler->display->display_options['filters']['field_s_person_program_tid']['expose']['label'] = 'Filter by program';
   $handler->display->display_options['filters']['field_s_person_program_tid']['expose']['operator'] = 'field_s_person_program_tid_op';
   $handler->display->display_options['filters']['field_s_person_program_tid']['expose']['identifier'] = 'field_s_person_program_tid';
   $handler->display->display_options['filters']['field_s_person_program_tid']['expose']['remember_roles'] = array(
