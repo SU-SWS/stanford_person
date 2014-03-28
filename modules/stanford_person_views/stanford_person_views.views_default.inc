@@ -858,6 +858,11 @@ function stanford_person_views_views_default_views() {
       'rendered' => 1,
       'rendered_strip' => 0,
     ),
+    1 => array(
+      'field' => 'field_s_person_cohort_1',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
   );
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
@@ -890,16 +895,6 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_program']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_person_program']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_s_person_program']['delta_offset'] = '0';
-  /* Field: Content: Dissertation Title */
-  $handler->display->display_options['fields']['field_s_person_dissertatn_title']['id'] = 'field_s_person_dissertatn_title';
-  $handler->display->display_options['fields']['field_s_person_dissertatn_title']['table'] = 'field_data_field_s_person_dissertatn_title';
-  $handler->display->display_options['fields']['field_s_person_dissertatn_title']['field'] = 'field_s_person_dissertatn_title';
-  $handler->display->display_options['fields']['field_s_person_dissertatn_title']['label'] = 'Dissertation';
-  $handler->display->display_options['fields']['field_s_person_dissertatn_title']['element_label_type'] = 'span';
-  $handler->display->display_options['fields']['field_s_person_dissertatn_title']['element_label_class'] = 'descriptor ';
-  $handler->display->display_options['fields']['field_s_person_dissertatn_title']['element_wrapper_type'] = 'div';
-  $handler->display->display_options['fields']['field_s_person_dissertatn_title']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_s_person_dissertatn_title']['hide_empty'] = TRUE;
   /* Field: Content: Field of Study */
   $handler->display->display_options['fields']['field_s_person_study']['id'] = 'field_s_person_study';
   $handler->display->display_options['fields']['field_s_person_study']['table'] = 'field_data_field_s_person_study';
@@ -946,6 +941,21 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['fields']['edit_node']['element_wrapper_class'] = 'edit-link';
   $handler->display->display_options['fields']['edit_node']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['edit_node']['text'] = 'Edit';
+  /* Field: Content: Group by Cohort */
+  $handler->display->display_options['fields']['field_s_person_cohort_1']['id'] = 'field_s_person_cohort_1';
+  $handler->display->display_options['fields']['field_s_person_cohort_1']['table'] = 'field_data_field_s_person_cohort';
+  $handler->display->display_options['fields']['field_s_person_cohort_1']['field'] = 'field_s_person_cohort';
+  $handler->display->display_options['fields']['field_s_person_cohort_1']['ui_name'] = 'Content: Group by Cohort';
+  $handler->display->display_options['fields']['field_s_person_cohort_1']['label'] = '';
+  $handler->display->display_options['fields']['field_s_person_cohort_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_cohort_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_person_cohort_1']['settings'] = array(
+    'format_type' => 'long',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
   /* Sort criterion: Taxonomy term: Weight */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
