@@ -141,6 +141,7 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_interests']['label'] = '';
   $handler->display->display_options['fields']['field_s_person_interests']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_person_interests']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_person_interests']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_s_person_interests']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_s_person_interests']['separator'] = ' ';
   /* Field: Content: Associated Program */
