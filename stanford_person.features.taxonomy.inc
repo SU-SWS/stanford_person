@@ -10,10 +10,10 @@
 function stanford_person_taxonomy_default_vocabularies() {
   return array(
     'stanford_faculty_type' => array(
-      'name' => 'Faculty Type',
+      'name' => 'Art - Faculty Type',
       'machine_name' => 'stanford_faculty_type',
       'description' => '',
-      'hierarchy' => 1,
+      'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
       'rdf_mapping' => array(
@@ -56,10 +56,10 @@ function stanford_person_taxonomy_default_vocabularies() {
       ),
     ),
     'stanford_interests' => array(
-      'name' => 'Research Interests',
+      'name' => 'Art - Research Interests',
       'machine_name' => 'stanford_interests',
       'description' => '',
-      'hierarchy' => 1,
+      'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
       'rdf_mapping' => array(
@@ -102,7 +102,7 @@ function stanford_person_taxonomy_default_vocabularies() {
       ),
     ),
     'stanford_student_type' => array(
-      'name' => 'Student Type',
+      'name' => 'Art - Student Type',
       'machine_name' => 'stanford_student_type',
       'description' => '',
       'hierarchy' => 0,
