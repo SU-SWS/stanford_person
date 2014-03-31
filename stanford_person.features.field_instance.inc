@@ -240,7 +240,7 @@ function stanford_person_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -566,7 +566,7 @@ function stanford_person_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -1489,10 +1489,11 @@ function stanford_person_field_default_field_instances() {
         'weight' => 29,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 3,
       ),
       'taxonomy' => array(
         'label' => 'above',
