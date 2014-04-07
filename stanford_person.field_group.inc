@@ -44,6 +44,37 @@ function stanford_person_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_programs_list_wrapper|node|stanford_person|full';
+  $field_group->group_name = 'group_programs_list_wrapper';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_s_postcard_col2';
+  $field_group->data = array(
+    'label' => 'Program List Wrapper',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_s_person_program',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Program List Wrapper',
+      'instance_settings' => array(
+        'classes' => 'program-list',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_programs_list_wrapper|node|stanford_person|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_s_image_border_style|node|stanford_person|full';
   $field_group->group_name = 'group_s_image_border_style';
   $field_group->entity_type = 'node';
@@ -401,7 +432,7 @@ function stanford_person_field_group_info() {
     'format_settings' => array(
       'label' => 'Interests Style',
       'instance_settings' => array(
-        'classes' => 'descriptor descriptor-btn',
+        'classes' => 'descriptor descriptor-btn category-pill',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
@@ -561,8 +592,8 @@ function stanford_person_field_group_info() {
       1 => 'field_s_person_faculty_title',
       2 => 'field_s_person_faculty_type',
       3 => 'field_s_person_file',
-      4 => 'field_s_person_program',
-      5 => 'title',
+      4 => 'title',
+      5 => 'group_programs_list_wrapper',
     ),
     'format_type' => 'div',
     'format_settings' => array(
