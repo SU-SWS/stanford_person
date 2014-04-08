@@ -35,7 +35,7 @@ function stanford_person_reference_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_s_person_link',
-    'label' => 'Author link',
+    'label' => 'Creator link',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -49,13 +49,13 @@ function stanford_person_reference_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Author link');
+  t('Creator link');
   t('This displays the people associated with profiles website. Begin typing a name and it will autocomplete.');
 
   return $field_instances;
