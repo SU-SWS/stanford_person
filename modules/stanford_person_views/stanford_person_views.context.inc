@@ -19,17 +19,24 @@ function stanford_person_views_context_default_contexts() {
   $context->conditions = array(
     'path' => array(
       'values' => array(
-        'people/*' => 'people/*',
+        'people/faculty/*' => 'people/faculty/*',
+        'people/faculty' => 'people/faculty',
+        'people/staff/*' => 'people/staff/*',
+        'people/staff' => 'people/staff',
+        'people/student/*' => 'people/student/*',
+        'people/student' => 'people/student',
+        'people/students/*' => 'people/students/*',
+        'people/students' => 'people/students',
       ),
     ),
   );
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-8116868180a8a203a7d1a990228283dc' => array(
-          'module' => 'views',
-          'delta' => '8116868180a8a203a7d1a990228283dc',
-          'region' => 'content_bottom',
+        'menu_block-stanford_jsa_layouts-1' => array(
+          'module' => 'menu_block',
+          'delta' => 'stanford_jsa_layouts-1',
+          'region' => 'sidebar_first',
           'weight' => '-10',
         ),
       ),

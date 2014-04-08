@@ -10,6 +10,7 @@ dependencies[] = features
 dependencies[] = image
 dependencies[] = link
 dependencies[] = list
+dependencies[] = menu_block
 dependencies[] = options
 dependencies[] = stanford_person
 dependencies[] = strongarm

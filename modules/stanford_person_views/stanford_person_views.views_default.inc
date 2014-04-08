@@ -140,6 +140,8 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_interests']['field'] = 'field_s_person_interests';
   $handler->display->display_options['fields']['field_s_person_interests']['label'] = '';
   $handler->display->display_options['fields']['field_s_person_interests']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_interests']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_interests']['alter']['text'] = '<div class="category-pill">[field_s_person_interests]</div>';
   $handler->display->display_options['fields']['field_s_person_interests']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_person_interests']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_s_person_interests']['delta_offset'] = '0';
@@ -150,6 +152,7 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_program']['field'] = 'field_s_person_program';
   $handler->display->display_options['fields']['field_s_person_program']['label'] = '';
   $handler->display->display_options['fields']['field_s_person_program']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_program']['alter']['text'] = '<div class="program-list">[field_s_person_program]</div>';
   $handler->display->display_options['fields']['field_s_person_program']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_person_program']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_s_person_program']['delta_offset'] = '0';
@@ -187,7 +190,7 @@ function stanford_person_views_views_default_views() {
 <div class="postcard-col2">
   <h3>[title]</h3>
   <div class="faculty-type"> [field_s_person_faculty_title] </div>
-  <div class="faculty-type">[field_s_person_program]</div>
+  <div class="program-list">[field_s_person_program]</div>
   [field_s_person_office_location]
   [field_s_person_office_hours]
   [field_s_person_phone_display]
@@ -197,7 +200,7 @@ function stanford_person_views_views_default_views() {
 </div>
 
 <div class="postcard-col3">
-  <div class="descriptor descriptor-btn">[field_s_person_interests]</div>
+  <div>[field_s_person_interests]</div>
 </div>
 
 </div>';
@@ -669,8 +672,8 @@ function stanford_person_views_views_default_views() {
 
 <div class="postcard-col2">
 <h3>[title] </h3>
-<div class="title-dept"> [field_s_person_faculty_title]</div>
-[field_s_person_program]
+<div class="faculty-type"> [field_s_person_faculty_title]</div>
+<div class="program-list">[field_s_person_program]</div>
 [field_s_person_office_location]
 [field_s_person_office_hours]
 [field_s_person_phone_display]
@@ -893,9 +896,19 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_program']['table'] = 'field_data_field_s_person_program';
   $handler->display->display_options['fields']['field_s_person_program']['field'] = 'field_s_person_program';
   $handler->display->display_options['fields']['field_s_person_program']['label'] = '';
+  $handler->display->display_options['fields']['field_s_person_program']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_program']['alter']['text'] = '<div class="program-list">[field_s_person_program]</div>';
   $handler->display->display_options['fields']['field_s_person_program']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_person_program']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_s_person_program']['delta_offset'] = '0';
+  /* Field: Global: Rewrite program field */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Global: Rewrite program field';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="program-list">[field_s_person_program]</div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Field: Content: Field of Study */
   $handler->display->display_options['fields']['field_s_person_study']['id'] = 'field_s_person_study';
   $handler->display->display_options['fields']['field_s_person_study']['table'] = 'field_data_field_s_person_study';
