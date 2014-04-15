@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Stanford Person Work Info feature.
- */
-
-include_once 'stanford_person_work_info.features.inc';
