@@ -1,0 +1,8 @@
+name = Person Events & Exhibition Views
+description = Related Events and Exhibitions Views
+core = 7.x
+package = Stanford Art & Art History
+version = 7.x-1.0
+project = person_events_exhibition_views
+features[features_api][] = api:2
+project path = sites/default/modules/stanford/stanford_person/modules
