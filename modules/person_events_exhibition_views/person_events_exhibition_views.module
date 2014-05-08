@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the Person Events & Exhibition Views feature.
  */
+
+include_once 'person_events_exhibition_views.features.inc';
