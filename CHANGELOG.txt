@@ -1,6 +1,11 @@
 Stanford Person x.x-x.x xxxx-xx-xx
 --------------------------------------
 
+Stanford Person 7.x-4.0-alpha2 2014-05-16
+---------------------------------------------
+- Delete obsolete work info module
+- Added file to person CT and display
+
 Stanford Person 7.x-4.0-alpha1 2014-03-11
 ---------------------------------------------
 - Jumpstart Installation Profile Compatible Version
