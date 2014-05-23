@@ -14,7 +14,7 @@ function stanford_person_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_stanford_person';
-  $strongarm->value = 'edit-display';
+  $strongarm->value = 'edit-workflow';
   $export['additional_settings__active_tab_stanford_person'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -176,6 +176,7 @@ function stanford_person_strongarm() {
   $strongarm->name = 'node_options_stanford_person';
   $strongarm->value = array(
     0 => 'status',
+    1 => 'revision',
   );
   $export['node_options_stanford_person'] = $strongarm;
 
