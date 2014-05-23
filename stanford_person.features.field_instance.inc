@@ -839,7 +839,8 @@ function stanford_person_field_default_field_instances() {
     'bundle' => 'stanford_person',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Select each field of interest.',
+    'description' => 'List of faculty interests including research interests. Select one or more areas of interest. 
+Contact your site administrator to add or change entries. ',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1584,7 +1585,7 @@ function stanford_person_field_default_field_instances() {
     'bundle' => 'stanford_person',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Free tagging for students to list areas of study including research. This free-tagging field provides a place for a student to declare areas of study and provides a stop-gap until the student has a dissertation title.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1620,11 +1621,12 @@ function stanford_person_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_s_person_study',
     'label' => 'Field of Study',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 0,
       'module' => 'taxonomy',
       'settings' => array(
         'autocomplete_path' => 'taxonomy/autocomplete',
@@ -1759,11 +1761,14 @@ function stanford_person_field_default_field_instances() {
   t('Fields of Interest');
   t('File');
   t('First name');
+  t('Free tagging for students to list areas of study including research. This free-tagging field provides a place for a student to declare areas of study and provides a stop-gap until the student has a dissertation title.');
   t('Graduation Year');
   t('If applicable, select the faculty status (e.g., "Professor").');
   t('If applicable, select the group to which this person belongs (e.g., "Graduate Students").');
   t('If applicable, select the staff type (e.g., "Department Administrator").');
   t('Last Name');
+  t('List of faculty interests including research interests. Select one or more areas of interest. 
+Contact your site administrator to add or change entries. ');
   t('Mail Code');
   t('Mailing Address');
   t('Middle name');
@@ -1773,7 +1778,6 @@ function stanford_person_field_default_field_instances() {
   t('Phone');
   t('Profile / Bio');
   t('Profile Picture');
-  t('Select each field of interest.');
   t('Select the year this person graduates.');
   t('Sorting Weight');
   t('Staff Type');

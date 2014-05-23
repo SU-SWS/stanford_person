@@ -33,9 +33,9 @@ function stanford_person_taxonomy_default_vocabularies() {
       ),
     ),
     'stanford_field_of_study' => array(
-      'name' => 'Field of Study',
+      'name' => 'Field of Study (for Students)',
       'machine_name' => 'stanford_field_of_study',
-      'description' => '',
+      'description' => 'List of areas of study for students including research',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
@@ -56,10 +56,10 @@ function stanford_person_taxonomy_default_vocabularies() {
       ),
     ),
     'stanford_interests' => array(
-      'name' => 'Research Interests',
+      'name' => 'Fields of Interest (for Faculty)',
       'machine_name' => 'stanford_interests',
-      'description' => '',
-      'hierarchy' => 1,
+      'description' => 'List of faculty interests including research interests. This is a list curated by site owners.',
+      'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,
       'rdf_mapping' => array(
