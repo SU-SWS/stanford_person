@@ -4,6 +4,7 @@ core = 7.x
 package = Stanford
 version = 7.x-4.0-alpha2
 project = stanford_person
+project status url = https://github.com/SU-SWS/stanford_person
 dependencies[] = auto_nodetitle
 dependencies[] = context
 dependencies[] = ctools
