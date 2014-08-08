@@ -10,10 +10,10 @@ The Stanford Person feature is used to create pages for real life people. In thi
 Sub Modules
 ---
 
-**[Stanford Person Reference]()**
+**[Stanford Person Reference]()**   
 This module provides the Stanford Person entity reference field. By default an instance of this field is created on Stanford Publications but it may be added to other content types.
 
-**[Stanford Person Views]()**
+**[Stanford Person Views]()**   
 This module provides a collection of views that work with the Stanford Person content type.
 
 * **Faculty Page**  
