@@ -401,6 +401,11 @@ function stanford_person_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_first_name']['label'] = '';
   $handler->display->display_options['fields']['field_s_person_first_name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_person_first_name']['element_label_colon'] = FALSE;
+  /* Sort criterion: Content: Updated date */
+  $handler->display->display_options['sorts']['changed']['id'] = 'changed';
+  $handler->display->display_options['sorts']['changed']['table'] = 'node';
+  $handler->display->display_options['sorts']['changed']['field'] = 'changed';
+  $handler->display->display_options['sorts']['changed']['order'] = 'DESC';
   /* Sort criterion: Content: Last Name (field_s_person_last_name) */
   $handler->display->display_options['sorts']['field_s_person_last_name_value']['id'] = 'field_s_person_last_name_value';
   $handler->display->display_options['sorts']['field_s_person_last_name_value']['table'] = 'field_data_field_s_person_last_name';
