@@ -1,6 +1,17 @@
 Stanford Person x.x-x.x xxxx-xx-xx
 --------------------------------------
 
+Stanford Person 7.x-4.0 2014-11-27
+---------------------------------------------
+- BASIC-752: removed duplicate div on edit link
+- BASIC-1034: Updated manage person view with sort by updated date
+- Update stanford_person.info to add project status url
+- Update and rename README.txt to README.md
+- Added new revision on edit
+- Added help text to field of interest and field of study
+- Added css file
+- Added dependency on Token
+
 Stanford Person 7.x-4.0-alpha2 2014-05-16
 ---------------------------------------------
 - Delete obsolete work info module
