@@ -75,6 +75,55 @@ function stanford_person_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-stanford_person-field_s_person_affiliation'
+  $field_instances['node-stanford_person-field_s_person_affiliation'] = array(
+    'bundle' => 'stanford_person',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Select the appropriate affiliation(s) for this person.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 28,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'taxonomy' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_s_person_affiliation',
+    'label' => 'Affiliation',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 0,
+    ),
+  );
+
   // Exported field_instance: 'node-stanford_person-field_s_person_cohort'
   $field_instances['node-stanford_person-field_s_person_cohort'] = array(
     'bundle' => 'stanford_person',
@@ -700,7 +749,7 @@ function stanford_person_field_default_field_instances() {
         'size' => 30,
       ),
       'type' => 'text_textfield',
-      'weight' => 18,
+      'weight' => -4,
     ),
   );
 
@@ -945,7 +994,7 @@ Contact your site administrator to add or change entries. ',
         'size' => 30,
       ),
       'type' => 'text_textfield',
-      'weight' => 20,
+      'weight' => -2,
     ),
   );
 
@@ -1142,7 +1191,7 @@ Contact your site administrator to add or change entries. ',
         'size' => 20,
       ),
       'type' => 'text_textfield',
-      'weight' => 19,
+      'weight' => -3,
     ),
   );
 
@@ -1471,7 +1520,7 @@ Contact your site administrator to add or change entries. ',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 22,
+      'weight' => -1,
     ),
   );
 
@@ -1687,7 +1736,7 @@ Contact your site administrator to add or change entries. ',
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 35,
+      'weight' => 1,
     ),
   );
 
@@ -1749,6 +1798,7 @@ Contact your site administrator to add or change entries. ',
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Affiliation');
   t('Cohort');
   t('Cohort typically applies to graduate students. If applicable, select the year this person started studies at Stanford; if not applicable, select "-Year."');
   t('Degrees / Education');
@@ -1778,6 +1828,7 @@ Contact your site administrator to add or change entries. ');
   t('Phone');
   t('Profile / Bio');
   t('Profile Picture');
+  t('Select the appropriate affiliation(s) for this person.');
   t('Select the year this person graduates.');
   t('Sorting Weight');
   t('Staff Type');
