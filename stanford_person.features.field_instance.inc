@@ -1686,60 +1686,6 @@ Contact your site administrator to add or change entries. ',
     ),
   );
 
-  // Exported field_instance: 'node-stanford_person-field_s_person_type'
-  $field_instances['node-stanford_person-field_s_person_type'] = array(
-    'bundle' => 'stanford_person',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'This identifies the type of person. ',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 20,
-      ),
-      'stanford_taxonomy' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
-      ),
-      'taxonomy' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_s_person_type',
-    'label' => 'Type',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 1,
-    ),
-  );
-
   // Exported field_instance: 'node-stanford_person-field_s_person_weight'
   $field_instances['node-stanford_person-field_s_person_weight'] = array(
     'bundle' => 'stanford_person',
@@ -1834,7 +1780,6 @@ Contact your site administrator to add or change entries. ');
   t('Staff Type');
   t('Student Type');
   t('This email field displays the primary email address (e.g. "mysunetid@stanford.edu").');
-  t('This identifies the type of person. ');
   t('This integer field is used to control the sort order in views displays. Larger numbers are "heavier" and sink lower in the list.');
   t('This text area displays a biography or profile of the person. To enter a summary to be displayed when a shorter amount of text is needed, click on "Edit summary" above.');
   t('This text area displays the mailing address. Enter the address as you want it to appear. Hint: Use control+enter to enter a new line.');
@@ -1849,7 +1794,6 @@ Contact your site administrator to add or change entries. ');
   t('This text field is used for the middle name.');
   t('This text field provides a description of the person\'s office location (e.g. "Bldg. 460, rm 317," or "460-317").');
   t('Title and Department');
-  t('Type');
   t('Upload a file, such as a CV.');
   t('Upload an image of this person.');
 
