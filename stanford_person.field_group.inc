@@ -122,9 +122,10 @@ function stanford_person_field_group_info() {
     'format_settings' => array(
       'label' => 'About',
       'instance_settings' => array(
+        'id' => '',
         'classes' => '',
         'description' => '',
-        'show_label' => '1',
+        'show_label' => '0',
         'label_element' => 'h2',
         'effect' => 'none',
         'speed' => 'fast',
