@@ -349,10 +349,6 @@ function stanford_person_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_last_name']['id'] = 'field_s_person_last_name';
   $handler->display->display_options['fields']['field_s_person_last_name']['table'] = 'field_data_field_s_person_last_name';
   $handler->display->display_options['fields']['field_s_person_last_name']['field'] = 'field_s_person_last_name';
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['field_s_person_type']['id'] = 'field_s_person_type';
-  $handler->display->display_options['fields']['field_s_person_type']['table'] = 'field_data_field_s_person_type';
-  $handler->display->display_options['fields']['field_s_person_type']['field'] = 'field_s_person_type';
   /* Field: Content: Faculty Status */
   $handler->display->display_options['fields']['field_s_person_faculty_type']['id'] = 'field_s_person_faculty_type';
   $handler->display->display_options['fields']['field_s_person_faculty_type']['table'] = 'field_data_field_s_person_faculty_type';
@@ -444,16 +440,6 @@ function stanford_person_views_default_views() {
   $handler->display->display_options['filters']['status']['expose']['label'] = 'Published';
   $handler->display->display_options['filters']['status']['expose']['operator'] = 'status_op';
   $handler->display->display_options['filters']['status']['expose']['identifier'] = 'status';
-  /* Filter criterion: Broken/missing handler */
-  $handler->display->display_options['filters']['field_s_person_type_value']['id'] = 'field_s_person_type_value';
-  $handler->display->display_options['filters']['field_s_person_type_value']['table'] = 'field_data_field_s_person_type';
-  $handler->display->display_options['filters']['field_s_person_type_value']['field'] = 'field_s_person_type_value';
-  $handler->display->display_options['filters']['field_s_person_type_value']['group'] = 1;
-  $handler->display->display_options['filters']['field_s_person_type_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_s_person_type_value']['expose']['operator_id'] = 'field_s_person_type_value_op';
-  $handler->display->display_options['filters']['field_s_person_type_value']['expose']['label'] = 'Person Type';
-  $handler->display->display_options['filters']['field_s_person_type_value']['expose']['operator'] = 'field_s_person_type_value_op';
-  $handler->display->display_options['filters']['field_s_person_type_value']['expose']['identifier'] = 'field_s_person_type_value';
   /* Filter criterion: Content: Faculty Status (field_s_person_faculty_type) */
   $handler->display->display_options['filters']['field_s_person_faculty_type_tid']['id'] = 'field_s_person_faculty_type_tid';
   $handler->display->display_options['filters']['field_s_person_faculty_type_tid']['table'] = 'field_data_field_s_person_faculty_type';
