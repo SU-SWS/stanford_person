@@ -2,3 +2,13 @@
 	padding-right: 15px; 
 	min-width: 40%; 
 }
+@media (max-width: 480px) {
+	.view-stanford-person .postcard-left > div {
+		display: block;
+		width: 100%;
+		padding: 0 0 15px 0;
+	}
+	.view-stanford-person .postcard-left > div:first-child {
+		float: none;
+	}
+}
