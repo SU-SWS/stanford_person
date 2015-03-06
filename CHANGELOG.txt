@@ -1,6 +1,11 @@
 Stanford Person x.x-x.x xxxx-xx-xx
 --------------------------------------
 
+Stanford Person 7.x-4.1 2015-03-06
+----------------------------------
+By jbickar: Updated dependencies
+By meganem: Added responsive table styles to stanford_person.css
+
 Stanford Person 7.x-4.0 2014-11-27
 ---------------------------------------------
 - BASIC-752: removed duplicate div on edit link
