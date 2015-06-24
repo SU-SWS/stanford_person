@@ -2,36 +2,17 @@
 
 function run() {
 
-  // 4. Check the views in the feature for the field_s_person_type field and remove it.
-  // Views: stanford_person_manage, stanford_person_faculty, stanford_person_people, stanford_person_staff, stanford_person_student
+  include_once "stanford_person.features.field_base.inc";
+  include_once "stanford_person.features.field_instance.inc";
 
-  $list = array(
-    'stanford_person_manage',
-    'stanford_person_faculty',
-    'stanford_person_people',
-    'stanford_person_staff',
-    'stanford_person_student',
-  );
+  $bases = stanford_person_field_default_field_bases();
+  $instances = stanford_person_field_default_field_instances();
 
-  // Loop through all the included views in the feature and try to find the old
-  // field_s_person_type field and remove it from the view.
-  foreach ($list as $view_name) {
+  $field_base = $bases["field_s_person_affiliation"];
+  $field_instance = $instances["field_s_person_affiliation"];
 
-    $view = views_get_view($view_name);
-    if (!is_object($view)) {
-      continue;
-    }
-
-    foreach ($view->display as &$display) {
-      unset($display->display_options['style_options']['columns']['field_s_person_type']);
-      unset($display->display_options['sorts']['field_s_person_type']);
-      unset($display->display_options['arguments']['field_s_person_type']);
-      unset($display->display_options['fields']['field_s_person_type']);
-      unset($display->display_options['filters']['field_s_person_type']);
-    }
-
-    $view->save();
-  }
+  field_create_field($field_base);
+  field_create_instance($field_instance);
 
 }
 

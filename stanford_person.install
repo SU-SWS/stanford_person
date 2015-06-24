@@ -22,7 +22,23 @@ function stanford_person_update_7000(&$sandbox) {
   $new_field = field_info_field("field_s_person_affiliation");
 
   if (!$field) {
-    watchdog('go', 'message', array(), WATCHDOG_NOTICE, 'link');
+    watchdog('stanford_person', 'field_s_person_type was not found', array(), WATCHDOG_NOTICE);
+  }
+
+  // Gosh darnit! The field is not avilable. Get it!
+  if (!$new_field) {
+    $bases = stanford_person_field_default_field_bases();
+    $instances = stanford_person_field_default_field_instances();
+
+    $field_base = $bases["field_s_person_affiliation"];
+    $field_instance = $instances["field_s_person_affiliation"];
+
+    field_create_field($field_base);
+    field_create_instance($field_instance);
+
+    // Clear static caches and get new one.
+    drupal_static_reset();
+    $new_field = field_info_field("field_s_person_affiliation");
   }
 
   // 1. Check if vocabulary exists and create it if it does not.
