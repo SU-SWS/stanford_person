@@ -52,15 +52,8 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
     'stanford_faculty_type' => 'stanford_faculty_type',
     'stanford_affiliation' => 0,
-    'stanford_event_type' => 0,
     'stanford_field_of_study' => 0,
     'stanford_interests' => 0,
-    'news_categories' => 0,
-    'publication_type' => 0,
-    'stanford_slide_category' => 0,
-    'stanford_staff_type' => 0,
-    'stanford_event_audience' => 0,
-    'stanford_event_categories' => 0,
     'stanford_student_type' => 0,
     'tags' => 0,
   );
@@ -71,16 +64,10 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['relationships']['term_node_tid_1']['label'] = 'term-aff';
   $handler->display->display_options['relationships']['term_node_tid_1']['vocabularies'] = array(
     'stanford_affiliation' => 'stanford_affiliation',
-    'stanford_event_type' => 0,
     'stanford_faculty_type' => 0,
     'stanford_field_of_study' => 0,
     'stanford_interests' => 0,
-    'news_categories' => 0,
-    'publication_type' => 0,
-    'stanford_slide_category' => 0,
     'stanford_staff_type' => 0,
-    'stanford_event_audience' => 0,
-    'stanford_event_categories' => 0,
     'stanford_student_type' => 0,
     'tags' => 0,
   );
@@ -529,15 +516,9 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
     'stanford_staff_type' => 'stanford_staff_type',
     'stanford_affiliation' => 0,
-    'stanford_event_type' => 0,
     'stanford_faculty_type' => 0,
     'stanford_field_of_study' => 0,
     'stanford_interests' => 0,
-    'news_categories' => 0,
-    'publication_type' => 0,
-    'stanford_slide_category' => 0,
-    'stanford_event_audience' => 0,
-    'stanford_event_categories' => 0,
     'stanford_student_type' => 0,
     'tags' => 0,
   );
@@ -548,16 +529,10 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['relationships']['term_node_tid_1']['label'] = 'term-aff';
   $handler->display->display_options['relationships']['term_node_tid_1']['vocabularies'] = array(
     'stanford_affiliation' => 'stanford_affiliation',
-    'stanford_event_type' => 0,
     'stanford_faculty_type' => 0,
     'stanford_field_of_study' => 0,
     'stanford_interests' => 0,
-    'news_categories' => 0,
-    'publication_type' => 0,
-    'stanford_slide_category' => 0,
     'stanford_staff_type' => 0,
-    'stanford_event_audience' => 0,
-    'stanford_event_categories' => 0,
     'stanford_student_type' => 0,
     'tags' => 0,
   );
@@ -862,16 +837,10 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
     'stanford_student_type' => 'stanford_student_type',
     'stanford_affiliation' => 0,
-    'stanford_event_type' => 0,
     'stanford_faculty_type' => 0,
     'stanford_field_of_study' => 0,
     'stanford_interests' => 0,
-    'news_categories' => 0,
-    'publication_type' => 0,
-    'stanford_slide_category' => 0,
     'stanford_staff_type' => 0,
-    'stanford_event_audience' => 0,
-    'stanford_event_categories' => 0,
     'tags' => 0,
   );
   /* Relationship: Content: Taxonomy terms on node */
@@ -881,16 +850,10 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['relationships']['term_node_tid_1']['label'] = 'term-aff';
   $handler->display->display_options['relationships']['term_node_tid_1']['vocabularies'] = array(
     'stanford_affiliation' => 'stanford_affiliation',
-    'stanford_event_type' => 0,
     'stanford_faculty_type' => 0,
     'stanford_field_of_study' => 0,
     'stanford_interests' => 0,
-    'news_categories' => 0,
-    'publication_type' => 0,
-    'stanford_slide_category' => 0,
     'stanford_staff_type' => 0,
-    'stanford_event_audience' => 0,
-    'stanford_event_categories' => 0,
     'stanford_student_type' => 0,
     'tags' => 0,
   );

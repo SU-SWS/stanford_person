@@ -124,8 +124,8 @@ function stanford_person_update_7000(&$sandbox) {
   field_delete_field("field_s_person_type");
   field_purge_batch(100);
 
-  // 4. Check the views in the feature for the field_s_person_type field and remove it
-  // 4. Check the views in the feature for the field_s_person_type field and remove it.
+  // 4. Check the views in the feature for the field_s_person_type field and
+  // remove it.
 
   // Views included in the feature.
   $list = array(
@@ -146,6 +146,7 @@ function stanford_person_update_7000(&$sandbox) {
       continue;
     }
 
+    // Remove from all places the field could be.
     foreach ($view->display as &$display) {
       unset($display->display_options['style_options']['columns']['field_s_person_type']);
       unset($display->display_options['sorts']['field_s_person_type']);
@@ -156,5 +157,10 @@ function stanford_person_update_7000(&$sandbox) {
 
     $view->save();
   }
+
+  // 5. Add the new affiliation field to the views.
+
+
+
 
 }
