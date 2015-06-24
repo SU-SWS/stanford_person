@@ -31,7 +31,7 @@ function stanford_person_update_7000(&$sandbox) {
     $instances = stanford_person_field_default_field_instances();
 
     $field_base = $bases["field_s_person_affiliation"];
-    $field_instance = $instances["field_s_person_affiliation"];
+    $field_instance = $instances["node-stanford_person-field_s_person_affiliation"];
 
     field_create_field($field_base);
     field_create_instance($field_instance);
