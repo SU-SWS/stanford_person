@@ -46,7 +46,7 @@ function stanford_person_views_default_views() {
     'status' => 'status',
     'changed' => 'changed',
     'field_s_person_last_name' => 'field_s_person_last_name',
-    'field_s_person_type' => 'field_s_person_type',
+    'field_s_person_affiliation' => 'field_s_person_affiliation',
     'field_s_person_faculty_type' => 'field_s_person_faculty_type',
     'field_s_person_student_type' => 'field_s_person_student_type',
     'field_s_person_staff_type' => 'field_s_person_staff_type',
@@ -109,7 +109,9 @@ function stanford_person_views_default_views() {
       'separator' => ' | ',
       'empty_column' => 0,
     ),
-    'field_s_person_type' => array(
+    'field_s_person_affiliation' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
       'align' => '',
       'separator' => ' | ',
       'empty_column' => 0,
@@ -235,7 +237,7 @@ function stanford_person_views_default_views() {
         'display_values' => array(
           'stanford_person::field_s_person_faculty_type' => 'stanford_person::field_s_person_faculty_type',
           'stanford_person::field_s_person_student_type' => 'stanford_person::field_s_person_student_type',
-          'stanford_person::field_s_person_type' => 'stanford_person::field_s_person_type',
+          'stanford_person::field_s_person_affiliation' => 'stanford_person::field_s_person_affiliation',
         ),
       ),
       'postpone_processing' => 0,

@@ -1,0 +1,21 @@
+<?php
+
+function run() {
+
+  // 4. Check the views in the feature for the field_s_person_type field and remove it.
+
+
+
+}
+
+
+
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+$args = drush_get_arguments();
+if(function_exists($args[2])) {
+  $args[2]($args);
+  drush_log('completed running', 'ok');
+} else {
+  drush_log('Could not find drush script command', 'error');
+}

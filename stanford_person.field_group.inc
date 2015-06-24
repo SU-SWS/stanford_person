@@ -180,7 +180,6 @@ function stanford_person_field_group_info() {
       1 => 'field_s_person_last_name',
       2 => 'field_s_person_middle_name',
       3 => 'field_s_person_profile_picture',
-      4 => 'field_s_person_type',
       5 => 'field_s_person_affiliation',
       6 => 'title',
     ),

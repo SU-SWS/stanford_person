@@ -1,0 +1,11 @@
+<?php
+/**
+ * @file Install
+ */
+
+/**
+ * Handle the changes to the type field that goes from list to taxonomy.
+ */
+function stanford_person_views_update_7000(&$sandbox) {
+
+}
