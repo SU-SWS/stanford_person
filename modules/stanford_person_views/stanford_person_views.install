@@ -8,9 +8,69 @@
  */
 function stanford_person_views_update_7100(&$sandbox) {
 
+  // Add fields to manage person views.
+  stanford_person_views_update_7100_add_update_manage_person_view($sandbox);
+
   // Add filter to faculty view.
   stanford_person_views_update_7100_add_filter_to_faculty($sandbox);
 
+  // Add filter to staff view.
+  stanford_person_views_update_7100_add_filter_to_staff($sandbox);
+
+  // Add filter to student view.
+  stanford_person_views_update_7100_add_filter_to_student($sandbox);
+
+}
+
+/**
+ * [stanford_person_views_update_7100_add_update_manage_person_view description]
+ * @param  [type] &$sandbox [description]
+ * @return [type]           [description]
+ */
+function stanford_person_views_update_7100_add_update_manage_person_view(&$sandbox) {
+
+  $view = views_get_view("stanford_person_manage");
+  $view->set_display("page");
+
+  // Add filter to the view.
+  $view->add_item(
+    $view->current_display,
+    'filter',
+    'field_data_field_s_person_affiliation',
+    'field_s_person_affiliation_tid',
+    array(
+      'type' => "select",
+      'vocabulary' => 'stanford_affiliation',
+      'group' => 1,
+      'exposed' => TRUE,
+      'expose' => array(
+        'operator_id' => 'field_s_person_affiliation_tid_op',
+        'label' => t('Affiliation'),
+        'operator' => 'field_s_person_affiliation_tid_op',
+        'identifier' => 'field_s_person_affiliation_tid',
+        'remember_roles' => array(
+          2 => '2',
+        ),
+      ),
+    ),
+    'field_s_person_affiliation_tid'
+  );
+
+  // Add field to the view.
+  $view->add_item(
+    $view->current_display,
+    'filter',
+    'field_data_field_s_person_affiliation',
+    'field_s_person_affiliation',
+    array(
+      'element_label_colon' => FALSE,
+      'type' => "taxonomy_term_reference_plain",
+      'delta_offset' => 0,
+    ),
+    'field_s_person_affiliation'
+  );
+
+  $view->save();
 }
 
 /**
@@ -28,6 +88,74 @@ function stanford_person_views_update_7100_add_filter_to_faculty(&$sandbox) {
   $term = array_pop($terms);
 
   $view = views_get_view("stanford_person_faculty");
+  $view->set_display("page");
+  $view->add_item(
+    $view->current_display,
+    'filter',
+    'field_data_field_s_person_affiliation',
+    'field_s_person_affiliation_tid',
+    array(
+      'value' => array(
+        (int) $term->tid => (string) $term->tid
+      ),
+      'type' => "select",
+      'vocabulary' => 'stanford_affiliation',
+    ),
+    'field_s_person_affiliation_tid'
+  );
+
+  $view->save();
+}
+
+/**
+ * Adds a staff filter based on term id to the view.
+ * @return [type] [description]
+ */
+function stanford_person_views_update_7100_add_filter_to_staff(&$sandbox) {
+  $vocab = taxonomy_vocabulary_machine_name_load("stanford_affiliation");
+  $terms = taxonomy_get_term_by_name("Staff", $vocab->machine_name);
+
+  if (!$vocab || !$terms) {
+    throw new DrupalUpdateException("Could not run stanford person views updates. Missing vocabulary or term");
+  }
+
+  $term = array_pop($terms);
+
+  $view = views_get_view("stanford_person_staff");
+  $view->set_display("page");
+  $view->add_item(
+    $view->current_display,
+    'filter',
+    'field_data_field_s_person_affiliation',
+    'field_s_person_affiliation_tid',
+    array(
+      'value' => array(
+        (int) $term->tid => (string) $term->tid
+      ),
+      'type' => "select",
+      'vocabulary' => 'stanford_affiliation',
+    ),
+    'field_s_person_affiliation_tid'
+  );
+
+  $view->save();
+}
+
+/**
+ * Adds a student filter based on term id to the view.
+ * @return [type] [description]
+ */
+function stanford_person_views_update_7100_add_filter_to_student(&$sandbox) {
+  $vocab = taxonomy_vocabulary_machine_name_load("stanford_affiliation");
+  $terms = taxonomy_get_term_by_name("Student", $vocab->machine_name);
+
+  if (!$vocab || !$terms) {
+    throw new DrupalUpdateException("Could not run stanford person views updates. Missing vocabulary or term");
+  }
+
+  $term = array_pop($terms);
+
+  $view = views_get_view("stanford_person_student");
   $view->set_display("page");
   $view->add_item(
     $view->current_display,
