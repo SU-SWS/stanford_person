@@ -27,6 +27,9 @@ function stanford_person_update_7000(&$sandbox) {
 
   // Gosh darnit! The field is not avilable. Get it!
   if (!$new_field) {
+
+    include_once "stanford_person.features.field_base.inc";
+    include_once "stanford_person.features.field_instance.inc";
     $bases = stanford_person_field_default_field_bases();
     $instances = stanford_person_field_default_field_instances();
 
@@ -39,6 +42,7 @@ function stanford_person_update_7000(&$sandbox) {
     // Clear static caches and get new one.
     drupal_static_reset();
     $new_field = field_info_field("field_s_person_affiliation");
+
   }
 
   // 1. Check if vocabulary exists and create it if it does not.
@@ -53,11 +57,14 @@ function stanford_person_update_7000(&$sandbox) {
   // 2. Save the new terms into the vocabulary.
   $values = $field['settings']['allowed_values'];
   foreach ($values as $name => $label) {
-    $term = new stdClass();
-    $term->name = $label;
-    $term->vocabulary_machine_name = $vocab->machine_name;
-    $term->vid = $vocab->vid;
-    taxonomy_term_save($term);
+    $term = taxonomy_get_term_by_name($label, $vocab->machine_name);
+    if (!$term) {
+      $term = new stdClass();
+      $term->name = $label;
+      $term->vocabulary_machine_name = $vocab->machine_name;
+      $term->vid = $vocab->vid;
+      taxonomy_term_save($term);
+    }
   }
 
   // 3a. Copy the values from field_s_person_type to field_s_person_affiliation.
