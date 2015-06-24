@@ -6,6 +6,43 @@
 /**
  * Handle the changes to the type field that goes from list to taxonomy.
  */
-function stanford_person_views_update_7000(&$sandbox) {
+function stanford_person_views_update_7100(&$sandbox) {
 
+  // Add filter to faculty view.
+  stanford_person_views_update_7100_add_filter_to_faculty($sandbox);
+
+}
+
+/**
+ * Adds a faculty filter based on term id to the view.
+ * @return [type] [description]
+ */
+function stanford_person_views_update_7100_add_filter_to_faculty(&$sandbox) {
+  $vocab = taxonomy_vocabulary_machine_name_load("stanford_affiliation");
+  $terms = taxonomy_get_term_by_name("Faculty", $vocab->machine_name);
+
+  if (!$vocab || !$terms) {
+    throw new DrupalUpdateException("Could not run stanford person views updates. Missing vocabulary or term");
+  }
+
+  $term = array_pop($terms);
+
+  $view = views_get_view("stanford_person_faculty");
+  $view->set_display("page");
+  $view->add_item(
+    $view->current_display,
+    'filter',
+    'field_data_field_s_person_affiliation',
+    'field_s_person_affiliation_tid',
+    array(
+      'value' => array(
+        (int) $term->tid => (string) $term->tid
+      ),
+      'type' => "select",
+      'vocabulary' => 'stanford_affiliation',
+    ),
+    'field_s_person_affiliation_tid'
+  );
+
+  $view->save();
 }

@@ -2,17 +2,33 @@
 
 function run() {
 
-  include_once "stanford_person.features.field_base.inc";
-  include_once "stanford_person.features.field_instance.inc";
+  $vocab = taxonomy_vocabulary_machine_name_load("stanford_affiliation");
+  $terms = taxonomy_get_term_by_name("Faculty", $vocab->machine_name);
 
-  $bases = stanford_person_field_default_field_bases();
-  $instances = stanford_person_field_default_field_instances();
+  if (!$vocab || !$terms) {
+    throw new DrupalUpdateException("Could not run stanford person views updates. Missing vocabulary or term");
+  }
 
-  $field_base = $bases["field_s_person_affiliation"];
-  $field_instance = $instances["node-stanford_person-field_s_person_affiliation"];
+  $term = array_pop($terms);
 
-  field_create_field($field_base);
-  field_create_instance($field_instance);
+  $view = views_get_view("stanford_person_faculty");
+  $view->set_display("page");
+  $view->add_item(
+    $view->current_display,
+    'filter',
+    'field_data_field_s_person_affiliation',
+    'field_s_person_affiliation_tid',
+    array(
+      'value' => array(
+        (int) $term->tid => (string) $term->tid
+      ),
+      'type' => "select",
+      'vocabulary' => 'stanford_affiliation',
+    ),
+    'field_s_person_affiliation_tid'
+  );
+
+  $view->save();
 
 }
 

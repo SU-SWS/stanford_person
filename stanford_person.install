@@ -7,7 +7,7 @@
 /**
  * Implements hook_update_N().
  */
-function stanford_person_update_7000(&$sandbox) {
+function stanford_person_update_7100(&$sandbox) {
 
   // 1. Check if vocabulary exists. If not create it. If it does get machine_name
   // 2. For every value in the field_s_person_type create a taxonomy term in the affiliations vocab.
