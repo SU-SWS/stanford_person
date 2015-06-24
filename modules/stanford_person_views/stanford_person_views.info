@@ -25,4 +25,5 @@ features[views_view][] = stanford_person_faculty
 features[views_view][] = stanford_person_people
 features[views_view][] = stanford_person_staff
 features[views_view][] = stanford_person_student
+mtime = 1424300598
 project status url = http://drupalfeatures.stanford.edu/fserver/stanford_person_views/7.x
