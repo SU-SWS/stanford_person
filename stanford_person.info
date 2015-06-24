@@ -156,5 +156,3 @@ features_exclude[variable][comment_preview_stanford_person] = comment_preview_st
 features_exclude[variable][comment_stanford_person] = comment_stanford_person
 features_exclude[variable][comment_subject_field_stanford_person] = comment_subject_field_stanford_person
 features_exclude[dependencies][stanford_page] = stanford_page
-mtime = 1424459433
-project status url = https://github.com/SU-SWS/stanford_person
