@@ -229,6 +229,8 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
   $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['tid']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['tid']['title'] = '%1';
   $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['tid']['default_argument_options']['argument'] = 'faculty';
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
@@ -809,22 +811,6 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Has taxonomy term ID */
-  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
-  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['tid']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
-  $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
-    'stanford_staff_type' => 'stanford_staff_type',
-  );
-  $handler->display->display_options['arguments']['tid']['validate_options']['type'] = 'convert';
-  $handler->display->display_options['arguments']['tid']['validate_options']['transform'] = TRUE;
   $handler->display->display_options['path'] = 'people/staff/grouped';
   $handler->display->display_options['menu']['title'] = 'Staff';
   $handler->display->display_options['menu']['weight'] = '0';
