@@ -24,6 +24,15 @@ function stanford_person_update_7400(&$sandbox) {
     watchdog('stanford_person', 'field_s_person_type was not found', array(), WATCHDOG_NOTICE);
   }
 
+  // 1. Check if vocabulary exists and create it if it does not.
+  $vocab = taxonomy_vocabulary_machine_name_load("stanford_affiliation");
+  if (!$vocab) {
+    include "stanford_person.features.taxonomy.inc";
+    $options = stanford_person_taxonomy_default_vocabularies();
+    taxonomy_vocabulary_save($options['stanford_affiliation']);
+    $vocab = taxonomy_vocabulary_machine_name_load("stanford_affiliation");
+  }
+
   // Gosh darnit! The field is not avilable. Get it!
   if (!$new_field) {
 
@@ -42,15 +51,6 @@ function stanford_person_update_7400(&$sandbox) {
     drupal_static_reset();
     $new_field = field_info_field("field_s_person_affiliation");
 
-  }
-
-  // 1. Check if vocabulary exists and create it if it does not.
-  $vocab = taxonomy_vocabulary_machine_name_load("stanford_affiliation");
-  if (!$vocab) {
-    include "stanford_person.features.taxonomy.inc";
-    $options = stanford_person_taxonomy_default_vocabularies();
-    taxonomy_vocabulary_save($options['stanford_affiliation']);
-    $vocab = taxonomy_vocabulary_machine_name_load("stanford_affiliation");
   }
 
   // 2. Save the new terms into the vocabulary.
