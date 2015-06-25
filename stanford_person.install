@@ -29,7 +29,8 @@ function stanford_person_update_7400(&$sandbox) {
   if (!$vocab) {
     include "stanford_person.features.taxonomy.inc";
     $options = stanford_person_taxonomy_default_vocabularies();
-    taxonomy_vocabulary_save($options['stanford_affiliation']);
+    $vocab = (object) $options['stanford_affiliation'];
+    taxonomy_vocabulary_save($vocab);
     $vocab = taxonomy_vocabulary_machine_name_load("stanford_affiliation");
   }
 
