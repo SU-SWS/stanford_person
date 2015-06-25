@@ -8,17 +8,24 @@
  */
 function stanford_person_views_update_7100(&$sandbox) {
 
+  $db_views_query = db_select("views_view", "vv")
+    ->fields("vv", array('name'))
+    ->execute()
+    ->fetchAllAssoc('name');
+
+  $db_views = array_keys($db_views_query);
+
   // Add fields to manage person views.
-  stanford_person_views_update_7100_add_update_manage_person_view($sandbox);
+  stanford_person_views_update_7100_add_update_manage_person_view($sandbox, $db_views);
 
   // Add filter to faculty view.
-  stanford_person_views_update_7100_add_filter_to_faculty($sandbox);
+  stanford_person_views_update_7100_add_filter_to_faculty($sandbox, $db_views);
 
   // Add filter to staff view.
-  stanford_person_views_update_7100_add_filter_to_staff($sandbox);
+  stanford_person_views_update_7100_add_filter_to_staff($sandbox, $db_views);
 
   // Add filter to student view.
-  stanford_person_views_update_7100_add_filter_to_student($sandbox);
+  stanford_person_views_update_7100_add_filter_to_student($sandbox, $db_views);
 
 }
 
@@ -27,9 +34,16 @@ function stanford_person_views_update_7100(&$sandbox) {
  * @param  [type] &$sandbox [description]
  * @return [type]           [description]
  */
-function stanford_person_views_update_7100_add_update_manage_person_view(&$sandbox) {
+function stanford_person_views_update_7100_add_update_manage_person_view(&$sandbox, $db_views) {
 
   $view = views_get_view("stanford_person_manage");
+
+  // If the view is not in the database let the feature handle the change.
+  if (!in_array("stanford_person_manage", $db_views)) {
+    views_revert_view($view);
+    return;
+  }
+
   $view->set_display("page");
 
   // Add filter to the view.
@@ -59,7 +73,7 @@ function stanford_person_views_update_7100_add_update_manage_person_view(&$sandb
   // Add field to the view.
   $view->add_item(
     $view->current_display,
-    'filter',
+    'field',
     'field_data_field_s_person_affiliation',
     'field_s_person_affiliation',
     array(
@@ -77,7 +91,7 @@ function stanford_person_views_update_7100_add_update_manage_person_view(&$sandb
  * Adds a faculty filter based on term id to the view.
  * @return [type] [description]
  */
-function stanford_person_views_update_7100_add_filter_to_faculty(&$sandbox) {
+function stanford_person_views_update_7100_add_filter_to_faculty(&$sandbox, $db_views) {
   $vocab = taxonomy_vocabulary_machine_name_load("stanford_affiliation");
   $terms = taxonomy_get_term_by_name("Faculty", $vocab->machine_name);
 
@@ -88,6 +102,12 @@ function stanford_person_views_update_7100_add_filter_to_faculty(&$sandbox) {
   $term = array_pop($terms);
 
   $view = views_get_view("stanford_person_faculty");
+  // If the view is not in the database let the feature handle the change.
+  if (!in_array("stanford_person_faculty", $db_views)) {
+    views_revert_view($view);
+    return;
+  }
+
   $view->set_display("page");
   $view->add_item(
     $view->current_display,
@@ -111,7 +131,7 @@ function stanford_person_views_update_7100_add_filter_to_faculty(&$sandbox) {
  * Adds a staff filter based on term id to the view.
  * @return [type] [description]
  */
-function stanford_person_views_update_7100_add_filter_to_staff(&$sandbox) {
+function stanford_person_views_update_7100_add_filter_to_staff(&$sandbox, $db_views) {
   $vocab = taxonomy_vocabulary_machine_name_load("stanford_affiliation");
   $terms = taxonomy_get_term_by_name("Staff", $vocab->machine_name);
 
@@ -122,6 +142,11 @@ function stanford_person_views_update_7100_add_filter_to_staff(&$sandbox) {
   $term = array_pop($terms);
 
   $view = views_get_view("stanford_person_staff");
+  // If the view is not in the database let the feature handle the change.
+  if (!in_array("stanford_person_staff", $db_views)) {
+    views_revert_view($view);
+    return;
+  }
   $view->set_display("page");
   $view->add_item(
     $view->current_display,
@@ -145,7 +170,7 @@ function stanford_person_views_update_7100_add_filter_to_staff(&$sandbox) {
  * Adds a student filter based on term id to the view.
  * @return [type] [description]
  */
-function stanford_person_views_update_7100_add_filter_to_student(&$sandbox) {
+function stanford_person_views_update_7100_add_filter_to_student(&$sandbox, $db_views) {
   $vocab = taxonomy_vocabulary_machine_name_load("stanford_affiliation");
   $terms = taxonomy_get_term_by_name("Student", $vocab->machine_name);
 
@@ -156,6 +181,12 @@ function stanford_person_views_update_7100_add_filter_to_student(&$sandbox) {
   $term = array_pop($terms);
 
   $view = views_get_view("stanford_person_student");
+  // If the view is not in the database let the feature handle the change.
+  if (!in_array("stanford_person_student", $db_views)) {
+    views_revert_view($view);
+    return;
+  }
+
   $view->set_display("page");
   $view->add_item(
     $view->current_display,

@@ -2,48 +2,15 @@
 
 function run() {
 
-  $view = views_get_view("stanford_person_manage");
-  $view->set_display("page");
+  $db_views_query = db_select("views_view", "vv")
+    ->fields("vv", array('name'))
+    ->execute()
+    ->fetchAllAssoc('name');
 
-  // Add filter to the view.
-  $view->add_item(
-    $view->current_display,
-    'filter',
-    'field_data_field_s_person_affiliation',
-    'field_s_person_affiliation_tid',
-    array(
-      'type' => "select",
-      'vocabulary' => 'stanford_affiliation',
-      'group' => 1,
-      'exposed' => TRUE,
-      'expose' => array(
-        'operator_id' => 'field_s_person_affiliation_tid_op',
-        'label' => t('Affiliation'),
-        'operator' => 'field_s_person_affiliation_tid_op',
-        'identifier' => 'field_s_person_affiliation_tid',
-        'remember_roles' => array(
-          2 => '2',
-        ),
-      ),
-    ),
-    'field_s_person_affiliation_tid'
-  );
+  $db_views = array_keys($db_views_query);
 
-  // Add field to the view.
-  $view->add_item(
-    $view->current_display,
-    'filter',
-    'field_data_field_s_person_affiliation',
-    'field_s_person_affiliation',
-    array(
-      'element_label_colon' => FALSE,
-      'type' => "taxonomy_term_reference_plain",
-      'delta_offset' => 0,
-    ),
-    'field_s_person_affiliation'
-  );
-
-  $view->save();
+    var_dump($db_views);
+    return;
 
 }
 
