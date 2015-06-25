@@ -75,6 +75,55 @@ function stanford_person_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-stanford_person-field_s_person_affiliation'
+  $field_instances['node-stanford_person-field_s_person_affiliation'] = array(
+    'bundle' => 'stanford_person',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Select the appropriate affiliation(s) for this person.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 28,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'taxonomy' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_s_person_affiliation',
+    'label' => 'Affiliation',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 0,
+    ),
+  );
+
   // Exported field_instance: 'node-stanford_person-field_s_person_cohort'
   $field_instances['node-stanford_person-field_s_person_cohort'] = array(
     'bundle' => 'stanford_person',
@@ -134,7 +183,8 @@ function stanford_person_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-stanford_person-field_s_person_dissertatn_title'
+  // Exported field_instance:
+  // 'node-stanford_person-field_s_person_dissertatn_title'
   $field_instances['node-stanford_person-field_s_person_dissertatn_title'] = array(
     'bundle' => 'stanford_person',
     'default_value' => NULL,
@@ -339,7 +389,8 @@ function stanford_person_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-stanford_person-field_s_person_faculty_title'
+  // Exported field_instance:
+  // 'node-stanford_person-field_s_person_faculty_title'
   $field_instances['node-stanford_person-field_s_person_faculty_title'] = array(
     'bundle' => 'stanford_person',
     'default_value' => NULL,
@@ -700,11 +751,12 @@ function stanford_person_field_default_field_instances() {
         'size' => 30,
       ),
       'type' => 'text_textfield',
-      'weight' => 18,
+      'weight' => -4,
     ),
   );
 
-  // Exported field_instance: 'node-stanford_person-field_s_person_graduation_year'
+  // Exported field_instance:
+  // 'node-stanford_person-field_s_person_graduation_year'
   $field_instances['node-stanford_person-field_s_person_graduation_year'] = array(
     'bundle' => 'stanford_person',
     'deleted' => 0,
@@ -807,6 +859,7 @@ function stanford_person_field_default_field_instances() {
     'label' => 'Personal info Links',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -819,6 +872,7 @@ function stanford_person_field_default_field_instances() {
       ),
       'enable_tokens' => 1,
       'title' => 'required',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 80,
       'title_value' => '',
       'url' => 0,
@@ -945,11 +999,12 @@ Contact your site administrator to add or change entries. ',
         'size' => 30,
       ),
       'type' => 'text_textfield',
-      'weight' => 20,
+      'weight' => -2,
     ),
   );
 
-  // Exported field_instance: 'node-stanford_person-field_s_person_mail_address_dspl'
+  // Exported field_instance:
+  // 'node-stanford_person-field_s_person_mail_address_dspl'
   $field_instances['node-stanford_person-field_s_person_mail_address_dspl'] = array(
     'bundle' => 'stanford_person',
     'default_value' => NULL,
@@ -1142,7 +1197,7 @@ Contact your site administrator to add or change entries. ',
         'size' => 20,
       ),
       'type' => 'text_textfield',
-      'weight' => 19,
+      'weight' => -3,
     ),
   );
 
@@ -1205,7 +1260,8 @@ Contact your site administrator to add or change entries. ',
     ),
   );
 
-  // Exported field_instance: 'node-stanford_person-field_s_person_office_location'
+  // Exported field_instance:
+  // 'node-stanford_person-field_s_person_office_location'
   $field_instances['node-stanford_person-field_s_person_office_location'] = array(
     'bundle' => 'stanford_person',
     'default_value' => NULL,
@@ -1290,7 +1346,8 @@ Contact your site administrator to add or change entries. ',
     ),
   );
 
-  // Exported field_instance: 'node-stanford_person-field_s_person_phone_display'
+  // Exported field_instance:
+  // 'node-stanford_person-field_s_person_phone_display'
   $field_instances['node-stanford_person-field_s_person_phone_display'] = array(
     'bundle' => 'stanford_person',
     'default_value' => NULL,
@@ -1349,7 +1406,8 @@ Contact your site administrator to add or change entries. ',
     ),
   );
 
-  // Exported field_instance: 'node-stanford_person-field_s_person_profile_picture'
+  // Exported field_instance:
+  // 'node-stanford_person-field_s_person_profile_picture'
   $field_instances['node-stanford_person-field_s_person_profile_picture'] = array(
     'bundle' => 'stanford_person',
     'deleted' => 0,
@@ -1471,7 +1529,7 @@ Contact your site administrator to add or change entries. ',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 22,
+      'weight' => -1,
     ),
   );
 
@@ -1637,60 +1695,6 @@ Contact your site administrator to add or change entries. ',
     ),
   );
 
-  // Exported field_instance: 'node-stanford_person-field_s_person_type'
-  $field_instances['node-stanford_person-field_s_person_type'] = array(
-    'bundle' => 'stanford_person',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'This identifies the type of person. ',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 20,
-      ),
-      'stanford_taxonomy' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
-      ),
-      'taxonomy' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_s_person_type',
-    'label' => 'Type',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 35,
-    ),
-  );
-
   // Exported field_instance: 'node-stanford_person-field_s_person_weight'
   $field_instances['node-stanford_person-field_s_person_weight'] = array(
     'bundle' => 'stanford_person',
@@ -1749,6 +1753,7 @@ Contact your site administrator to add or change entries. ',
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Affiliation');
   t('Cohort');
   t('Cohort typically applies to graduate students. If applicable, select the year this person started studies at Stanford; if not applicable, select "-Year."');
   t('Degrees / Education');
@@ -1778,12 +1783,12 @@ Contact your site administrator to add or change entries. ');
   t('Phone');
   t('Profile / Bio');
   t('Profile Picture');
+  t('Select the appropriate affiliation(s) for this person.');
   t('Select the year this person graduates.');
   t('Sorting Weight');
   t('Staff Type');
   t('Student Type');
   t('This email field displays the primary email address (e.g. "mysunetid@stanford.edu").');
-  t('This identifies the type of person. ');
   t('This integer field is used to control the sort order in views displays. Larger numbers are "heavier" and sink lower in the list.');
   t('This text area displays a biography or profile of the person. To enter a summary to be displayed when a shorter amount of text is needed, click on "Edit summary" above.');
   t('This text area displays the mailing address. Enter the address as you want it to appear. Hint: Use control+enter to enter a new line.');
@@ -1798,7 +1803,6 @@ Contact your site administrator to add or change entries. ');
   t('This text field is used for the middle name.');
   t('This text field provides a description of the person\'s office location (e.g. "Bldg. 460, rm 317," or "460-317").');
   t('Title and Department');
-  t('Type');
   t('Upload a file, such as a CV.');
   t('Upload an image of this person.');
 

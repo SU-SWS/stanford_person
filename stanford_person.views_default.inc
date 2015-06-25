@@ -46,7 +46,7 @@ function stanford_person_views_default_views() {
     'status' => 'status',
     'changed' => 'changed',
     'field_s_person_last_name' => 'field_s_person_last_name',
-    'field_s_person_type' => 'field_s_person_type',
+    'field_s_person_affiliation' => 'field_s_person_affiliation',
     'field_s_person_faculty_type' => 'field_s_person_faculty_type',
     'field_s_person_student_type' => 'field_s_person_student_type',
     'field_s_person_staff_type' => 'field_s_person_staff_type',
@@ -109,7 +109,9 @@ function stanford_person_views_default_views() {
       'separator' => ' | ',
       'empty_column' => 0,
     ),
-    'field_s_person_type' => array(
+    'field_s_person_affiliation' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
       'align' => '',
       'separator' => ' | ',
       'empty_column' => 0,
@@ -235,7 +237,7 @@ function stanford_person_views_default_views() {
         'display_values' => array(
           'stanford_person::field_s_person_faculty_type' => 'stanford_person::field_s_person_faculty_type',
           'stanford_person::field_s_person_student_type' => 'stanford_person::field_s_person_student_type',
-          'stanford_person::field_s_person_type' => 'stanford_person::field_s_person_type',
+          'stanford_person::field_s_person_affiliation' => 'stanford_person::field_s_person_affiliation',
         ),
       ),
       'postpone_processing' => 0,
@@ -349,18 +351,22 @@ function stanford_person_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_last_name']['id'] = 'field_s_person_last_name';
   $handler->display->display_options['fields']['field_s_person_last_name']['table'] = 'field_data_field_s_person_last_name';
   $handler->display->display_options['fields']['field_s_person_last_name']['field'] = 'field_s_person_last_name';
-  /* Field: Content: Type */
-  $handler->display->display_options['fields']['field_s_person_type']['id'] = 'field_s_person_type';
-  $handler->display->display_options['fields']['field_s_person_type']['table'] = 'field_data_field_s_person_type';
-  $handler->display->display_options['fields']['field_s_person_type']['field'] = 'field_s_person_type';
+  /* Field: Content: Affiliation */
+  $handler->display->display_options['fields']['field_s_person_affiliation']['id'] = 'field_s_person_affiliation';
+  $handler->display->display_options['fields']['field_s_person_affiliation']['table'] = 'field_data_field_s_person_affiliation';
+  $handler->display->display_options['fields']['field_s_person_affiliation']['field'] = 'field_s_person_affiliation';
+  $handler->display->display_options['fields']['field_s_person_affiliation']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_s_person_affiliation']['delta_offset'] = '0';
   /* Field: Content: Faculty Status */
   $handler->display->display_options['fields']['field_s_person_faculty_type']['id'] = 'field_s_person_faculty_type';
   $handler->display->display_options['fields']['field_s_person_faculty_type']['table'] = 'field_data_field_s_person_faculty_type';
   $handler->display->display_options['fields']['field_s_person_faculty_type']['field'] = 'field_s_person_faculty_type';
+  $handler->display->display_options['fields']['field_s_person_faculty_type']['type'] = 'taxonomy_term_reference_plain';
   /* Field: Content: Student Type */
   $handler->display->display_options['fields']['field_s_person_student_type']['id'] = 'field_s_person_student_type';
   $handler->display->display_options['fields']['field_s_person_student_type']['table'] = 'field_data_field_s_person_student_type';
   $handler->display->display_options['fields']['field_s_person_student_type']['field'] = 'field_s_person_student_type';
+  $handler->display->display_options['fields']['field_s_person_student_type']['type'] = 'taxonomy_term_reference_plain';
   /* Field: Content: Staff Type */
   $handler->display->display_options['fields']['field_s_person_staff_type']['id'] = 'field_s_person_staff_type';
   $handler->display->display_options['fields']['field_s_person_staff_type']['table'] = 'field_data_field_s_person_staff_type';
@@ -444,16 +450,6 @@ function stanford_person_views_default_views() {
   $handler->display->display_options['filters']['status']['expose']['label'] = 'Published';
   $handler->display->display_options['filters']['status']['expose']['operator'] = 'status_op';
   $handler->display->display_options['filters']['status']['expose']['identifier'] = 'status';
-  /* Filter criterion: Content: Type (field_s_person_type) */
-  $handler->display->display_options['filters']['field_s_person_type_value']['id'] = 'field_s_person_type_value';
-  $handler->display->display_options['filters']['field_s_person_type_value']['table'] = 'field_data_field_s_person_type';
-  $handler->display->display_options['filters']['field_s_person_type_value']['field'] = 'field_s_person_type_value';
-  $handler->display->display_options['filters']['field_s_person_type_value']['group'] = 1;
-  $handler->display->display_options['filters']['field_s_person_type_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_s_person_type_value']['expose']['operator_id'] = 'field_s_person_type_value_op';
-  $handler->display->display_options['filters']['field_s_person_type_value']['expose']['label'] = 'Person Type';
-  $handler->display->display_options['filters']['field_s_person_type_value']['expose']['operator'] = 'field_s_person_type_value_op';
-  $handler->display->display_options['filters']['field_s_person_type_value']['expose']['identifier'] = 'field_s_person_type_value';
   /* Filter criterion: Content: Faculty Status (field_s_person_faculty_type) */
   $handler->display->display_options['filters']['field_s_person_faculty_type_tid']['id'] = 'field_s_person_faculty_type_tid';
   $handler->display->display_options['filters']['field_s_person_faculty_type_tid']['table'] = 'field_data_field_s_person_faculty_type';

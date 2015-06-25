@@ -122,9 +122,10 @@ function stanford_person_field_group_info() {
     'format_settings' => array(
       'label' => 'About',
       'instance_settings' => array(
+        'id' => '',
         'classes' => '',
         'description' => '',
-        'show_label' => '1',
+        'show_label' => '0',
         'label_element' => 'h2',
         'effect' => 'none',
         'speed' => 'fast',
@@ -179,7 +180,7 @@ function stanford_person_field_group_info() {
       1 => 'field_s_person_last_name',
       2 => 'field_s_person_middle_name',
       3 => 'field_s_person_profile_picture',
-      4 => 'field_s_person_type',
+      4 => 'field_s_person_affiliation',
       5 => 'title',
     ),
     'format_type' => 'fieldset',
@@ -210,8 +211,8 @@ function stanford_person_field_group_info() {
     'children' => array(
       0 => 'field_s_person_education',
       1 => 'field_s_person_faculty_title',
-      2 => 'body',
-      3 => 'field_s_person_file',
+      2 => 'field_s_person_file',
+      3 => 'body',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
