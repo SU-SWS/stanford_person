@@ -40,7 +40,6 @@ function stanford_person_views_update_7100_add_update_manage_person_view(&$sandb
 
   // If the view is not in the database let the feature handle the change.
   if (!in_array("stanford_person_manage", $db_views)) {
-    views_revert_view($view);
     return;
   }
 
@@ -104,7 +103,6 @@ function stanford_person_views_update_7100_add_filter_to_faculty(&$sandbox, $db_
   $view = views_get_view("stanford_person_faculty");
   // If the view is not in the database let the feature handle the change.
   if (!in_array("stanford_person_faculty", $db_views)) {
-    views_revert_view($view);
     return;
   }
 
@@ -144,7 +142,6 @@ function stanford_person_views_update_7100_add_filter_to_staff(&$sandbox, $db_vi
   $view = views_get_view("stanford_person_staff");
   // If the view is not in the database let the feature handle the change.
   if (!in_array("stanford_person_staff", $db_views)) {
-    views_revert_view($view);
     return;
   }
   $view->set_display("page");
@@ -183,7 +180,6 @@ function stanford_person_views_update_7100_add_filter_to_student(&$sandbox, $db_
   $view = views_get_view("stanford_person_student");
   // If the view is not in the database let the feature handle the change.
   if (!in_array("stanford_person_student", $db_views)) {
-    views_revert_view($view);
     return;
   }
 
