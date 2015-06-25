@@ -6,7 +6,7 @@
 /**
  * Handle the changes to the type field that goes from list to taxonomy.
  */
-function stanford_person_views_update_7100(&$sandbox) {
+function stanford_person_views_update_7400(&$sandbox) {
 
   $db_views_query = db_select("views_view", "vv")
     ->fields("vv", array('name'))
