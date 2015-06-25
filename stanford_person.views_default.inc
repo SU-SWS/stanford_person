@@ -351,14 +351,22 @@ function stanford_person_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_last_name']['id'] = 'field_s_person_last_name';
   $handler->display->display_options['fields']['field_s_person_last_name']['table'] = 'field_data_field_s_person_last_name';
   $handler->display->display_options['fields']['field_s_person_last_name']['field'] = 'field_s_person_last_name';
+  /* Field: Content: Affiliation */
+  $handler->display->display_options['fields']['field_s_person_affiliation']['id'] = 'field_s_person_affiliation';
+  $handler->display->display_options['fields']['field_s_person_affiliation']['table'] = 'field_data_field_s_person_affiliation';
+  $handler->display->display_options['fields']['field_s_person_affiliation']['field'] = 'field_s_person_affiliation';
+  $handler->display->display_options['fields']['field_s_person_affiliation']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_s_person_affiliation']['delta_offset'] = '0';
   /* Field: Content: Faculty Status */
   $handler->display->display_options['fields']['field_s_person_faculty_type']['id'] = 'field_s_person_faculty_type';
   $handler->display->display_options['fields']['field_s_person_faculty_type']['table'] = 'field_data_field_s_person_faculty_type';
   $handler->display->display_options['fields']['field_s_person_faculty_type']['field'] = 'field_s_person_faculty_type';
+  $handler->display->display_options['fields']['field_s_person_faculty_type']['type'] = 'taxonomy_term_reference_plain';
   /* Field: Content: Student Type */
   $handler->display->display_options['fields']['field_s_person_student_type']['id'] = 'field_s_person_student_type';
   $handler->display->display_options['fields']['field_s_person_student_type']['table'] = 'field_data_field_s_person_student_type';
   $handler->display->display_options['fields']['field_s_person_student_type']['field'] = 'field_s_person_student_type';
+  $handler->display->display_options['fields']['field_s_person_student_type']['type'] = 'taxonomy_term_reference_plain';
   /* Field: Content: Staff Type */
   $handler->display->display_options['fields']['field_s_person_staff_type']['id'] = 'field_s_person_staff_type';
   $handler->display->display_options['fields']['field_s_person_staff_type']['table'] = 'field_data_field_s_person_staff_type';
