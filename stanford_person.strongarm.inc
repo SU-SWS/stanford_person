@@ -14,14 +14,14 @@ function stanford_person_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_stanford_person';
-  $strongarm->value = 'edit-workflow';
+  $strongarm->value = 'edit-auto-nodetitle';
   $export['additional_settings__active_tab_stanford_person'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'ant_pattern_stanford_person';
-  $strongarm->value = '[node:field_s_person_first_name] [node:field_s_person_last_name]';
+  $strongarm->value = '[node:field_s_person_first_name] [node:field_s_person_middle_name] [node:field_s_person_last_name]';
   $export['ant_pattern_stanford_person'] = $strongarm;
 
   $strongarm = new stdClass();

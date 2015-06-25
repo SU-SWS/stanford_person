@@ -9,6 +9,29 @@
  */
 function stanford_person_taxonomy_default_vocabularies() {
   return array(
+    'stanford_affiliation' => array(
+      'name' => 'Affiliation',
+      'machine_name' => 'stanford_affiliation',
+      'description' => 'Types of people on this website',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'stanford_faculty_type' => array(
       'name' => 'Faculty Type',
       'machine_name' => 'stanford_faculty_type',

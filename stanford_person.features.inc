@@ -43,5 +43,6 @@ function stanford_person_node_info() {
       'help' => t('This form captures information about a person. First and last name are required.'),
     ),
   );
+  drupal_alter('node_info', $items);
   return $items;
 }
