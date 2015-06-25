@@ -16,25 +16,25 @@ function stanford_person_views_update_7400(&$sandbox) {
   $db_views = array_keys($db_views_query);
 
   // Add fields to manage person views.
-  stanford_person_views_update_7100_add_update_manage_person_view($sandbox, $db_views);
+  stanford_person_views_update_7400_add_update_manage_person_view($sandbox, $db_views);
 
   // Add filter to faculty view.
-  stanford_person_views_update_7100_add_filter_to_faculty($sandbox, $db_views);
+  stanford_person_views_update_7400_add_filter_to_faculty($sandbox, $db_views);
 
   // Add filter to staff view.
-  stanford_person_views_update_7100_add_filter_to_staff($sandbox, $db_views);
+  stanford_person_views_update_7400_add_filter_to_staff($sandbox, $db_views);
 
   // Add filter to student view.
-  stanford_person_views_update_7100_add_filter_to_student($sandbox, $db_views);
+  stanford_person_views_update_7400_add_filter_to_student($sandbox, $db_views);
 
 }
 
 /**
- * [stanford_person_views_update_7100_add_update_manage_person_view description]
+ * [stanford_person_views_update_7400_add_update_manage_person_view description]
  * @param  [type] &$sandbox [description]
  * @return [type]           [description]
  */
-function stanford_person_views_update_7100_add_update_manage_person_view(&$sandbox, $db_views) {
+function stanford_person_views_update_7400_add_update_manage_person_view(&$sandbox, $db_views) {
 
   $view = views_get_view("stanford_person_manage");
 
@@ -90,7 +90,7 @@ function stanford_person_views_update_7100_add_update_manage_person_view(&$sandb
  * Adds a faculty filter based on term id to the view.
  * @return [type] [description]
  */
-function stanford_person_views_update_7100_add_filter_to_faculty(&$sandbox, $db_views) {
+function stanford_person_views_update_7400_add_filter_to_faculty(&$sandbox, $db_views) {
   $vocab = taxonomy_vocabulary_machine_name_load("stanford_affiliation");
   $terms = taxonomy_get_term_by_name("Faculty", $vocab->machine_name);
 
@@ -129,7 +129,7 @@ function stanford_person_views_update_7100_add_filter_to_faculty(&$sandbox, $db_
  * Adds a staff filter based on term id to the view.
  * @return [type] [description]
  */
-function stanford_person_views_update_7100_add_filter_to_staff(&$sandbox, $db_views) {
+function stanford_person_views_update_7400_add_filter_to_staff(&$sandbox, $db_views) {
   $vocab = taxonomy_vocabulary_machine_name_load("stanford_affiliation");
   $terms = taxonomy_get_term_by_name("Staff", $vocab->machine_name);
 
@@ -167,7 +167,7 @@ function stanford_person_views_update_7100_add_filter_to_staff(&$sandbox, $db_vi
  * Adds a student filter based on term id to the view.
  * @return [type] [description]
  */
-function stanford_person_views_update_7100_add_filter_to_student(&$sandbox, $db_views) {
+function stanford_person_views_update_7400_add_filter_to_student(&$sandbox, $db_views) {
   $vocab = taxonomy_vocabulary_machine_name_load("stanford_affiliation");
   $terms = taxonomy_get_term_by_name("Student", $vocab->machine_name);
 
