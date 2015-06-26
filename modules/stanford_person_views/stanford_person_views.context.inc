@@ -54,6 +54,9 @@ function stanford_person_views_context_default_contexts() {
       'values' => array(
         'people/faculty' => 'people/faculty',
         'people/faculty/*' => 'people/faculty/*',
+        '~people/faculty/directory' => '~people/faculty/directory',
+        '~people/faculty/list' => '~people/faculty/list',
+        '~people/faculty/profiles' => '~people/faculty/profiles',
       ),
     ),
   );
@@ -65,12 +68,6 @@ function stanford_person_views_context_default_contexts() {
           'delta' => 'b38da907588eed2d09c10bdb381e5aaf',
           'region' => 'sidebar_first',
           'weight' => '-8',
-        ),
-        'views-stanford_quote-block_2' => array(
-          'module' => 'views',
-          'delta' => 'stanford_quote-block_2',
-          'region' => 'sidebar_first',
-          'weight' => '-7',
         ),
       ),
     ),
@@ -94,6 +91,9 @@ function stanford_person_views_context_default_contexts() {
       'values' => array(
         'people/staff' => 'people/staff',
         'people/staff/*' => 'people/staff/*',
+        '~people/staff/directory' => '~people/staff/directory',
+        '~people/staff/list' => '~people/staff/list',
+        '~people/staff/profiles' => '~people/staff/profiles',
       ),
     ),
   );
@@ -130,6 +130,9 @@ function stanford_person_views_context_default_contexts() {
         'people/student/*' => 'people/student/*',
         'people/students' => 'people/students',
         'people/students/*' => 'people/students/*',
+        '~people/students/list' => '~people/students/list',
+        '~people/students/directory' => '~people/students/directory',
+        '~people/students/profiles' => '~people/students/profiles',
       ),
     ),
   );
