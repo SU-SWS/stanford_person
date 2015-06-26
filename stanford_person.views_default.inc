@@ -474,6 +474,54 @@ function stanford_person_views_default_views() {
   $handler->display->display_options['filters']['field_s_person_student_type_tid']['expose']['identifier'] = 'field_s_person_student_type_tid';
   $handler->display->display_options['filters']['field_s_person_student_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_s_person_student_type_tid']['vocabulary'] = 'stanford_student_type';
+  /* Filter criterion: Content: Staff Type (field_s_person_staff_type) */
+  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['id'] = 'field_s_person_staff_type_tid';
+  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['table'] = 'field_data_field_s_person_staff_type';
+  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['field'] = 'field_s_person_staff_type_tid';
+  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['expose']['operator_id'] = 'field_s_person_staff_type_tid_op';
+  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['expose']['label'] = 'Staff Type';
+  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['expose']['operator'] = 'field_s_person_staff_type_tid_op';
+  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['expose']['identifier'] = 'field_s_person_staff_type_tid';
+  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    6 => 0,
+    5 => 0,
+    4 => 0,
+    3 => 0,
+    9 => 0,
+    7 => 0,
+    8 => 0,
+  );
+  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['vocabulary'] = 'stanford_staff_type';
+  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['hierarchy'] = 1;
+  /* Filter criterion: Content: Affiliation (field_s_person_affiliation) */
+  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['id'] = 'field_s_person_affiliation_tid';
+  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['table'] = 'field_data_field_s_person_affiliation';
+  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['field'] = 'field_s_person_affiliation_tid';
+  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['expose']['operator_id'] = 'field_s_person_affiliation_tid_op';
+  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['expose']['label'] = 'Affiliation';
+  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['expose']['operator'] = 'field_s_person_affiliation_tid_op';
+  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['expose']['identifier'] = 'field_s_person_affiliation_tid';
+  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    6 => 0,
+    5 => 0,
+    4 => 0,
+    3 => 0,
+    9 => 0,
+    7 => 0,
+    8 => 0,
+  );
+  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['vocabulary'] = 'stanford_affiliation';
+  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['hierarchy'] = 1;
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
