@@ -5,7 +5,14 @@
 
 
 /**
- * Implements hook_update_N().
+ *
+ * 1. Check if vocabulary exists. If not create it. If it does get machine_name
+ * 2. For every value in the field_s_person_type create a taxonomy term in the affiliations vocab.
+ * 3a. Copy the values from field_s_person_type to field_s_person_affiliation.
+ * 3b. Remove the field_s_person_type field from the content type.
+ * 4. Check the views in the feature for the field_s_person_type field and remove it
+ * 5. Add the new affiliation field to the views.
+ *
  */
 function stanford_person_update_7400(&$sandbox) {
 
@@ -14,7 +21,7 @@ function stanford_person_update_7400(&$sandbox) {
   // 3a. Copy the values from field_s_person_type to field_s_person_affiliation.
   // 3b. Remove the field_s_person_type field from the content type.
   // 4. Check the views in the feature for the field_s_person_type field and remove it
-  // 5. Add the new affiliation field to the views
+  // 5. Add the new affiliation field to the views.
 
   // 0. Check if the field exists. Die if gone.
   $field = field_info_field("field_s_person_type");
@@ -22,6 +29,7 @@ function stanford_person_update_7400(&$sandbox) {
 
   if (!$field) {
     watchdog('stanford_person', 'field_s_person_type was not found', array(), WATCHDOG_NOTICE);
+    return;
   }
 
   // 1. Check if vocabulary exists and create it if it does not.
