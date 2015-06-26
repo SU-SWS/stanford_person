@@ -301,6 +301,18 @@ function stanford_person_views_views_default_views() {
   /* Display: Faculty Block */
   $handler = $view->new_display('block', 'Faculty Block', 'block_faculty');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+
+  /* Display: Profiles Page */
+  $handler = $view->new_display('page', 'Profiles Page', 'profiles_page');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Profiles';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['path'] = 'people/%/profiles';
+  $handler->display->display_options['menu']['title'] = 'Faculty';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'main-menu';
+  $handler->display->display_options['menu']['context'] = 0;
   $export['stanford_person_faculty'] = $view;
 
   $view = new view();
@@ -791,6 +803,19 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['name'] = 'main-menu';
   $handler->display->display_options['menu']['context'] = 0;
+
+  /* Display: Directory Page */
+  $handler = $view->new_display('page', 'Directory Page', 'directory_page');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Directory';
+  $handler->display->display_options['display_comment'] = 'CJW';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['path'] = 'people/%/directory';
+  $handler->display->display_options['menu']['title'] = 'Staff';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'main-menu';
+  $handler->display->display_options['menu']['context'] = 0;
   $export['stanford_person_staff'] = $view;
 
   $view = new view();
@@ -1000,6 +1025,18 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+
+  /* Display: List Page */
+  $handler = $view->new_display('page', 'List Page', 'list_page');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'List';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['path'] = 'people/%/list';
+  $handler->display->display_options['menu']['title'] = 'Students';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'main-menu';
+  $handler->display->display_options['menu']['context'] = 0;
   $export['stanford_person_student'] = $view;
 
   return $export;
