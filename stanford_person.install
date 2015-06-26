@@ -132,42 +132,6 @@ function stanford_person_update_7500(&$sandbox) {
   field_delete_field("field_s_person_type");
   field_purge_batch(100);
 
-  // 4. Check the views in the feature for the field_s_person_type field and
-  // remove it.
-
-  // Views included in the feature.
-  $list = array(
-    'stanford_person_manage',
-    'stanford_person_faculty',
-    'stanford_person_people',
-    'stanford_person_staff',
-    'stanford_person_student',
-  );
-
-  // Loop through all the included views in the feature and try to find the old
-  // field_s_person_type field and remove it from the view.
-  foreach ($list as $view_name) {
-
-    // Try to load the view.
-    $view = views_get_view($view_name);
-    if (!is_object($view)) {
-      continue;
-    }
-
-    // Remove from all places the field could be.
-    foreach ($view->display as &$display) {
-      unset($display->display_options['style_options']['columns']['field_s_person_type']);
-      unset($display->display_options['sorts']['field_s_person_type']);
-      unset($display->display_options['arguments']['field_s_person_type']);
-      unset($display->display_options['fields']['field_s_person_type']);
-      unset($display->display_options['filters']['field_s_person_type']);
-    }
-
-    $view->save();
-  }
-
-  // 5. Add the new affiliation field to the views.
-
 
 
 
