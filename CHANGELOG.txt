@@ -3,7 +3,9 @@ Stanford Person x.x-x.x xxxx-xx-xx
 
 Stanford Person 7.x-5.0 2015-06-25
 ----------------------------------
--
+- Replaced field_s_person_type with field_s_person_affiliation
+- Upgrade path from 4.x to 5.x
+- Cache yer views!
 
 Stanford Person 7.x-4.1 2015-03-06
 ----------------------------------
