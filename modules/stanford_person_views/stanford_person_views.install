@@ -4,15 +4,15 @@
  */
 
 /**
- * Handle the changes to the type field that goes from list to taxonomy by
+ * 1. Handle the changes to the type field that goes from list to taxonomy by
  * removing all fields and filters from the views but only if they exist in the
  * database. Also, play nice and add new fields.
  *
- * Field update change. Remove list based field_s_person_type and replace with
+ * 2. Field update change. Remove list based field_s_person_type and replace with
  * a taxonomy term field called field_s_person_affiliation.
  *
- * 4. Check the views in the feature for the field_s_person_type field and remove it
- * 5. Add the new affiliation field to the views.
+ * 3. Check the views in the feature for the field_s_person_type field and remove it
+ * 4. Add the new affiliation field to the views.
  *
  */
 function stanford_person_views_update_7500(&$sandbox) {
