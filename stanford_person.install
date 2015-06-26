@@ -14,7 +14,7 @@
  * 5. Add the new affiliation field to the views.
  *
  */
-function stanford_person_update_7400(&$sandbox) {
+function stanford_person_update_7500(&$sandbox) {
 
   // 1. Check if vocabulary exists. If not create it. If it does get machine_name
   // 2. For every value in the field_s_person_type create a taxonomy term in the affiliations vocab.
