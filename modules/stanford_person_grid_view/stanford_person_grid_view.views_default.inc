@@ -32,7 +32,6 @@ function stanford_person_grid_view_views_default_views() {
   $handler->display->display_options['cache']['output_lifespan'] = '3600';
   $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['query']['options']['distinct'] = TRUE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Go';
   $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
@@ -48,20 +47,6 @@ function stanford_person_grid_view_views_default_views() {
   );
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-  /* Relationship: Content: Taxonomy terms on node */
-  $handler->display->display_options['relationships']['term_node_tid_1']['id'] = 'term_node_tid_1';
-  $handler->display->display_options['relationships']['term_node_tid_1']['table'] = 'node';
-  $handler->display->display_options['relationships']['term_node_tid_1']['field'] = 'term_node_tid';
-  $handler->display->display_options['relationships']['term_node_tid_1']['label'] = 'term-aff';
-  $handler->display->display_options['relationships']['term_node_tid_1']['vocabularies'] = array(
-    'stanford_affiliation' => 'stanford_affiliation',
-    'stanford_faculty_type' => 0,
-    'stanford_field_of_study' => 0,
-    'stanford_interests' => 0,
-    'stanford_staff_type' => 0,
-    'stanford_student_type' => 0,
-    'tags' => 0,
-  );
   /* Field: Content: Profile Picture */
   $handler->display->display_options['fields']['field_s_person_profile_picture']['id'] = 'field_s_person_profile_picture';
   $handler->display->display_options['fields']['field_s_person_profile_picture']['table'] = 'field_data_field_s_person_profile_picture';
@@ -123,7 +108,7 @@ function stanford_person_grid_view_views_default_views() {
   $handler->display->display_options['arguments']['tid']['title_enable'] = TRUE;
   $handler->display->display_options['arguments']['tid']['title'] = '%1';
   $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['tid']['default_argument_options']['argument'] = 'faculty';
+  $handler->display->display_options['arguments']['tid']['default_argument_options']['argument'] = 'all';
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
@@ -171,29 +156,6 @@ function stanford_person_grid_view_views_default_views() {
     7 => 0,
     8 => 0,
   );
-  /* Filter criterion: Content: Affiliation (field_s_person_affiliation) */
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['id'] = 'field_s_person_affiliation_tid';
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['table'] = 'field_data_field_s_person_affiliation';
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['field'] = 'field_s_person_affiliation_tid';
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['expose']['operator_id'] = 'field_s_person_affiliation_tid_op';
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['expose']['label'] = 'Affiliation';
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['expose']['operator'] = 'field_s_person_affiliation_tid_op';
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['expose']['identifier'] = 'field_s_person_affiliation_tid';
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    6 => 0,
-    5 => 0,
-    4 => 0,
-    3 => 0,
-    9 => 0,
-    7 => 0,
-    8 => 0,
-  );
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['vocabulary'] = 'stanford_affiliation';
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['hierarchy'] = 1;
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
