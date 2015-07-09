@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Stanford Person Grid View feature.
+ */
+
+include_once 'stanford_person_grid_view.features.inc';
