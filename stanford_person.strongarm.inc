@@ -139,7 +139,7 @@ function stanford_person_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '40',
+          'weight' => '11',
         ),
         'title' => array(
           'weight' => '-5',
@@ -148,7 +148,10 @@ function stanford_person_strongarm() {
           'weight' => '8',
         ),
         'redirect' => array(
-          'weight' => '30',
+          'weight' => '9',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '10',
         ),
       ),
       'display' => array(),
@@ -219,7 +222,7 @@ function stanford_person_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_stanford_interests_pattern';
-  $strongarm->value = 'people/faculty/[term:name]';
+  $strongarm->value = '';
   $export['pathauto_taxonomy_term_stanford_interests_pattern'] = $strongarm;
 
   $strongarm = new stdClass();

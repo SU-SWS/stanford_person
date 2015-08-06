@@ -21,7 +21,7 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'More Link group',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
       0 => 'field_s_person_info_links',
     ),
@@ -146,7 +146,7 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Advanced',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
       0 => 'field_s_person_weight',
     ),
@@ -176,11 +176,11 @@ function stanford_person_field_group_info() {
     'label' => 'Basic Info',
     'weight' => '0',
     'children' => array(
-      0 => 'field_s_person_first_name',
-      1 => 'field_s_person_last_name',
-      2 => 'field_s_person_middle_name',
-      3 => 'field_s_person_profile_picture',
-      4 => 'field_s_person_affiliation',
+      0 => 'field_s_person_affiliation',
+      1 => 'field_s_person_first_name',
+      2 => 'field_s_person_last_name',
+      3 => 'field_s_person_middle_name',
+      4 => 'field_s_person_profile_picture',
       5 => 'title',
     ),
     'format_type' => 'fieldset',
@@ -209,10 +209,10 @@ function stanford_person_field_group_info() {
     'label' => 'Bio',
     'weight' => '1',
     'children' => array(
-      0 => 'field_s_person_education',
-      1 => 'field_s_person_faculty_title',
-      2 => 'field_s_person_file',
-      3 => 'body',
+      0 => 'body',
+      1 => 'field_s_person_education',
+      2 => 'field_s_person_faculty_title',
+      3 => 'field_s_person_file',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -290,6 +290,43 @@ function stanford_person_field_group_info() {
     ),
   );
   $export['group_s_person_faculty|node|stanford_person|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_s_person_social_media|node|stanford_person|form';
+  $field_group->group_name = 'group_s_person_social_media';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Social Media',
+    'weight' => '6',
+    'children' => array(
+      0 => 'field_s_person_facebook',
+      1 => 'field_s_person_twitter',
+      2 => 'field_s_person_googleplus',
+      3 => 'field_s_person_linkedin',
+      4 => 'field_s_person_instagram',
+      5 => 'field_s_person_youtube',
+      6 => 'field_s_person_vimeo',
+      7 => 'field_s_person_tumblr',
+      8 => 'field_s_person_pinterest',
+      9 => 'field_s_person_flickr',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Social Media',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'classes' => 'group-s-person-social-media field-group-fieldset',
+        'description' => '',
+      ),
+      'formatter' => 'collapsed',
+    ),
+  );
+  $export['group_s_person_social_media|node|stanford_person|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -561,7 +598,17 @@ function stanford_person_field_group_info() {
       1 => 'field_s_person_faculty_title',
       2 => 'field_s_person_faculty_type',
       3 => 'field_s_person_file',
-      4 => 'title',
+      4 => 'field_s_person_facebook',
+      5 => 'field_s_person_twitter',
+      6 => 'field_s_person_googleplus',
+      7 => 'field_s_person_linkedin',
+      8 => 'field_s_person_instagram',
+      9 => 'field_s_person_youtube',
+      10 => 'field_s_person_vimeo',
+      11 => 'field_s_person_tumblr',
+      12 => 'field_s_person_pinterest',
+      13 => 'field_s_person_flickr',
+      14 => 'title',
     ),
     'format_type' => 'div',
     'format_settings' => array(
