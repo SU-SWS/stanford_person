@@ -261,7 +261,21 @@ function stanford_person_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_affiliation']['id'] = 'field_s_person_affiliation';
   $handler->display->display_options['fields']['field_s_person_affiliation']['table'] = 'field_data_field_s_person_affiliation';
   $handler->display->display_options['fields']['field_s_person_affiliation']['field'] = 'field_s_person_affiliation';
+  $handler->display->display_options['fields']['field_s_person_affiliation']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_person_affiliation']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_s_person_affiliation']['settings'] = array(
+    'custom_link_to_entity' => 0,
+    'custom_prefix' => '',
+    'custom_suffix' => '',
+    'custom_reverse' => 0,
+    'custom_trim' => 0,
+    'custom_strtolower' => 0,
+    'custom_strtoupper' => 0,
+    'custom_ucfirst' => 0,
+    'custom_ucwords' => 0,
+    'custom_strip_tags' => 0,
+    'custom_strip_preserve' => '',
+  );
   $handler->display->display_options['fields']['field_s_person_affiliation']['delta_offset'] = '0';
   /* Field: Content: Faculty Status */
   $handler->display->display_options['fields']['field_s_person_faculty_type']['id'] = 'field_s_person_faculty_type';
@@ -329,6 +343,12 @@ function stanford_person_views_default_views() {
     'thousand_separator' => ',',
     'prefix_suffix' => 0,
   );
+  /* Field: Content: Author uid */
+  $handler->display->display_options['fields']['uid']['id'] = 'uid';
+  $handler->display->display_options['fields']['uid']['table'] = 'node';
+  $handler->display->display_options['fields']['uid']['field'] = 'uid';
+  $handler->display->display_options['fields']['uid']['label'] = 'Author';
+  $handler->display->display_options['fields']['uid']['link_to_user'] = FALSE;
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
