@@ -139,19 +139,19 @@ function stanford_person_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '11',
+          'weight' => '12',
         ),
         'title' => array(
           'weight' => '-5',
         ),
         'path' => array(
-          'weight' => '8',
-        ),
-        'redirect' => array(
           'weight' => '9',
         ),
-        'xmlsitemap' => array(
+        'redirect' => array(
           'weight' => '10',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '11',
         ),
       ),
       'display' => array(),

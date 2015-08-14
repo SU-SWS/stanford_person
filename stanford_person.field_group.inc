@@ -401,7 +401,7 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Advanced',
-    'weight' => '7',
+    'weight' => '8',
     'children' => array(
       0 => 'field_s_person_weight',
     ),
@@ -436,7 +436,8 @@ function stanford_person_field_group_info() {
       2 => 'field_s_person_last_name',
       3 => 'field_s_person_middle_name',
       4 => 'field_s_person_profile_picture',
-      5 => 'title',
+      5 => 'field_s_person_view_profile',
+      6 => 'title',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

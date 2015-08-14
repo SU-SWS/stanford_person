@@ -3069,6 +3069,73 @@ Contact your site administrator to add or change entries. ',
     ),
   );
 
+  // Exported field_instance: 'node-stanford_person-field_s_person_view_profile'
+  $field_instances['node-stanford_person-field_s_person_view_profile'] = array(
+    'bundle' => 'stanford_person',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Check this box to add a View profile button link.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(
+          'custom_link_to_entity' => '',
+          'custom_prefix' => '',
+          'custom_reverse' => '',
+          'custom_strip_preserve' => '',
+          'custom_strip_tags' => '',
+          'custom_strtolower' => '',
+          'custom_strtoupper' => '',
+          'custom_suffix' => '',
+          'custom_trim' => '',
+          'custom_ucfirst' => '',
+          'custom_ucwords' => '',
+        ),
+        'type' => 'list_default',
+        'weight' => 40,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'taxonomy' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_s_person_view_profile',
+    'label' => 'View Profile',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'node-stanford_person-field_s_person_vimeo'
   $field_instances['node-stanford_person-field_s_person_vimeo'] = array(
     'bundle' => 'stanford_person',
@@ -3326,6 +3393,7 @@ Contact your site administrator to add or change entries. ',
   // Translatables
   // Included for use with string extractors like potx.
   t('Affiliation');
+  t('Check this box to add a View profile button link.');
   t('Cohort');
   t('Cohort typically applies to graduate students. If applicable, select the year this person started studies at Stanford; if not applicable, select "-Year."');
   t('Degrees / Education');
@@ -3400,6 +3468,7 @@ Contact your site administrator to add or change entries. ');
   t('Twitter');
   t('Upload a file, such as a CV.');
   t('Upload an image of this person.');
+  t('View Profile');
   t('Vimeo');
   t('Website');
   t('YouTube');
