@@ -65,6 +65,27 @@ function stanford_person_field_default_field_bases() {
     'type' => 'datetime',
   );
 
+  // Exported field_base: 'field_s_person_department'
+  $field_bases['field_s_person_department'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_s_person_department',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_s_person_dissertatn_title'
   $field_bases['field_s_person_dissertatn_title'] = array(
     'active' => 1,
@@ -353,7 +374,7 @@ function stanford_person_field_default_field_bases() {
   // Exported field_base: 'field_s_person_info_links'
   $field_bases['field_s_person_info_links'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_s_person_info_links',
@@ -659,6 +680,27 @@ function stanford_person_field_default_field_bases() {
     'type' => 'image',
   );
 
+  // Exported field_base: 'field_s_person_school'
+  $field_bases['field_s_person_school'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_s_person_school',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_s_person_staff_type'
   $field_bases['field_s_person_staff_type'] = array(
     'active' => 1,
@@ -735,6 +777,27 @@ function stanford_person_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'taxonomy_term_reference',
+  );
+
+  // Exported field_base: 'field_s_person_title'
+  $field_bases['field_s_person_title'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_s_person_title',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
   );
 
   // Exported field_base: 'field_s_person_tumblr'

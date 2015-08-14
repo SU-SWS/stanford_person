@@ -34,7 +34,7 @@ function stanford_person_field_default_field_instances() {
           'custom_ucwords' => '',
         ),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 3,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -53,7 +53,7 @@ function stanford_person_field_default_field_instances() {
           'custom_ucwords' => '',
         ),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 41,
       ),
       'stanford_taxonomy' => array(
         'label' => 'hidden',
@@ -131,28 +131,15 @@ function stanford_person_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'custom_link_to_entity' => '',
-          'custom_prefix' => '',
-          'custom_reverse' => '',
-          'custom_strip_preserve' => '',
-          'custom_strip_tags' => '',
-          'custom_strtolower' => '',
-          'custom_strtoupper' => '',
-          'custom_suffix' => '',
-          'custom_trim' => '',
-          'custom_ucfirst' => '',
-          'custom_ucwords' => '',
-        ),
-        'type' => 'taxonomy_term_reference_link',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 28,
       ),
       'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 19,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -199,7 +186,7 @@ function stanford_person_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 20,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -242,6 +229,109 @@ function stanford_person_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-stanford_person-field_s_person_department'
+  $field_instances['node-stanford_person-field_s_person_department'] = array(
+    'bundle' => 'stanford_person',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Enter the person\'s department information.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'custom_link_to_entity' => '',
+          'custom_prefix' => '',
+          'custom_reverse' => '',
+          'custom_strip_preserve' => '',
+          'custom_strip_tags' => '',
+          'custom_strtolower' => '',
+          'custom_strtoupper' => '',
+          'custom_suffix' => '',
+          'custom_trim' => '',
+          'custom_ucfirst' => '',
+          'custom_ucwords' => '',
+        ),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'custom_link_to_entity' => '',
+          'custom_prefix' => '',
+          'custom_reverse' => '',
+          'custom_strip_preserve' => '',
+          'custom_strip_tags' => '',
+          'custom_strtolower' => '',
+          'custom_strtoupper' => '',
+          'custom_suffix' => '',
+          'custom_trim' => '',
+          'custom_ucfirst' => '',
+          'custom_ucwords' => '',
+        ),
+        'type' => 'text_default',
+        'weight' => 37,
+      ),
+      'taxonomy' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_s_person_department',
+    'label' => 'Department',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'content_editor_text_format' => 'content_editor_text_format',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'content_editor_text_format' => array(
+              'weight' => -10,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 9,
+    ),
+  );
+
   // Exported field_instance:
   // 'node-stanford_person-field_s_person_dissertatn_title'
   $field_instances['node-stanford_person-field_s_person_dissertatn_title'] = array(
@@ -260,7 +350,7 @@ function stanford_person_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 30,
+        'weight' => 26,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -339,41 +429,15 @@ function stanford_person_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'custom_link_to_entity' => '',
-          'custom_prefix' => '',
-          'custom_reverse' => '',
-          'custom_strip_preserve' => '',
-          'custom_strip_tags' => '',
-          'custom_strtolower' => '',
-          'custom_strtoupper' => '',
-          'custom_suffix' => '',
-          'custom_trim' => '',
-          'custom_ucfirst' => '',
-          'custom_ucwords' => '',
-        ),
-        'type' => 'text_default',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 4,
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'custom_link_to_entity' => '',
-          'custom_prefix' => '',
-          'custom_reverse' => '',
-          'custom_strip_preserve' => '',
-          'custom_strip_tags' => '',
-          'custom_strtolower' => '',
-          'custom_strtoupper' => '',
-          'custom_suffix' => '',
-          'custom_trim' => '',
-          'custom_ucfirst' => '',
-          'custom_ucwords' => '',
-        ),
-        'type' => 'text_default',
-        'weight' => 13,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -422,7 +486,7 @@ function stanford_person_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 9,
+      'weight' => 12,
     ),
   );
 
@@ -556,7 +620,7 @@ function stanford_person_field_default_field_instances() {
           'custom_ucwords' => '',
         ),
         'type' => 'link_default',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -617,41 +681,15 @@ function stanford_person_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'custom_link_to_entity' => '',
-          'custom_prefix' => '',
-          'custom_reverse' => '',
-          'custom_strip_preserve' => '',
-          'custom_strip_tags' => '',
-          'custom_strtolower' => '',
-          'custom_strtoupper' => '',
-          'custom_suffix' => '',
-          'custom_trim' => '',
-          'custom_ucfirst' => '',
-          'custom_ucwords' => '',
-        ),
-        'type' => 'text_default',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 1,
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'custom_link_to_entity' => '',
-          'custom_prefix' => '',
-          'custom_reverse' => '',
-          'custom_strip_preserve' => '',
-          'custom_strip_tags' => '',
-          'custom_strtolower' => '',
-          'custom_strtoupper' => '',
-          'custom_suffix' => '',
-          'custom_trim' => '',
-          'custom_ucfirst' => '',
-          'custom_ucwords' => '',
-        ),
-        'type' => 'text_default',
-        'weight' => 12,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
       ),
       'stanford_taxonomy' => array(
         'label' => 'hidden',
@@ -734,7 +772,7 @@ function stanford_person_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 8,
+      'weight' => 11,
     ),
   );
 
@@ -747,41 +785,15 @@ function stanford_person_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'custom_link_to_entity' => '',
-          'custom_prefix' => '',
-          'custom_reverse' => '',
-          'custom_strip_preserve' => '',
-          'custom_strip_tags' => '',
-          'custom_strtolower' => '',
-          'custom_strtoupper' => '',
-          'custom_suffix' => '',
-          'custom_trim' => '',
-          'custom_ucfirst' => '',
-          'custom_ucwords' => '',
-        ),
-        'type' => 'taxonomy_term_reference_link',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 2,
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'custom_link_to_entity' => '',
-          'custom_prefix' => '',
-          'custom_reverse' => '',
-          'custom_strip_preserve' => '',
-          'custom_strip_tags' => '',
-          'custom_strtolower' => '',
-          'custom_strtoupper' => '',
-          'custom_suffix' => '',
-          'custom_trim' => '',
-          'custom_ucfirst' => '',
-          'custom_ucwords' => '',
-        ),
-        'type' => 'taxonomy_term_reference_plain',
-        'weight' => 11,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -861,7 +873,7 @@ function stanford_person_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 32,
+        'weight' => 28,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -909,41 +921,15 @@ function stanford_person_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'file',
-        'settings' => array(
-          'custom_link_to_entity' => '',
-          'custom_prefix' => '',
-          'custom_reverse' => '',
-          'custom_strip_preserve' => '',
-          'custom_strip_tags' => '',
-          'custom_strtolower' => '',
-          'custom_strtoupper' => '',
-          'custom_suffix' => '',
-          'custom_trim' => '',
-          'custom_ucfirst' => '',
-          'custom_ucwords' => '',
-        ),
-        'type' => 'file_default',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 5,
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'file',
-        'settings' => array(
-          'custom_link_to_entity' => '',
-          'custom_prefix' => '',
-          'custom_reverse' => '',
-          'custom_strip_preserve' => '',
-          'custom_strip_tags' => '',
-          'custom_strtolower' => '',
-          'custom_strtoupper' => '',
-          'custom_suffix' => '',
-          'custom_trim' => '',
-          'custom_ucfirst' => '',
-          'custom_ucwords' => '',
-        ),
-        'type' => 'file_default',
-        'weight' => 14,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -1020,7 +1006,7 @@ function stanford_person_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 10,
+      'weight' => 13,
     ),
   );
 
@@ -1041,7 +1027,7 @@ function stanford_person_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 34,
+        'weight' => 30,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -1110,7 +1096,7 @@ function stanford_person_field_default_field_instances() {
           'custom_ucwords' => '',
         ),
         'type' => 'link_default',
-        'weight' => 38,
+        'weight' => 39,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -1129,7 +1115,7 @@ function stanford_person_field_default_field_instances() {
           'custom_ucwords' => '',
         ),
         'type' => 'link_default',
-        'weight' => 10,
+        'weight' => 12,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -1228,7 +1214,7 @@ function stanford_person_field_default_field_instances() {
           'custom_ucwords' => '',
         ),
         'type' => 'link_default',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -1296,7 +1282,7 @@ function stanford_person_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 26,
+        'weight' => 22,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -1344,7 +1330,7 @@ function stanford_person_field_default_field_instances() {
     'bundle' => 'stanford_person',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Each link provides a URL about the person. The required title provides a human readable name (e.g., "Web page," "StanfordWho," or "Facebook"). For each title enter the URL which corresponds to the person (e.g.,  "http://www.stanford.edu/~hennessy/").',
+    'description' => 'This link provides a URL about the person. The required title provides a human readable name (e.g., "Web page," "StanfordWho," or "Facebook"). Enter the URL which corresponds to the person (e.g.,  "http://www.stanford.edu/~hennessy/").',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1369,7 +1355,7 @@ function stanford_person_field_default_field_instances() {
           'custom_ucwords' => '',
         ),
         'type' => 'link_default',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -1392,12 +1378,13 @@ function stanford_person_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_s_person_info_links',
-    'label' => 'Personal info Links',
+    'label' => 'Website',
     'required' => 0,
     'settings' => array(
       'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
+        'configurable_class' => 0,
         'configurable_title' => 0,
         'rel' => '',
         'target' => 'default',
@@ -1407,8 +1394,9 @@ function stanford_person_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'rel_remove' => 'default',
       'title' => 'required',
-      'title_label_use_field_label' => FALSE,
+      'title_label_use_field_label' => 0,
       'title_maxlength' => 80,
       'title_value' => '',
       'url' => 0,
@@ -1472,7 +1460,7 @@ function stanford_person_field_default_field_instances() {
           'custom_ucwords' => '',
         ),
         'type' => 'link_default',
-        'weight' => 5,
+        'weight' => 7,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -1539,22 +1527,9 @@ Contact your site administrator to add or change entries. ',
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'custom_link_to_entity' => '',
-          'custom_prefix' => '',
-          'custom_reverse' => '',
-          'custom_strip_preserve' => '',
-          'custom_strip_tags' => '',
-          'custom_strtolower' => '',
-          'custom_strtoupper' => '',
-          'custom_suffix' => '',
-          'custom_trim' => '',
-          'custom_ucfirst' => '',
-          'custom_ucwords' => '',
-        ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 8,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
       ),
       'stanford_taxonomy' => array(
         'label' => 'hidden',
@@ -1634,7 +1609,7 @@ Contact your site administrator to add or change entries. ',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 36,
+        'weight' => 32,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -1722,7 +1697,7 @@ Contact your site administrator to add or change entries. ',
           'custom_ucwords' => '',
         ),
         'type' => 'link_default',
-        'weight' => 4,
+        'weight' => 6,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -1791,7 +1766,7 @@ Contact your site administrator to add or change entries. ',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 31,
+        'weight' => 27,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -1848,7 +1823,7 @@ Contact your site administrator to add or change entries. ',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 33,
+        'weight' => 29,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -1931,7 +1906,7 @@ Contact your site administrator to add or change entries. ',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 35,
+        'weight' => 31,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -1985,7 +1960,7 @@ Contact your site administrator to add or change entries. ',
         'weight' => 11,
       ),
       'full' => array(
-        'label' => 'hidden',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(
           'custom_link_to_entity' => '',
@@ -2001,7 +1976,7 @@ Contact your site administrator to add or change entries. ',
           'custom_ucwords' => '',
         ),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 7,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -2085,7 +2060,7 @@ Contact your site administrator to add or change entries. ',
           'custom_ucwords' => '',
         ),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -2195,7 +2170,7 @@ Contact your site administrator to add or change entries. ',
           'custom_ucwords' => '',
         ),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -2296,7 +2271,7 @@ Contact your site administrator to add or change entries. ',
           'custom_ucwords' => '',
         ),
         'type' => 'link_default',
-        'weight' => 9,
+        'weight' => 11,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -2518,6 +2493,109 @@ Contact your site administrator to add or change entries. ',
     ),
   );
 
+  // Exported field_instance: 'node-stanford_person-field_s_person_school'
+  $field_instances['node-stanford_person-field_s_person_school'] = array(
+    'bundle' => 'stanford_person',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This field allows faculty and students to enter their School (e.g., Stanford Law School).',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'custom_link_to_entity' => '',
+          'custom_prefix' => '',
+          'custom_reverse' => '',
+          'custom_strip_preserve' => '',
+          'custom_strip_tags' => '',
+          'custom_strtolower' => '',
+          'custom_strtoupper' => '',
+          'custom_suffix' => '',
+          'custom_trim' => '',
+          'custom_ucfirst' => '',
+          'custom_ucwords' => '',
+        ),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'custom_link_to_entity' => '',
+          'custom_prefix' => '',
+          'custom_reverse' => '',
+          'custom_strip_preserve' => '',
+          'custom_strip_tags' => '',
+          'custom_strtolower' => '',
+          'custom_strtoupper' => '',
+          'custom_suffix' => '',
+          'custom_trim' => '',
+          'custom_ucfirst' => '',
+          'custom_ucwords' => '',
+        ),
+        'type' => 'text_default',
+        'weight' => 38,
+      ),
+      'taxonomy' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_s_person_school',
+    'label' => 'School',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'content_editor_text_format' => 'content_editor_text_format',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'content_editor_text_format' => array(
+              'weight' => -10,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 10,
+    ),
+  );
+
   // Exported field_instance: 'node-stanford_person-field_s_person_staff_type'
   $field_instances['node-stanford_person-field_s_person_staff_type'] = array(
     'bundle' => 'stanford_person',
@@ -2535,7 +2613,7 @@ Contact your site administrator to add or change entries. ',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 27,
+        'weight' => 23,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -2575,28 +2653,15 @@ Contact your site administrator to add or change entries. ',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'custom_link_to_entity' => '',
-          'custom_prefix' => '',
-          'custom_reverse' => '',
-          'custom_strip_preserve' => '',
-          'custom_strip_tags' => '',
-          'custom_strtolower' => '',
-          'custom_strtoupper' => '',
-          'custom_suffix' => '',
-          'custom_trim' => '',
-          'custom_ucfirst' => '',
-          'custom_ucwords' => '',
-        ),
-        'type' => 'taxonomy_term_reference_link',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 3,
       ),
       'full' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 28,
+        'weight' => 24,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -2676,7 +2741,7 @@ Contact your site administrator to add or change entries. ',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 29,
+        'weight' => 25,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -2716,6 +2781,96 @@ Contact your site administrator to add or change entries. ',
     ),
   );
 
+  // Exported field_instance: 'node-stanford_person-field_s_person_title'
+  $field_instances['node-stanford_person-field_s_person_title'] = array(
+    'bundle' => 'stanford_person',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This field is for the person\'s job title.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'custom_link_to_entity' => '',
+          'custom_prefix' => '',
+          'custom_reverse' => '',
+          'custom_strip_preserve' => '',
+          'custom_strip_tags' => '',
+          'custom_strtolower' => '',
+          'custom_strtoupper' => '',
+          'custom_suffix' => '',
+          'custom_trim' => '',
+          'custom_ucfirst' => '',
+          'custom_ucwords' => '',
+        ),
+        'type' => 'text_default',
+        'weight' => 37,
+      ),
+      'taxonomy' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_s_person_title',
+    'label' => 'Job Title',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'content_editor_text_format' => 'content_editor_text_format',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'content_editor_text_format' => array(
+              'weight' => -10,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 8,
+    ),
+  );
+
   // Exported field_instance: 'node-stanford_person-field_s_person_tumblr'
   $field_instances['node-stanford_person-field_s_person_tumblr'] = array(
     'bundle' => 'stanford_person',
@@ -2745,7 +2900,7 @@ Contact your site administrator to add or change entries. ',
           'custom_ucwords' => '',
         ),
         'type' => 'link_default',
-        'weight' => 36,
+        'weight' => 38,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -2764,7 +2919,7 @@ Contact your site administrator to add or change entries. ',
           'custom_ucwords' => '',
         ),
         'type' => 'link_default',
-        'weight' => 8,
+        'weight' => 10,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -2863,7 +3018,7 @@ Contact your site administrator to add or change entries. ',
           'custom_ucwords' => '',
         ),
         'type' => 'link_default',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -2943,7 +3098,7 @@ Contact your site administrator to add or change entries. ',
           'custom_ucwords' => '',
         ),
         'type' => 'link_default',
-        'weight' => 35,
+        'weight' => 36,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -2962,7 +3117,7 @@ Contact your site administrator to add or change entries. ',
           'custom_ucwords' => '',
         ),
         'type' => 'link_default',
-        'weight' => 7,
+        'weight' => 9,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -3034,7 +3189,7 @@ Contact your site administrator to add or change entries. ',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 25,
+        'weight' => 21,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -3098,7 +3253,7 @@ Contact your site administrator to add or change entries. ',
           'custom_ucwords' => '',
         ),
         'type' => 'link_default',
-        'weight' => 34,
+        'weight' => 35,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -3117,7 +3272,7 @@ Contact your site administrator to add or change entries. ',
           'custom_ucwords' => '',
         ),
         'type' => 'link_default',
-        'weight' => 6,
+        'weight' => 8,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -3174,9 +3329,10 @@ Contact your site administrator to add or change entries. ',
   t('Cohort');
   t('Cohort typically applies to graduate students. If applicable, select the year this person started studies at Stanford; if not applicable, select "-Year."');
   t('Degrees / Education');
+  t('Department');
   t('Dissertation Title');
-  t('Each link provides a URL about the person. The required title provides a human readable name (e.g., "Web page," "StanfordWho," or "Facebook"). For each title enter the URL which corresponds to the person (e.g.,  "http://www.stanford.edu/~hennessy/").');
   t('Email');
+  t('Enter the person\'s department information.');
   t('Facebook');
   t('Faculty Status');
   t('Fax');
@@ -3202,6 +3358,7 @@ Contact your site administrator to add or change entries. ',
   t('Insert a link to your Vimeo account; if left empty, this field will not display.');
   t('Insert a link to your YouTube account; if left empty, this field will not display.');
   t('Instagram');
+  t('Job Title');
   t('Last Name');
   t('LinkedIn');
   t('List of faculty interests including research interests. Select one or more areas of interest. 
@@ -3211,18 +3368,21 @@ Contact your site administrator to add or change entries. ');
   t('Middle name');
   t('Office');
   t('Office Hours');
-  t('Personal info Links');
   t('Phone');
   t('Pinterest');
   t('Profile / Bio');
   t('Profile Picture');
+  t('School');
   t('Select the appropriate affiliation(s) for this person.');
   t('Select the year this person graduates.');
   t('Sorting Weight');
   t('Staff Type');
   t('Student Type');
   t('This email field displays the primary email address (e.g. "mysunetid@stanford.edu").');
+  t('This field allows faculty and students to enter their School (e.g., Stanford Law School).');
+  t('This field is for the person\'s job title.');
   t('This integer field is used to control the sort order in views displays. Larger numbers are "heavier" and sink lower in the list.');
+  t('This link provides a URL about the person. The required title provides a human readable name (e.g., "Web page," "StanfordWho," or "Facebook"). Enter the URL which corresponds to the person (e.g.,  "http://www.stanford.edu/~hennessy/").');
   t('This text area displays a biography or profile of the person. To enter a summary to be displayed when a shorter amount of text is needed, click on "Edit summary" above.');
   t('This text area displays the mailing address. Enter the address as you want it to appear. Hint: Use control+enter to enter a new line.');
   t('This text field displays education information (e.g. "B.A., Stanford University, 1972"). Enter one degree per line.');
@@ -3241,6 +3401,7 @@ Contact your site administrator to add or change entries. ');
   t('Upload a file, such as a CV.');
   t('Upload an image of this person.');
   t('Vimeo');
+  t('Website');
   t('YouTube');
 
   return $field_instances;

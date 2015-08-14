@@ -13,6 +13,235 @@ function stanford_person_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_contact_info_styles|node|stanford_person|full';
+  $field_group->group_name = 'group_contact_info_styles';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_s_postcard_col2';
+  $field_group->data = array(
+    'label' => 'Contact Info Styles',
+    'weight' => '40',
+    'children' => array(
+      0 => 'field_s_person_email',
+      1 => 'field_s_person_info_links',
+      2 => 'field_s_person_office_hours',
+      3 => 'field_s_person_office_location',
+      4 => 'field_s_person_phone_display',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Contact Info Styles',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'descriptor',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_contact_info_styles|node|stanford_person|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_department_school_styles|node|stanford_person|full';
+  $field_group->group_name = 'group_department_school_styles';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_s_postcard_col2';
+  $field_group->data = array(
+    'label' => 'Department School Styles',
+    'weight' => '38',
+    'children' => array(
+      0 => 'field_s_person_department',
+      1 => 'field_s_person_school',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Department School Styles',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_department_school_styles|node|stanford_person|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_facebook_styles|node|stanford_person|full';
+  $field_group->group_name = 'group_facebook_styles';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_social_media_styles';
+  $field_group->data = array(
+    'label' => 'Facebook Styles',
+    'weight' => '35',
+    'children' => array(
+      0 => 'field_s_person_facebook',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Facebook Styles',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_facebook_styles|node|stanford_person|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_flickr_styles|node|stanford_person|full';
+  $field_group->group_name = 'group_flickr_styles';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_social_media_styles';
+  $field_group->data = array(
+    'label' => 'Flickr Styles',
+    'weight' => '44',
+    'children' => array(
+      0 => 'field_s_person_flickr',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Flickr Styles',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_flickr_styles|node|stanford_person|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_googleplus_styles|node|stanford_person|full';
+  $field_group->group_name = 'group_googleplus_styles';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_social_media_styles';
+  $field_group->data = array(
+    'label' => 'GooglePlus Styles',
+    'weight' => '37',
+    'children' => array(
+      0 => 'field_s_person_googleplus',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'GooglePlus Styles',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_googleplus_styles|node|stanford_person|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_instagram_styles|node|stanford_person|full';
+  $field_group->group_name = 'group_instagram_styles';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_social_media_styles';
+  $field_group->data = array(
+    'label' => 'Instagram Styles',
+    'weight' => '39',
+    'children' => array(
+      0 => 'field_s_person_instagram',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Instagram Styles',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_instagram_styles|node|stanford_person|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_linkedin_styles|node|stanford_person|full';
+  $field_group->group_name = 'group_linkedin_styles';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_social_media_styles';
+  $field_group->data = array(
+    'label' => 'LinkedIn Styles',
+    'weight' => '38',
+    'children' => array(
+      0 => 'field_s_person_linkedin',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'LinkedIn Styles',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_linkedin_styles|node|stanford_person|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_morelink_group|node|stanford_person|full';
   $field_group->group_name = 'group_morelink_group';
   $field_group->entity_type = 'node';
@@ -21,10 +250,8 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'More Link group',
-    'weight' => '7',
-    'children' => array(
-      0 => 'field_s_person_info_links',
-    ),
+    'weight' => '2',
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'More Link group',
@@ -40,6 +267,38 @@ function stanford_person_field_group_info() {
     ),
   );
   $export['group_morelink_group|node|stanford_person|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_pinterest_styles|node|stanford_person|full';
+  $field_group->group_name = 'group_pinterest_styles';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_social_media_styles';
+  $field_group->data = array(
+    'label' => 'Pinterest Styles',
+    'weight' => '43',
+    'children' => array(
+      0 => 'field_s_person_pinterest',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Pinterest Styles',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_pinterest_styles|node|stanford_person|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -84,9 +343,7 @@ function stanford_person_field_group_info() {
   $field_group->data = array(
     'label' => 'About',
     'weight' => '1',
-    'children' => array(
-      0 => 'body',
-    ),
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'About',
@@ -115,9 +372,7 @@ function stanford_person_field_group_info() {
   $field_group->data = array(
     'label' => 'About',
     'weight' => '1',
-    'children' => array(
-      0 => 'body',
-    ),
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'About',
@@ -213,6 +468,9 @@ function stanford_person_field_group_info() {
       1 => 'field_s_person_education',
       2 => 'field_s_person_faculty_title',
       3 => 'field_s_person_file',
+      4 => 'field_s_person_title',
+      5 => 'field_s_person_department',
+      6 => 'field_s_person_school',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -430,10 +688,8 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Interests Style',
-    'weight' => '8',
-    'children' => array(
-      0 => 'field_s_person_interests',
-    ),
+    'weight' => '3',
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Interests Style',
@@ -558,12 +814,10 @@ function stanford_person_field_group_info() {
     'label' => 'Postcard Column 2',
     'weight' => '29',
     'children' => array(
-      0 => 'field_s_person_education',
-      1 => 'field_s_person_faculty_title',
-      2 => 'field_s_person_faculty_type',
-      3 => 'field_s_person_student_type',
-      4 => 'field_s_person_file',
-      5 => 'title',
+      0 => 'body',
+      1 => 'field_s_person_department',
+      2 => 'field_s_person_school',
+      3 => 'title',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -594,21 +848,12 @@ function stanford_person_field_group_info() {
     'label' => 'Postcard Column 2',
     'weight' => '29',
     'children' => array(
-      0 => 'field_s_person_education',
-      1 => 'field_s_person_faculty_title',
-      2 => 'field_s_person_faculty_type',
-      3 => 'field_s_person_file',
-      4 => 'field_s_person_facebook',
-      5 => 'field_s_person_twitter',
-      6 => 'field_s_person_googleplus',
-      7 => 'field_s_person_linkedin',
-      8 => 'field_s_person_instagram',
-      9 => 'field_s_person_youtube',
-      10 => 'field_s_person_vimeo',
-      11 => 'field_s_person_tumblr',
-      12 => 'field_s_person_pinterest',
-      13 => 'field_s_person_flickr',
-      14 => 'title',
+      0 => 'body',
+      1 => 'field_s_person_title',
+      2 => 'title',
+      3 => 'group_contact_info_styles',
+      4 => 'group_social_media_styles',
+      5 => 'group_department_school_styles',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -921,6 +1166,175 @@ function stanford_person_field_group_info() {
     ),
   );
   $export['group_s_postcard|node|stanford_person|taxonomy'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_social_media_styles|node|stanford_person|full';
+  $field_group->group_name = 'group_social_media_styles';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_s_postcard_col2';
+  $field_group->data = array(
+    'label' => 'Social Media Styles',
+    'weight' => '39',
+    'children' => array(
+      0 => 'group_facebook_styles',
+      1 => 'group_twitter_styles',
+      2 => 'group_googleplus_styles',
+      3 => 'group_linkedin_styles',
+      4 => 'group_instagram_styles',
+      5 => 'group_youtube_styles',
+      6 => 'group_vimeo_styles',
+      7 => 'group_tumblr_styles',
+      8 => 'group_pinterest_styles',
+      9 => 'group_flickr_styles',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Social Media Styles',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-social-media-styles field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_social_media_styles|node|stanford_person|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_tumblr_styles|node|stanford_person|full';
+  $field_group->group_name = 'group_tumblr_styles';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_social_media_styles';
+  $field_group->data = array(
+    'label' => 'Tumblr Styles',
+    'weight' => '42',
+    'children' => array(
+      0 => 'field_s_person_tumblr',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Tumblr Styles',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_tumblr_styles|node|stanford_person|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_twitter_styles|node|stanford_person|full';
+  $field_group->group_name = 'group_twitter_styles';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_social_media_styles';
+  $field_group->data = array(
+    'label' => 'Twitter Styles',
+    'weight' => '36',
+    'children' => array(
+      0 => 'field_s_person_twitter',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Twitter Styles',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_twitter_styles|node|stanford_person|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_vimeo_styles|node|stanford_person|full';
+  $field_group->group_name = 'group_vimeo_styles';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_social_media_styles';
+  $field_group->data = array(
+    'label' => 'Vimeo Styles',
+    'weight' => '41',
+    'children' => array(
+      0 => 'field_s_person_vimeo',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Vimeo Styles',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_vimeo_styles|node|stanford_person|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_youtube_styles|node|stanford_person|full';
+  $field_group->group_name = 'group_youtube_styles';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_social_media_styles';
+  $field_group->data = array(
+    'label' => 'YouTube Styles',
+    'weight' => '40',
+    'children' => array(
+      0 => 'field_s_person_youtube',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'YouTube Styles',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_youtube_styles|node|stanford_person|full'] = $field_group;
 
   return $export;
 }
