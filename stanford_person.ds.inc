@@ -84,16 +84,16 @@ function stanford_person_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'title',
-        1 => 'group_s_postcard',
-        2 => 'field_s_person_department',
+        0 => 'group_s_postcard',
+        1 => 'title',
+        2 => 'field_s_person_profile_picture',
         3 => 'group_s_person_about',
-        4 => 'field_s_person_profile_picture',
+        4 => 'field_s_person_department',
         5 => 'field_s_person_school',
         6 => 'body',
         7 => 'group_s_postcard_col1',
-        8 => 'field_s_person_facebook',
-        9 => 'group_s_postcard_col2',
+        8 => 'group_s_postcard_col2',
+        9 => 'field_s_person_facebook',
         10 => 'field_s_person_twitter',
         11 => 'field_s_person_googleplus',
         12 => 'field_s_person_linkedin',
@@ -106,16 +106,16 @@ function stanford_person_ds_layout_settings_info() {
       ),
     ),
     'fields' => array(
-      'title' => 'ds_content',
       'group_s_postcard' => 'ds_content',
-      'field_s_person_department' => 'ds_content',
-      'group_s_person_about' => 'ds_content',
+      'title' => 'ds_content',
       'field_s_person_profile_picture' => 'ds_content',
+      'group_s_person_about' => 'ds_content',
+      'field_s_person_department' => 'ds_content',
       'field_s_person_school' => 'ds_content',
       'body' => 'ds_content',
       'group_s_postcard_col1' => 'ds_content',
-      'field_s_person_facebook' => 'ds_content',
       'group_s_postcard_col2' => 'ds_content',
+      'field_s_person_facebook' => 'ds_content',
       'field_s_person_twitter' => 'ds_content',
       'field_s_person_googleplus' => 'ds_content',
       'field_s_person_linkedin' => 'ds_content',
@@ -310,6 +310,16 @@ function stanford_person_ds_layout_settings_info() {
  */
 function stanford_person_ds_view_modes_info() {
   $export = array();
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'stanford_huge_landscape';
+  $ds_view_mode->label = 'Huge Landscape';
+  $ds_view_mode->entities = array(
+    'field_collection_item' => 'field_collection_item',
+    'node' => 'node',
+  );
+  $export['stanford_huge_landscape'] = $ds_view_mode;
 
   $ds_view_mode = new stdClass();
   $ds_view_mode->api_version = 1;

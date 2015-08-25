@@ -135,6 +135,12 @@ function stanford_person_strongarm() {
       'taxonomy' => array(
         'custom_settings' => TRUE,
       ),
+      'stanford_half_page_profile' => array(
+        'custom_settings' => FALSE,
+      ),
+      'stanford_huge_landscape' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

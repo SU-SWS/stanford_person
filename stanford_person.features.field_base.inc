@@ -874,8 +874,8 @@ function stanford_person_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        0 => 'No',
-        1 => 'Yes',
+        0 => '',
+        1 => 'View profile',
       ),
       'allowed_values_function' => '',
     ),
