@@ -47,6 +47,21 @@ function stanford_person_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|stanford_person|stanford_huge_landscape';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'stanford_person';
+  $ds_fieldsetting->view_mode = 'stanford_huge_landscape';
+  $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '21',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+  );
+  $export['node|stanford_person|stanford_huge_landscape'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|stanford_person|taxonomy';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'stanford_person';
@@ -249,6 +264,108 @@ function stanford_person_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['node|stanford_person|full'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|stanford_person|stanford_huge_landscape';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'stanford_person';
+  $ds_layout->view_mode = 'stanford_huge_landscape';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'group_s_postcard',
+        1 => 'field_s_person_department',
+        2 => 'field_s_person_profile_picture',
+        3 => 'field_s_person_school',
+        4 => 'field_s_person_facebook',
+        5 => 'field_s_person_twitter',
+        6 => 'field_s_person_linkedin',
+        7 => 'field_s_person_instagram',
+        8 => 'field_s_person_youtube',
+        9 => 'field_s_person_vimeo',
+        10 => 'field_s_person_pinterest',
+        11 => 'field_s_person_tumblr',
+        12 => 'field_s_person_flickr',
+        13 => 'title',
+        14 => 'field_s_person_title',
+        15 => 'group_department_school_styles',
+        16 => 'group_social_media_styles',
+        17 => 'group_contact_info_styles',
+        18 => 'body',
+        19 => 'field_s_person_email',
+        20 => 'field_s_person_phone_display',
+        21 => 'field_s_person_office_location',
+        22 => 'field_s_person_office_hours',
+        23 => 'field_s_person_info_links',
+        24 => 'group_s_postcard_col1',
+        25 => 'group_s_image_border_style',
+        26 => 'group_s_postcard_col2',
+        27 => 'group_facebook_styles',
+        28 => 'group_twitter_styles',
+        29 => 'group_googleplus_styles',
+        30 => 'group_linkedin_styles',
+        31 => 'group_instagram_styles',
+        32 => 'group_youtube_styles',
+        33 => 'group_vimeo_styles',
+        34 => 'field_s_person_googleplus',
+        35 => 'group_tumblr_styles',
+        36 => 'group_pinterest_styles',
+        37 => 'group_flickr_styles',
+      ),
+    ),
+    'fields' => array(
+      'group_s_postcard' => 'ds_content',
+      'field_s_person_department' => 'ds_content',
+      'field_s_person_profile_picture' => 'ds_content',
+      'field_s_person_school' => 'ds_content',
+      'field_s_person_facebook' => 'ds_content',
+      'field_s_person_twitter' => 'ds_content',
+      'field_s_person_linkedin' => 'ds_content',
+      'field_s_person_instagram' => 'ds_content',
+      'field_s_person_youtube' => 'ds_content',
+      'field_s_person_vimeo' => 'ds_content',
+      'field_s_person_pinterest' => 'ds_content',
+      'field_s_person_tumblr' => 'ds_content',
+      'field_s_person_flickr' => 'ds_content',
+      'title' => 'ds_content',
+      'field_s_person_title' => 'ds_content',
+      'group_department_school_styles' => 'ds_content',
+      'group_social_media_styles' => 'ds_content',
+      'group_contact_info_styles' => 'ds_content',
+      'body' => 'ds_content',
+      'field_s_person_email' => 'ds_content',
+      'field_s_person_phone_display' => 'ds_content',
+      'field_s_person_office_location' => 'ds_content',
+      'field_s_person_office_hours' => 'ds_content',
+      'field_s_person_info_links' => 'ds_content',
+      'group_s_postcard_col1' => 'ds_content',
+      'group_s_image_border_style' => 'ds_content',
+      'group_s_postcard_col2' => 'ds_content',
+      'group_facebook_styles' => 'ds_content',
+      'group_twitter_styles' => 'ds_content',
+      'group_googleplus_styles' => 'ds_content',
+      'group_linkedin_styles' => 'ds_content',
+      'group_instagram_styles' => 'ds_content',
+      'group_youtube_styles' => 'ds_content',
+      'group_vimeo_styles' => 'ds_content',
+      'field_s_person_googleplus' => 'ds_content',
+      'group_tumblr_styles' => 'ds_content',
+      'group_pinterest_styles' => 'ds_content',
+      'group_flickr_styles' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|stanford_person|stanford_huge_landscape'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
