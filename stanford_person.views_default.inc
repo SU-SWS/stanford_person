@@ -430,7 +430,7 @@ function stanford_person_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'People';
-  $handler->display->display_options['css_class'] = 'views-grid-five';
+  $handler->display->display_options['css_class'] = 'views-grid-four';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -588,18 +588,23 @@ function stanford_person_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['ui_name'] = 'Global: View Rewrite';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div> [field_s_person_profile_picture]</div>
-<div><h3>[title] </h3></div>
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="person-image">[field_s_person_profile_picture]</div>
+
+<div class="person-details">
+<h3>[title] </h3>
 <div class="summary">[field_s_person_title]</div>
-<div>
+
+<div class="details">
 [field_s_person_email]
 [field_s_person_phone_display]
 [field_s_person_office_location]
 [field_s_person_office_hours]
-[field_s_person_view_profile]
-<div><span class="edit-link">[edit_node]</span></div>
 </div>
-';
+
+[field_s_person_view_profile]
+
+<div><span class="edit-link">[edit_node]</span></div>
+</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Sorting Weight (field_s_person_weight) */
   $handler->display->display_options['sorts']['field_s_person_weight_value']['id'] = 'field_s_person_weight_value';
