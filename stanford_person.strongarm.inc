@@ -93,6 +93,24 @@ function stanford_person_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'ds_extras_switch_view_mode';
+  $strongarm->value = 1;
+  $export['ds_extras_switch_view_mode'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ds_extras_view_modes_stanford_person';
+  $strongarm->value = array(
+    0 => 'default',
+    1 => 'full',
+    2 => 'stanford_huge_landscape',
+  );
+  $export['ds_extras_view_modes_stanford_person'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__stanford_person';
   $strongarm->value = array(
     'view_modes' => array(
