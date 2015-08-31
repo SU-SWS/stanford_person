@@ -203,6 +203,7 @@ features[variable][] = menu_parent_stanford_person
 features[variable][] = node_options_stanford_person
 features[variable][] = node_preview_stanford_person
 features[variable][] = node_submitted_stanford_person
+features[variable][] = nodeformscols_field_placements_stanford_person_default
 features[variable][] = pathauto_node_stanford_person_pattern
 features[variable][] = pathauto_taxonomy_term_stanford_faculty_type_pattern
 features[variable][] = pathauto_taxonomy_term_stanford_field_of_study_pattern
