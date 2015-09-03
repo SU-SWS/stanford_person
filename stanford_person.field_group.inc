@@ -13,6 +13,42 @@ function stanford_person_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_contact_info_styles|node|stanford_person|default';
+  $field_group->group_name = 'group_contact_info_styles';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_s_postcard_col2';
+  $field_group->data = array(
+    'label' => 'Contact Info Styles',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_s_person_email',
+      1 => 'field_s_person_info_links',
+      2 => 'field_s_person_office_hours',
+      3 => 'field_s_person_office_location',
+      4 => 'field_s_person_phone_display',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Contact Info Styles',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'descriptor',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_contact_info_styles|node|stanford_person|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_contact_info_styles|node|stanford_person|full';
   $field_group->group_name = 'group_contact_info_styles';
   $field_group->entity_type = 'node';
@@ -81,6 +117,39 @@ function stanford_person_field_group_info() {
     ),
   );
   $export['group_contact_info_styles|node|stanford_person|stanford_huge_landscape'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_department_school_styles|node|stanford_person|default';
+  $field_group->group_name = 'group_department_school_styles';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_s_postcard_col2';
+  $field_group->data = array(
+    'label' => 'Department School Styles',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_s_person_department',
+      1 => 'field_s_person_school',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Department School Styles',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_department_school_styles|node|stanford_person|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -339,6 +408,102 @@ function stanford_person_field_group_info() {
     ),
   );
   $export['group_googleplus_styles|node|stanford_person|stanford_huge_landscape'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_image_border_styles|field_collection_item|field_s_image_info|stanford_half_page_profile';
+  $field_group->group_name = 'group_image_border_styles';
+  $field_group->entity_type = 'field_collection_item';
+  $field_group->bundle = 'field_s_image_info';
+  $field_group->mode = 'stanford_half_page_profile';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Image Border Styles',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_s_image_image',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Image Border Styles',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => '',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_image_border_styles|field_collection_item|field_s_image_info|stanford_half_page_profile'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_image_border_styles|field_collection_item|field_s_image_info|stanford_huge_landscape';
+  $field_group->group_name = 'group_image_border_styles';
+  $field_group->entity_type = 'field_collection_item';
+  $field_group->bundle = 'field_s_image_info';
+  $field_group->mode = 'stanford_huge_landscape';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Image Border Styles',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_s_image_image',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Image Border Styles',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'border-simple-nowidth border-shadow',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_image_border_styles|field_collection_item|field_s_image_info|stanford_huge_landscape'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_image_border_style|node|stanford_person|default';
+  $field_group->group_name = 'group_image_border_style';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_s_postcard_col1';
+  $field_group->data = array(
+    'label' => 'Image Border Styles',
+    'weight' => '41',
+    'children' => array(
+      0 => 'field_s_person_profile_picture',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Image Border Styles',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'border-simple-nowidth border-shadow',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_image_border_style|node|stanford_person|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1013,7 +1178,7 @@ function stanford_person_field_group_info() {
     'label' => 'Postcard Column 1',
     'weight' => '28',
     'children' => array(
-      0 => 'field_s_person_profile_picture',
+      0 => 'group_image_border_style',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -1141,9 +1306,11 @@ function stanford_person_field_group_info() {
     'weight' => '29',
     'children' => array(
       0 => 'body',
-      1 => 'field_s_person_department',
-      2 => 'field_s_person_school',
-      3 => 'title',
+      1 => 'field_s_person_title',
+      2 => 'title',
+      3 => 'group_department_school_styles',
+      4 => 'group_social_media_styles',
+      5 => 'group_contact_info_styles',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -1566,6 +1733,47 @@ function stanford_person_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_social_media_styles|node|stanford_person|default';
+  $field_group->group_name = 'group_social_media_styles';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_s_postcard_col2';
+  $field_group->data = array(
+    'label' => 'Social Media Styles',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_s_person_facebook',
+      1 => 'field_s_person_twitter',
+      2 => 'field_s_person_googleplus',
+      3 => 'field_s_person_linkedin',
+      4 => 'field_s_person_instagram',
+      5 => 'field_s_person_youtube',
+      6 => 'field_s_person_vimeo',
+      7 => 'field_s_person_tumblr',
+      8 => 'field_s_person_pinterest',
+      9 => 'field_s_person_flickr',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Social Media Styles',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'social-links',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_social_media_styles|node|stanford_person|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_social_media_styles|node|stanford_person|full';
   $field_group->group_name = 'group_social_media_styles';
   $field_group->entity_type = 'node';
@@ -1592,7 +1800,7 @@ function stanford_person_field_group_info() {
       'label' => 'Social Media Styles',
       'instance_settings' => array(
         'id' => '',
-        'classes' => '',
+        'classes' => 'social-links',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
