@@ -3124,9 +3124,13 @@ Contact your site administrator to add or change entries. ',
   // Exported field_instance: 'node-stanford_person-field_s_person_school'
   $field_instances['node-stanford_person-field_s_person_school'] = array(
     'bundle' => 'stanford_person',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 'Student Affairs',
+      ),
+    ),
     'deleted' => 0,
-    'description' => 'Enter the person\'s unit or school name (e.g., Student Affairs or Stanford Law School).',
+    'description' => 'Enter the person\'s unit or school name (e.g., Student Affairs).',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -4199,7 +4203,7 @@ Contact your site administrator to add or change entries. ',
   t('Dissertation Title');
   t('Email');
   t('Enter the person\'s office/department information.');
-  t('Enter the person\'s unit or school name (e.g., Student Affairs or Stanford Law School).');
+  t('Enter the person\'s unit or school name (e.g., Student Affairs).');
   t('Facebook');
   t('Faculty Status');
   t('Fax');
