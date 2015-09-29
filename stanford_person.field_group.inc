@@ -257,13 +257,11 @@ function stanford_person_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'stanford_person';
   $field_group->mode = 'stanford_huge_landscape';
-  $field_group->parent_name = 'group_social_media_styles';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Facebook Styles',
     'weight' => '53',
-    'children' => array(
-      0 => 'field_s_person_facebook',
-    ),
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Facebook Styles',
@@ -321,13 +319,11 @@ function stanford_person_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'stanford_person';
   $field_group->mode = 'stanford_huge_landscape';
-  $field_group->parent_name = 'group_social_media_styles';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Flickr Styles',
     'weight' => '62',
-    'children' => array(
-      0 => 'field_s_person_flickr',
-    ),
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Flickr Styles',
@@ -385,13 +381,11 @@ function stanford_person_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'stanford_person';
   $field_group->mode = 'stanford_huge_landscape';
-  $field_group->parent_name = 'group_social_media_styles';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'GooglePlus Styles',
     'weight' => '55',
-    'children' => array(
-      0 => 'field_s_person_googleplus',
-    ),
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'GooglePlus Styles',
@@ -545,13 +539,11 @@ function stanford_person_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'stanford_person';
   $field_group->mode = 'stanford_huge_landscape';
-  $field_group->parent_name = 'group_social_media_styles';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Instagram Styles',
     'weight' => '57',
-    'children' => array(
-      0 => 'field_s_person_instagram',
-    ),
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Instagram Styles',
@@ -609,13 +601,11 @@ function stanford_person_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'stanford_person';
   $field_group->mode = 'stanford_huge_landscape';
-  $field_group->parent_name = 'group_social_media_styles';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'LinkedIn Styles',
     'weight' => '56',
-    'children' => array(
-      0 => 'field_s_person_linkedin',
-    ),
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'LinkedIn Styles',
@@ -702,13 +692,11 @@ function stanford_person_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'stanford_person';
   $field_group->mode = 'stanford_huge_landscape';
-  $field_group->parent_name = 'group_social_media_styles';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Pinterest Styles',
     'weight' => '61',
-    'children' => array(
-      0 => 'field_s_person_pinterest',
-    ),
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Pinterest Styles',
@@ -1377,12 +1365,12 @@ function stanford_person_field_group_info() {
     'label' => 'Postcard Column 2',
     'weight' => '50',
     'children' => array(
-      0 => 'body',
-      1 => 'field_s_person_title',
+      0 => 'field_s_person_title',
+      1 => 'body',
       2 => 'title',
-      3 => 'group_department_school_styles',
-      4 => 'group_social_media_styles',
-      5 => 'group_contact_info_styles',
+      3 => 'group_contact_info_styles',
+      4 => 'group_department_school_styles',
+      5 => 'group_social_media_styles',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -1826,15 +1814,15 @@ function stanford_person_field_group_info() {
     'weight' => '24',
     'children' => array(
       0 => 'field_s_person_facebook',
-      1 => 'field_s_person_twitter',
+      1 => 'field_s_person_flickr',
       2 => 'field_s_person_googleplus',
-      3 => 'field_s_person_linkedin',
-      4 => 'field_s_person_instagram',
-      5 => 'field_s_person_youtube',
-      6 => 'field_s_person_vimeo',
-      7 => 'field_s_person_tumblr',
-      8 => 'field_s_person_pinterest',
-      9 => 'field_s_person_flickr',
+      3 => 'field_s_person_instagram',
+      4 => 'field_s_person_linkedin',
+      5 => 'field_s_person_pinterest',
+      6 => 'field_s_person_tumblr',
+      7 => 'field_s_person_twitter',
+      8 => 'field_s_person_vimeo',
+      9 => 'field_s_person_youtube',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -1893,13 +1881,11 @@ function stanford_person_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'stanford_person';
   $field_group->mode = 'stanford_huge_landscape';
-  $field_group->parent_name = 'group_social_media_styles';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Tumblr Styles',
     'weight' => '60',
-    'children' => array(
-      0 => 'field_s_person_tumblr',
-    ),
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Tumblr Styles',
@@ -1957,13 +1943,11 @@ function stanford_person_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'stanford_person';
   $field_group->mode = 'stanford_huge_landscape';
-  $field_group->parent_name = 'group_social_media_styles';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Twitter Styles',
     'weight' => '54',
-    'children' => array(
-      0 => 'field_s_person_twitter',
-    ),
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Twitter Styles',
@@ -2021,13 +2005,11 @@ function stanford_person_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'stanford_person';
   $field_group->mode = 'stanford_huge_landscape';
-  $field_group->parent_name = 'group_social_media_styles';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Vimeo Styles',
     'weight' => '59',
-    'children' => array(
-      0 => 'field_s_person_vimeo',
-    ),
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Vimeo Styles',
@@ -2085,13 +2067,11 @@ function stanford_person_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'stanford_person';
   $field_group->mode = 'stanford_huge_landscape';
-  $field_group->parent_name = 'group_social_media_styles';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'YouTube Styles',
     'weight' => '58',
-    'children' => array(
-      0 => 'field_s_person_youtube',
-    ),
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'YouTube Styles',

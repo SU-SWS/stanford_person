@@ -80,6 +80,10 @@ function stanford_person_strongarm() {
       'title' => 'Research Interests',
       'info' => 'node_stanford_person_full',
     ),
+    'full_width_bleed' => array(
+      'title' => 'Full Width Bleed',
+      'info' => 'node_stanford_person_stanford_huge_landscape',
+    ),
   );
   $export['ds_extras_region_blocks'] = $strongarm;
 
@@ -484,21 +488,21 @@ function stanford_person_strongarm() {
       'region' => 'main',
       'weight' => '15',
       'has_required' => FALSE,
-      'title' => 'Department',
+      'title' => 'Office/Department',
       'hidden' => 0,
     ),
     'field_s_person_school' => array(
       'region' => 'main',
       'weight' => '18',
       'has_required' => FALSE,
-      'title' => 'School',
-      'hidden' => 0,
+      'title' => 'Unit/School',
+      'hidden' => 1,
     ),
     'field_s_person_view_profile' => array(
       'region' => 'main',
       'weight' => '6',
       'has_required' => FALSE,
-      'title' => 'View Profile',
+      'title' => 'View profile',
       'hidden' => 0,
     ),
   );

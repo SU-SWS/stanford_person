@@ -29,10 +29,10 @@ function stanford_person_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-8116868180a8a203a7d1a990228283dc' => array(
-          'module' => 'views',
-          'delta' => '8116868180a8a203a7d1a990228283dc',
-          'region' => 'content_bottom',
+        'ds_extras-full_width_bleed' => array(
+          'module' => 'ds_extras',
+          'delta' => 'full_width_bleed',
+          'region' => 'fullwidth',
           'weight' => '-10',
         ),
         'ds_extras-contact' => array(

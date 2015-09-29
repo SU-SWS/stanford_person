@@ -14,3 +14,22 @@ function stanford_person_form_alter(&$form, &$form_state, $form_id){
     $form ['title'] ['#description'] = '<p>' . t('If left empty, this optional text field is populated from the "First name" and "Last name" fields.') . '</p>';
   }
 }
+
+
+/**
+ * Implements hook_preprocess_block()
+ *
+ */
+function stanford_person_preprocess_block(&$vars) {
+
+  // If this is not the full width block then do nothing!
+  if (!isset($vars['elements']["#block"]->bid) && $vars["elements"]['#block']->bid !== "ds_extras-full_width_bleed") {
+    return;
+  }
+
+  // Remove the defualt block title.
+  if ($vars['elements']["#block"]->subject == t("Full Width Bleed")) {
+    $vars['elements']["#block"]->subject = "";
+  }
+
+}
