@@ -1829,7 +1829,7 @@ function stanford_person_field_group_info() {
       'label' => 'Social Media Styles',
       'instance_settings' => array(
         'id' => '',
-        'classes' => '',
+        'classes' => 'social-links',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
