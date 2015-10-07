@@ -167,8 +167,8 @@ function stanford_person_ds_layout_settings_info() {
         23 => 'field_s_person_office_hours',
         24 => 'field_s_person_info_links',
         25 => 'group_s_postcard_col1',
-        26 => 'group_s_image_border_style',
-        27 => 'group_s_postcard_col2',
+        26 => 'group_s_postcard_col2',
+        27 => 'group_s_image_border_style',
       ),
     ),
     'fields' => array(
@@ -198,8 +198,8 @@ function stanford_person_ds_layout_settings_info() {
       'field_s_person_office_hours' => 'full_width_bleed',
       'field_s_person_info_links' => 'full_width_bleed',
       'group_s_postcard_col1' => 'full_width_bleed',
-      'group_s_image_border_style' => 'full_width_bleed',
       'group_s_postcard_col2' => 'full_width_bleed',
+      'group_s_image_border_style' => 'full_width_bleed',
     ),
     'classes' => array(),
     'wrappers' => array(
