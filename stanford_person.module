@@ -33,3 +33,33 @@ function stanford_person_preprocess_block(&$vars) {
   }
 
 }
+
+/**
+ * Implements hook_preprocess_html().
+ *
+ * Add a view mode css class to the body tag.
+ */
+function stanford_person_preprocess_html(&$vars) {
+
+  // Node holder.
+  $node = FALSE;
+
+  // Check the current path for admin pages.
+  $admin_path = path_is_admin(current_path());
+
+  // Load the node if on node page.
+  if (arg(0) == 'node' && is_numeric(arg(1))) {
+    $node = node_load(arg(1));
+  }
+
+  // End if not a person node or on admin page..
+  if (!$node || $node->type !== "stanford_person" || $admin_path) {
+    return;
+  }
+
+  // If the ds_switch option is available then lets add the value to the body classes.
+  if (isset($node->ds_switch) && !empty($node->ds_switch)) {
+    $vars['classes_array'][] = "view-mode-" . drupal_clean_css_identifier($node->ds_switch);
+  }
+
+}
