@@ -32,7 +32,7 @@ function stanford_person_context_default_contexts() {
         'ds_extras-full_width_bleed' => array(
           'module' => 'ds_extras',
           'delta' => 'full_width_bleed',
-          'region' => 'fullwidth',
+          'region' => 'fullwidth_bottom',
           'weight' => '-10',
         ),
         'ds_extras-contact' => array(
