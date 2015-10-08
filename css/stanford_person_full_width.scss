@@ -1,0 +1,36 @@
+/**
+ * Full width view mode styles.
+ */
+
+.view-mode-stanford-huge-landscape {
+  .fullwidth {
+    .content {
+      .postcard {
+        vertical-align: top;
+        line-height: 100%;
+
+        .postcard-image {
+          vertical-align: top;
+          width: 66%;
+          display: table-cell;
+          overflow: hidden;
+          position: relative;
+        }
+
+        .postcard-content {
+          width: 32%;
+          display: table-cell;
+        }
+
+      }
+    }
+  }
+}
+
+.js-enabled {
+  .postcard-image img {
+    position: absolute;
+    max-width: inherit !important;
+    width: auto;
+  }
+}
