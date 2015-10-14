@@ -260,7 +260,7 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Facebook Styles',
-    'weight' => '53',
+    'weight' => '28',
     'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
@@ -322,7 +322,7 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Flickr Styles',
-    'weight' => '62',
+    'weight' => '37',
     'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
@@ -384,7 +384,7 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'GooglePlus Styles',
-    'weight' => '55',
+    'weight' => '30',
     'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
@@ -542,7 +542,7 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Instagram Styles',
-    'weight' => '57',
+    'weight' => '32',
     'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
@@ -604,7 +604,7 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'LinkedIn Styles',
-    'weight' => '56',
+    'weight' => '31',
     'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
@@ -695,7 +695,7 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Pinterest Styles',
-    'weight' => '61',
+    'weight' => '36',
     'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
@@ -1884,7 +1884,7 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Tumblr Styles',
-    'weight' => '60',
+    'weight' => '35',
     'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
@@ -1946,7 +1946,7 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Twitter Styles',
-    'weight' => '54',
+    'weight' => '29',
     'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
@@ -2008,7 +2008,7 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Vimeo Styles',
-    'weight' => '59',
+    'weight' => '34',
     'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
@@ -2070,7 +2070,7 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'YouTube Styles',
-    'weight' => '58',
+    'weight' => '33',
     'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
