@@ -1,36 +1,32 @@
-/**
- * Full width view mode styles.
- */
+// .view-mode-stanford-huge-landscape {
 
-.view-mode-stanford-huge-landscape {
-  .fullwidth {
-    .content {
-      .postcard {
-        vertical-align: top;
-        line-height: 100%;
+//   #main-nav,
+//   #admin-shortcuts,
+//   #global-header,
+//   #header,
+//   #main-menu,
+//   #global-footer,
+//   #footer {
+//     position: relative;
+//     z-index: 100;
+//   }
 
-        .postcard-image {
-          vertical-align: top;
-          width: 66%;
-          display: table-cell;
-          overflow: hidden;
-          position: relative;
-        }
+//   #main {
+//     z-index: 10;
+//   }
 
-        .postcard-content {
-          width: 32%;
-          display: table-cell;
-        }
+//   .postcard-image {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     z-index: 1;
+//     max-width: 50%;
+//   }
 
-      }
-    }
-  }
-}
+//   .postcard-content {
+//     max-width: 550px;
+//     padding-left: 25px;
+//     margin-left: 50%;
+//   }
 
-.js-enabled {
-  .postcard-image img {
-    position: absolute;
-    max-width: inherit !important;
-    width: auto;
-  }
-}
+// }
