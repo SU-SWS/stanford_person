@@ -21,7 +21,7 @@ function stanford_person_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'ant_pattern_stanford_person';
-  $strongarm->value = '[node:field-s-person-first-name] [node:field-s-person-middle-name] [node:field-s-person-last-name]';
+  $strongarm->value = '[node:field-s-person-first-name] [node:field-s-person-last-name]';
   $export['ant_pattern_stanford_person'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -79,6 +79,10 @@ function stanford_person_strongarm() {
     'research_interests' => array(
       'title' => 'Research Interests',
       'info' => 'node_stanford_person_full',
+    ),
+    'full_width_bleed' => array(
+      'title' => 'Full Width Bleed',
+      'info' => 'node_stanford_person_stanford_huge_landscape',
     ),
   );
   $export['ds_extras_region_blocks'] = $strongarm;

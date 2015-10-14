@@ -1377,7 +1377,7 @@ function stanford_person_field_group_info() {
       'label' => 'Postcard Column 2',
       'instance_settings' => array(
         'id' => '',
-        'classes' => '',
+        'classes' => 'postcard-content',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
@@ -1640,7 +1640,7 @@ function stanford_person_field_group_info() {
       'label' => 'Postcard',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'postcard-left',
+        'classes' => 'postcard',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
