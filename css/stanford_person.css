@@ -110,18 +110,18 @@
 
 /* field styles */
 
-.node-type-stanford-person .content-body .field-name-field-s-person-title,
-.node-type-stanford-person .field-name-field-s-person-title {
+.page-node.node-type-stanford-person .content-body .field-name-field-s-person-title,
+.page-node.node-type-stanford-person .field-name-field-s-person-title {
     font-size: 1.5em;
     line-height: 1.3em;
     margin-bottom: 0.25em;
 }
 
-.node-type-stanford-person .content-body .field-name-field-s-person-department {
+.page-node.node-type-stanford-person .content-body .field-name-field-s-person-department {
     margin-bottom: 0.25em;
 }
 
-.node-type-stanford-person .content-body .field-name-field-s-person-school {
+.page-node.node-type-stanford-person .content-body .field-name-field-s-person-school {
     margin-bottom: 0.25em;
 }
 
@@ -129,7 +129,7 @@
     margin-bottom: 1.5em;
 }
 
-.node-type-stanford-person .content-body .descriptor .field {
+.page-node.node-type-stanford-person .content-body .descriptor .field {
     margin-bottom: 0.25em;
 }
 
@@ -169,43 +169,43 @@
 }
 
 .node-type-stanford-person .field-name-field-s-person-twitter a {
-    background-image: url("../../../../sites/default/modules/stanford/stanford_bean_types/images/twitter.png");
+    background-image: url("../../../../../../sites/default/modules/stanford/stanford_bean_types/images/twitter.png");
 }
 
 .node-type-stanford-person .field-name-field-s-person-facebook a {
-    background-image: url("../../../../sites/default/modules/stanford/stanford_bean_types/images/facebook.png");
+    background-image: url("../../../../../../sites/default/modules/stanford/stanford_bean_types/images/facebook.png");
 }
 
 .node-type-stanford-person .field-name-field-s-person-linkedin a {
-    background-image: url("../../../../sites/default/modules/stanford/stanford_bean_types/images/linkedin.png");
+    background-image: url("../../../../../../sites/default/modules/stanford/stanford_bean_types/images/linkedin.png");
 }
 
 .node-type-stanford-person .field-name-field-s-person-instagram a {
-    background-image: url("../../../../sites/default/modules/stanford/stanford_bean_types/images/instagram.png");
+    background-image: url("../../../../../../sites/default/modules/stanford/stanford_bean_types/images/instagram.png");
 }
 
 .node-type-stanford-person .field-name-field-s-person-vimeo a {
-    background-image: url("../../../../sites/default/modules/stanford/stanford_bean_types/images/vimeo.png");
+    background-image: url("../../../../../../sites/default/modules/stanford/stanford_bean_types/images/vimeo.png");
 }
 
 .node-type-stanford-person .field-name-field-s-person-youtube a {
-    background-image: url("../../../../sites/default/modules/stanford/stanford_bean_types/images/youtube.png");
+    background-image: url("../../../../../../sites/default/modules/stanford/stanford_bean_types/images/youtube.png");
 }
 
 .node-type-stanford-person .field-name-field-s-person-tumblr a {
-    background-image: url("../../../../sites/default/modules/stanford/stanford_bean_types/images/tumblr.png");
+    background-image: url("../../../../../../sites/default/modules/stanford/stanford_bean_types/images/tumblr.png");
 }
 
 .node-type-stanford-person .field-name-field-s-person-flickr a {
-    background-image: url("../../../../sites/default/modules/stanford/stanford_bean_types/images/flickr.png");
+    background-image: url("../../../../../../sites/default/modules/stanford/stanford_bean_types/images/flickr.png");
 }
 
 .node-type-stanford-person .field-name-field-s-person-pinterest a {
-    background-image: url("../../../../sites/default/modules/stanford/stanford_bean_types/images/pinterest.png");
+    background-image: url("../../../../../../sites/default/modules/stanford/stanford_bean_types/images/pinterest.png");
 }
 
 .node-type-stanford-person .field-name-field-s-person-googleplus a {
-    background-image: url("../../../../sites/default/modules/stanford/stanford_bean_types/images/google.png");
+    background-image: url("../../../../../../sites/default/modules/stanford/stanford_bean_types/images/google.png");
 }
 
 
