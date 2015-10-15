@@ -309,7 +309,7 @@ body.view-mode-stanford-huge-landscape:after {
         z-index: 100;
     }
     body.view-mode-stanford-huge-landscape {
-        background: #fbfbf9;
+        background: #fbfbf9 !important;
         background-image: none;
     }
     body.view-mode-stanford-huge-landscape:after {
