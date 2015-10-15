@@ -338,17 +338,17 @@ body.view-mode-stanford-huge-landscape:after {
 }
 @media (max-width: 1300px) {
     body.view-mode-stanford-huge-landscape {
-        background-position: calc(100% - 100px) 180px;
+        background-position: calc(100% - 160px) 180px;
     }
 }
 @media (max-width: 1199px) {
     body.view-mode-stanford-huge-landscape {
-        background-position: 100% 180px;
+        background-position: 130% 180px;
     }
 }
 @media (max-width: 1090px) {
     body.view-mode-stanford-huge-landscape {
-        background-position: 77% 180px;
+        background-position: 100% 180px;
     }
 }
 @media (max-width: 979px) {
