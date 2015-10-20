@@ -189,7 +189,7 @@ function stanford_person_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 26,
+        'weight' => 27,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -248,7 +248,7 @@ function stanford_person_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 24,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -450,7 +450,7 @@ function stanford_person_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 21,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -549,7 +549,7 @@ function stanford_person_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 12,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -1080,7 +1080,7 @@ function stanford_person_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 16,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -1148,7 +1148,7 @@ function stanford_person_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 13,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -1258,7 +1258,7 @@ function stanford_person_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 18,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -1567,7 +1567,7 @@ function stanford_person_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 25,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -1885,7 +1885,7 @@ Contact your site administrator to add or change entries. ',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 15,
       ),
       'stanford_taxonomy' => array(
         'label' => 'hidden',
@@ -1977,7 +1977,7 @@ Contact your site administrator to add or change entries. ',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 20,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -2167,7 +2167,7 @@ Contact your site administrator to add or change entries. ',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 14,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -2236,7 +2236,7 @@ Contact your site administrator to add or change entries. ',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 17,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -2331,7 +2331,7 @@ Contact your site administrator to add or change entries. ',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 19,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -2797,7 +2797,7 @@ Contact your site administrator to add or change entries. ',
     'description' => 'This text field is used to display image credits for this profile picture.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(
           'custom_link_to_entity' => '',
@@ -2816,15 +2816,28 @@ Contact your site administrator to add or change entries. ',
         'weight' => 43,
       ),
       'stanford_huge_landscape' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(
+          'custom_link_to_entity' => '',
+          'custom_prefix' => '',
+          'custom_reverse' => '',
+          'custom_strip_preserve' => '',
+          'custom_strip_tags' => '',
+          'custom_strtolower' => '',
+          'custom_strtoupper' => '',
+          'custom_suffix' => '',
+          'custom_trim' => '',
+          'custom_ucfirst' => '',
+          'custom_ucwords' => '',
+        ),
+        'type' => 'text_default',
         'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_s_person_picture_credits',
-    'label' => 'Profile Picture Credits',
+    'label' => 'Image Credits',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -3362,7 +3375,7 @@ Contact your site administrator to add or change entries. ',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 23,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -3422,7 +3435,7 @@ Contact your site administrator to add or change entries. ',
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -3514,7 +3527,7 @@ Contact your site administrator to add or change entries. ',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 22,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -3943,7 +3956,7 @@ Contact your site administrator to add or change entries. ',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 27,
+        'weight' => 28,
       ),
     ),
     'entity_type' => 'node',
@@ -4117,7 +4130,7 @@ Contact your site administrator to add or change entries. ',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 25,
+        'weight' => 26,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -4297,6 +4310,7 @@ Contact your site administrator to add or change entries. ',
   t('If applicable, select the faculty status (e.g., "Professor").');
   t('If applicable, select the group to which this person belongs (e.g., "Graduate Students").');
   t('If applicable, select the staff type (e.g., "Department Administrator").');
+  t('Image Credits');
   t('Insert a link to your Facebook account; if left empty, this field will not display.');
   t('Insert a link to your Flickr account; if left empty, this field will not display.');
   t('Insert a link to your Google+ account; if left empty, this field will not display.');
@@ -4323,7 +4337,6 @@ Contact your site administrator to add or change entries. ');
   t('Pinterest');
   t('Profile / Bio');
   t('Profile Picture');
-  t('Profile Picture Credits');
   t('Select the appropriate affiliation(s) for this person.');
   t('Select the year this person graduates.');
   t('Sorting Weight');
