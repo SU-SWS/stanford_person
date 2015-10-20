@@ -883,7 +883,8 @@ function stanford_person_field_group_info() {
       3 => 'field_s_person_middle_name',
       4 => 'field_s_person_profile_picture',
       5 => 'field_s_person_view_profile',
-      6 => 'title',
+      6 => 'field_s_person_picture_credits',
+      7 => 'title',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
