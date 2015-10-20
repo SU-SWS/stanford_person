@@ -216,7 +216,7 @@ function stanford_person_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 0,
+      'weight' => 1,
     ),
   );
 
@@ -2788,6 +2788,85 @@ Contact your site administrator to add or change entries. ',
     ),
   );
 
+  // Exported field_instance:
+  // 'node-stanford_person-field_s_person_picture_credits'
+  $field_instances['node-stanford_person-field_s_person_picture_credits'] = array(
+    'bundle' => 'stanford_person',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This text field is used to display image credits for this profile picture.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'custom_link_to_entity' => '',
+          'custom_prefix' => '',
+          'custom_reverse' => '',
+          'custom_strip_preserve' => '',
+          'custom_strip_tags' => '',
+          'custom_strtolower' => '',
+          'custom_strtoupper' => '',
+          'custom_suffix' => '',
+          'custom_trim' => '',
+          'custom_ucfirst' => '',
+          'custom_ucwords' => '',
+        ),
+        'type' => 'text_default',
+        'weight' => 43,
+      ),
+      'stanford_huge_landscape' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_s_person_picture_credits',
+    'label' => 'Profile Picture Credits',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'content_editor_text_format' => 'content_editor_text_format',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'content_editor_text_format' => array(
+              'weight' => -10,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 0,
+    ),
+  );
+
   // Exported field_instance: 'node-stanford_person-field_s_person_pinterest'
   $field_instances['node-stanford_person-field_s_person_pinterest'] = array(
     'bundle' => 'stanford_person',
@@ -3881,7 +3960,7 @@ Contact your site administrator to add or change entries. ',
         'display_label' => 0,
       ),
       'type' => 'options_onoff',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -4244,6 +4323,7 @@ Contact your site administrator to add or change entries. ');
   t('Pinterest');
   t('Profile / Bio');
   t('Profile Picture');
+  t('Profile Picture Credits');
   t('Select the appropriate affiliation(s) for this person.');
   t('Select the year this person graduates.');
   t('Sorting Weight');
@@ -4264,6 +4344,7 @@ Contact your site administrator to add or change entries. ');
   t('This text field is used for sorting by and displaying the first name, and optionally to populate the "Display Name" field.');
   t('This text field is used for sorting by and displaying the last name, and optionally to populate the "Display Name" field.');
   t('This text field is used for the middle name.');
+  t('This text field is used to display image credits for this profile picture.');
   t('This text field provides a description of the person\'s office location (e.g. "Bldg. 460, rm 317," or "460-317").');
   t('Title and Department');
   t('Tumblr');
