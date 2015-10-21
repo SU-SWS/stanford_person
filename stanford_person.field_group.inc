@@ -260,7 +260,7 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Facebook Styles',
-    'weight' => '28',
+    'weight' => '29',
     'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
@@ -322,7 +322,7 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Flickr Styles',
-    'weight' => '37',
+    'weight' => '38',
     'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
@@ -384,7 +384,7 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'GooglePlus Styles',
-    'weight' => '30',
+    'weight' => '31',
     'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
@@ -502,6 +502,38 @@ function stanford_person_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_image_credits_style|node|stanford_person|stanford_huge_landscape';
+  $field_group->group_name = 'group_image_credits_style';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'stanford_huge_landscape';
+  $field_group->parent_name = 'group_s_postcard_col2';
+  $field_group->data = array(
+    'label' => 'Image Credits Style',
+    'weight' => '27',
+    'children' => array(
+      0 => 'field_s_person_picture_credits',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Image Credits Style',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'credits',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_image_credits_style|node|stanford_person|stanford_huge_landscape'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_instagram_styles|node|stanford_person|full';
   $field_group->group_name = 'group_instagram_styles';
   $field_group->entity_type = 'node';
@@ -542,7 +574,7 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Instagram Styles',
-    'weight' => '32',
+    'weight' => '33',
     'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
@@ -604,7 +636,7 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'LinkedIn Styles',
-    'weight' => '31',
+    'weight' => '32',
     'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
@@ -655,6 +687,38 @@ function stanford_person_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_picture_credits_style|node|stanford_person|default';
+  $field_group->group_name = 'group_picture_credits_style';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_s_postcard_col2';
+  $field_group->data = array(
+    'label' => 'Image Credits Style',
+    'weight' => '6',
+    'children' => array(
+      0 => 'field_s_person_picture_credits',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Image Credits Style',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'credits',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h2',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_picture_credits_style|node|stanford_person|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_pinterest_styles|node|stanford_person|full';
   $field_group->group_name = 'group_pinterest_styles';
   $field_group->entity_type = 'node';
@@ -695,7 +759,7 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Pinterest Styles',
-    'weight' => '36',
+    'weight' => '37',
     'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
@@ -1294,12 +1358,13 @@ function stanford_person_field_group_info() {
     'label' => 'Postcard Column 2',
     'weight' => '29',
     'children' => array(
-      0 => 'body',
-      1 => 'field_s_person_title',
+      0 => 'field_s_person_title',
+      1 => 'body',
       2 => 'title',
-      3 => 'group_department_school_styles',
-      4 => 'group_social_media_styles',
-      5 => 'group_contact_info_styles',
+      3 => 'group_picture_credits_style',
+      4 => 'group_contact_info_styles',
+      5 => 'group_department_school_styles',
+      6 => 'group_social_media_styles',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -1369,9 +1434,10 @@ function stanford_person_field_group_info() {
       0 => 'field_s_person_title',
       1 => 'body',
       2 => 'title',
-      3 => 'group_contact_info_styles',
-      4 => 'group_department_school_styles',
-      5 => 'group_social_media_styles',
+      3 => 'group_image_credits_style',
+      4 => 'group_contact_info_styles',
+      5 => 'group_department_school_styles',
+      6 => 'group_social_media_styles',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -1733,15 +1799,15 @@ function stanford_person_field_group_info() {
     'weight' => '3',
     'children' => array(
       0 => 'field_s_person_facebook',
-      1 => 'field_s_person_twitter',
+      1 => 'field_s_person_flickr',
       2 => 'field_s_person_googleplus',
-      3 => 'field_s_person_linkedin',
-      4 => 'field_s_person_instagram',
-      5 => 'field_s_person_youtube',
-      6 => 'field_s_person_vimeo',
-      7 => 'field_s_person_tumblr',
-      8 => 'field_s_person_pinterest',
-      9 => 'field_s_person_flickr',
+      3 => 'field_s_person_instagram',
+      4 => 'field_s_person_linkedin',
+      5 => 'field_s_person_pinterest',
+      6 => 'field_s_person_tumblr',
+      7 => 'field_s_person_twitter',
+      8 => 'field_s_person_vimeo',
+      9 => 'field_s_person_youtube',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -1885,7 +1951,7 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Tumblr Styles',
-    'weight' => '35',
+    'weight' => '36',
     'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
@@ -1947,7 +2013,7 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Twitter Styles',
-    'weight' => '29',
+    'weight' => '30',
     'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
@@ -2009,7 +2075,7 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Vimeo Styles',
-    'weight' => '34',
+    'weight' => '35',
     'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
@@ -2071,7 +2137,7 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'YouTube Styles',
-    'weight' => '33',
+    'weight' => '34',
     'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
