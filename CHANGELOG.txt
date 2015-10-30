@@ -1,6 +1,12 @@
 Stanford Person x.x-x.x xxxx-xx-xx
 --------------------------------------
 
+Stanford Person 7.x-5.0-jsvpsa 2015-10-30
+-----------------------------------------
+- Initial release for jsvpsa
+- https://github.com/SU-SWS/stanford_person/compare/7.x-5.0-beta3...7.x-5.0-jsvpsa
+
+
 Stanford Person 7.x-5.0-beta1 2015-06-25
 ----------------------------------------
 - Replaced field_s_person_type with field_s_person_affiliation
