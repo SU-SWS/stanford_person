@@ -17,6 +17,7 @@ dependencies[] = views
 features[context][] = stanford_people_all_pages
 features[context][] = stanford_people_directory_pages
 features[context][] = stanford_people_faculty_pages
+features[context][] = stanford_people_grid_pages
 features[context][] = stanford_people_list_pages
 features[context][] = stanford_people_profiles_pages
 features[context][] = stanford_people_staff_pages

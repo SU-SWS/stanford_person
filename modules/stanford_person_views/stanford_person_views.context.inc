@@ -54,6 +54,8 @@ function stanford_person_views_context_default_contexts() {
       'values' => array(
         'people/directory' => 'people/directory',
         'people/directory/*' => 'people/directory/*',
+        'people/*/directory' => 'people/*/directory',
+        'people/*/directory/*' => 'people/*/directory/*',
       ),
     ),
   );
@@ -120,6 +122,42 @@ function stanford_person_views_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'stanford_people_grid_pages';
+  $context->description = 'Context for all grid pages';
+  $context->tag = 'People';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'people/grid' => 'people/grid',
+        'people/grid/*' => 'people/grid/*',
+        'people/*/grid' => 'people/*/grid',
+        'people/*/grid/*' => 'people/*/grid/*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views--exp-stanford_person_grid-page' => array(
+          'module' => 'views',
+          'delta' => '-exp-stanford_person_grid-page',
+          'region' => 'sidebar_first',
+          'weight' => '-6',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Context for all grid pages');
+  t('People');
+  $export['stanford_people_grid_pages'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'stanford_people_list_pages';
   $context->description = 'Context for all list pages';
   $context->tag = 'People';
@@ -128,6 +166,8 @@ function stanford_person_views_context_default_contexts() {
       'values' => array(
         'people/list' => 'people/list',
         'people/list/*' => 'people/list/*',
+        'people/*/list' => 'people/*/list',
+        'people/*/list/*' => 'people/*/list/*',
       ),
     ),
   );
@@ -162,6 +202,8 @@ function stanford_person_views_context_default_contexts() {
       'values' => array(
         'people/profiles' => 'people/profiles',
         'people/profiles/*' => 'people/profiles/*',
+        'people/*/profiles' => 'people/*/profiles',
+        'people/*/profiles/*' => 'people/*/profiles/*',
       ),
     ),
   );
