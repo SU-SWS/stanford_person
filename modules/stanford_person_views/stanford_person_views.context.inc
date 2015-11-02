@@ -120,6 +120,40 @@ function stanford_person_views_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'stanford_people_list_pages';
+  $context->description = 'Context for all list pages';
+  $context->tag = 'People';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'people/list' => 'people/list',
+        'people/list/*' => 'people/list/*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-99107f9408b38333b7b9429d6f180b75' => array(
+          'module' => 'views',
+          'delta' => '99107f9408b38333b7b9429d6f180b75',
+          'region' => 'sidebar_first',
+          'weight' => '-8',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Context for all list pages');
+  t('People');
+  $export['stanford_people_list_pages'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'stanford_people_profiles_layout_pages';
   $context->description = 'Context for all profiles pages';
   $context->tag = 'People';
