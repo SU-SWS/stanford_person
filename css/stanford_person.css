@@ -12,3 +12,12 @@
 		float: none;
 	}
 }
+
+.views-stanford-person-grid .views-row h3 {
+	margin: .9em 0 0;
+}
+
+.views-stanford-person-grid.views-grid-four .views-row {
+	margin-bottom: 30px;
+}
+

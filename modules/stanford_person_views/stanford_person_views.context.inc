@@ -154,7 +154,7 @@ function stanford_person_views_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'stanford_people_profiles_layout_pages';
+  $context->name = 'stanford_people_profiles_pages';
   $context->description = 'Context for all profiles pages';
   $context->tag = 'People';
   $context->conditions = array(
@@ -183,7 +183,7 @@ function stanford_person_views_context_default_contexts() {
   // Included for use with string extractors like potx.
   t('Context for all profiles pages');
   t('People');
-  $export['stanford_people_profiles_layout_pages'] = $context;
+  $export['stanford_people_profiles_pages'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
