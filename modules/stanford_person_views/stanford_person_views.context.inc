@@ -46,6 +46,40 @@ function stanford_person_views_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'stanford_people_directory_pages';
+  $context->description = 'Context for all directory pages';
+  $context->tag = 'People';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'people/directory' => 'people/directory',
+        'people/directory/*' => 'people/directory/*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-84a0a512b3e0ccb8042a7d3b418168d7' => array(
+          'module' => 'views',
+          'delta' => '84a0a512b3e0ccb8042a7d3b418168d7',
+          'region' => 'sidebar_first',
+          'weight' => '-8',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Context for all directory pages');
+  t('People');
+  $export['stanford_people_directory_pages'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'stanford_people_faculty_pages';
   $context->description = 'Context for all faculty pages';
   $context->tag = 'People';
