@@ -251,17 +251,20 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['filters']['title']['group'] = 1;
   $handler->display->display_options['filters']['title']['exposed'] = TRUE;
   $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
-  $handler->display->display_options['filters']['title']['expose']['label'] = 'Search staff by name';
+  $handler->display->display_options['filters']['title']['expose']['label'] = 'Search by name';
   $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
   $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
   $handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
-    13 => 0,
-    11 => 0,
-    9 => 0,
-    7 => 0,
+    6 => 0,
     5 => 0,
+    4 => 0,
+    3 => 0,
+    10 => 0,
+    7 => 0,
+    8 => 0,
+    9 => 0,
   );
   /* Filter criterion: Content: Staff Type (field_s_person_staff_type) */
   $handler->display->display_options['filters']['field_s_person_staff_type_tid']['id'] = 'field_s_person_staff_type_tid';
@@ -269,9 +272,21 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['filters']['field_s_person_staff_type_tid']['field'] = 'field_s_person_staff_type_tid';
   $handler->display->display_options['filters']['field_s_person_staff_type_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_s_person_staff_type_tid']['expose']['operator_id'] = 'field_s_person_staff_type_tid_op';
-  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['expose']['label'] = 'Filter by staff type';
+  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['expose']['label'] = 'Filter by type';
   $handler->display->display_options['filters']['field_s_person_staff_type_tid']['expose']['operator'] = 'field_s_person_staff_type_tid_op';
   $handler->display->display_options['filters']['field_s_person_staff_type_tid']['expose']['identifier'] = 'field_s_person_staff_type_tid';
+  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    6 => 0,
+    5 => 0,
+    4 => 0,
+    3 => 0,
+    10 => 0,
+    7 => 0,
+    8 => 0,
+    9 => 0,
+  );
   $handler->display->display_options['filters']['field_s_person_staff_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_s_person_staff_type_tid']['vocabulary'] = 'stanford_staff_type';
   $handler->display->display_options['filters']['field_s_person_staff_type_tid']['hierarchy'] = 1;

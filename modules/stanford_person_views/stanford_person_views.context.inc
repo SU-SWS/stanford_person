@@ -13,39 +13,6 @@ function stanford_person_views_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'stanford_people_all_pages';
-  $context->description = 'Context for all people pages';
-  $context->tag = 'People';
-  $context->conditions = array(
-    'path' => array(
-      'values' => array(
-        'people/*' => 'people/*',
-      ),
-    ),
-  );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'views-8116868180a8a203a7d1a990228283dc' => array(
-          'module' => 'views',
-          'delta' => '8116868180a8a203a7d1a990228283dc',
-          'region' => 'content_bottom',
-          'weight' => '-10',
-        ),
-      ),
-    ),
-  );
-  $context->condition_mode = 0;
-
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('Context for all people pages');
-  t('People');
-  $export['stanford_people_all_pages'] = $context;
-
-  $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
-  $context->api_version = 3;
   $context->name = 'stanford_people_directory_pages';
   $context->description = 'Context for all directory pages';
   $context->tag = 'People';
@@ -90,8 +57,7 @@ function stanford_person_views_context_default_contexts() {
       'values' => array(
         '~people/faculty/directory' => '~people/faculty/directory',
         '~people/faculty/profiles' => '~people/faculty/profiles',
-        '~people/faculty/lists' => '~people/faculty/lists',
-        '~people/faculty/lists' => '~people/faculty/list',
+        '~people/faculty/list' => '~people/faculty/list',
         '~people/faculty/grid' => '~people/faculty/grid',
         'people/faculty' => 'people/faculty',
         'people/faculty/*' => 'people/faculty/*',
@@ -238,7 +204,7 @@ function stanford_person_views_context_default_contexts() {
         '~people/staff/directory' => '~people/staff/directory',
         '~people/staff/profiles' => '~people/staff/profiles',
         '~people/staff/lists' => '~people/staff/lists',
-        '~people/staff/lists' => '~people/staff/list',
+        '~people/staff/list' => '~people/staff/list',
         '~people/staff/grid' => '~people/staff/grid',
         'people/staff' => 'people/staff',
         'people/staff/*' => 'people/staff/*',
@@ -276,8 +242,8 @@ function stanford_person_views_context_default_contexts() {
       'values' => array(
         '~people/students/directory' => '~people/students/directory',
         '~people/students/profiles' => '~people/students/profiles',
+        '~people/students/list' => '~people/students/list',
         '~people/students/lists' => '~people/students/lists',
-        '~people/students/lists' => '~people/students/list',
         '~people/students/grid' => '~people/students/grid',
         'people/student' => 'people/student',
         'people/student/*' => 'people/student/*',
