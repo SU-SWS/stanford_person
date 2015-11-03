@@ -88,6 +88,10 @@ function stanford_person_views_context_default_contexts() {
   $context->conditions = array(
     'path' => array(
       'values' => array(
+        '~people/faculty/directory' => '~people/faculty/directory',
+        '~people/faculty/profiles' => '~people/faculty/profiles',
+        '~people/faculty/lists' => '~people/faculty/lists',
+        '~people/faculty/grid' => '~people/faculty/grid',
         'people/faculty' => 'people/faculty',
         'people/faculty/*' => 'people/faculty/*',
       ),
@@ -101,12 +105,6 @@ function stanford_person_views_context_default_contexts() {
           'delta' => 'b38da907588eed2d09c10bdb381e5aaf',
           'region' => 'sidebar_first',
           'weight' => '-8',
-        ),
-        'views-stanford_quote-block_2' => array(
-          'module' => 'views',
-          'delta' => 'stanford_quote-block_2',
-          'region' => 'sidebar_first',
-          'weight' => '-7',
         ),
       ),
     ),
@@ -236,6 +234,10 @@ function stanford_person_views_context_default_contexts() {
   $context->conditions = array(
     'path' => array(
       'values' => array(
+        '~people/staff/directory' => '~people/staff/directory',
+        '~people/staff/profiles' => '~people/staff/profiles',
+        '~people/staff/lists' => '~people/staff/lists',
+        '~people/staff/grid' => '~people/staff/grid',
         'people/staff' => 'people/staff',
         'people/staff/*' => 'people/staff/*',
       ),
@@ -270,6 +272,10 @@ function stanford_person_views_context_default_contexts() {
   $context->conditions = array(
     'path' => array(
       'values' => array(
+        '~people/students/directory' => '~people/students/directory',
+        '~people/students/profiles' => '~people/students/profiles',
+        '~people/students/lists' => '~people/students/lists',
+        '~people/students/grid' => '~people/students/grid',
         'people/student' => 'people/student',
         'people/student/*' => 'people/student/*',
         'people/students' => 'people/students',
