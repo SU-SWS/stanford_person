@@ -894,6 +894,7 @@ function stanford_person_field_default_field_instances() {
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'List of faculty interests including research interests. Select one or more areas of interest. 
+
 Contact your site administrator to add or change entries. ',
     'display' => array(
       'default' => array(
@@ -1466,7 +1467,7 @@ Contact your site administrator to add or change entries. ',
     'required' => 0,
     'settings' => array(
       'alt_field' => 1,
-      'default_image' => 0,
+      'default_image' => 60,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
@@ -1773,6 +1774,7 @@ Contact your site administrator to add or change entries. ',
   t('If applicable, select the staff type (e.g., "Department Administrator").');
   t('Last Name');
   t('List of faculty interests including research interests. Select one or more areas of interest. 
+
 Contact your site administrator to add or change entries. ');
   t('Mail Code');
   t('Mailing Address');
