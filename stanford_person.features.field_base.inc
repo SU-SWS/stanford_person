@@ -478,7 +478,7 @@ function stanford_person_field_default_field_bases() {
     'locked' => 0,
     'module' => 'image',
     'settings' => array(
-      'default_image' => 619,
+      'default_image' => 59,
       'uri_scheme' => 'public',
     ),
     'translatable' => 0,
