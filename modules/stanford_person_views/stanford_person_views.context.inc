@@ -36,6 +36,7 @@ function stanford_person_views_context_default_contexts() {
     ),
   );
   $context->condition_mode = 0;
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Context for all people pages');
