@@ -142,6 +142,12 @@ function stanford_person_views_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-6',
         ),
+        'views-stanford_quote-block_2' => array(
+          'module' => 'views',
+          'delta' => 'stanford_quote-block_2',
+          'region' => 'sidebar_first',
+          'weight' => '-7',
+        ),
       ),
     ),
   );
