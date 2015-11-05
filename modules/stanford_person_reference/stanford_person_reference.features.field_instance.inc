@@ -15,7 +15,7 @@ function stanford_person_reference_field_default_field_instances() {
     'bundle' => 'stanford_publication',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'This displays the people associated with profiles website. Begin typing a name and it will autocomplete.',
+    'description' => 'Link to authors who have their profile pages on this site. Begin typing the person\'s name and it will autocomplete. Enter one author per line.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -56,7 +56,7 @@ function stanford_person_reference_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Author link');
-  t('This displays the people associated with profiles website. Begin typing a name and it will autocomplete.');
+  t('Link to authors who have their profile pages on this site. Begin typing the person\'s name and it will autocomplete. Enter one author per line.');
 
   return $field_instances;
 }
