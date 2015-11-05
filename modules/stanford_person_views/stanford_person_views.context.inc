@@ -46,6 +46,40 @@ function stanford_person_views_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'stanford_people_directory_pages';
+  $context->description = 'Context for all directory pages';
+  $context->tag = 'People';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'people/*/directory' => 'people/*/directory',
+        'people/*/directory/*' => 'people/*/directory/*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-5d1eed40683c671dbb34235c46f07503' => array(
+          'module' => 'views',
+          'delta' => '5d1eed40683c671dbb34235c46f07503',
+          'region' => 'sidebar_first',
+          'weight' => '-8',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Context for all directory pages');
+  t('People');
+  $export['stanford_people_directory_pages'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'stanford_people_faculty_pages';
   $context->description = 'Context for all faculty pages';
   $context->tag = 'People';
@@ -54,6 +88,9 @@ function stanford_person_views_context_default_contexts() {
       'values' => array(
         'people/faculty' => 'people/faculty',
         'people/faculty/*' => 'people/faculty/*',
+        '~people/faculty/directory' => '~people/faculty/directory',
+        '~people/faculty/list' => '~people/faculty/list',
+        '~people/faculty/profiles' => '~people/faculty/profiles',
       ),
     ),
   );
@@ -65,12 +102,6 @@ function stanford_person_views_context_default_contexts() {
           'delta' => 'b38da907588eed2d09c10bdb381e5aaf',
           'region' => 'sidebar_first',
           'weight' => '-8',
-        ),
-        'views-stanford_quote-block_2' => array(
-          'module' => 'views',
-          'delta' => 'stanford_quote-block_2',
-          'region' => 'sidebar_first',
-          'weight' => '-7',
         ),
       ),
     ),
@@ -86,6 +117,74 @@ function stanford_person_views_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'stanford_people_list_pages';
+  $context->description = 'Context for all list pages';
+  $context->tag = 'People';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'people/*/list' => 'people/*/list',
+        'people/*/list/*' => 'people/*/list/*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-82d290d8865767f268a0a5a983598011' => array(
+          'module' => 'views',
+          'delta' => '82d290d8865767f268a0a5a983598011',
+          'region' => 'sidebar_first',
+          'weight' => '-8',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Context for all list pages');
+  t('People');
+  $export['stanford_people_list_pages'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'stanford_people_profiles_pages';
+  $context->description = 'Context for all profiles pages';
+  $context->tag = 'People';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'people/*/profiles' => 'people/*/profiles',
+        'people/*/profiles/*' => 'people/*/profiles/*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-d8d6ba8faf44664b3c712e40baea3aba' => array(
+          'module' => 'views',
+          'delta' => 'd8d6ba8faf44664b3c712e40baea3aba',
+          'region' => 'sidebar_first',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Context for all profiles pages');
+  t('People');
+  $export['stanford_people_profiles_pages'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'stanford_people_staff_pages';
   $context->description = 'Context for all staff pages';
   $context->tag = 'People';
@@ -94,6 +193,9 @@ function stanford_person_views_context_default_contexts() {
       'values' => array(
         'people/staff' => 'people/staff',
         'people/staff/*' => 'people/staff/*',
+        '~people/staff/directory' => '~people/staff/directory',
+        '~people/staff/list' => '~people/staff/list',
+        '~people/staff/profiles' => '~people/staff/profiles',
       ),
     ),
   );
@@ -130,6 +232,9 @@ function stanford_person_views_context_default_contexts() {
         'people/student/*' => 'people/student/*',
         'people/students' => 'people/students',
         'people/students/*' => 'people/students/*',
+        '~people/students/list' => '~people/students/list',
+        '~people/students/directory' => '~people/students/directory',
+        '~people/students/profiles' => '~people/students/profiles',
       ),
     ),
   );

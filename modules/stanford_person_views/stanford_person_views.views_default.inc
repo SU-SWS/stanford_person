@@ -253,9 +253,20 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['filters']['title']['group'] = 1;
   $handler->display->display_options['filters']['title']['exposed'] = TRUE;
   $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
-  $handler->display->display_options['filters']['title']['expose']['label'] = 'Search faculty by name';
+  $handler->display->display_options['filters']['title']['expose']['label'] = 'Search by name';
   $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
   $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
+  $handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    6 => 0,
+    5 => 0,
+    4 => 0,
+    3 => 0,
+    9 => 0,
+    7 => 0,
+    8 => 0,
+  );
   /* Filter criterion: Content: Faculty Status (field_s_person_faculty_type) */
   $handler->display->display_options['filters']['field_s_person_faculty_type_tid']['id'] = 'field_s_person_faculty_type_tid';
   $handler->display->display_options['filters']['field_s_person_faculty_type_tid']['table'] = 'field_data_field_s_person_faculty_type';
@@ -263,9 +274,20 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['filters']['field_s_person_faculty_type_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_s_person_faculty_type_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_s_person_faculty_type_tid']['expose']['operator_id'] = 'field_s_person_faculty_type_tid_op';
-  $handler->display->display_options['filters']['field_s_person_faculty_type_tid']['expose']['label'] = 'Filter by faculty status';
+  $handler->display->display_options['filters']['field_s_person_faculty_type_tid']['expose']['label'] = 'Filter by status';
   $handler->display->display_options['filters']['field_s_person_faculty_type_tid']['expose']['operator'] = 'field_s_person_faculty_type_tid_op';
   $handler->display->display_options['filters']['field_s_person_faculty_type_tid']['expose']['identifier'] = 'field_s_person_faculty_type_tid';
+  $handler->display->display_options['filters']['field_s_person_faculty_type_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    6 => 0,
+    5 => 0,
+    4 => 0,
+    3 => 0,
+    9 => 0,
+    7 => 0,
+    8 => 0,
+  );
   $handler->display->display_options['filters']['field_s_person_faculty_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_s_person_faculty_type_tid']['vocabulary'] = 'stanford_faculty_type';
   /* Filter criterion: Content: Fields of Interest (field_s_person_interests) */
@@ -301,6 +323,18 @@ function stanford_person_views_views_default_views() {
   /* Display: Faculty Block */
   $handler = $view->new_display('block', 'Faculty Block', 'block_faculty');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+
+  /* Display: Profiles Page */
+  $handler = $view->new_display('page', 'Profiles Page', 'profiles_page');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Profiles';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['path'] = 'people/%/profiles';
+  $handler->display->display_options['menu']['title'] = 'Faculty';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'main-menu';
+  $handler->display->display_options['menu']['context'] = 0;
   $export['stanford_person_faculty'] = $view;
 
   $view = new view();
@@ -724,17 +758,19 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['filters']['title']['group'] = 1;
   $handler->display->display_options['filters']['title']['exposed'] = TRUE;
   $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
-  $handler->display->display_options['filters']['title']['expose']['label'] = 'Search staff by name';
+  $handler->display->display_options['filters']['title']['expose']['label'] = 'Search by name';
   $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
   $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
   $handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
-    13 => 0,
-    11 => 0,
+    6 => 0,
+    5 => 0,
+    4 => 0,
+    3 => 0,
     9 => 0,
     7 => 0,
-    5 => 0,
+    8 => 0,
   );
   /* Filter criterion: Content: Staff Type (field_s_person_staff_type) */
   $handler->display->display_options['filters']['field_s_person_staff_type_tid']['id'] = 'field_s_person_staff_type_tid';
@@ -742,9 +778,20 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['filters']['field_s_person_staff_type_tid']['field'] = 'field_s_person_staff_type_tid';
   $handler->display->display_options['filters']['field_s_person_staff_type_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_s_person_staff_type_tid']['expose']['operator_id'] = 'field_s_person_staff_type_tid_op';
-  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['expose']['label'] = 'Filter by staff type';
+  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['expose']['label'] = 'Filter by type';
   $handler->display->display_options['filters']['field_s_person_staff_type_tid']['expose']['operator'] = 'field_s_person_staff_type_tid_op';
   $handler->display->display_options['filters']['field_s_person_staff_type_tid']['expose']['identifier'] = 'field_s_person_staff_type_tid';
+  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    6 => 0,
+    5 => 0,
+    4 => 0,
+    3 => 0,
+    9 => 0,
+    7 => 0,
+    8 => 0,
+  );
   $handler->display->display_options['filters']['field_s_person_staff_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_s_person_staff_type_tid']['vocabulary'] = 'stanford_staff_type';
   $handler->display->display_options['filters']['field_s_person_staff_type_tid']['hierarchy'] = 1;
@@ -787,6 +834,19 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['path'] = 'people/staff/grouped';
+  $handler->display->display_options['menu']['title'] = 'Staff';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'main-menu';
+  $handler->display->display_options['menu']['context'] = 0;
+
+  /* Display: Directory Page */
+  $handler = $view->new_display('page', 'Directory Page', 'directory_page');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Directory';
+  $handler->display->display_options['display_comment'] = 'CJW';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['path'] = 'people/%/directory';
   $handler->display->display_options['menu']['title'] = 'Staff';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['name'] = 'main-menu';
@@ -981,9 +1041,20 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['filters']['title']['group'] = 1;
   $handler->display->display_options['filters']['title']['exposed'] = TRUE;
   $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
-  $handler->display->display_options['filters']['title']['expose']['label'] = 'Search students by name';
+  $handler->display->display_options['filters']['title']['expose']['label'] = 'Search by name';
   $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
   $handler->display->display_options['filters']['title']['expose']['identifier'] = 'title';
+  $handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    6 => 0,
+    5 => 0,
+    4 => 0,
+    3 => 0,
+    9 => 0,
+    7 => 0,
+    8 => 0,
+  );
 
   /* Display: Student Page */
   $handler = $view->new_display('page', 'Student Page', 'page');
@@ -1000,6 +1071,18 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+
+  /* Display: List Page */
+  $handler = $view->new_display('page', 'List Page', 'list_page');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'List';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['path'] = 'people/%/list';
+  $handler->display->display_options['menu']['title'] = 'Students';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'main-menu';
+  $handler->display->display_options['menu']['context'] = 0;
   $export['stanford_person_student'] = $view;
 
   return $export;
