@@ -14,6 +14,7 @@ dependencies[] = options
 dependencies[] = stanford_person
 dependencies[] = strongarm
 dependencies[] = views
+dependencies[] = bean
 features[context][] = stanford_people_all_pages
 features[context][] = stanford_people_directory_pages
 features[context][] = stanford_people_faculty_pages
@@ -33,4 +34,4 @@ features[views_view][] = stanford_person_people
 features[views_view][] = stanford_person_profiles
 features[views_view][] = stanford_person_staff
 features[views_view][] = stanford_person_student
-features_exclude[dependencies][bean] = bean
+
