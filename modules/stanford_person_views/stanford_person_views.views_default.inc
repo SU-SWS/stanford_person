@@ -1041,6 +1041,30 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['arguments']['term_node_tid_depth']['validate_options']['type'] = 'convert';
   $handler->display->display_options['arguments']['term_node_tid_depth']['validate_options']['transform'] = TRUE;
   $handler->display->display_options['arguments']['term_node_tid_depth']['depth'] = '0';
+  /* Contextual filter: Content: Has taxonomy term ID (with depth) */
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['id'] = 'term_node_tid_depth_1';
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['table'] = 'node';
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['field'] = 'term_node_tid_depth';
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['exception']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['exception']['title'] = '';
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['title'] = '%1 %2';
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['default_argument_options']['argument'] = 'all';
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['validate_options']['vocabularies'] = array(
+    'stanford_faculty_type' => 'stanford_faculty_type',
+    'stanford_staff_type' => 'stanford_staff_type',
+    'stanford_student_type' => 'stanford_student_type',
+  );
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['validate_options']['transform'] = TRUE;
+  $handler->display->display_options['arguments']['term_node_tid_depth_1']['depth'] = '0';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
