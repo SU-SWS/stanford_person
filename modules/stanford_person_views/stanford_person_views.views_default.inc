@@ -223,7 +223,9 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['arguments']['term_node_tid_depth']['validate']['type'] = 'taxonomy_term';
   $handler->display->display_options['arguments']['term_node_tid_depth']['validate_options']['vocabularies'] = array(
     'stanford_affiliation' => 'stanford_affiliation',
+    'stanford_faculty_type' => 'stanford_faculty_type',
     'stanford_staff_type' => 'stanford_staff_type',
+    'stanford_student_type' => 'stanford_student_type',
   );
   $handler->display->display_options['arguments']['term_node_tid_depth']['validate_options']['type'] = 'convert';
   $handler->display->display_options['arguments']['term_node_tid_depth']['validate_options']['transform'] = TRUE;
@@ -749,6 +751,9 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
   $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
     'stanford_affiliation' => 'stanford_affiliation',
+    'stanford_faculty_type' => 'stanford_faculty_type',
+    'stanford_staff_type' => 'stanford_staff_type',
+    'stanford_student_type' => 'stanford_student_type',
   );
   $handler->display->display_options['arguments']['tid']['validate_options']['type'] = 'convert';
   $handler->display->display_options['arguments']['tid']['validate_options']['transform'] = TRUE;
@@ -989,6 +994,8 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['arguments']['term_node_tid_depth']['validate']['type'] = 'taxonomy_term';
   $handler->display->display_options['arguments']['term_node_tid_depth']['validate_options']['vocabularies'] = array(
     'stanford_affiliation' => 'stanford_affiliation',
+    'stanford_faculty_type' => 'stanford_faculty_type',
+    'stanford_staff_type' => 'stanford_staff_type',
     'stanford_student_type' => 'stanford_student_type',
   );
   $handler->display->display_options['arguments']['term_node_tid_depth']['validate_options']['type'] = 'convert';
@@ -1449,6 +1456,9 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
   $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
     'stanford_affiliation' => 'stanford_affiliation',
+    'stanford_faculty_type' => 'stanford_faculty_type',
+    'stanford_staff_type' => 'stanford_staff_type',
+    'stanford_student_type' => 'stanford_student_type',
   );
   $handler->display->display_options['arguments']['tid']['validate_options']['type'] = 'convert';
   $handler->display->display_options['arguments']['tid']['validate_options']['transform'] = TRUE;
