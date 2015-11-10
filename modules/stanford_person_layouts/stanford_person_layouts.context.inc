@@ -58,7 +58,6 @@ function stanford_person_layouts_context_default_contexts() {
         '~people/faculty/list' => '~people/faculty/list',
         '~people/faculty/grid' => '~people/faculty/grid',
         'people/faculty' => 'people/faculty',
-        'people/faculty/*' => 'people/faculty/*',
       ),
     ),
   );
@@ -98,7 +97,6 @@ function stanford_person_layouts_context_default_contexts() {
         '~people/staff/list' => '~people/staff/list',
         '~people/staff/grid' => '~people/staff/grid',
         'people/staff' => 'people/staff',
-        'people/staff/*' => 'people/staff/*',
       ),
     ),
   );
