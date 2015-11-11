@@ -223,7 +223,9 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['arguments']['term_node_tid_depth']['validate']['type'] = 'taxonomy_term';
   $handler->display->display_options['arguments']['term_node_tid_depth']['validate_options']['vocabularies'] = array(
     'stanford_affiliation' => 'stanford_affiliation',
+    'stanford_faculty_type' => 'stanford_faculty_type',
     'stanford_staff_type' => 'stanford_staff_type',
+    'stanford_student_type' => 'stanford_student_type',
   );
   $handler->display->display_options['arguments']['term_node_tid_depth']['validate_options']['type'] = 'convert';
   $handler->display->display_options['arguments']['term_node_tid_depth']['validate_options']['transform'] = TRUE;
@@ -266,30 +268,6 @@ function stanford_person_views_views_default_views() {
     8 => 0,
     9 => 0,
   );
-  /* Filter criterion: Content: Staff Type (field_s_person_staff_type) */
-  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['id'] = 'field_s_person_staff_type_tid';
-  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['table'] = 'field_data_field_s_person_staff_type';
-  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['field'] = 'field_s_person_staff_type_tid';
-  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['expose']['operator_id'] = 'field_s_person_staff_type_tid_op';
-  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['expose']['label'] = 'Filter by type';
-  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['expose']['operator'] = 'field_s_person_staff_type_tid_op';
-  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['expose']['identifier'] = 'field_s_person_staff_type_tid';
-  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    6 => 0,
-    5 => 0,
-    4 => 0,
-    3 => 0,
-    10 => 0,
-    7 => 0,
-    8 => 0,
-    9 => 0,
-  );
-  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['vocabulary'] = 'stanford_staff_type';
-  $handler->display->display_options['filters']['field_s_person_staff_type_tid']['hierarchy'] = 1;
 
   /* Display: Directory Page */
   $handler = $view->new_display('page', 'Directory Page', 'page');
@@ -309,31 +287,6 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-
-  /* Display: Directory Page: Group by staff type */
-  $handler = $view->new_display('page', 'Directory Page: Group by staff type', 'page_1');
-  $handler->display->display_options['display_comment'] = 'CJW';
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['grouping'] = array(
-    0 => array(
-      'field' => 'field_s_person_staff_type',
-      'rendered' => 1,
-      'rendered_strip' => 0,
-    ),
-  );
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['exposed_block'] = TRUE;
-  $handler->display->display_options['path'] = 'people/%/directory/grouped';
-  $handler->display->display_options['menu']['title'] = 'Staff';
-  $handler->display->display_options['menu']['weight'] = '0';
-  $handler->display->display_options['menu']['name'] = 'main-menu';
-  $handler->display->display_options['menu']['context'] = 0;
   $export['stanford_person_directory'] = $view;
 
   $view = new view();
@@ -553,6 +506,7 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
   $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
     'stanford_affiliation' => 'stanford_affiliation',
+    'stanford_faculty_type' => 'stanford_faculty_type',
   );
   $handler->display->display_options['arguments']['tid']['validate_options']['type'] = 'convert';
   $handler->display->display_options['arguments']['tid']['validate_options']['transform'] = TRUE;
@@ -749,6 +703,9 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
   $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
     'stanford_affiliation' => 'stanford_affiliation',
+    'stanford_faculty_type' => 'stanford_faculty_type',
+    'stanford_staff_type' => 'stanford_staff_type',
+    'stanford_student_type' => 'stanford_student_type',
   );
   $handler->display->display_options['arguments']['tid']['validate_options']['type'] = 'convert';
   $handler->display->display_options['arguments']['tid']['validate_options']['transform'] = TRUE;
@@ -789,29 +746,6 @@ function stanford_person_views_views_default_views() {
     7 => 0,
     8 => 0,
   );
-  /* Filter criterion: Content: Affiliation (field_s_person_affiliation) */
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['id'] = 'field_s_person_affiliation_tid';
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['table'] = 'field_data_field_s_person_affiliation';
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['field'] = 'field_s_person_affiliation_tid';
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['expose']['operator_id'] = 'field_s_person_affiliation_tid_op';
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['expose']['label'] = 'Affiliation';
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['expose']['operator'] = 'field_s_person_affiliation_tid_op';
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['expose']['identifier'] = 'field_s_person_affiliation_tid';
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    6 => 0,
-    5 => 0,
-    4 => 0,
-    3 => 0,
-    9 => 0,
-    7 => 0,
-    8 => 0,
-  );
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['vocabulary'] = 'stanford_affiliation';
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['hierarchy'] = 1;
 
   /* Display: Grid Block  */
   $handler = $view->new_display('block', 'Grid Block ', 'block');
@@ -857,13 +791,6 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['grouping'] = array(
-    0 => array(
-      'field' => 'field_s_person_student_type',
-      'rendered' => 1,
-      'rendered_strip' => 0,
-    ),
-  );
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   /* Relationship: Content: Taxonomy terms on node */
@@ -989,6 +916,8 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['arguments']['term_node_tid_depth']['validate']['type'] = 'taxonomy_term';
   $handler->display->display_options['arguments']['term_node_tid_depth']['validate_options']['vocabularies'] = array(
     'stanford_affiliation' => 'stanford_affiliation',
+    'stanford_faculty_type' => 'stanford_faculty_type',
+    'stanford_staff_type' => 'stanford_staff_type',
     'stanford_student_type' => 'stanford_student_type',
   );
   $handler->display->display_options['arguments']['term_node_tid_depth']['validate_options']['type'] = 'convert';
@@ -1260,13 +1189,6 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['grouping'] = array(
-    0 => array(
-      'field' => 'field_s_person_faculty_type',
-      'rendered' => 1,
-      'rendered_strip' => 0,
-    ),
-  );
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   /* Relationship: Content: Taxonomy terms on node */
@@ -1449,6 +1371,9 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
   $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
     'stanford_affiliation' => 'stanford_affiliation',
+    'stanford_faculty_type' => 'stanford_faculty_type',
+    'stanford_staff_type' => 'stanford_staff_type',
+    'stanford_student_type' => 'stanford_student_type',
   );
   $handler->display->display_options['arguments']['tid']['validate_options']['type'] = 'convert';
   $handler->display->display_options['arguments']['tid']['validate_options']['transform'] = TRUE;
