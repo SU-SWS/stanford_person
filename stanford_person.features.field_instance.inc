@@ -1573,7 +1573,7 @@ Contact your site administrator to add or change entries. ',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => 'med-square',
+          'image_style' => 'large-square',
         ),
         'type' => 'image',
         'weight' => 6,
