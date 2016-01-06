@@ -452,7 +452,7 @@ function stanford_person_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'text_plain',
         'weight' => 55,
       ),
       'stanford_taxonomy' => array(
@@ -553,7 +553,7 @@ function stanford_person_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'taxonomy_term_reference_plain',
         'weight' => 10,
       ),
       'stanford_taxonomy' => array(

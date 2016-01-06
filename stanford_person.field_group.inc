@@ -58,16 +58,17 @@ function stanford_person_field_group_info() {
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'About',
       'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-s-about field-group-div',
         'description' => '',
-        'show_label' => 1,
-        'label_element' => 'h3',
+        'show_label' => '0',
+        'label_element' => 'h2',
         'effect' => 'none',
         'speed' => 'fast',
-        'classes' => 'group-s-about field-group-div',
-        'id' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $export['group_s_about|node|stanford_person|stanford_cap'] = $field_group;
@@ -93,16 +94,17 @@ function stanford_person_field_group_info() {
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Contact',
       'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-s-contact field-group-div',
         'description' => '',
-        'show_label' => 1,
-        'label_element' => 'h3',
+        'show_label' => '0',
+        'label_element' => 'h2',
         'effect' => 'none',
         'speed' => 'fast',
-        'classes' => 'group-s-contact field-group-div',
-        'id' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $export['group_s_contact|node|stanford_person|stanford_cap'] = $field_group;
@@ -155,16 +157,17 @@ function stanford_person_field_group_info() {
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Image Border Style',
       'instance_settings' => array(
+        'id' => '',
+        'classes' => 'border-simple-nowidth border-shadow',
         'description' => '',
-        'show_label' => 1,
+        'show_label' => '0',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
-        'classes' => 'group-s-image-border-style field-group-div',
-        'id' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $export['group_s_image_border_style|node|stanford_person|stanford_cap'] = $field_group;
@@ -589,16 +592,17 @@ function stanford_person_field_group_info() {
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Postcard Column 1',
       'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-s-postcard-col1 field-group-div',
         'description' => '',
-        'show_label' => 1,
+        'show_label' => '0',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
-        'classes' => 'group-s-postcard-col1 field-group-div',
-        'id' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $export['group_s_postcard_col1|node|stanford_person|stanford_cap'] = $field_group;
@@ -729,16 +733,17 @@ function stanford_person_field_group_info() {
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Postcard Column 2',
       'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-s-postcard-col2 field-group-div',
         'description' => '',
-        'show_label' => 1,
+        'show_label' => '0',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
-        'classes' => 'group-s-postcard-col2 field-group-div',
-        'id' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $export['group_s_postcard_col2|node|stanford_person|stanford_cap'] = $field_group;
@@ -991,16 +996,17 @@ function stanford_person_field_group_info() {
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Postcard',
       'instance_settings' => array(
+        'id' => '',
+        'classes' => 'postcard-right-wrap',
         'description' => '',
-        'show_label' => 1,
+        'show_label' => '0',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
-        'classes' => 'group-s-postcard field-group-div',
-        'id' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $export['group_s_postcard|node|stanford_person|stanford_cap'] = $field_group;
@@ -1086,16 +1092,17 @@ function stanford_person_field_group_info() {
     'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Profile Link Style',
       'instance_settings' => array(
+        'id' => '',
+        'classes' => 'btn btn-arrow',
         'description' => '',
-        'show_label' => 1,
+        'show_label' => '0',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
-        'classes' => 'group-s-profile-link-style field-group-div',
-        'id' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $export['group_s_profile_link_style|node|stanford_person|stanford_cap'] = $field_group;
@@ -1117,16 +1124,17 @@ function stanford_person_field_group_info() {
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Research Interests',
       'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-s-research-interests field-group-div',
         'description' => '',
-        'show_label' => 1,
-        'label_element' => 'h3',
+        'show_label' => '1',
+        'label_element' => 'h2',
         'effect' => 'none',
         'speed' => 'fast',
-        'classes' => 'group-s-research-interests field-group-div',
-        'id' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $export['group_s_research_interests|node|stanford_person|stanford_cap'] = $field_group;
@@ -1148,16 +1156,17 @@ function stanford_person_field_group_info() {
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Status Style',
       'instance_settings' => array(
+        'id' => '',
+        'classes' => 'summary',
         'description' => '',
-        'show_label' => 1,
+        'show_label' => '0',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
-        'classes' => 'group-s-status-style field-group-div',
-        'id' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $export['group_s_status_style|node|stanford_person|stanford_cap'] = $field_group;
