@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Stanford Person CAP feature.
+ */
+
+include_once 'stanford_person_cap.features.inc';
