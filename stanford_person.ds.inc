@@ -84,11 +84,11 @@ function stanford_person_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'group_s_postcard',
-        1 => 'title',
-        2 => 'field_s_person_profile_picture',
-        3 => 'group_s_person_about',
-        4 => 'field_s_person_faculty_title',
+        0 => 'title',
+        1 => 'group_s_postcard',
+        2 => 'group_s_person_about',
+        3 => 'field_s_person_faculty_title',
+        4 => 'field_s_person_profile_picture',
         5 => 'field_s_person_faculty_type',
         6 => 'field_s_person_student_type',
         7 => 'field_s_person_education',
@@ -99,11 +99,11 @@ function stanford_person_ds_layout_settings_info() {
       ),
     ),
     'fields' => array(
-      'group_s_postcard' => 'ds_content',
       'title' => 'ds_content',
-      'field_s_person_profile_picture' => 'ds_content',
+      'group_s_postcard' => 'ds_content',
       'group_s_person_about' => 'ds_content',
       'field_s_person_faculty_title' => 'ds_content',
+      'field_s_person_profile_picture' => 'ds_content',
       'field_s_person_faculty_type' => 'ds_content',
       'field_s_person_student_type' => 'ds_content',
       'field_s_person_education' => 'ds_content',

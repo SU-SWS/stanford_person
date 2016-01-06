@@ -44,6 +44,64 @@ function stanford_person_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_s_about|node|stanford_person|stanford_cap';
+  $field_group->group_name = 'group_s_about';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'stanford_cap';
+  $field_group->parent_name = 'group_s_postcard_col2';
+  $field_group->data = array(
+    'label' => 'About',
+    'weight' => '57',
+    'children' => array(),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => 'group-s-about field-group-div',
+        'id' => '',
+      ),
+    ),
+  );
+  $export['group_s_about|node|stanford_person|stanford_cap'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_s_contact|node|stanford_person|stanford_cap';
+  $field_group->group_name = 'group_s_contact';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'stanford_cap';
+  $field_group->parent_name = 'group_s_postcard_col2';
+  $field_group->data = array(
+    'label' => 'Contact',
+    'weight' => '56',
+    'children' => array(),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => 'group-s-contact field-group-div',
+        'id' => '',
+      ),
+    ),
+  );
+  $export['group_s_contact|node|stanford_person|stanford_cap'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_s_image_border_style|node|stanford_person|full';
   $field_group->group_name = 'group_s_image_border_style';
   $field_group->entity_type = 'node';
@@ -71,6 +129,35 @@ function stanford_person_field_group_info() {
     ),
   );
   $export['group_s_image_border_style|node|stanford_person|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_s_image_border_style|node|stanford_person|stanford_cap';
+  $field_group->group_name = 'group_s_image_border_style';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'stanford_cap';
+  $field_group->parent_name = 'group_s_postcard_col1';
+  $field_group->data = array(
+    'label' => 'Image Border Style',
+    'weight' => '39',
+    'children' => array(),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => 'group-s-image-border-style field-group-div',
+        'id' => '',
+      ),
+    ),
+  );
+  $export['group_s_image_border_style|node|stanford_person|stanford_cap'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -478,6 +565,37 @@ function stanford_person_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_s_postcard_col1|node|stanford_person|stanford_cap';
+  $field_group->group_name = 'group_s_postcard_col1';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'stanford_cap';
+  $field_group->parent_name = 'group_s_postcard';
+  $field_group->data = array(
+    'label' => 'Postcard Column 1',
+    'weight' => '1',
+    'children' => array(
+      0 => 'group_s_image_border_style',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => 'group-s-postcard-col1 field-group-div',
+        'id' => '',
+      ),
+    ),
+  );
+  $export['group_s_postcard_col1|node|stanford_person|stanford_cap'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_s_postcard_col1|node|stanford_person|stanford_taxonomy';
   $field_group->group_name = 'group_s_postcard_col1';
   $field_group->entity_type = 'node';
@@ -524,8 +642,8 @@ function stanford_person_field_group_info() {
       0 => 'field_s_person_education',
       1 => 'field_s_person_faculty_title',
       2 => 'field_s_person_faculty_type',
-      3 => 'field_s_person_student_type',
-      4 => 'field_s_person_file',
+      3 => 'field_s_person_file',
+      4 => 'field_s_person_student_type',
       5 => 'title',
     ),
     'format_type' => 'div',
@@ -578,6 +696,41 @@ function stanford_person_field_group_info() {
     ),
   );
   $export['group_s_postcard_col2|node|stanford_person|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_s_postcard_col2|node|stanford_person|stanford_cap';
+  $field_group->group_name = 'group_s_postcard_col2';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'stanford_cap';
+  $field_group->parent_name = 'group_s_postcard';
+  $field_group->data = array(
+    'label' => 'Postcard Column 2',
+    'weight' => '2',
+    'children' => array(
+      0 => 'group_s_research_interests',
+      1 => 'group_s_contact',
+      2 => 'group_s_about',
+      3 => 'group_s_profile_link_style',
+      4 => 'group_s_status_style',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => 'group-s-postcard-col2 field-group-div',
+        'id' => '',
+      ),
+    ),
+  );
+  $export['group_s_postcard_col2|node|stanford_person|stanford_cap'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -812,6 +965,38 @@ function stanford_person_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_s_postcard|node|stanford_person|stanford_cap';
+  $field_group->group_name = 'group_s_postcard';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'stanford_cap';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Postcard',
+    'weight' => '0',
+    'children' => array(
+      0 => 'group_s_postcard_col1',
+      1 => 'group_s_postcard_col2',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => 'group-s-postcard field-group-div',
+        'id' => '',
+      ),
+    ),
+  );
+  $export['group_s_postcard|node|stanford_person|stanford_cap'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_s_postcard|node|stanford_person|stanford_taxonomy';
   $field_group->group_name = 'group_s_postcard';
   $field_group->entity_type = 'node';
@@ -874,6 +1059,93 @@ function stanford_person_field_group_info() {
     ),
   );
   $export['group_s_postcard|node|stanford_person|taxonomy'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_s_profile_link_style|node|stanford_person|stanford_cap';
+  $field_group->group_name = 'group_s_profile_link_style';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'stanford_cap';
+  $field_group->parent_name = 'group_s_postcard_col2';
+  $field_group->data = array(
+    'label' => 'Profile Link Style',
+    'weight' => '58',
+    'children' => array(),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => 'group-s-profile-link-style field-group-div',
+        'id' => '',
+      ),
+    ),
+  );
+  $export['group_s_profile_link_style|node|stanford_person|stanford_cap'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_s_research_interests|node|stanford_person|stanford_cap';
+  $field_group->group_name = 'group_s_research_interests';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'stanford_cap';
+  $field_group->parent_name = 'group_s_postcard_col2';
+  $field_group->data = array(
+    'label' => 'Research Interests',
+    'weight' => '55',
+    'children' => array(),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => 'group-s-research-interests field-group-div',
+        'id' => '',
+      ),
+    ),
+  );
+  $export['group_s_research_interests|node|stanford_person|stanford_cap'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_s_status_style|node|stanford_person|stanford_cap';
+  $field_group->group_name = 'group_s_status_style';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'stanford_cap';
+  $field_group->parent_name = 'group_s_postcard_col2';
+  $field_group->data = array(
+    'label' => 'Status Style',
+    'weight' => '54',
+    'children' => array(),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'show_label' => 1,
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+        'classes' => 'group-s-status-style field-group-div',
+        'id' => '',
+      ),
+    ),
+  );
+  $export['group_s_status_style|node|stanford_person|stanford_cap'] = $field_group;
 
   return $export;
 }
