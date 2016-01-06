@@ -915,7 +915,7 @@ function stanford_person_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -997,7 +997,7 @@ Contact your site administrator to add or change entries. ',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 2,
+        'weight' => 63,
       ),
       'stanford_taxonomy' => array(
         'label' => 'hidden',

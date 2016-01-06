@@ -87,10 +87,10 @@ function stanford_person_field_group_info() {
     'weight' => '57',
     'children' => array(
       0 => 'field_s_person_email',
-      1 => 'field_s_person_info_links',
-      2 => 'field_s_person_office_hours',
-      3 => 'field_s_person_office_location',
-      4 => 'field_s_person_phone_display',
+      1 => 'field_s_person_office_hours',
+      2 => 'field_s_person_office_location',
+      3 => 'field_s_person_phone_display',
+      4 => 'group_s_personal_link_style',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -171,6 +171,38 @@ function stanford_person_field_group_info() {
     ),
   );
   $export['group_s_image_border_style|node|stanford_person|stanford_cap'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_s_interest_style|node|stanford_person|stanford_cap';
+  $field_group->group_name = 'group_s_interest_style';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'stanford_cap';
+  $field_group->parent_name = 'group_s_research_interests';
+  $field_group->data = array(
+    'label' => 'Interest Style',
+    'weight' => '62',
+    'children' => array(
+      0 => 'field_s_person_interests',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Interest Style',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'descriptor descriptor-btn',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_s_interest_style|node|stanford_person|stanford_cap'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -512,6 +544,38 @@ function stanford_person_field_group_info() {
     ),
   );
   $export['group_s_person_style_interests|node|stanford_person|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_s_personal_link_style|node|stanford_person|stanford_cap';
+  $field_group->group_name = 'group_s_personal_link_style';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'stanford_person';
+  $field_group->mode = 'stanford_cap';
+  $field_group->parent_name = 'group_s_contact';
+  $field_group->data = array(
+    'label' => 'Personal info Link Style',
+    'weight' => '10',
+    'children' => array(
+      0 => 'field_s_person_info_links',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Personal info Link Style',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'more-link',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_s_personal_link_style|node|stanford_person|stanford_cap'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1120,7 +1184,7 @@ function stanford_person_field_group_info() {
     'label' => 'Research Interests',
     'weight' => '56',
     'children' => array(
-      0 => 'field_s_person_interests',
+      0 => 'group_s_interest_style',
     ),
     'format_type' => 'div',
     'format_settings' => array(
