@@ -1541,6 +1541,82 @@ Contact your site administrator to add or change entries. ',
     ),
   );
 
+  // Exported field_instance: 'node-stanford_person-field_s_person_profile_link'
+  $field_instances['node-stanford_person-field_s_person_profile_link'] = array(
+    'bundle' => 'stanford_person',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This link provides a URL to this person\'s profile on CAP or Stanford Profiles. ',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 29,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'stanford_cap' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 0,
+      ),
+      'taxonomy' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_s_person_profile_link',
+    'label' => 'External Profile Link',
+    'required' => 0,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'value',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 128,
+      'title_value' => 'View full profile on Stanford Profiles',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 8,
+    ),
+  );
+
   // Exported field_instance:
   // 'node-stanford_person-field_s_person_profile_picture'
   $field_instances['node-stanford_person-field_s_person_profile_picture'] = array(
@@ -1929,6 +2005,7 @@ Contact your site administrator to add or change entries. ',
   t('Dissertation Title');
   t('Each link provides a URL about the person. The required title provides a human readable name (e.g., "Web page," "StanfordWho," or "Facebook"). For each title enter the URL which corresponds to the person (e.g.,  "http://www.stanford.edu/~hennessy/").');
   t('Email');
+  t('External Profile Link');
   t('Faculty Status');
   t('Fax');
   t('Field of Study');
@@ -1960,6 +2037,7 @@ Contact your site administrator to add or change entries. ');
   t('Student Type');
   t('This email field displays the primary email address (e.g. "mysunetid@stanford.edu").');
   t('This integer field is used to control the sort order in views displays. Larger numbers are "heavier" and sink lower in the list.');
+  t('This link provides a URL to this person\'s profile on CAP or Stanford Profiles. ');
   t('This text area displays a biography or profile of the person. To enter a summary to be displayed when a shorter amount of text is needed, click on "Edit summary" above.');
   t('This text area displays the mailing address. Enter the address as you want it to appear. Hint: Use control+enter to enter a new line.');
   t('This text field displays education information (e.g. "B.A., Stanford University, 1972"). Enter one degree per line.');

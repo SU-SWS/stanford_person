@@ -281,6 +281,7 @@ function stanford_person_field_group_info() {
     'weight' => '6',
     'children' => array(
       0 => 'field_s_person_weight',
+      1 => 'field_s_person_profile_link',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -308,11 +309,11 @@ function stanford_person_field_group_info() {
     'label' => 'Basic Info',
     'weight' => '0',
     'children' => array(
-      0 => 'field_s_person_first_name',
-      1 => 'field_s_person_last_name',
-      2 => 'field_s_person_middle_name',
-      3 => 'field_s_person_profile_picture',
-      4 => 'field_s_person_affiliation',
+      0 => 'field_s_person_affiliation',
+      1 => 'field_s_person_first_name',
+      2 => 'field_s_person_last_name',
+      3 => 'field_s_person_middle_name',
+      4 => 'field_s_person_profile_picture',
       5 => 'title',
     ),
     'format_type' => 'fieldset',
@@ -1154,7 +1155,9 @@ function stanford_person_field_group_info() {
   $field_group->data = array(
     'label' => 'Profile Link Style',
     'weight' => '6',
-    'children' => array(),
+    'children' => array(
+      0 => 'field_s_person_profile_link',
+    ),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Profile Link Style',
