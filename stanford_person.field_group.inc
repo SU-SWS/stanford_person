@@ -52,8 +52,10 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = 'group_s_postcard_col2';
   $field_group->data = array(
     'label' => 'About',
-    'weight' => '57',
-    'children' => array(),
+    'weight' => '58',
+    'children' => array(
+      0 => 'body',
+    ),
     'format_type' => 'div',
     'format_settings' => array(
       'formatter' => 'collapsible',
@@ -81,8 +83,14 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = 'group_s_postcard_col2';
   $field_group->data = array(
     'label' => 'Contact',
-    'weight' => '56',
-    'children' => array(),
+    'weight' => '57',
+    'children' => array(
+      0 => 'field_s_person_email',
+      1 => 'field_s_person_info_links',
+      2 => 'field_s_person_office_hours',
+      3 => 'field_s_person_office_location',
+      4 => 'field_s_person_phone_display',
+    ),
     'format_type' => 'div',
     'format_settings' => array(
       'formatter' => 'collapsible',
@@ -142,7 +150,9 @@ function stanford_person_field_group_info() {
   $field_group->data = array(
     'label' => 'Image Border Style',
     'weight' => '39',
-    'children' => array(),
+    'children' => array(
+      0 => 'field_s_person_profile_picture',
+    ),
     'format_type' => 'div',
     'format_settings' => array(
       'formatter' => 'collapsible',
@@ -710,11 +720,12 @@ function stanford_person_field_group_info() {
     'label' => 'Postcard Column 2',
     'weight' => '2',
     'children' => array(
-      0 => 'group_s_research_interests',
-      1 => 'group_s_contact',
-      2 => 'group_s_about',
-      3 => 'group_s_profile_link_style',
-      4 => 'group_s_status_style',
+      0 => 'field_s_person_faculty_title',
+      1 => 'group_s_research_interests',
+      2 => 'group_s_contact',
+      3 => 'group_s_about',
+      4 => 'group_s_profile_link_style',
+      5 => 'group_s_status_style',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -1071,7 +1082,7 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = 'group_s_postcard_col2';
   $field_group->data = array(
     'label' => 'Profile Link Style',
-    'weight' => '58',
+    'weight' => '59',
     'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
@@ -1100,8 +1111,10 @@ function stanford_person_field_group_info() {
   $field_group->parent_name = 'group_s_postcard_col2';
   $field_group->data = array(
     'label' => 'Research Interests',
-    'weight' => '55',
-    'children' => array(),
+    'weight' => '56',
+    'children' => array(
+      0 => 'field_s_person_interests',
+    ),
     'format_type' => 'div',
     'format_settings' => array(
       'formatter' => 'collapsible',
@@ -1130,7 +1143,9 @@ function stanford_person_field_group_info() {
   $field_group->data = array(
     'label' => 'Status Style',
     'weight' => '54',
-    'children' => array(),
+    'children' => array(
+      0 => 'field_s_person_faculty_type',
+    ),
     'format_type' => 'div',
     'format_settings' => array(
       'formatter' => 'collapsible',
