@@ -85,7 +85,8 @@ function stanford_person_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'settings' => array(),
-        'type' => 'hidden',
+        'module' => 'taxonomy',
+        'type' => 'taxonomy_term_reference_link',
         'weight' => 28,
       ),
       'full' => array(
