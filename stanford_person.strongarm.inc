@@ -135,6 +135,9 @@ function stanford_person_strongarm() {
       'taxonomy' => array(
         'custom_settings' => TRUE,
       ),
+      'stanford_cap' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

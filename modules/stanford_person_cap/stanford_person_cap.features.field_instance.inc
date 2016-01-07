@@ -7,7 +7,7 @@
 /**
  * Implements hook_field_default_field_instances().
  */
-function stanford_person_field_default_field_instances() {
+function stanford_person_cap_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance: 'node-stanford_person-body'
@@ -32,10 +32,11 @@ function stanford_person_field_default_field_instances() {
         'weight' => 6,
       ),
       'stanford_cap' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'text_default',
+        'weight' => 58,
       ),
       'stanford_taxonomy' => array(
         'label' => 'hidden',
@@ -90,9 +91,8 @@ function stanford_person_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'hidden',
         'weight' => 28,
       ),
       'full' => array(
@@ -105,7 +105,7 @@ function stanford_person_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 24,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -158,7 +158,7 @@ function stanford_person_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 21,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -225,7 +225,7 @@ function stanford_person_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 18,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -317,10 +317,10 @@ function stanford_person_field_default_field_instances() {
         'weight' => 3,
       ),
       'stanford_cap' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 10,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -382,10 +382,11 @@ function stanford_person_field_default_field_instances() {
         'weight' => 4,
       ),
       'stanford_cap' => array(
-        'label' => 'above',
+        'label' => 'inline',
+        'module' => 'email',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'email_default',
+        'weight' => 7,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -448,10 +449,11 @@ function stanford_person_field_default_field_instances() {
         'weight' => 2,
       ),
       'stanford_cap' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'text_plain',
+        'weight' => 2,
       ),
       'stanford_taxonomy' => array(
         'label' => 'hidden',
@@ -548,10 +550,11 @@ function stanford_person_field_default_field_instances() {
         'weight' => 1,
       ),
       'stanford_cap' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 10,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -613,7 +616,7 @@ function stanford_person_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 13,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -677,7 +680,7 @@ function stanford_person_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 9,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -781,7 +784,7 @@ function stanford_person_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 15,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -844,7 +847,7 @@ function stanford_person_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 22,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -908,10 +911,11 @@ function stanford_person_field_default_field_instances() {
         'weight' => 7,
       ),
       'stanford_cap' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'link',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'link_default',
+        'weight' => 11,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -989,10 +993,11 @@ Contact your site administrator to add or change entries. ',
         'weight' => 8,
       ),
       'stanford_cap' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 63,
       ),
       'stanford_taxonomy' => array(
         'label' => 'hidden',
@@ -1054,7 +1059,7 @@ Contact your site administrator to add or change entries. ',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 17,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -1118,7 +1123,7 @@ Contact your site administrator to add or change entries. ',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 12,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -1181,7 +1186,7 @@ Contact your site administrator to add or change entries. ',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 14,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -1270,7 +1275,7 @@ Contact your site administrator to add or change entries. ',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 16,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -1331,10 +1336,11 @@ Contact your site administrator to add or change entries. ',
         'weight' => 2,
       ),
       'stanford_cap' => array(
-        'label' => 'above',
+        'label' => 'inline',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'text_default',
+        'weight' => 9,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -1397,10 +1403,11 @@ Contact your site administrator to add or change entries. ',
         'weight' => 5,
       ),
       'stanford_cap' => array(
-        'label' => 'above',
+        'label' => 'inline',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'text_default',
+        'weight' => 8,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -1489,10 +1496,11 @@ Contact your site administrator to add or change entries. ',
         'weight' => 3,
       ),
       'stanford_cap' => array(
-        'label' => 'above',
+        'label' => 'inline',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'text_default',
+        'weight' => 6,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -1554,9 +1562,10 @@ Contact your site administrator to add or change entries. ',
         'weight' => 0,
       ),
       'stanford_cap' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'link',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'link_default',
         'weight' => 0,
       ),
       'taxonomy' => array(
@@ -1636,10 +1645,14 @@ Contact your site administrator to add or change entries. ',
         'weight' => 30,
       ),
       'stanford_cap' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'large-square',
+        ),
+        'type' => 'image',
+        'weight' => 6,
       ),
       'stanford_taxonomy' => array(
         'label' => 'hidden',
@@ -1764,7 +1777,7 @@ Contact your site administrator to add or change entries. ',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 20,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -1816,10 +1829,10 @@ Contact your site administrator to add or change entries. ',
         'weight' => 16,
       ),
       'stanford_cap' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 11,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -1881,7 +1894,7 @@ Contact your site administrator to add or change entries. ',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 19,
       ),
       'stanford_taxonomy' => array(
         'label' => 'above',
@@ -1948,7 +1961,7 @@ Contact your site administrator to add or change entries. ',
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 23,
       ),
       'taxonomy' => array(
         'label' => 'above',
