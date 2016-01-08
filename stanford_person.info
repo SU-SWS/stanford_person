@@ -35,6 +35,7 @@ features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
 features[ds_field_settings][] = node|stanford_person|default
 features[ds_field_settings][] = node|stanford_person|full
+features[ds_field_settings][] = node|stanford_person|stanford_cap
 features[ds_field_settings][] = node|stanford_person|taxonomy
 features[ds_layout_settings][] = node|stanford_person|default
 features[ds_layout_settings][] = node|stanford_person|full

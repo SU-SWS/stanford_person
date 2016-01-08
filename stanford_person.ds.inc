@@ -47,6 +47,26 @@ function stanford_person_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|stanford_person|stanford_cap';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'stanford_person';
+  $ds_fieldsetting->view_mode = 'stanford_cap';
+  $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '0',
+        'wrapper' => 'h1',
+        'class' => '',
+      ),
+    ),
+  );
+  $export['node|stanford_person|stanford_cap'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|stanford_person|taxonomy';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'stanford_person';
@@ -136,10 +156,10 @@ function stanford_person_ds_layout_settings_info() {
       'ds_content' => array(
         0 => 'title',
         1 => 'group_s_postcard',
-        2 => 'group_s_person_about',
-        3 => 'field_s_person_faculty_type',
+        2 => 'field_s_person_faculty_type',
+        3 => 'group_s_person_about',
         4 => 'field_s_person_faculty_title',
-        6 => 'field_s_person_education',
+        7 => 'field_s_person_education',
         8 => 'field_s_person_file',
         11 => 'body',
         16 => 'group_s_postcard_col1',
@@ -151,7 +171,7 @@ function stanford_person_ds_layout_settings_info() {
         5 => 'field_s_person_office_hours',
       ),
       'contact' => array(
-        7 => 'field_s_person_phone_display',
+        6 => 'field_s_person_phone_display',
         9 => 'field_s_person_email',
         10 => 'field_s_person_office_location',
         12 => 'group_morelink_group',
@@ -165,12 +185,12 @@ function stanford_person_ds_layout_settings_info() {
     'fields' => array(
       'title' => 'ds_content',
       'group_s_postcard' => 'ds_content',
-      'group_s_person_about' => 'ds_content',
       'field_s_person_faculty_type' => 'ds_content',
+      'group_s_person_about' => 'ds_content',
       'field_s_person_faculty_title' => 'ds_content',
       'field_s_person_office_hours' => 'office_hours',
-      'field_s_person_education' => 'ds_content',
       'field_s_person_phone_display' => 'contact',
+      'field_s_person_education' => 'ds_content',
       'field_s_person_file' => 'ds_content',
       'field_s_person_email' => 'contact',
       'field_s_person_office_location' => 'contact',
