@@ -146,7 +146,6 @@ features[variable][] = additional_settings__active_tab_stanford_person
 features[variable][] = ant_pattern_stanford_person
 features[variable][] = ant_php_stanford_person
 features[variable][] = ant_stanford_person
-features[variable][] = contextual_view_modes_node
 features[variable][] = diff_enable_revisions_page_node_stanford_person
 features[variable][] = diff_show_preview_changes_node_stanford_person
 features[variable][] = diff_view_mode_preview_node_stanford_person
