@@ -26,7 +26,9 @@
 /* CAP VIEW MODE STYLES */
 
 .node-type-stanford-person .view-mode-stanford_cap .group-s-contact .field-name-field-s-person-phone-display,
-.node-type-stanford-person .view-mode-stanford_cap .group-s-contact .field-name-field-s-person-email {
+.node-type-stanford-person .view-mode-stanford_cap .group-s-contact .field-name-field-s-person-email,
+.node-type-stanford-person .view-mode-stanford_cap .group-s-contact .field-name-field-s-person-office-location,
+.node-type-stanford-person .view-mode-stanford_cap .group-s-contact .field-name-field-s-person-office-hours {
   margin-bottom: 0;
 }
 
