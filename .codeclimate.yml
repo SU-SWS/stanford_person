@@ -8,3 +8,5 @@ exclude_paths:
 - "*.field_group.inc"
 - "*.strongarm*.inc"
 - "*.context*.inc"
+- "*.ds.inc"
+- "*.views_default.inc"
