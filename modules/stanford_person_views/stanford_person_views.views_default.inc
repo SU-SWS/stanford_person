@@ -22,7 +22,7 @@ function stanford_person_views_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Staff';
+  $handler->display->display_options['title'] = 'People';
   $handler->display->display_options['css_class'] = 'views-row-lines view-stanford-person';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
@@ -104,15 +104,6 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['fields']['title']['element_type'] = 'h3';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
-  /* Field: Content: Staff Type */
-  $handler->display->display_options['fields']['field_s_person_staff_type']['id'] = 'field_s_person_staff_type';
-  $handler->display->display_options['fields']['field_s_person_staff_type']['table'] = 'field_data_field_s_person_staff_type';
-  $handler->display->display_options['fields']['field_s_person_staff_type']['field'] = 'field_s_person_staff_type';
-  $handler->display->display_options['fields']['field_s_person_staff_type']['label'] = '';
-  $handler->display->display_options['fields']['field_s_person_staff_type']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_s_person_staff_type']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_s_person_staff_type']['type'] = 'taxonomy_term_reference_plain';
-  $handler->display->display_options['fields']['field_s_person_staff_type']['delta_offset'] = '0';
   /* Field: Content: Title and Department */
   $handler->display->display_options['fields']['field_s_person_faculty_title']['id'] = 'field_s_person_faculty_title';
   $handler->display->display_options['fields']['field_s_person_faculty_title']['table'] = 'field_data_field_s_person_faculty_title';
@@ -189,11 +180,6 @@ function stanford_person_views_views_default_views() {
 
 </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Sort criterion: Taxonomy term: Weight */
-  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
-  $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
-  $handler->display->display_options['sorts']['weight']['relationship'] = 'term_node_tid';
   /* Sort criterion: Content: Sorting Weight (field_s_person_weight) */
   $handler->display->display_options['sorts']['field_s_person_weight_value']['id'] = 'field_s_person_weight_value';
   $handler->display->display_options['sorts']['field_s_person_weight_value']['table'] = 'field_data_field_s_person_weight';
@@ -212,10 +198,11 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['arguments']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
   $handler->display->display_options['arguments']['term_node_tid_depth']['default_action'] = 'default';
   $handler->display->display_options['arguments']['term_node_tid_depth']['exception']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['term_node_tid_depth']['exception']['title'] = 'People';
   $handler->display->display_options['arguments']['term_node_tid_depth']['title_enable'] = TRUE;
   $handler->display->display_options['arguments']['term_node_tid_depth']['title'] = '%1';
   $handler->display->display_options['arguments']['term_node_tid_depth']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['term_node_tid_depth']['default_argument_options']['argument'] = 'staff';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['default_argument_options']['argument'] = 'all';
   $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['term_node_tid_depth']['summary_options']['items_per_page'] = '25';
@@ -250,7 +237,6 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['filters']['title']['table'] = 'node';
   $handler->display->display_options['filters']['title']['field'] = 'title';
   $handler->display->display_options['filters']['title']['operator'] = 'contains';
-  $handler->display->display_options['filters']['title']['group'] = 1;
   $handler->display->display_options['filters']['title']['exposed'] = TRUE;
   $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
   $handler->display->display_options['filters']['title']['expose']['label'] = 'Search by name';
@@ -287,6 +273,141 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+
+  /* Display: Group by Page */
+  $handler = $view->new_display('page', 'Group by Page', 'grouped_page');
+  $handler->display->display_options['display_description'] = 'Group people by Affiliation';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_s_person_affiliation',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Field: Content: Profile Picture */
+  $handler->display->display_options['fields']['field_s_person_profile_picture']['id'] = 'field_s_person_profile_picture';
+  $handler->display->display_options['fields']['field_s_person_profile_picture']['table'] = 'field_data_field_s_person_profile_picture';
+  $handler->display->display_options['fields']['field_s_person_profile_picture']['field'] = 'field_s_person_profile_picture';
+  $handler->display->display_options['fields']['field_s_person_profile_picture']['label'] = '';
+  $handler->display->display_options['fields']['field_s_person_profile_picture']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_profile_picture']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_person_profile_picture']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_s_person_profile_picture']['settings'] = array(
+    'image_style' => 'sm-square',
+    'image_link' => 'content',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  /* Field: Content: Title and Department */
+  $handler->display->display_options['fields']['field_s_person_faculty_title']['id'] = 'field_s_person_faculty_title';
+  $handler->display->display_options['fields']['field_s_person_faculty_title']['table'] = 'field_data_field_s_person_faculty_title';
+  $handler->display->display_options['fields']['field_s_person_faculty_title']['field'] = 'field_s_person_faculty_title';
+  $handler->display->display_options['fields']['field_s_person_faculty_title']['label'] = '';
+  $handler->display->display_options['fields']['field_s_person_faculty_title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_faculty_title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_person_faculty_title']['delta_limit'] = '3';
+  $handler->display->display_options['fields']['field_s_person_faculty_title']['delta_offset'] = '0';
+  /* Field: Content: Office */
+  $handler->display->display_options['fields']['field_s_person_office_location']['id'] = 'field_s_person_office_location';
+  $handler->display->display_options['fields']['field_s_person_office_location']['table'] = 'field_data_field_s_person_office_location';
+  $handler->display->display_options['fields']['field_s_person_office_location']['field'] = 'field_s_person_office_location';
+  $handler->display->display_options['fields']['field_s_person_office_location']['label'] = '';
+  $handler->display->display_options['fields']['field_s_person_office_location']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_office_location']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_office_location']['alter']['text'] = '<div><span class="descriptor">Office: </span>[field_s_person_office_location] </div>';
+  $handler->display->display_options['fields']['field_s_person_office_location']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_person_office_location']['group_column'] = '';
+  /* Field: Content: Office Hours */
+  $handler->display->display_options['fields']['field_s_person_office_hours']['id'] = 'field_s_person_office_hours';
+  $handler->display->display_options['fields']['field_s_person_office_hours']['table'] = 'field_data_field_s_person_office_hours';
+  $handler->display->display_options['fields']['field_s_person_office_hours']['field'] = 'field_s_person_office_hours';
+  $handler->display->display_options['fields']['field_s_person_office_hours']['label'] = '';
+  $handler->display->display_options['fields']['field_s_person_office_hours']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_office_hours']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_office_hours']['alter']['text'] = '<div><span class="descriptor">Office Hours: </span>[field_s_person_office_hours] </div>';
+  $handler->display->display_options['fields']['field_s_person_office_hours']['element_label_colon'] = FALSE;
+  /* Field: Content: Phone */
+  $handler->display->display_options['fields']['field_s_person_phone_display']['id'] = 'field_s_person_phone_display';
+  $handler->display->display_options['fields']['field_s_person_phone_display']['table'] = 'field_data_field_s_person_phone_display';
+  $handler->display->display_options['fields']['field_s_person_phone_display']['field'] = 'field_s_person_phone_display';
+  $handler->display->display_options['fields']['field_s_person_phone_display']['label'] = 'Office Phone';
+  $handler->display->display_options['fields']['field_s_person_phone_display']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_phone_display']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_phone_display']['alter']['text'] = '<div><span class="descriptor">Phone: </span>[field_s_person_phone_display]</div>';
+  /* Field: Content: Email */
+  $handler->display->display_options['fields']['field_s_person_email']['id'] = 'field_s_person_email';
+  $handler->display->display_options['fields']['field_s_person_email']['table'] = 'field_data_field_s_person_email';
+  $handler->display->display_options['fields']['field_s_person_email']['field'] = 'field_s_person_email';
+  $handler->display->display_options['fields']['field_s_person_email']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_email']['alter']['text'] = '<div><span class="descriptor">Email: </span>[field_s_person_email]</div>';
+  /* Field: Content: Edit link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['label'] = '';
+  $handler->display->display_options['fields']['edit_node']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['edit_node']['alter']['text'] = '<div class="edit-link">Edit</div>';
+  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['edit_node']['text'] = 'Edit';
+  /* Field: Global: View Rewrite */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Global: View Rewrite';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="postcard-left">
+<div class="postcard-col1">
+<div> [field_s_person_profile_picture]</div>
+
+</div>
+
+<div class="postcard-col2">
+<h3>[title] </h3>
+<div class="title-dept"> [field_s_person_faculty_title]</div>
+[field_s_person_office_location]
+[field_s_person_office_hours]
+[field_s_person_phone_display]
+[field_s_person_email]
+<span class="edit-link">[edit_node]</span>
+</div>
+
+</div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Field: Content: Affiliation */
+  $handler->display->display_options['fields']['field_s_person_affiliation']['id'] = 'field_s_person_affiliation';
+  $handler->display->display_options['fields']['field_s_person_affiliation']['table'] = 'field_data_field_s_person_affiliation';
+  $handler->display->display_options['fields']['field_s_person_affiliation']['field'] = 'field_s_person_affiliation';
+  $handler->display->display_options['fields']['field_s_person_affiliation']['label'] = '';
+  $handler->display->display_options['fields']['field_s_person_affiliation']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_affiliation']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_person_affiliation']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_s_person_affiliation']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_s_person_affiliation']['delta_offset'] = '0';
+  $handler->display->display_options['path'] = 'people/%/directory/grouped';
   $export['stanford_person_directory'] = $view;
 
   $view = new view();
