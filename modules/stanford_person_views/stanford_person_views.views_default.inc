@@ -12,7 +12,7 @@ function stanford_person_views_views_default_views() {
 
   $view = new view();
   $view->name = 'stanford_person_directory';
-  $view->description = 'Provides a directory display for people and defaults to staff. Sorted by type tax. term, by weight, then by last and first names';
+  $view->description = 'Provides a directory display for people oriented toward staff. Sorted by weight, then by last and first names';
   $view->tag = 'default';
   $view->base_table = 'node';
   $view->human_name = 'Stanford Person: Directory';
@@ -706,7 +706,7 @@ function stanford_person_views_views_default_views() {
 
   $view = new view();
   $view->name = 'stanford_person_grid';
-  $view->description = '';
+  $view->description = 'Provides a grid display for people.';
   $view->tag = 'default';
   $view->base_table = 'node';
   $view->human_name = 'Stanford Person: Grid';
@@ -949,7 +949,7 @@ function stanford_person_views_views_default_views() {
 
   $view = new view();
   $view->name = 'stanford_person_list';
-  $view->description = 'Provides a list display for people and defaults to students';
+  $view->description = 'Provides a list display for people oriented towards students';
   $view->tag = 'default';
   $view->base_table = 'node';
   $view->human_name = 'Stanford Person: List';
@@ -1423,7 +1423,7 @@ function stanford_person_views_views_default_views() {
 
   $view = new view();
   $view->name = 'stanford_person_profiles';
-  $view->description = 'Provides a profile display for people and defaults to faculty';
+  $view->description = 'Provides a profile display for people oriented towards faculty';
   $view->tag = 'default';
   $view->base_table = 'node';
   $view->human_name = 'Stanford Person: Profiles';
