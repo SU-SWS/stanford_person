@@ -1,6 +1,22 @@
 Stanford Person x.x-x.x xxxx-xx-xx
 --------------------------------------
 
+Stanford Person 7.x-5.0 2016-02-18
+----------------------------------------
+- Changed ANT to use entity tokens
+- VPSADEV-146: Added author exposed filter to manage content view
+- basic-1435 added profiles, directory, grid, and list layouts
+- basic-1435: created stanford_person_layouts (split contexts from views)
+- basic-1435: Added faculty, staff, and student terms to arguments
+- SOE-419: Added CAP display and initial settings for field groups
+- SOE-501: Created a cap-list view. Grouped by affiliation.
+- SOE-547: Created a grouped display for list, profile, grid, and directory views.
+- added codeclimate yml
+- SOE-441: Added external profile link for CAP display
+- SOE-419: added fields for student info.
+- added styles for CAP view mode
+- SOE-419: Added CAP DS view mode
+
 Stanford Person 7.x-5.0-beta1 2015-06-25
 ----------------------------------------
 - Replaced field_s_person_type with field_s_person_affiliation
