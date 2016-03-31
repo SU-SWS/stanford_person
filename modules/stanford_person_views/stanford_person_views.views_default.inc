@@ -228,7 +228,7 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
 
   /* Display: Group by Affiliation Page */
-  $handler = $view->new_display('page', 'Group by Affiliation Page', 'grouped_page');
+  $handler = $view->new_display('page', 'Group by Affiliation Page', 'group_by_affiliation_page');
   $handler->display->display_options['display_description'] = 'Group people by Affiliation';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
@@ -345,8 +345,8 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['path'] = 'people/%/cap-list/grouped/affiliation';
 
   /* Display: Group by Student Page */
-  $handler = $view->new_display('page', 'Group by Student Page', 'page_2');
-  $handler->display->display_options['display_description'] = 'Group people by Affiliation';
+  $handler = $view->new_display('page', 'Group by Student Page', 'group_by_student_page');
+  $handler->display->display_options['display_description'] = 'Group people by student type';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['grouping'] = array(
@@ -1426,7 +1426,7 @@ function stanford_person_views_views_default_views() {
 
   $view = new view();
   $view->name = 'stanford_person_list';
-  $view->description = 'Provides a list display for people oriented towards students';
+  $view->description = 'Provides a list display grouped by affiliation for people and oriented towards students';
   $view->tag = 'default';
   $view->base_table = 'node';
   $view->human_name = 'Stanford Person: List';
