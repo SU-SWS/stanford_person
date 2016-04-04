@@ -227,8 +227,8 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
 
-  /* Display: Group by Page */
-  $handler = $view->new_display('page', 'Group by Page', 'grouped_page');
+  /* Display: Group by Affiliation Page */
+  $handler = $view->new_display('page', 'Group by Affiliation Page', 'group_by_affiliation_page');
   $handler->display->display_options['display_description'] = 'Group people by Affiliation';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
@@ -324,6 +324,141 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_affiliation']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_s_person_affiliation']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_s_person_affiliation']['delta_offset'] = '0';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Taxonomy term: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['relationship'] = 'term_node_tid_1';
+  /* Sort criterion: Content: Sorting Weight (field_s_person_weight) */
+  $handler->display->display_options['sorts']['field_s_person_weight_value']['id'] = 'field_s_person_weight_value';
+  $handler->display->display_options['sorts']['field_s_person_weight_value']['table'] = 'field_data_field_s_person_weight';
+  $handler->display->display_options['sorts']['field_s_person_weight_value']['field'] = 'field_s_person_weight_value';
+  /* Sort criterion: Content: Last Name (field_s_person_last_name) */
+  $handler->display->display_options['sorts']['field_s_person_last_name_value']['id'] = 'field_s_person_last_name_value';
+  $handler->display->display_options['sorts']['field_s_person_last_name_value']['table'] = 'field_data_field_s_person_last_name';
+  $handler->display->display_options['sorts']['field_s_person_last_name_value']['field'] = 'field_s_person_last_name_value';
+  /* Sort criterion: Content: First name (field_s_person_first_name) */
+  $handler->display->display_options['sorts']['field_s_person_first_name_value']['id'] = 'field_s_person_first_name_value';
+  $handler->display->display_options['sorts']['field_s_person_first_name_value']['table'] = 'field_data_field_s_person_first_name';
+  $handler->display->display_options['sorts']['field_s_person_first_name_value']['field'] = 'field_s_person_first_name_value';
+  $handler->display->display_options['path'] = 'people/%/cap-list/grouped/affiliation';
+
+  /* Display: Group by Student Page */
+  $handler = $view->new_display('page', 'Group by Student Page', 'group_by_student_page');
+  $handler->display->display_options['display_description'] = 'Group people by student type';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_s_person_student_type',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Dissertation Title */
+  $handler->display->display_options['fields']['field_s_person_dissertatn_title']['id'] = 'field_s_person_dissertatn_title';
+  $handler->display->display_options['fields']['field_s_person_dissertatn_title']['table'] = 'field_data_field_s_person_dissertatn_title';
+  $handler->display->display_options['fields']['field_s_person_dissertatn_title']['field'] = 'field_s_person_dissertatn_title';
+  $handler->display->display_options['fields']['field_s_person_dissertatn_title']['label'] = 'Thesis';
+  $handler->display->display_options['fields']['field_s_person_dissertatn_title']['element_label_type'] = 'span';
+  $handler->display->display_options['fields']['field_s_person_dissertatn_title']['element_label_class'] = 'descriptor ';
+  $handler->display->display_options['fields']['field_s_person_dissertatn_title']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['field_s_person_dissertatn_title']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_s_person_dissertatn_title']['hide_empty'] = TRUE;
+  /* Field: Content: Field of Study */
+  $handler->display->display_options['fields']['field_s_person_study']['id'] = 'field_s_person_study';
+  $handler->display->display_options['fields']['field_s_person_study']['table'] = 'field_data_field_s_person_study';
+  $handler->display->display_options['fields']['field_s_person_study']['field'] = 'field_s_person_study';
+  $handler->display->display_options['fields']['field_s_person_study']['element_label_type'] = 'span';
+  $handler->display->display_options['fields']['field_s_person_study']['element_label_class'] = 'descriptor';
+  $handler->display->display_options['fields']['field_s_person_study']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['field_s_person_study']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_study']['type'] = 'taxonomy_term_reference_plain';
+  /* Field: Content: Title and Department */
+  $handler->display->display_options['fields']['field_s_person_faculty_title']['id'] = 'field_s_person_faculty_title';
+  $handler->display->display_options['fields']['field_s_person_faculty_title']['table'] = 'field_data_field_s_person_faculty_title';
+  $handler->display->display_options['fields']['field_s_person_faculty_title']['field'] = 'field_s_person_faculty_title';
+  $handler->display->display_options['fields']['field_s_person_faculty_title']['label'] = 'Affiliation';
+  $handler->display->display_options['fields']['field_s_person_faculty_title']['element_label_type'] = 'span';
+  $handler->display->display_options['fields']['field_s_person_faculty_title']['element_label_class'] = 'descriptor ';
+  $handler->display->display_options['fields']['field_s_person_faculty_title']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['field_s_person_faculty_title']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_s_person_faculty_title']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_faculty_title']['delta_offset'] = '0';
+  /* Field: Content: Cohort */
+  $handler->display->display_options['fields']['field_s_person_cohort']['id'] = 'field_s_person_cohort';
+  $handler->display->display_options['fields']['field_s_person_cohort']['table'] = 'field_data_field_s_person_cohort';
+  $handler->display->display_options['fields']['field_s_person_cohort']['field'] = 'field_s_person_cohort';
+  $handler->display->display_options['fields']['field_s_person_cohort']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_cohort']['element_label_type'] = 'span';
+  $handler->display->display_options['fields']['field_s_person_cohort']['element_label_class'] = 'descriptor';
+  $handler->display->display_options['fields']['field_s_person_cohort']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['field_s_person_cohort']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_s_person_cohort']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_cohort']['settings'] = array(
+    'format_type' => 'stanford_long_day_date_year',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: Content: Edit link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['label'] = '';
+  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['edit_node']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['edit_node']['element_wrapper_class'] = 'edit-link';
+  $handler->display->display_options['fields']['edit_node']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['edit_node']['text'] = 'Edit';
+  /* Field: Content: Student Type */
+  $handler->display->display_options['fields']['field_s_person_student_type']['id'] = 'field_s_person_student_type';
+  $handler->display->display_options['fields']['field_s_person_student_type']['table'] = 'field_data_field_s_person_student_type';
+  $handler->display->display_options['fields']['field_s_person_student_type']['field'] = 'field_s_person_student_type';
+  $handler->display->display_options['fields']['field_s_person_student_type']['label'] = '';
+  $handler->display->display_options['fields']['field_s_person_student_type']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_student_type']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_s_person_student_type']['alter']['text'] = '<h2>[field_s_person_student_type]</h2>';
+  $handler->display->display_options['fields']['field_s_person_student_type']['element_type'] = 'div';
+  $handler->display->display_options['fields']['field_s_person_student_type']['element_label_type'] = 'div';
+  $handler->display->display_options['fields']['field_s_person_student_type']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_person_student_type']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Taxonomy term: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['relationship'] = 'term_node_tid';
+  /* Sort criterion: Content: Sorting Weight (field_s_person_weight) */
+  $handler->display->display_options['sorts']['field_s_person_weight_value']['id'] = 'field_s_person_weight_value';
+  $handler->display->display_options['sorts']['field_s_person_weight_value']['table'] = 'field_data_field_s_person_weight';
+  $handler->display->display_options['sorts']['field_s_person_weight_value']['field'] = 'field_s_person_weight_value';
+  /* Sort criterion: Content: Last Name (field_s_person_last_name) */
+  $handler->display->display_options['sorts']['field_s_person_last_name_value']['id'] = 'field_s_person_last_name_value';
+  $handler->display->display_options['sorts']['field_s_person_last_name_value']['table'] = 'field_data_field_s_person_last_name';
+  $handler->display->display_options['sorts']['field_s_person_last_name_value']['field'] = 'field_s_person_last_name_value';
+  /* Sort criterion: Content: First name (field_s_person_first_name) */
+  $handler->display->display_options['sorts']['field_s_person_first_name_value']['id'] = 'field_s_person_first_name_value';
+  $handler->display->display_options['sorts']['field_s_person_first_name_value']['table'] = 'field_data_field_s_person_first_name';
+  $handler->display->display_options['sorts']['field_s_person_first_name_value']['field'] = 'field_s_person_first_name_value';
   $handler->display->display_options['path'] = 'people/%/cap-list/grouped';
   $export['stanford_person_cap_list'] = $view;
 
@@ -365,20 +500,6 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['header']['view']['empty'] = TRUE;
   $handler->display->display_options['header']['view']['view_to_insert'] = 'people_affiliation_description:block';
   $handler->display->display_options['header']['view']['inherit_arguments'] = TRUE;
-  /* Relationship: Content: Taxonomy terms on node */
-  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
-  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
-  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
-  $handler->display->display_options['relationships']['term_node_tid']['label'] = 'Staff Type term';
-  $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
-    'stanford_staff_type' => 'stanford_staff_type',
-    'stanford_affiliation' => 0,
-    'stanford_faculty_type' => 0,
-    'stanford_field_of_study' => 0,
-    'stanford_interests' => 0,
-    'stanford_student_type' => 0,
-    'tags' => 0,
-  );
   /* Relationship: Content: Taxonomy terms on node */
   $handler->display->display_options['relationships']['term_node_tid_1']['id'] = 'term_node_tid_1';
   $handler->display->display_options['relationships']['term_node_tid_1']['table'] = 'node';
@@ -726,6 +847,24 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_affiliation']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_s_person_affiliation']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_s_person_affiliation']['delta_offset'] = '0';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Taxonomy term: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['relationship'] = 'term_node_tid_1';
+  /* Sort criterion: Content: Sorting Weight (field_s_person_weight) */
+  $handler->display->display_options['sorts']['field_s_person_weight_value']['id'] = 'field_s_person_weight_value';
+  $handler->display->display_options['sorts']['field_s_person_weight_value']['table'] = 'field_data_field_s_person_weight';
+  $handler->display->display_options['sorts']['field_s_person_weight_value']['field'] = 'field_s_person_weight_value';
+  /* Sort criterion: Content: Last Name (field_s_person_last_name) */
+  $handler->display->display_options['sorts']['field_s_person_last_name_value']['id'] = 'field_s_person_last_name_value';
+  $handler->display->display_options['sorts']['field_s_person_last_name_value']['table'] = 'field_data_field_s_person_last_name';
+  $handler->display->display_options['sorts']['field_s_person_last_name_value']['field'] = 'field_s_person_last_name_value';
+  /* Sort criterion: Content: First name (field_s_person_first_name) */
+  $handler->display->display_options['sorts']['field_s_person_first_name_value']['id'] = 'field_s_person_first_name_value';
+  $handler->display->display_options['sorts']['field_s_person_first_name_value']['table'] = 'field_data_field_s_person_first_name';
+  $handler->display->display_options['sorts']['field_s_person_first_name_value']['field'] = 'field_s_person_first_name_value';
   $handler->display->display_options['path'] = 'people/%/directory/grouped';
   $export['stanford_person_directory'] = $view;
 
@@ -1264,12 +1403,30 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_affiliation']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_s_person_affiliation']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_s_person_affiliation']['delta_offset'] = '0';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Taxonomy term: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['relationship'] = 'term_node_tid_1';
+  /* Sort criterion: Content: Sorting Weight (field_s_person_weight) */
+  $handler->display->display_options['sorts']['field_s_person_weight_value']['id'] = 'field_s_person_weight_value';
+  $handler->display->display_options['sorts']['field_s_person_weight_value']['table'] = 'field_data_field_s_person_weight';
+  $handler->display->display_options['sorts']['field_s_person_weight_value']['field'] = 'field_s_person_weight_value';
+  /* Sort criterion: Content: Last Name (field_s_person_last_name) */
+  $handler->display->display_options['sorts']['field_s_person_last_name_value']['id'] = 'field_s_person_last_name_value';
+  $handler->display->display_options['sorts']['field_s_person_last_name_value']['table'] = 'field_data_field_s_person_last_name';
+  $handler->display->display_options['sorts']['field_s_person_last_name_value']['field'] = 'field_s_person_last_name_value';
+  /* Sort criterion: Content: First name (field_s_person_first_name) */
+  $handler->display->display_options['sorts']['field_s_person_first_name_value']['id'] = 'field_s_person_first_name_value';
+  $handler->display->display_options['sorts']['field_s_person_first_name_value']['table'] = 'field_data_field_s_person_first_name';
+  $handler->display->display_options['sorts']['field_s_person_first_name_value']['field'] = 'field_s_person_first_name_value';
   $handler->display->display_options['path'] = 'people/%/grid/grouped';
   $export['stanford_person_grid'] = $view;
 
   $view = new view();
   $view->name = 'stanford_person_list';
-  $view->description = 'Provides a list display for people oriented towards students';
+  $view->description = 'Provides a list display grouped by affiliation for people and oriented towards students';
   $view->tag = 'default';
   $view->base_table = 'node';
   $view->human_name = 'Stanford Person: List';
@@ -1298,20 +1455,6 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-  /* Relationship: Content: Taxonomy terms on node */
-  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
-  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
-  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
-  $handler->display->display_options['relationships']['term_node_tid']['label'] = 'Student Type term';
-  $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
-    'stanford_student_type' => 'stanford_student_type',
-    'stanford_affiliation' => 0,
-    'stanford_faculty_type' => 0,
-    'stanford_field_of_study' => 0,
-    'stanford_interests' => 0,
-    'stanford_staff_type' => 0,
-    'tags' => 0,
-  );
   /* Relationship: Content: Taxonomy terms on node */
   $handler->display->display_options['relationships']['term_node_tid_1']['id'] = 'term_node_tid_1';
   $handler->display->display_options['relationships']['term_node_tid_1']['table'] = 'node';
@@ -1559,6 +1702,24 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_affiliation']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_s_person_affiliation']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_s_person_affiliation']['delta_offset'] = '0';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Taxonomy term: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['relationship'] = 'term_node_tid_1';
+  /* Sort criterion: Content: Sorting Weight (field_s_person_weight) */
+  $handler->display->display_options['sorts']['field_s_person_weight_value']['id'] = 'field_s_person_weight_value';
+  $handler->display->display_options['sorts']['field_s_person_weight_value']['table'] = 'field_data_field_s_person_weight';
+  $handler->display->display_options['sorts']['field_s_person_weight_value']['field'] = 'field_s_person_weight_value';
+  /* Sort criterion: Content: Last Name (field_s_person_last_name) */
+  $handler->display->display_options['sorts']['field_s_person_last_name_value']['id'] = 'field_s_person_last_name_value';
+  $handler->display->display_options['sorts']['field_s_person_last_name_value']['table'] = 'field_data_field_s_person_last_name';
+  $handler->display->display_options['sorts']['field_s_person_last_name_value']['field'] = 'field_s_person_last_name_value';
+  /* Sort criterion: Content: First name (field_s_person_first_name) */
+  $handler->display->display_options['sorts']['field_s_person_first_name_value']['id'] = 'field_s_person_first_name_value';
+  $handler->display->display_options['sorts']['field_s_person_first_name_value']['table'] = 'field_data_field_s_person_first_name';
+  $handler->display->display_options['sorts']['field_s_person_first_name_value']['field'] = 'field_s_person_first_name_value';
   $handler->display->display_options['path'] = 'people/%/list/grouped';
   $export['stanford_person_list'] = $view;
 
@@ -1774,19 +1935,6 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-  /* Relationship: Content: Taxonomy terms on node */
-  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
-  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
-  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
-  $handler->display->display_options['relationships']['term_node_tid']['label'] = 'Faculty Type term';
-  $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
-    'stanford_faculty_type' => 'stanford_faculty_type',
-    'stanford_affiliation' => 0,
-    'stanford_field_of_study' => 0,
-    'stanford_interests' => 0,
-    'stanford_student_type' => 0,
-    'tags' => 0,
-  );
   /* Relationship: Content: Taxonomy terms on node */
   $handler->display->display_options['relationships']['term_node_tid_1']['id'] = 'term_node_tid_1';
   $handler->display->display_options['relationships']['term_node_tid_1']['table'] = 'node';
@@ -2196,6 +2344,24 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_affiliation']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_s_person_affiliation']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_s_person_affiliation']['delta_offset'] = '0';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Taxonomy term: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['relationship'] = 'term_node_tid_1';
+  /* Sort criterion: Content: Sorting Weight (field_s_person_weight) */
+  $handler->display->display_options['sorts']['field_s_person_weight_value']['id'] = 'field_s_person_weight_value';
+  $handler->display->display_options['sorts']['field_s_person_weight_value']['table'] = 'field_data_field_s_person_weight';
+  $handler->display->display_options['sorts']['field_s_person_weight_value']['field'] = 'field_s_person_weight_value';
+  /* Sort criterion: Content: Last Name (field_s_person_last_name) */
+  $handler->display->display_options['sorts']['field_s_person_last_name_value']['id'] = 'field_s_person_last_name_value';
+  $handler->display->display_options['sorts']['field_s_person_last_name_value']['table'] = 'field_data_field_s_person_last_name';
+  $handler->display->display_options['sorts']['field_s_person_last_name_value']['field'] = 'field_s_person_last_name_value';
+  /* Sort criterion: Content: First name (field_s_person_first_name) */
+  $handler->display->display_options['sorts']['field_s_person_first_name_value']['id'] = 'field_s_person_first_name_value';
+  $handler->display->display_options['sorts']['field_s_person_first_name_value']['table'] = 'field_data_field_s_person_first_name';
+  $handler->display->display_options['sorts']['field_s_person_first_name_value']['field'] = 'field_s_person_first_name_value';
   $handler->display->display_options['path'] = 'people/%/profiles/grouped';
   $export['stanford_person_profiles'] = $view;
 
@@ -2378,11 +2544,6 @@ function stanford_person_views_views_default_views() {
 
 </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Sort criterion: Taxonomy term: Weight */
-  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
-  $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
-  $handler->display->display_options['sorts']['weight']['relationship'] = 'term_node_tid';
   /* Sort criterion: Content: Sorting Weight (field_s_person_weight) */
   $handler->display->display_options['sorts']['field_s_person_weight_value']['id'] = 'field_s_person_weight_value';
   $handler->display->display_options['sorts']['field_s_person_weight_value']['table'] = 'field_data_field_s_person_weight';
@@ -2501,6 +2662,24 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Taxonomy term: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['relationship'] = 'term_node_tid';
+  /* Sort criterion: Content: Sorting Weight (field_s_person_weight) */
+  $handler->display->display_options['sorts']['field_s_person_weight_value']['id'] = 'field_s_person_weight_value';
+  $handler->display->display_options['sorts']['field_s_person_weight_value']['table'] = 'field_data_field_s_person_weight';
+  $handler->display->display_options['sorts']['field_s_person_weight_value']['field'] = 'field_s_person_weight_value';
+  /* Sort criterion: Content: Last Name (field_s_person_last_name) */
+  $handler->display->display_options['sorts']['field_s_person_last_name_value']['id'] = 'field_s_person_last_name_value';
+  $handler->display->display_options['sorts']['field_s_person_last_name_value']['table'] = 'field_data_field_s_person_last_name';
+  $handler->display->display_options['sorts']['field_s_person_last_name_value']['field'] = 'field_s_person_last_name_value';
+  /* Sort criterion: Content: First name (field_s_person_first_name) */
+  $handler->display->display_options['sorts']['field_s_person_first_name_value']['id'] = 'field_s_person_first_name_value';
+  $handler->display->display_options['sorts']['field_s_person_first_name_value']['table'] = 'field_data_field_s_person_first_name';
+  $handler->display->display_options['sorts']['field_s_person_first_name_value']['field'] = 'field_s_person_first_name_value';
   $handler->display->display_options['path'] = 'people/staff/grouped';
   $handler->display->display_options['menu']['title'] = 'Staff';
   $handler->display->display_options['menu']['weight'] = '0';
