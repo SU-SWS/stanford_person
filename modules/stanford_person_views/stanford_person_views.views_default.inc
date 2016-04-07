@@ -211,8 +211,9 @@ function stanford_person_views_views_default_views() {
     9 => 0,
   );
 
-  /* Display: List Page */
-  $handler = $view->new_display('page', 'List Page', 'page_list');
+  /* Display: Student List Page */
+  $handler = $view->new_display('page', 'Student List Page', 'page_list');
+  $handler->display->display_options['display_description'] = 'List of people displaying student fields';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['path'] = 'people/%/cap-list';
@@ -1600,8 +1601,9 @@ function stanford_person_views_views_default_views() {
     9 => 0,
   );
 
-  /* Display: List Page */
-  $handler = $view->new_display('page', 'List Page', 'page_list');
+  /* Display: Student List Page */
+  $handler = $view->new_display('page', 'Student List Page', 'page_list');
+  $handler->display->display_options['display_description'] = 'List of people displaying student fields';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['path'] = 'people/%/list';
@@ -1610,15 +1612,16 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['menu']['name'] = 'main-menu';
   $handler->display->display_options['menu']['context'] = 0;
 
-  /* Display: List Block */
-  $handler = $view->new_display('block', 'List Block', 'block_list');
+  /* Display: Student List Block */
+  $handler = $view->new_display('block', 'Student List Block', 'block_list');
+  $handler->display->display_options['display_description'] = 'List of people displaying student fields';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
 
-  /* Display: Group by Page */
-  $handler = $view->new_display('page', 'Group by Page', 'grouped_page');
-  $handler->display->display_options['display_description'] = 'Group people by Affiliation';
+  /* Display: Student List Group by Page */
+  $handler = $view->new_display('page', 'Student List Group by Page', 'grouped_page');
+  $handler->display->display_options['display_description'] = 'List of people displaying student fields and grouped by Affiliation ';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['grouping'] = array(
