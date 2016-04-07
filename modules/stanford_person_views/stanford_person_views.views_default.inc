@@ -1343,7 +1343,7 @@ function stanford_person_views_views_default_views() {
     0 => array(
       'field' => 'field_s_person_affiliation',
       'rendered' => 1,
-      'rendered_strip' => 0,
+      'rendered_strip' => 1,
     ),
   );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -1397,8 +1397,6 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_affiliation']['field'] = 'field_s_person_affiliation';
   $handler->display->display_options['fields']['field_s_person_affiliation']['label'] = '';
   $handler->display->display_options['fields']['field_s_person_affiliation']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_s_person_affiliation']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_s_person_affiliation']['alter']['text'] = '<h2>[field_s_person_affiliation]</h2>';
   $handler->display->display_options['fields']['field_s_person_affiliation']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_person_affiliation']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_s_person_affiliation']['type'] = 'taxonomy_term_reference_plain';
