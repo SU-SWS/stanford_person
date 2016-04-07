@@ -236,7 +236,7 @@ function stanford_person_views_views_default_views() {
     0 => array(
       'field' => 'field_s_person_affiliation',
       'rendered' => 1,
-      'rendered_strip' => 0,
+      'rendered_strip' => 1,
     ),
   );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -353,7 +353,7 @@ function stanford_person_views_views_default_views() {
     0 => array(
       'field' => 'field_s_person_student_type',
       'rendered' => 1,
-      'rendered_strip' => 0,
+      'rendered_strip' => 1,
     ),
   );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -721,7 +721,7 @@ function stanford_person_views_views_default_views() {
     0 => array(
       'field' => 'field_s_person_affiliation',
       'rendered' => 1,
-      'rendered_strip' => 0,
+      'rendered_strip' => 1,
     ),
   );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -901,7 +901,7 @@ function stanford_person_views_views_default_views() {
     0 => array(
       'field' => 'field_s_person_faculty_type',
       'rendered' => 1,
-      'rendered_strip' => 0,
+      'rendered_strip' => 1,
     ),
   );
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -1342,7 +1342,7 @@ function stanford_person_views_views_default_views() {
     0 => array(
       'field' => 'field_s_person_affiliation',
       'rendered' => 1,
-      'rendered_strip' => 0,
+      'rendered_strip' => 1,
     ),
   );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -1625,7 +1625,7 @@ function stanford_person_views_views_default_views() {
     0 => array(
       'field' => 'field_s_person_affiliation',
       'rendered' => 1,
-      'rendered_strip' => 0,
+      'rendered_strip' => 1,
     ),
   );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -1755,7 +1755,7 @@ function stanford_person_views_views_default_views() {
     0 => array(
       'field' => 'field_s_person_faculty_type',
       'rendered' => 1,
-      'rendered_strip' => 0,
+      'rendered_strip' => 1,
     ),
   );
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -2653,7 +2653,7 @@ function stanford_person_views_views_default_views() {
     0 => array(
       'field' => 'field_s_person_staff_type',
       'rendered' => 1,
-      'rendered_strip' => 0,
+      'rendered_strip' => 1,
     ),
   );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -2720,7 +2720,7 @@ function stanford_person_views_views_default_views() {
     0 => array(
       'field' => 'field_s_person_student_type',
       'rendered' => 1,
-      'rendered_strip' => 0,
+      'rendered_strip' => 1,
     ),
   );
   $handler->display->display_options['row_plugin'] = 'fields';
