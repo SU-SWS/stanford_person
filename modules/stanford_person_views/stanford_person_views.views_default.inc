@@ -211,8 +211,9 @@ function stanford_person_views_views_default_views() {
     9 => 0,
   );
 
-  /* Display: List Page */
-  $handler = $view->new_display('page', 'List Page', 'page_list');
+  /* Display: Student List Page */
+  $handler = $view->new_display('page', 'Student List Page', 'page_list');
+  $handler->display->display_options['display_description'] = 'List of people displaying student fields';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['path'] = 'people/%/cap-list';
@@ -318,8 +319,6 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_affiliation']['field'] = 'field_s_person_affiliation';
   $handler->display->display_options['fields']['field_s_person_affiliation']['label'] = '';
   $handler->display->display_options['fields']['field_s_person_affiliation']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_s_person_affiliation']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_s_person_affiliation']['alter']['text'] = '<h2>[field_s_person_affiliation]</h2>';
   $handler->display->display_options['fields']['field_s_person_affiliation']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_person_affiliation']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_s_person_affiliation']['group_rows'] = FALSE;
@@ -435,8 +434,6 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_student_type']['field'] = 'field_s_person_student_type';
   $handler->display->display_options['fields']['field_s_person_student_type']['label'] = '';
   $handler->display->display_options['fields']['field_s_person_student_type']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_s_person_student_type']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_s_person_student_type']['alter']['text'] = '<h2>[field_s_person_student_type]</h2>';
   $handler->display->display_options['fields']['field_s_person_student_type']['element_type'] = 'div';
   $handler->display->display_options['fields']['field_s_person_student_type']['element_label_type'] = 'div';
   $handler->display->display_options['fields']['field_s_person_student_type']['element_label_colon'] = FALSE;
@@ -841,8 +838,6 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_affiliation']['field'] = 'field_s_person_affiliation';
   $handler->display->display_options['fields']['field_s_person_affiliation']['label'] = '';
   $handler->display->display_options['fields']['field_s_person_affiliation']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_s_person_affiliation']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_s_person_affiliation']['alter']['text'] = '<h2>[field_s_person_affiliation]</h2>';
   $handler->display->display_options['fields']['field_s_person_affiliation']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_person_affiliation']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_s_person_affiliation']['group_rows'] = FALSE;
@@ -1342,7 +1337,7 @@ function stanford_person_views_views_default_views() {
     0 => array(
       'field' => 'field_s_person_affiliation',
       'rendered' => 1,
-      'rendered_strip' => 0,
+      'rendered_strip' => 1,
     ),
   );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -1396,8 +1391,6 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_affiliation']['field'] = 'field_s_person_affiliation';
   $handler->display->display_options['fields']['field_s_person_affiliation']['label'] = '';
   $handler->display->display_options['fields']['field_s_person_affiliation']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_s_person_affiliation']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_s_person_affiliation']['alter']['text'] = '<h2>[field_s_person_affiliation]</h2>';
   $handler->display->display_options['fields']['field_s_person_affiliation']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_person_affiliation']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_s_person_affiliation']['type'] = 'taxonomy_term_reference_plain';
@@ -1600,8 +1593,9 @@ function stanford_person_views_views_default_views() {
     9 => 0,
   );
 
-  /* Display: List Page */
-  $handler = $view->new_display('page', 'List Page', 'page_list');
+  /* Display: Student List Page */
+  $handler = $view->new_display('page', 'Student List Page', 'page_list');
+  $handler->display->display_options['display_description'] = 'List of people displaying student fields';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['path'] = 'people/%/list';
@@ -1610,15 +1604,16 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['menu']['name'] = 'main-menu';
   $handler->display->display_options['menu']['context'] = 0;
 
-  /* Display: List Block */
-  $handler = $view->new_display('block', 'List Block', 'block_list');
+  /* Display: Student List Block */
+  $handler = $view->new_display('block', 'Student List Block', 'block_list');
+  $handler->display->display_options['display_description'] = 'List of people displaying student fields';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
 
-  /* Display: Group by Page */
-  $handler = $view->new_display('page', 'Group by Page', 'grouped_page');
-  $handler->display->display_options['display_description'] = 'Group people by Affiliation';
+  /* Display: Student List Group by Page */
+  $handler = $view->new_display('page', 'Student List Group by Page', 'grouped_page');
+  $handler->display->display_options['display_description'] = 'List of people displaying student fields and grouped by Affiliation ';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['grouping'] = array(
@@ -1696,8 +1691,6 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_affiliation']['field'] = 'field_s_person_affiliation';
   $handler->display->display_options['fields']['field_s_person_affiliation']['label'] = '';
   $handler->display->display_options['fields']['field_s_person_affiliation']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_s_person_affiliation']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_s_person_affiliation']['alter']['text'] = '<h2>[field_s_person_affiliation]</h2>';
   $handler->display->display_options['fields']['field_s_person_affiliation']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_person_affiliation']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_s_person_affiliation']['group_rows'] = FALSE;
@@ -2338,8 +2331,6 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_person_affiliation']['field'] = 'field_s_person_affiliation';
   $handler->display->display_options['fields']['field_s_person_affiliation']['label'] = '';
   $handler->display->display_options['fields']['field_s_person_affiliation']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_s_person_affiliation']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_s_person_affiliation']['alter']['text'] = '<h2>[field_s_person_affiliation]</h2>';
   $handler->display->display_options['fields']['field_s_person_affiliation']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_person_affiliation']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_s_person_affiliation']['group_rows'] = FALSE;
