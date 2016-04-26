@@ -595,7 +595,8 @@ function stanford_person_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['ui_name'] = 'Global: View Rewrite';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="person-image">[field_s_person_profile_picture]</div>
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="column">
+  <div class="person-image">[field_s_person_profile_picture]</div>
 
 <div class="person-details">
 <h3>[title] </h3>
@@ -611,6 +612,7 @@ function stanford_person_views_default_views() {
 [field_s_person_view_profile]
 
 <div><span class="edit-link">[edit_node]</span></div>
+</div>
 </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Sorting Weight (field_s_person_weight) */
