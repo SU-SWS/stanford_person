@@ -596,7 +596,7 @@ function stanford_person_views_default_views() {
   $handler->display->display_options['fields']['nothing']['ui_name'] = 'Global: View Rewrite';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="column">
-  <div class="person-image">[field_s_person_profile_picture]</div>
+<div class="person-image">[field_s_person_profile_picture]</div>
 
 <div class="person-details">
 <h3>[title] </h3>
