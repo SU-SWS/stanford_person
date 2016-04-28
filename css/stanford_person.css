@@ -23,6 +23,7 @@
 .view-stanford-person-vpsa .views-row {
     background: #f2f1eb;
     border-radius: 3px;
+    padding-bottom: 20px;
 }
 
 .main .view-stanford-person-vpsa .person-image img {
