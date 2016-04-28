@@ -10,6 +10,7 @@ dependencies[] = ctools
 dependencies[] = date
 dependencies[] = ds
 dependencies[] = ds_extras
+dependencies[] = default_image_ft
 dependencies[] = email
 dependencies[] = entity_token
 dependencies[] = features

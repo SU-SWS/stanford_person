@@ -1689,7 +1689,7 @@ Contact your site administrator to add or change entries. ',
     'required' => 0,
     'settings' => array(
       'alt_field' => 1,
-      'default_image' => 60,
+      'default_image_ft_source_var' => 'stanford_person_profile_picture',
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
