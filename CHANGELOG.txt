@@ -1,6 +1,14 @@
 Stanford Person x.x-x.x xxxx-xx-xx
 --------------------------------------
 
+Stanford Person 7.x-5.1       2016-05-30
+----------------------------------------
+- SOE-623: Updated tax weight for grouping views
+- SOE-623: Updated labels per Shea
+- BASIC-2008: remove H2 rewrite
+- SOE-658: Removed default image file id so it doesn't get set
+- SOE-705 added default_image_ft and set variable for fid to stanford_person_profile_picture
+
 Stanford Person 7.x-5.0 2016-02-18
 ----------------------------------------
 - Changed ANT to use entity tokens
