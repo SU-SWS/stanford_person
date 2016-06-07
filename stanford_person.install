@@ -131,16 +131,14 @@ function stanford_person_update_7500(&$sandbox) {
   // 3b. Remove the field_s_person_type field from the content type.
   field_delete_field("field_s_person_type");
   field_purge_batch(100);
-
-
-
-
 }
 
 /**
  * Implements hook_install().
  */
 function stanford_person_install() {
+
+  // Add the DS region blocks variables.
   stanford_person_set_ds_region_blocks();
 }
 
@@ -151,7 +149,6 @@ function stanford_person_uninstall() {
 
   // Remove the DS region blocks variables.
   $settings = variable_get('ds_extras_region_blocks');
-  unset($settings['s_news_image']);
   unset($settings['office_hours']);
   unset($settings['contact']);
   unset($settings['research_interests']);
@@ -172,17 +169,7 @@ function stanford_person_set_ds_region_blocks() {
 
   // Add the DS region blocks variables.
   $settings = variable_get('ds_extras_region_blocks', array());
-
-  if (!isset($settings['s_news_image'])) {
-    $settings['s_news_image'] = array(
-      'title' => t('News Image'),
-      'info' => 'node_stanford_person_full',
-    );
-  }
-  else {
-    watchdog('stanford_person', 'DS extras News Image already in use', WATCHDOG_NOTICE);
-  }
-
+  
   if (!isset($settings['office_hours'])) {
     $settings['office_hours'] = array(
       'title' => t('Office Hours'),
