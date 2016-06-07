@@ -136,3 +136,41 @@ function stanford_person_update_7500(&$sandbox) {
 
 
 }
+
+/**
+ * Implements hook_install().
+ */
+function stanford_person_install() {
+
+  // Add the DS region blocks variables.
+  $settings = variable_get('ds_extras_region_blocks');
+
+  $settings['s_news_image'] = array(
+    'title' => 'News Image',
+    'info' => 'node_stanford_person_full');
+  $settings['office_hours'] = array(
+    'title' => 'Office Hours',
+    'info' => 'node_stanford_person_full');
+  $settings['contact'] = array(
+    'title' => 'Contact',
+    'info' => 'node_stanford_person_full');
+  $settings['research_interests'] = array(
+    'title' => 'Research Interests',
+    'info' => 'node_stanford_person_full');
+
+  variable_set('ds_extras_region_blocks', $settings );
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function stanford_person_uninstall() {
+
+  // Remove the DS region blocks variables.
+  $settings = variable_get('ds_extras_region_blocks');
+  unset($settings['s_news_image']);
+  unset($settings['office_hours']);
+  unset($settings['contact']);
+  unset($settings['research_interests']);
+  variable_set('ds_extras_region_blocks', $settings);
+}

@@ -62,30 +62,6 @@ function stanford_person_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'ds_extras_region_blocks';
-  $strongarm->value = array(
-    's_news_image' => array(
-      'title' => 'News Image',
-      'info' => 'node_stanford_news_item_full',
-    ),
-    'office_hours' => array(
-      'title' => 'Office Hours',
-      'info' => 'node_stanford_person_full',
-    ),
-    'contact' => array(
-      'title' => 'Contact',
-      'info' => 'node_stanford_person_full',
-    ),
-    'research_interests' => array(
-      'title' => 'Research Interests',
-      'info' => 'node_stanford_person_full',
-    ),
-  );
-  $export['ds_extras_region_blocks'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'ds_extras_region_to_block';
   $strongarm->value = 1;
   $export['ds_extras_region_to_block'] = $strongarm;
