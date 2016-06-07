@@ -203,16 +203,6 @@ function stanford_person_set_ds_region_blocks() {
     watchdog('stanford_person', 'DS extras Contact region already in use', WATCHDOG_NOTICE);
   }
 
-  if (!isset($settings['office_hours'])) {
-    $settings['office_hours'] = array(
-      'title' => t('Office Hours'),
-      'info' => 'node_stanford_person_full',
-    );
-  }
-  else {
-    watchdog('stanford_person', 'DS extras Office Hours region already in use', WATCHDOG_NOTICE);
-  }
-
   if (!isset($settings['research_interests'])) {
     $settings['research_interests'] = array(
       'title' => t('Research Interests'),
