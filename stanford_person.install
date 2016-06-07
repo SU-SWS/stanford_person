@@ -159,32 +159,69 @@ function stanford_person_uninstall() {
 }
 
 /**
+ * Implements hook_update_N().
+ */
+function stanford_person_update_7501(&$sandbox) {
+  stanford_person_set_ds_region_blocks();
+}
+
+/**
  * Set the DS region block values.
  */
 function stanford_person_set_ds_region_blocks() {
 
   // Add the DS region blocks variables.
-  $settings = variable_get('ds_extras_region_blocks');
+  $settings = variable_get('ds_extras_region_blocks', array());
 
-  $settings['s_news_image'] = array(
-    'title' => 'News Image',
-    'info' => 'node_stanford_person_full');
-  $settings['office_hours'] = array(
-    'title' => 'Office Hours',
-    'info' => 'node_stanford_person_full');
-  $settings['contact'] = array(
-    'title' => 'Contact',
-    'info' => 'node_stanford_person_full');
-  $settings['research_interests'] = array(
-    'title' => 'Research Interests',
-    'info' => 'node_stanford_person_full');
+  if (!isset($settings['s_news_image'])) {
+    $settings['s_news_image'] = array(
+      'title' => t('News Image'),
+      'info' => 'node_stanford_person_full',
+    );
+  }
+  else {
+    watchdog('stanford_person', 'DS extras News Image already in use', WATCHDOG_NOTICE);
+  }
+
+  if (!isset($settings['office_hours'])) {
+    $settings['office_hours'] = array(
+      'title' => t('Office Hours'),
+      'info' => 'node_stanford_person_full',
+    );
+  }
+  else {
+    watchdog('stanford_person', 'DS extras Office Hours region already in use', WATCHDOG_NOTICE);
+  }
+
+  if (!isset($settings['contact'])) {
+    $settings['contact'] = array(
+      'title' => t('Contact'),
+      'info' => 'node_stanford_person_full',
+    );
+  }
+  else {
+    watchdog('stanford_person', 'DS extras Contact region already in use', WATCHDOG_NOTICE);
+  }
+
+  if (!isset($settings['office_hours'])) {
+    $settings['office_hours'] = array(
+      'title' => t('Office Hours'),
+      'info' => 'node_stanford_person_full',
+    );
+  }
+  else {
+    watchdog('stanford_person', 'DS extras Office Hours region already in use', WATCHDOG_NOTICE);
+  }
+
+  if (!isset($settings['research_interests'])) {
+    $settings['research_interests'] = array(
+      'title' => t('Research Interests'),
+      'info' => 'node_stanford_person_full',
+    );
+  }
+  else {
+    watchdog('stanford_person', 'DS extras Research Interests region already in use', WATCHDOG_NOTICE);
+  }
 
   variable_set('ds_extras_region_blocks', $settings );
-}
-
-/**
- * Implements hook_update_N().
- */
-function stanford_person_update_7510(&$sandbox) {
-  stanford_person_set_ds_region_blocks();
 }
