@@ -177,7 +177,7 @@ function stanford_person_set_ds_region_blocks() {
     );
   }
   else {
-    watchdog('stanford_person', 'DS extras Office Hours region already in use', array(), WATCHDOG_NOTICE);
+    watchdog('stanford_person', '%msg', array('%msg' => 'DS extras Office Hours in use'), WATCHDOG_NOTICE);
   }
 
   if (!isset($settings['contact'])) {
@@ -187,7 +187,7 @@ function stanford_person_set_ds_region_blocks() {
     );
   }
   else {
-    watchdog('stanford_person', 'DS extras Contact region already in use', array(), WATCHDOG_NOTICE);
+    watchdog('stanford_person', '%msg', array('%msg' => 'DS extras Contact in use'), WATCHDOG_NOTICE);
   }
 
   if (!isset($settings['research_interests'])) {
@@ -197,7 +197,7 @@ function stanford_person_set_ds_region_blocks() {
     );
   }
   else {
-    watchdog('stanford_person', 'DS extras Research Interests region already in use', array(), WATCHDOG_NOTICE);
+    watchdog('stanford_person', '%msg', array('%msg' => 'DS extras Research Interests in use'), WATCHDOG_NOTICE);
   }
 
   variable_set('ds_extras_region_blocks', $settings );
