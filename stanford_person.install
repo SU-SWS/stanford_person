@@ -148,7 +148,7 @@ function stanford_person_install() {
 function stanford_person_uninstall() {
 
   // Remove the DS region blocks variables.
-  $settings = variable_get('ds_extras_region_blocks');
+  $settings = variable_get('ds_extras_region_blocks', array());
   unset($settings['office_hours']);
   unset($settings['contact']);
   unset($settings['research_interests']);
