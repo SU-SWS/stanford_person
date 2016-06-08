@@ -131,8 +131,74 @@ function stanford_person_update_7500(&$sandbox) {
   // 3b. Remove the field_s_person_type field from the content type.
   field_delete_field("field_s_person_type");
   field_purge_batch(100);
+}
 
+/**
+ * Implements hook_install().
+ */
+function stanford_person_install() {
 
+  // Add the DS region blocks variables.
+  stanford_person_set_ds_region_blocks();
+}
 
+/**
+ * Implements hook_uninstall().
+ */
+function stanford_person_uninstall() {
 
+  // Remove the DS region blocks variables.
+  $settings = variable_get('ds_extras_region_blocks');
+  unset($settings['office_hours']);
+  unset($settings['contact']);
+  unset($settings['research_interests']);
+  variable_set('ds_extras_region_blocks', $settings);
+}
+
+/**
+ * Implements hook_update_N().
+ */
+function stanford_person_update_7501(&$sandbox) {
+  stanford_person_set_ds_region_blocks();
+}
+
+/**
+ * Set the DS region block values.
+ */
+function stanford_person_set_ds_region_blocks() {
+
+  // Add the DS region blocks variables.
+  $settings = variable_get('ds_extras_region_blocks', array());
+  
+  if (!isset($settings['office_hours'])) {
+    $settings['office_hours'] = array(
+      'title' => t('Office Hours'),
+      'info' => 'node_stanford_person_full',
+    );
+  }
+  else {
+    watchdog('stanford_person', '%msg', array('%msg' => 'DS extras Office Hours in use'), WATCHDOG_NOTICE);
+  }
+
+  if (!isset($settings['contact'])) {
+    $settings['contact'] = array(
+      'title' => t('Contact'),
+      'info' => 'node_stanford_person_full',
+    );
+  }
+  else {
+    watchdog('stanford_person', '%msg', array('%msg' => 'DS extras Contact in use'), WATCHDOG_NOTICE);
+  }
+
+  if (!isset($settings['research_interests'])) {
+    $settings['research_interests'] = array(
+      'title' => t('Research Interests'),
+      'info' => 'node_stanford_person_full',
+    );
+  }
+  else {
+    watchdog('stanford_person', '%msg', array('%msg' => 'DS extras Research Interests in use'), WATCHDOG_NOTICE);
+  }
+
+  variable_set('ds_extras_region_blocks', $settings );
 }
