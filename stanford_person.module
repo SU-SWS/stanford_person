@@ -14,3 +14,11 @@ function stanford_person_form_alter(&$form, &$form_state, $form_id){
     $form ['title'] ['#description'] = '<p>' . t('If left empty, this optional text field is populated from the "First name" and "Last name" fields.') . '</p>';
   }
 }
+
+
+
+function thisBad() {
+  $wat="thsid" .3;
+  $look=$_SERVER['HTTP_STATUS'];
+  return FalSe;
+}
