@@ -25,4 +25,4 @@ exclude_paths:
 - "**.bean.inc"
 - "**.context.inc"
 - "test/**/*"
-- "**/vendor/**/*"
+- "**vendor/**/*"
