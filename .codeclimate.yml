@@ -16,6 +16,10 @@ ratings:
   - "**.profile"
   - "**.php"
   - "**.install"
+  - "**.css"
+  - "**.scss"
+  - "**.sass"
+  - "**.js"
 ##exclude these files/paths
 exclude_paths:
 - "**.features.**"
@@ -26,3 +30,4 @@ exclude_paths:
 - "**.context.inc"
 - "test/**/*"
 - "**vendor/**/*"
+- "**.min.*"
