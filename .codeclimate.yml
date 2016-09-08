@@ -5,8 +5,18 @@ engines:
     enabled: true
   phpcodesniffer:
     enabled: true
+    config:
+      file_extensions: "php,inc,install,module,profile"
+      standard: "Drupal"
   phpmd:
     enabled: true
+    config:
+      file_extensions:
+      - inc
+      - module
+      - profile
+      - php
+      - install
   scss-lint:
     enabled: true
 ratings:
@@ -29,5 +39,5 @@ exclude_paths:
 - "**.bean.inc"
 - "**.context.inc"
 - "test/**/*"
-- "**vendor/**/*"
+- "**/vendor/**/*"
 - "**.min.*"
