@@ -1581,7 +1581,7 @@ function stanford_person_views_views_default_views() {
   $handler = $view->new_display('page', 'Grid Page', 'page');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
-  $handler->display->display_options['path'] = 'people/%/grid';
+  $handler->display->display_options['path'] = 'people/%/grid-five';
   $handler->display->display_options['menu']['title'] = 'Faculty';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['name'] = 'main-menu';
@@ -1673,7 +1673,7 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['sorts']['field_s_person_first_name_value']['id'] = 'field_s_person_first_name_value';
   $handler->display->display_options['sorts']['field_s_person_first_name_value']['table'] = 'field_data_field_s_person_first_name';
   $handler->display->display_options['sorts']['field_s_person_first_name_value']['field'] = 'field_s_person_first_name_value';
-  $handler->display->display_options['path'] = 'people/%/grid/grouped';
+  $handler->display->display_options['path'] = 'people/%/grid-five/grouped';
   $export['stanford_person_grid_five'] = $view;
 
   $view = new view();
@@ -1840,7 +1840,7 @@ function stanford_person_views_views_default_views() {
   $handler = $view->new_display('page', 'Grid Page', 'page');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
-  $handler->display->display_options['path'] = 'people/%/grid';
+  $handler->display->display_options['path'] = 'people/%/grid-six';
   $handler->display->display_options['menu']['title'] = 'Faculty';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['name'] = 'main-menu';
@@ -1932,7 +1932,7 @@ function stanford_person_views_views_default_views() {
   $handler->display->display_options['sorts']['field_s_person_first_name_value']['id'] = 'field_s_person_first_name_value';
   $handler->display->display_options['sorts']['field_s_person_first_name_value']['table'] = 'field_data_field_s_person_first_name';
   $handler->display->display_options['sorts']['field_s_person_first_name_value']['field'] = 'field_s_person_first_name_value';
-  $handler->display->display_options['path'] = 'people/%/grid/grouped';
+  $handler->display->display_options['path'] = 'people/%/grid-six/grouped';
   $export['stanford_person_grid_six'] = $view;
 
   $view = new view();
