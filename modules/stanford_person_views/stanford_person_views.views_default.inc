@@ -3357,16 +3357,6 @@ function stanford_person_views_views_default_views() {
     7 => 0,
     5 => 0,
   );
-  /* Filter criterion: Content: Affiliation (field_s_person_affiliation) */
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['id'] = 'field_s_person_affiliation_tid';
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['table'] = 'field_data_field_s_person_affiliation';
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['field'] = 'field_s_person_affiliation_tid';
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['operator'] = 'not';
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['value'] = array(
-    46 => '46',
-  );
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_s_person_affiliation_tid']['vocabulary'] = 'stanford_affiliation';
 
   /* Display: Members Page */
   $handler = $view->new_display('page', 'Members Page', 'page');
