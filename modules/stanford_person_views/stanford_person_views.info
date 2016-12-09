@@ -25,4 +25,5 @@ features[views_view][] = stanford_person_people
 features[views_view][] = stanford_person_profiles
 features[views_view][] = stanford_person_staff
 features[views_view][] = stanford_person_student
+features[views_view][] = stanford_person_members
 project status url = https://github.com/SU-SWS/stanford_person
