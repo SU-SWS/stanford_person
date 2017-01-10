@@ -30,4 +30,5 @@ before_script:
 script:
   # make sure shell can find drush and run behat tests here, so Travis CI reports accurate results
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
-  - behat
+  - cd stanford_travisci_scripts
+  - bin/behat
