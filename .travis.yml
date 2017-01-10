@@ -14,21 +14,20 @@ mysql:
 before_install:
   # download external repository with Stanford Travis CI scripts
   - git clone https://github.com/SU-SWS/stanford_travisci_scripts.git
-  - cd stanford_travisci_scripts
-  - export BASEDIR=${PWD}
-  - chmod +x bin/*.sh
+  - chmod +x stanford_travisci_scripts/bin/*.sh
   # install composer packages
-  - $BASEDIR/bin/before_install.sh
+  - stanford_travisci_scripts/bin/before_install.sh
 
 install:
   # install self-service site, disable webauth module, start webserver and selenium webdriver
-  - $BASEDIR/bin/install.sh
+  - export PATH="$HOME/.composer/vendor/bin:$PATH"
+  - stanford_travisci_scripts/bin/install.sh
 
 before_script:
   # download linky_clicky, grab related tests, and start xvfb virtual display
-  - $BASEDIR/bin/before_script.sh
+  - stanford_travisci_scripts/bin/before_script.sh
 
 script:
   # make sure shell can find drush and run behat tests here, so Travis CI reports accurate results
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
-  - $BASEDIR/bin/behat
+  - behat
