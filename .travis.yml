@@ -32,3 +32,6 @@ script:
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
   - cd stanford_travisci_scripts
   - bin/behat
+
+after_script:
+  - rm -rf $TRAVIS_BUILD_DIR
