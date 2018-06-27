@@ -1,5 +1,5 @@
 #[Stanford Person](https://github.com/SU-SWS/stanford_person)
-##### Version: 7.x-5.3-alpha2
+##### Version: 7.x-5.x-dev
 
 Maintainers: [jbickar](https://github.com/jbickar), [sherakama](https://github.com/sherakama)
 [Changelog.txt](CHANGELOG.txt)
