@@ -148,7 +148,6 @@ function stanford_person_views_update_7500_add_filter_to_faculty(&$sandbox, $db_
   if (!$vocab || !$terms) {
     watchdog("stanford_person_views", "Skipping stanford_person_views_update_7500_add_filter_to_faculty as missing vocab or term.", [], WATCHDOG_WARNING);
     return;
-    // throw new DrupalUpdateException("Could not run stanford person views updates. Missing vocabulary or term");
   }
 
   $term = array_pop($terms);
@@ -168,7 +167,7 @@ function stanford_person_views_update_7500_add_filter_to_faculty(&$sandbox, $db_
     [
       'value' => [
         (int) $term->tid => (string) $term->tid
-      ,
+      ],
       'type' => "select",
       'vocabulary' => 'stanford_affiliation',
     ],
@@ -189,7 +188,6 @@ function stanford_person_views_update_7500_add_filter_to_staff(&$sandbox, $db_vi
   if (!$vocab || !$terms) {
     watchdog("stanford_person_views", "Skipping stanford_person_views_update_7500_add_filter_to_staff as missing vocab or term.", [], WATCHDOG_WARNING);
     return;
-    // throw new DrupalUpdateException("Could not run stanford person views updates. Missing vocabulary or term");
   }
 
   $term = array_pop($terms);
@@ -229,7 +227,6 @@ function stanford_person_views_update_7500_add_filter_to_student(&$sandbox, $db_
   if (!$vocab || !$terms) {
     watchdog("stanford_person_views", "Skipping stanford_person_views_update_7500_add_filter_to_student as missing vocab or term.", [], WATCHDOG_WARNING);
     return;
-    // throw new DrupalUpdateException("Could not run stanford person views updates. Missing vocabulary or term");
   }
 
   $term = array_pop($terms);
