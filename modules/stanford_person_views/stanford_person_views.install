@@ -21,13 +21,13 @@ function stanford_person_views_update_7500(&$sandbox) {
   // remove it.
 
   // Views included in the feature.
-  $list = array(
+  $list = [
     'stanford_person_manage',
     'stanford_person_faculty',
     'stanford_person_people',
     'stanford_person_staff',
     'stanford_person_student',
-  );
+  ];
 
   // Loop through all the included views in the feature and try to find the old
   // field_s_person_type field and remove it from the view.
@@ -36,6 +36,12 @@ function stanford_person_views_update_7500(&$sandbox) {
     // Try to load the view.
     $view = views_get_view($view_name);
     if (!is_object($view)) {
+      continue;
+    }
+
+    // If the view is disabled or overridden then we skip.
+    if ($view->disabled || $view->type == "overridden") {
+      watchdog('stanford_person_views', "Skipping update to view %name", ['%name' => $view_name], WATCHDOG_WARNING);
       continue;
     }
 
@@ -54,7 +60,7 @@ function stanford_person_views_update_7500(&$sandbox) {
   // 5. Add the field back in.
 
   $db_views_query = db_select("views_view", "vv")
-    ->fields("vv", array('name'))
+    ->fields("vv", ['name'])
     ->execute()
     ->fetchAllAssoc('name');
 
@@ -96,21 +102,21 @@ function stanford_person_views_update_7500_add_update_manage_person_view(&$sandb
     'filter',
     'field_data_field_s_person_affiliation',
     'field_s_person_affiliation_tid',
-    array(
+    [
       'type' => "select",
       'vocabulary' => 'stanford_affiliation',
       'group' => 1,
       'exposed' => TRUE,
-      'expose' => array(
+      'expose' => [
         'operator_id' => 'field_s_person_affiliation_tid_op',
         'label' => t('Affiliation'),
         'operator' => 'field_s_person_affiliation_tid_op',
         'identifier' => 'field_s_person_affiliation_tid',
-        'remember_roles' => array(
+        'remember_roles' => [
           2 => '2',
-        ),
-      ),
-    ),
+        ],
+      ],
+    ],
     'field_s_person_affiliation_tid'
   );
 
@@ -120,11 +126,11 @@ function stanford_person_views_update_7500_add_update_manage_person_view(&$sandb
     'field',
     'field_data_field_s_person_affiliation',
     'field_s_person_affiliation',
-    array(
+    [
       'element_label_colon' => FALSE,
       'type' => "taxonomy_term_reference_plain",
       'delta_offset' => 0,
-    ),
+    ],
     'field_s_person_affiliation'
   );
 
@@ -140,7 +146,9 @@ function stanford_person_views_update_7500_add_filter_to_faculty(&$sandbox, $db_
   $terms = taxonomy_get_term_by_name("Faculty", $vocab->machine_name);
 
   if (!$vocab || !$terms) {
-    throw new DrupalUpdateException("Could not run stanford person views updates. Missing vocabulary or term");
+    watchdog("stanford_person_views", "Skipping stanford_person_views_update_7500_add_filter_to_faculty as missing vocab or term.", [], WATCHDOG_WARNING);
+    return;
+    // throw new DrupalUpdateException("Could not run stanford person views updates. Missing vocabulary or term");
   }
 
   $term = array_pop($terms);
@@ -157,13 +165,13 @@ function stanford_person_views_update_7500_add_filter_to_faculty(&$sandbox, $db_
     'filter',
     'field_data_field_s_person_affiliation',
     'field_s_person_affiliation_tid',
-    array(
-      'value' => array(
+    [
+      'value' => [
         (int) $term->tid => (string) $term->tid
-      ),
+      ,
       'type' => "select",
       'vocabulary' => 'stanford_affiliation',
-    ),
+    ],
     'field_s_person_affiliation_tid'
   );
 
@@ -179,7 +187,9 @@ function stanford_person_views_update_7500_add_filter_to_staff(&$sandbox, $db_vi
   $terms = taxonomy_get_term_by_name("Staff", $vocab->machine_name);
 
   if (!$vocab || !$terms) {
-    throw new DrupalUpdateException("Could not run stanford person views updates. Missing vocabulary or term");
+    watchdog("stanford_person_views", "Skipping stanford_person_views_update_7500_add_filter_to_staff as missing vocab or term.", [], WATCHDOG_WARNING);
+    return;
+    // throw new DrupalUpdateException("Could not run stanford person views updates. Missing vocabulary or term");
   }
 
   $term = array_pop($terms);
@@ -195,13 +205,13 @@ function stanford_person_views_update_7500_add_filter_to_staff(&$sandbox, $db_vi
     'filter',
     'field_data_field_s_person_affiliation',
     'field_s_person_affiliation_tid',
-    array(
-      'value' => array(
+    [
+      'value' => [
         (int) $term->tid => (string) $term->tid
-      ),
+      ],
       'type' => "select",
       'vocabulary' => 'stanford_affiliation',
-    ),
+    ],
     'field_s_person_affiliation_tid'
   );
 
@@ -217,7 +227,9 @@ function stanford_person_views_update_7500_add_filter_to_student(&$sandbox, $db_
   $terms = taxonomy_get_term_by_name("Student", $vocab->machine_name);
 
   if (!$vocab || !$terms) {
-    throw new DrupalUpdateException("Could not run stanford person views updates. Missing vocabulary or term");
+    watchdog("stanford_person_views", "Skipping stanford_person_views_update_7500_add_filter_to_student as missing vocab or term.", [], WATCHDOG_WARNING);
+    return;
+    // throw new DrupalUpdateException("Could not run stanford person views updates. Missing vocabulary or term");
   }
 
   $term = array_pop($terms);
@@ -234,13 +246,13 @@ function stanford_person_views_update_7500_add_filter_to_student(&$sandbox, $db_
     'filter',
     'field_data_field_s_person_affiliation',
     'field_s_person_affiliation_tid',
-    array(
-      'value' => array(
+    [
+      'value' => [
         (int) $term->tid => (string) $term->tid
-      ),
+      ],
       'type' => "select",
       'vocabulary' => 'stanford_affiliation',
-    ),
+    ],
     'field_s_person_affiliation_tid'
   );
 
