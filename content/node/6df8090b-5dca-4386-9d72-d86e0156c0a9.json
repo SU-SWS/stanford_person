@@ -1,0 +1,337 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/person\/haley-jackson?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/stanford_person"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/stanford_person\/revision_uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/stanford_person\/uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/stanford_person\/su_person_components": [
+            {
+                "href": ""
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/stanford_person\/su_person_photo": [
+            {
+                "href": "http:\/\/default\/media\/12\/edit?_format=hal_json"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": 13
+        }
+    ],
+    "uuid": [
+        {
+            "value": "6df8090b-5dca-4386-9d72-d86e0156c0a9"
+        }
+    ],
+    "vid": [
+        {
+            "value": 11
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "stanford_person"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2020-04-28T16:41:16+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/stanford_person\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "5ccbdea8-053a-4451-81e5-60e9ea382f47"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/stanford_person\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "5ccbdea8-053a-4451-81e5-60e9ea382f47"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/stanford_person\/su_person_components": [
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/stanford_wysiwyg"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "3e8e3b0e-7803-4713-9f37-7c479f9b3365"
+                    }
+                ],
+                "target_revision_id": "21"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/stanford_person\/su_person_photo": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/media\/12\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "381f792e-24b4-4c50-b5cc-69c13702f93a"
+                    }
+                ]
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "title": [
+        {
+            "value": "Haley Jackson",
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-04-28T16:36:09+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2020-04-28T16:41:16+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "Haley Jackson | University",
+                "og_site_name": "University",
+                "canonical_url": "http:\/\/default\/person\/haley-jackson",
+                "description": "This is a sample student bio for Sally Jacks. Nullam laoreet pulvinar nibh ut tempus. Aenean a enim in tellus mattis condimentum. Maecenas eu tristique sapien, mollis fringilla dolor. Vivamus nec laoreet metus. Praesent eu neque enim. Nam at neque sed arcu laoreet consequat. Donec feugiat sed magna tempus dignissim. Nunc pretium dolor justo, in hendrerit lectus scelerisque quis. Donec rhoncus condimentum interdum. Sed euismod varius diam quis suscipit. Vestibulum scelerisque gravida massa ut egestas. Maecenas sagittis nibh quis nibh tincidunt, a fringilla risus dictum.",
+                "og_url": "http:\/\/default\/home"
+            }
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/person\/haley-jackson",
+            "pid": 22,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ],
+    "rh_action": [
+        {
+            "value": "bundle_default"
+        }
+    ],
+    "rh_redirect_response": [
+        {
+            "value": 301
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>This is a sample student bio for Sally Jacks. Nullam laoreet pulvinar nibh ut tempus. Aenean a enim in tellus mattis condimentum. Maecenas eu tristique sapien, mollis fringilla dolor. Vivamus nec laoreet metus. Praesent eu neque enim. Nam at neque sed arcu laoreet consequat. Donec feugiat sed magna tempus dignissim. Nunc pretium dolor justo, in hendrerit lectus scelerisque quis. Donec rhoncus condimentum interdum. Sed euismod varius diam quis suscipit. Vestibulum scelerisque gravida massa ut egestas. Maecenas sagittis nibh quis nibh tincidunt, a fringilla risus dictum. Donec at luctus lectus. Sed et dictum nisl.<\/p>\r\n",
+            "format": "stanford_html",
+            "processed": "<p>This is a sample student bio for Sally Jacks. Nullam laoreet pulvinar nibh ut tempus. Aenean a enim in tellus mattis condimentum. Maecenas eu tristique sapien, mollis fringilla dolor. Vivamus nec laoreet metus. Praesent eu neque enim. Nam at neque sed arcu laoreet consequat. Donec feugiat sed magna tempus dignissim. Nunc pretium dolor justo, in hendrerit lectus scelerisque quis. Donec rhoncus condimentum interdum. Sed euismod varius diam quis suscipit. Vestibulum scelerisque gravida massa ut egestas. Maecenas sagittis nibh quis nibh tincidunt, a fringilla risus dictum. Donec at luctus lectus. Sed et dictum nisl.<\/p>",
+            "summary": "",
+            "lang": "en"
+        }
+    ],
+    "su_person_affiliations": [
+        {
+            "uri": "https:\/\/www.stanford.edu\/",
+            "title": "Stanford University",
+            "options": []
+        },
+        {
+            "uri": "https:\/\/stanford.edu\/",
+            "title": "Stanford",
+            "options": []
+        }
+    ],
+    "su_person_education": [
+        {
+            "value": "B.A., Stanford University, 2012"
+        },
+        {
+            "value": "PHD, Stanford University, 2019"
+        }
+    ],
+    "su_person_email": [
+        {
+            "value": "sunetid@stanford.edu"
+        }
+    ],
+    "su_person_fax": [
+        {
+            "value": "(555) 555-5555"
+        }
+    ],
+    "su_person_first_name": [
+        {
+            "value": "Haley"
+        }
+    ],
+    "su_person_full_title": [
+        {
+            "value": "Student, mentor, scholar. "
+        }
+    ],
+    "su_person_last_name": [
+        {
+            "value": "Jackson"
+        }
+    ],
+    "su_person_links": [
+        {
+            "uri": "https:\/\/google.com\/",
+            "title": "Google",
+            "options": []
+        },
+        {
+            "uri": "https:\/\/stanford.edu",
+            "title": "Stanford",
+            "options": []
+        }
+    ],
+    "su_person_location_address": [
+        {
+            "value": "<p>Building Name Room 555<br \/>\r\nStreet Address<br \/>\r\nStanford, CA 94305<\/p>\r\n",
+            "format": "stanford_html",
+            "processed": "<p>Building Name Room 555<br \/>\nStreet Address<br \/>\nStanford, CA 94305<\/p>"
+        }
+    ],
+    "su_person_location_name": [
+        {
+            "value": "A big shiny new building"
+        }
+    ],
+    "su_person_mail_code": [
+        {
+            "value": "3020"
+        }
+    ],
+    "su_person_mobile_phone": [
+        {
+            "value": "(555) 555-5555"
+        }
+    ],
+    "su_person_research": [
+        {
+            "value": "research interest one.",
+            "format": "stanford_minimal_html",
+            "processed": "research interest one."
+        },
+        {
+            "value": "research interest two.",
+            "format": "stanford_minimal_html",
+            "processed": "research interest two."
+        },
+        {
+            "value": "research interest three",
+            "format": "stanford_minimal_html",
+            "processed": "research interest three"
+        }
+    ],
+    "su_person_research_interests": [
+        {
+            "value": "Environment"
+        },
+        {
+            "value": "Science"
+        }
+    ],
+    "su_person_short_title": [
+        {
+            "value": "Student"
+        }
+    ],
+    "su_person_telephone": [
+        {
+            "value": "(555) 555-5555"
+        }
+    ]
+}
