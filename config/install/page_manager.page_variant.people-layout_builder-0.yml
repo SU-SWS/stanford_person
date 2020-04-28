@@ -1,4 +1,3 @@
-uuid: ac8eed9b-418c-4efa-858e-d265887445e9
 langcode: en
 status: true
 dependencies:
@@ -21,17 +20,17 @@ variant_settings:
         columns: default
         label: Header
       components:
-        02f9bbf0-260c-4cd5-9769-b84f81fd31d6:
-          uuid: 02f9bbf0-260c-4cd5-9769-b84f81fd31d6
+        1aa402a8-d32e-4c0d-88c8-350e4d8e54fb:
+          uuid: 1aa402a8-d32e-4c0d-88c8-350e4d8e54fb
           region: main
           configuration:
-            id: 'inline_block:stanford_component_block'
-            label: 'People Title'
-            provider: layout_builder
+            id: 'block_content:fb905cf3-4bd3-4bcd-ad01-92d25e46ba32'
+            label: 'People Banner'
+            provider: block_content
             label_display: visible
+            status: true
+            info: ''
             view_mode: full
-            block_revision_id: 2
-            block_serialized: null
             context_mapping: {  }
           additional: {  }
           weight: 0
