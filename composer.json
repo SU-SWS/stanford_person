@@ -1,0 +1,11 @@
+{
+  "name": "su-sws/stanford_person",
+  "description": "Stanford Module Example",
+  "type": "drupal-custom-module",
+  "homepage": "https://github.com/SU-SWS/stanford_person",
+  "authors": [],
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {}
+}
