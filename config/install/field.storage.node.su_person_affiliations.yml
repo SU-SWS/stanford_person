@@ -1,0 +1,19 @@
+uuid: af2d3b75-8364-4af0-86e4-553836e23c49
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.su_person_affiliations
+field_name: su_person_affiliations
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

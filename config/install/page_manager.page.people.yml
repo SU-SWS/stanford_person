@@ -1,0 +1,12 @@
+uuid: 859ff7e5-065a-4283-8e9c-0732ae4e294c
+langcode: en
+status: true
+dependencies: {  }
+id: people
+label: People
+description: 'People listing page'
+use_admin_theme: false
+path: /people
+access_logic: and
+access_conditions: {  }
+parameters: {  }

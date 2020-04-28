@@ -1,0 +1,8 @@
+uuid: 6f08edaa-2e2b-4cac-ba58-0b6ef2195f5a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Person Types'
+vid: stanford_person_types
+description: 'Categorization of people'
+weight: 0

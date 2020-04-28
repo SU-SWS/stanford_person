@@ -1,0 +1,23 @@
+uuid: f95d6bb5-9d68-4bc3-8581-83e7c4287cbd
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: person_types
+label: 'Person Types'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'people/[term:name]'
+selection_criteria:
+  5816938e-7493-4d3b-b129-9724bb49c0d3:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      stanford_person_types: stanford_person_types
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 5816938e-7493-4d3b-b129-9724bb49c0d3
+selection_logic: and
+weight: -5
+relationships: {  }
