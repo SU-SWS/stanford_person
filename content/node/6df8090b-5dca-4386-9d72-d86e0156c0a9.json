@@ -26,6 +26,11 @@
             {
                 "href": "http:\/\/default\/media\/12\/edit?_format=hal_json"
             }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/stanford_person\/su_person_type": [
+            {
+                "href": "http:\/\/default\/people\/alumni?_format=hal_json"
+            }
         ]
     },
     "nid": [
@@ -40,7 +45,7 @@
     ],
     "vid": [
         {
-            "value": 11
+            "value": 112
         }
     ],
     "langcode": [
@@ -56,7 +61,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2020-04-28T16:41:16+00:00",
+            "value": "2020-04-29T23:32:17+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -73,7 +78,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "5ccbdea8-053a-4451-81e5-60e9ea382f47"
+                        "value": "b7e30b50-4bb4-4268-ac18-a03258807db3"
                     }
                 ]
             }
@@ -90,7 +95,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "5ccbdea8-053a-4451-81e5-60e9ea382f47"
+                        "value": "b7e30b50-4bb4-4268-ac18-a03258807db3"
                     }
                 ],
                 "lang": "en"
@@ -111,7 +116,7 @@
                         "value": "3e8e3b0e-7803-4713-9f37-7c479f9b3365"
                     }
                 ],
-                "target_revision_id": "21"
+                "target_revision_id": "221"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/stanford_person\/su_person_photo": [
@@ -127,6 +132,23 @@
                 "uuid": [
                     {
                         "value": "381f792e-24b4-4c50-b5cc-69c13702f93a"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/stanford_person\/su_person_type": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/people\/alumni?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/stanford_person_types"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "6583b9b0-3a39-40b3-a354-f8a28ae45b80"
                     }
                 ]
             }
@@ -153,7 +175,7 @@
     ],
     "changed": [
         {
-            "value": "2020-04-28T16:41:16+00:00",
+            "value": "2020-04-29T23:32:17+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
