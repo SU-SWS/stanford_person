@@ -1,9 +1,12 @@
+uuid: acc8b3c1-1525-4be6-ab1f-9c30affdb94d
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.su_person_telephone
     - node.type.stanford_person
+_core:
+  default_config_hash: 0jIxaNoVjfWM5QS30pTFXBI9msh4Edu629eGT75iyCE
 id: node.stanford_person.su_person_telephone
 field_name: su_person_telephone
 entity_type: node

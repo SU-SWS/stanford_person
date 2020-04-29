@@ -1,6 +1,9 @@
+uuid: 207aaa7b-eb57-4a54-ae98-dd2487d325eb
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: BWjqc2NHU_zb_3_0mENBvc685IyhHaqddjplyjc5N2Q
 id: stanford-person-type
 label: 'Person Type'
 description: 'Taxonomy menu for person types'

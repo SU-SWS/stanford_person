@@ -1,8 +1,11 @@
+uuid: d8b7d56b-c7fb-45d9-bbb6-01c64e34346a
 langcode: en
 status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: ykx97OqK7K0rQKRaf6zONl7qgH6QOjnKwD3jl_Knt1I
 id: node.su_person_fax
 field_name: su_person_fax
 entity_type: node

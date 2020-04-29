@@ -1,3 +1,4 @@
+uuid: fae20588-28be-4ace-9cf1-ad66eac88e1f
 langcode: en
 status: true
 dependencies:
@@ -27,6 +28,8 @@ dependencies:
   module:
     - text
     - user
+_core:
+  default_config_hash: mllvVfWqXlxeskUSRRyC2cNQUgPfU6epiQT97JQ3Q2g
 id: node.stanford_person.teaser
 targetEntityType: node
 bundle: stanford_person

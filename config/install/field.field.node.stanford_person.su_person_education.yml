@@ -1,9 +1,12 @@
+uuid: 9dc33707-0452-450b-9537-ed5575897730
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.su_person_education
     - node.type.stanford_person
+_core:
+  default_config_hash: ujl5_6-Sr_8sxN173TMAW7-WTEQen8ZfqNchD64V3ow
 id: node.stanford_person.su_person_education
 field_name: su_person_education
 entity_type: node

@@ -1,9 +1,12 @@
+uuid: 54c96761-89e1-4382-8f7f-7dcc1305e7a6
 langcode: en
 status: true
 dependencies:
   module:
     - link
     - node
+_core:
+  default_config_hash: hnmFGpnDgdMh16DV0KQfZxuBw6mx1nKpK2T9BvRzRMY
 id: node.su_person_links
 field_name: su_person_links
 entity_type: node

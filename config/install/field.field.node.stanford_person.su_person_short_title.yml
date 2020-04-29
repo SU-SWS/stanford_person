@@ -1,9 +1,12 @@
+uuid: 8e757fcb-a196-475d-b7b9-a513cf5f17aa
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.su_person_short_title
     - node.type.stanford_person
+_core:
+  default_config_hash: ly0f7uCRDVDL1-ove2HJihH_jZJ00ptExBJEgu1kG6U
 id: node.stanford_person.su_person_short_title
 field_name: su_person_short_title
 entity_type: node

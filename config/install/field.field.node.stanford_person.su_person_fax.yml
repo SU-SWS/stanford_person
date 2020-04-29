@@ -1,9 +1,12 @@
+uuid: dcdc6e61-07a0-4e43-bd60-ce1e3a6e9c36
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.su_person_fax
     - node.type.stanford_person
+_core:
+  default_config_hash: bxmBZOhr6XL8YV6weylde_QncUWo7XOHJ1wryaKMNbI
 id: node.stanford_person.su_person_fax
 field_name: su_person_fax
 entity_type: node

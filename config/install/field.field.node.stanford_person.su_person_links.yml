@@ -1,3 +1,4 @@
+uuid: 734e811b-4cbe-4158-a4ba-e893cef9c300
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - node.type.stanford_person
   module:
     - link
+_core:
+  default_config_hash: 9TRBCvLyKgu_fknfRDkVcZxn5LY7E_YJl_iwknxPW5U
 id: node.stanford_person.su_person_links
 field_name: su_person_links
 entity_type: node

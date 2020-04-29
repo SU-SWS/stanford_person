@@ -1,3 +1,4 @@
+uuid: 33aef2cc-72b8-4dbc-affe-14070f8ffe84
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - entity_reference_revisions
     - node
     - paragraphs
+_core:
+  default_config_hash: Lvie3cyCuOUfQFkSWhAb7w3INf0umNu2pwrYfSrzQO8
 id: node.su_person_components
 field_name: su_person_components
 entity_type: node

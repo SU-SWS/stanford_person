@@ -1,3 +1,4 @@
+uuid: 9a300347-9de7-4e7b-9fd4-de039cdcc126
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - field.storage.node.su_person_photo
     - media.type.image
     - node.type.stanford_person
+_core:
+  default_config_hash: XIpm0pE-LBmCqeRA2YRhJB12yY-OyCTvCLJVqJQg6WE
 id: node.stanford_person.su_person_photo
 field_name: su_person_photo
 entity_type: node

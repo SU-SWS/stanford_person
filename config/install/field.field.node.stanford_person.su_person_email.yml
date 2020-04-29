@@ -1,9 +1,12 @@
+uuid: 8473db51-b6c0-4614-a65a-74005739a9fd
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.su_person_email
     - node.type.stanford_person
+_core:
+  default_config_hash: pWDIMkoajuyyZRWfgAe6Jv6rPGEEQk547t0fPY5mK2Y
 id: node.stanford_person.su_person_email
 field_name: su_person_email
 entity_type: node

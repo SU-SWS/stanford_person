@@ -4,3 +4,5 @@ escape: true
 dependencies:
   config:
     - node.type.stanford_person
+_core:
+  default_config_hash: JxnbUO6Sg4D-Fcq1iznde4uaoq2eHipzPPxDIeK1fpM

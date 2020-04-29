@@ -1,9 +1,12 @@
+uuid: 78a48c05-84d1-4682-b6b5-e1a72710275c
 langcode: en
 status: true
 dependencies:
   config:
     - system.menu.stanford-person-type
     - taxonomy.vocabulary.stanford_person_types
+_core:
+  default_config_hash: lTq4H1eH8GW-ybVro1ojwDFeRoSNPODJ5TUnPRAk_tY
 id: person_type_menu
 label: 'Person Type Menu'
 vocabulary: stanford_person_types

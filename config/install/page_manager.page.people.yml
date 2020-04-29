@@ -1,6 +1,9 @@
+uuid: 96d153fb-4d0d-4ee2-b5c2-d060c17ea048
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: NIiCTKi04kgfvHwWVjhsDFDN5ughhLVd26qloydVSrc
 id: people
 label: People
 description: 'People listing page'

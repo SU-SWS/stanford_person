@@ -1,9 +1,12 @@
+uuid: a9373466-cce6-46e7-b91e-e246f67905a7
 langcode: en
 status: true
 dependencies:
   module:
     - media
     - node
+_core:
+  default_config_hash: a57O45HTHpwql1KciKBS9lfAKjBsr83ZrKK8UHsO4GM
 id: node.su_person_photo
 field_name: su_person_photo
 entity_type: node

@@ -1,3 +1,4 @@
+uuid: 698d92db-4346-486d-80d7-23957f8aae00
 langcode: en
 status: true
 dependencies:
@@ -12,6 +13,8 @@ dependencies:
     - taxonomy
     - user
     - views_infinite_scroll
+_core:
+  default_config_hash: hjvmLrXzoIOByAHk_9s0G6YZKEl4jlnMJHb5h8K-sog
 id: stanford_people
 label: People
 module: views

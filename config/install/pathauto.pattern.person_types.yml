@@ -1,9 +1,12 @@
+uuid: b87fe1de-6d86-4661-9f67-97645be1c5e5
 langcode: en
 status: true
 dependencies:
   module:
     - ctools
     - taxonomy
+_core:
+  default_config_hash: nz25sVfTn8MP5R1neHbTcCZYUfhjKA7Bwp3BxheZQXo
 id: person_types
 label: 'Person Types'
 type: 'canonical_entities:taxonomy_term'

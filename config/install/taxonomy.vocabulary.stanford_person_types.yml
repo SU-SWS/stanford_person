@@ -1,6 +1,9 @@
+uuid: 1839f0e2-fc88-49ec-b9bf-d3dcfbd8e1b6
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: m61E6jXHbGBNBwBH0I722h-VEwt5ZpvwtGz_tJbUH60
 name: 'Person Types'
 vid: stanford_person_types
 description: 'Categorization of people'

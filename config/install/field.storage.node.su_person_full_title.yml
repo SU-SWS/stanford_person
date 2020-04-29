@@ -1,8 +1,11 @@
+uuid: 4435e41a-4cdc-466a-8c72-8df9e75f1811
 langcode: en
 status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: oSiS4orbnkYAE9LomeaO6lK-7swPJAOWnp9I9uPpxfc
 id: node.su_person_full_title
 field_name: su_person_full_title
 entity_type: node

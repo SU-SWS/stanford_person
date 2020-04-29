@@ -1,9 +1,12 @@
+uuid: fa621cce-abb7-465e-a7d3-25e5bfe58c87
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - text
+_core:
+  default_config_hash: VAMT-vn1UPZverHLNC1UVHHO8KVYOOTkRSuw0EQ3Stw
 id: node.su_person_research
 field_name: su_person_research
 entity_type: node

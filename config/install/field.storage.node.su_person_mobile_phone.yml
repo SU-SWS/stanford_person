@@ -1,8 +1,11 @@
+uuid: 358ba37e-9e4d-4a57-966e-1025311f93e2
 langcode: en
 status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: 4ysZ9ruil4qmdMk_3dRczy-jFGbs7tusQyCHaqvmbTc
 id: node.su_person_mobile_phone
 field_name: su_person_mobile_phone
 entity_type: node
