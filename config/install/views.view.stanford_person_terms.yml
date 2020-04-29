@@ -5,7 +5,6 @@ dependencies:
   config:
     - taxonomy.vocabulary.stanford_person_types
   module:
-    - stanford_fields
     - taxonomy
     - text
     - user
@@ -94,22 +93,22 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
-          element_class: ''
+          element_type: h1
+          element_class: page-title
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: entity_title_heading
+          type: string
           settings:
-            tag: h1
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
