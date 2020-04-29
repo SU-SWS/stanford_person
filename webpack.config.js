@@ -47,7 +47,8 @@ var webpackConfig = {
   // What build?
   entry: {
     "stanford_person.script": path.resolve(srcJS, "stanford_person.js"),
-    "stanford_person.styles": path.resolve(srcSass, "stanford_person.scss"),
+    "stanford_person.node":   path.resolve(srcSass, "stanford_person.node.scss"),
+    "stanford_person.views":  path.resolve(srcSass, "stanford_person.views.scss"),
   },
   // Where put build?
   output: {

@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/admin\/structure\/menu\/item\/13\/edit?_format=hal_json"
+            "href": "http:\/\/default\/admin\/structure\/menu\/item\/17\/edit?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/menu_link_content\/menu_link_content"
@@ -9,17 +9,17 @@
     },
     "id": [
         {
-            "value": 13
+            "value": 17
         }
     ],
     "uuid": [
         {
-            "value": "e635159f-4b50-4016-bbf6-41113adbff65"
+            "value": "a5f9f185-b376-4cab-b3bd-dc3b03617cea"
         }
     ],
     "revision_id": [
         {
-            "value": 4
+            "value": 7
         }
     ],
     "langcode": [
@@ -35,7 +35,7 @@
     ],
     "revision_created": [
         {
-            "value": "2019-08-27T23:12:50+00:00",
+            "value": "2020-04-29T23:13:57+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -46,18 +46,24 @@
     ],
     "title": [
         {
-            "value": "Resources",
+            "value": "All",
+            "lang": "en"
+        }
+    ],
+    "description": [
+        {
+            "value": "The people link",
             "lang": "en"
         }
     ],
     "menu_name": [
         {
-            "value": "main"
+            "value": "stanford-person-type"
         }
     ],
     "link": [
         {
-            "uri": "entity:node\/7",
+            "uri": "internal:\/people",
             "title": "",
             "options": []
         }
@@ -69,12 +75,12 @@
     ],
     "rediscover": [
         {
-            "value": false
+            "value": true
         }
     ],
     "weight": [
         {
-            "value": -48
+            "value": -50
         }
     ],
     "expanded": [
@@ -84,7 +90,7 @@
     ],
     "changed": [
         {
-            "value": "2019-10-11T17:53:17+00:00",
+            "value": "2020-04-29T23:13:57+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }

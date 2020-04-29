@@ -7,16 +7,32 @@
  * Long description.
  */
 
+use Drupal\views\ViewExecutable;
+use Drupal\node\NodeInterface;
+
 /**
- * Implements hook_page_attachments.
+ * Implements hook_views_pre_render().
  */
-function stanford_person_page_attachments(array &$page) {
+function stanford_person_views_pre_render(ViewExecutable $view) {
+  if (isset($view) && ($view->storage->id() == 'stanford_person')) {
+    $view->element['#attached']['library'][] = 'stanford_person/views';
+  }
+}
 
-  // Uncomment to add a library to all pages. It is recommended that you don't
-  // just add a library to all pages but rather, conditionally require this
-  // library only where it is needed.
-  // See: https://www.drupal.org/node/2274843
+/**
+ * Implements hook_preprocess_node().
+ */
+function stanford_person_page_attachments(array &$attachments) {
+  // Get the node from the route.
+  $node = \Drupal::routeMatch()->getParameter('node');
 
-  // $page['#attached']['library'][] = 'stanford_person/stanford_person';
+  // Not a node.. Then just continue.
+  if (!$node instanceof NodeInterface) {
+    return;
+  }
 
+  // Check for our type and add library if a match.
+  if ($node->getType() == "stanford_person") {
+    $attachments['#attached']['library'][] = 'stanford_person/node';
+  }
 }

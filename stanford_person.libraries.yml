@@ -43,10 +43,19 @@
 #
 # EXAMPLE:
 #
-stanford_person:
+node:
   version: VERSION
   css:
     component:
-      dist/css/stanford_person.styles.css: {}
+      dist/css/stanford_person.node.css: {}
   js:
     dist/js/stanford_person.script.js: {}
+
+views:
+  version: VERSION
+  css:
+    component:
+      dist/css/stanford_person.views.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

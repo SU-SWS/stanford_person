@@ -24,6 +24,7 @@ dependencies:
     - field.field.node.stanford_person.su_person_research_interests
     - field.field.node.stanford_person.su_person_short_title
     - field.field.node.stanford_person.su_person_telephone
+    - field.field.node.stanford_person.su_person_type
     - node.type.stanford_person
   module:
     - entity_reference_revisions
@@ -212,6 +213,22 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
+            additional: {  }
+            weight: 0
+          2ce0d1f5-d3e1-4d49-9d9f-4b62a6e11345:
+            uuid: 2ce0d1f5-d3e1-4d49-9d9f-4b62a6e11345
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:stanford_person:su_person_type'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
             additional: {  }
             weight: 0
         third_party_settings: {  }
@@ -715,6 +732,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  su_person_type:
+    weight: 122
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
 hidden:
   layout_builder__layout: true

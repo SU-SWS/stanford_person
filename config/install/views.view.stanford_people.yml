@@ -443,6 +443,30 @@ display:
           entity_field: type
           plugin_id: bundle
       sorts:
+        su_person_last_name_value:
+          id: su_person_last_name_value
+          table: node__su_person_last_name
+          field: su_person_last_name_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
+        su_person_first_name_value:
+          id: su_person_first_name_value
+          table: node__su_person_first_name
+          field: su_person_first_name_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
         created:
           id: created
           table: node_field_data
@@ -523,6 +547,7 @@ display:
           reduce_duplicates: false
           plugin_id: taxonomy_index_tid
       display_extenders: {  }
+      use_ajax: true
     cache_metadata:
       max-age: -1
       contexts:

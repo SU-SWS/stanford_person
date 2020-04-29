@@ -23,17 +23,15 @@ variant_settings:
         columns: default
         label: Header
       components:
-        1aa402a8-d32e-4c0d-88c8-350e4d8e54fb:
-          uuid: 1aa402a8-d32e-4c0d-88c8-350e4d8e54fb
+        ce591c2b-be2f-4117-9419-71d5a3784c99:
+          uuid: ce591c2b-be2f-4117-9419-71d5a3784c99
           region: main
           configuration:
-            id: 'block_content:fb905cf3-4bd3-4bcd-ad01-92d25e46ba32'
-            label: 'People Banner'
-            provider: block_content
-            label_display: visible
-            status: true
-            info: ''
-            view_mode: full
+            id: jumpstart_ui_page_title
+            label: 'Custom Page Title'
+            provider: jumpstart_ui
+            label_display: '0'
+            page_title: Person
             context_mapping: {  }
           additional: {  }
           weight: 0
@@ -71,7 +69,7 @@ variant_settings:
             id: jumpstart_ui_skipnav_main_anchor
             label: 'Main content anchor target'
             provider: jumpstart_ui
-            label_display: visible
+            label_display: '0'
             context_mapping: {  }
           additional: {  }
           weight: 0
@@ -85,6 +83,20 @@ variant_settings:
             label_display: '0'
             views_label: ''
             items_per_page: none
+            context_mapping: {  }
+          additional: {  }
+          weight: 2
+        1aa402a8-d32e-4c0d-88c8-350e4d8e54fb:
+          uuid: 1aa402a8-d32e-4c0d-88c8-350e4d8e54fb
+          region: main
+          configuration:
+            id: 'block_content:fb905cf3-4bd3-4bcd-ad01-92d25e46ba32'
+            label: 'People Banner'
+            provider: block_content
+            label_display: '0'
+            status: true
+            info: ''
+            view_mode: full
             context_mapping: {  }
           additional: {  }
           weight: 1

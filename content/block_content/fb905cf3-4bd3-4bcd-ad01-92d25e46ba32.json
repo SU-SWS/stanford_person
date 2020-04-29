@@ -24,7 +24,7 @@
     ],
     "revision_id": [
         {
-            "value": 3
+            "value": 2
         }
     ],
     "langcode": [
@@ -52,13 +52,13 @@
     ],
     "info": [
         {
-            "value": "People Banner",
+            "value": "People Intro",
             "lang": "en"
         }
     ],
     "changed": [
         {
-            "value": "2020-04-28T17:04:39+00:00",
+            "value": "2020-04-29T21:21:17+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -106,7 +106,7 @@
                         "value": "01072cf4-793d-4262-8182-b44be7287951"
                     }
                 ],
-                "target_revision_id": "22"
+                "target_revision_id": "19"
             }
         ]
     }
