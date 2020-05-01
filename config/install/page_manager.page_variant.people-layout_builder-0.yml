@@ -31,6 +31,7 @@ variant_settings:
             label: 'Custom Page Title'
             provider: jumpstart_ui
             label_display: '0'
+            wrapper: h1
             page_title: Person
             context_mapping: {  }
           additional: {  }
