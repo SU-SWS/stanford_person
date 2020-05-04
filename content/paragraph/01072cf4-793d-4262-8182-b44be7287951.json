@@ -7,19 +7,9 @@
             "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/stanford_wysiwyg"
         }
     },
-    "id": [
-        {
-            "value": 129
-        }
-    ],
     "uuid": [
         {
             "value": "01072cf4-793d-4262-8182-b44be7287951"
-        }
-    ],
-    "revision_id": [
-        {
-            "value": 19
         }
     ],
     "langcode": [
@@ -48,7 +38,7 @@
     ],
     "parent_id": [
         {
-            "value": "4"
+            "value": "fb905cf3-4bd3-4bcd-ad01-92d25e46ba32"
         }
     ],
     "parent_type": [

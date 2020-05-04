@@ -4,5 +4,27 @@ description: 'A person bio and supporting information content type'
 core_version_requirement: ^8 || ^9
 package: Stanford
 version: 8.x-1.0-dev
-# dependencies:
-#   - layout_plugin
+dependencies:
+  - auto_entitylabel:auto_entitylabel
+  - ctools:ctools
+  - drupal:allowed_formats
+  - drupal:layout_builder
+  - drupal:link
+  - drupal:node
+  - drupal:media_library
+  - drupal:menu_ui
+  - drupal:paragraphs
+  - drupal:path
+  - drupal:taxonomy
+  - drupal:text
+  - drupal:views
+  - entity_reference_revisions:entity_reference_revisions
+  - jumpstart_ui:jumpstart_ui
+  - layout_builder_restrictions:layout_builder_restrictions
+  - layout_library:layout_library
+  - metatag:metatag
+  - page_manager:page_manager
+  - page_manager:page_manager_ui
+  - stanford_media:stanford_media
+  - taxonomy_menu:taxonomy_menu
+  - views_infinite_scroll:views_infinite_scroll

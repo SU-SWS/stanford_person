@@ -5,7 +5,7 @@ dependencies:
   config:
     - page_manager.page.people
 _core:
-  default_config_hash: erxTyRoKlGM1TGrh7AX9s9Pt6XN1sM_64nIAZOLT2ig
+  default_config_hash: 0Y9TNpDv6AWzsJuj1m6exJ6cbgy-vUZ8kCqCQHWhpQ4
 id: people-layout_builder-0
 label: 'Layout Builder'
 variant: layout_builder
@@ -23,16 +23,16 @@ variant_settings:
         columns: default
         label: Header
       components:
-        ce591c2b-be2f-4117-9419-71d5a3784c99:
-          uuid: ce591c2b-be2f-4117-9419-71d5a3784c99
+        21416df0-1bf9-492d-9c81-23b8de4debc9:
+          uuid: 21416df0-1bf9-492d-9c81-23b8de4debc9
           region: main
           configuration:
-            id: jumpstart_ui_page_title
-            label: 'Custom Page Title'
+            id: jumpstart_ui_page_heading
+            label: 'Heading Block'
             provider: jumpstart_ui
             label_display: '0'
+            heading_text: People
             wrapper: h1
-            page_title: Person
             context_mapping: {  }
           additional: {  }
           weight: 0

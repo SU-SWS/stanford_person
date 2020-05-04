@@ -33,19 +33,9 @@
             }
         ]
     },
-    "nid": [
-        {
-            "value": 13
-        }
-    ],
     "uuid": [
         {
             "value": "6df8090b-5dca-4386-9d72-d86e0156c0a9"
-        }
-    ],
-    "vid": [
-        {
-            "value": 112
         }
     ],
     "langcode": [
@@ -115,8 +105,7 @@
                     {
                         "value": "3e8e3b0e-7803-4713-9f37-7c479f9b3365"
                     }
-                ],
-                "target_revision_id": "221"
+                ]
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/stanford_person\/su_person_photo": [
@@ -218,19 +207,8 @@
     "path": [
         {
             "alias": "\/person\/haley-jackson",
-            "pid": 22,
             "langcode": "en",
             "lang": "en"
-        }
-    ],
-    "rh_action": [
-        {
-            "value": "bundle_default"
-        }
-    ],
-    "rh_redirect_response": [
-        {
-            "value": 301
         }
     ],
     "body": [

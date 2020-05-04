@@ -7,5 +7,30 @@
   "license": "GPL-2.0+",
   "minimum-stability": "dev",
   "prefer-stable": true,
-  "require": {}
+  "require": {
+    "drupal/auto_entitylabel": "3.x-dev#1dd28579f4559cc03d09ab20143b1feb48644fac",
+    "drupal/ctools": "^3.4",
+    "drupal/default_content": "^1.0-alpha8",
+    "drupal/metatag": "^1.13",
+    "drupal/page_manager": "dev-4.x#78b492786c841c5d2eb07f6d977275a76b79e46f",
+    "drupal/taxonomy_menu": "^3.4",
+    "drupal/views_block_filter_block": "^1.0",
+    "drupal/views_infinite_scroll": "^1.6",
+    "drupal/views_taxonomy_term_name_depth": "^6.0",
+    "su-sws/stanford_media": "dev-8.x-2.x",
+    "su-sws/jumpstart_ui": "dev-8.x-1.x"
+  },
+  "extra": {
+    "enable-patching": true,
+    "patches": {
+      "drupal/default_content": {
+        "https://www.drupal.org/project/default_content/issues/2698425":
+        "https://www.drupal.org/files/issues/2020-02-05/2698425--accept-content-updates--122.patch"
+      },
+      "drupal/core": {
+        "https://www.drupal.org/project/drupal/issues/3039185":
+        "https://www.drupal.org/files/issues/2020-04-17/allow-field-blocks-to-display-label-in-layout-builder-3039185-22.patch"
+      }
+    }
+  }
 }
