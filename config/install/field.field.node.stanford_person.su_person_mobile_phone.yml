@@ -1,3 +1,4 @@
+uuid: 8a960ccc-c113-4335-baa2-1a2e0a671246
 langcode: en
 status: true
 dependencies:
@@ -5,7 +6,7 @@ dependencies:
     - field.storage.node.su_person_mobile_phone
     - node.type.stanford_person
 _core:
-  default_config_hash: DZxdgM0sb1hhj0NiTGXcst8oIKQevMtqbckt25KNzqM
+  default_config_hash: '-NA0HLz1PDpgNTCMdcfB8ZJecE0Aa2wlZVcfYBXNCIQ'
 id: node.stanford_person.su_person_mobile_phone
 field_name: su_person_mobile_phone
 entity_type: node

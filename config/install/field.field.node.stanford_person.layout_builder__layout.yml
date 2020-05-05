@@ -1,3 +1,4 @@
+uuid: a5a474f2-4b21-4c9c-9e55-b65acf7b9cde
 langcode: en
 status: true
 dependencies:
@@ -7,7 +8,7 @@ dependencies:
   module:
     - layout_builder
 _core:
-  default_config_hash: jGgFRqfI1CN4VovZC-ag5olTY3dlt4AESc9lzVMCLgc
+  default_config_hash: 2_l1D0_6FtIGRNPsvxbyHNX9E_OVwSRzdK-yVmvNHqE
 id: node.stanford_person.layout_builder__layout
 field_name: layout_builder__layout
 entity_type: node

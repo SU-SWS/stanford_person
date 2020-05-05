@@ -1,10 +1,11 @@
+uuid: e80a119b-99dc-4459-b622-da4fc5046bb8
 langcode: en
 status: true
 dependencies:
   module:
     - node
 _core:
-  default_config_hash: 3qQpfy7wOXVu6Sa_w9322ayMrdcBUWvGMfUeWigHqqQ
+  default_config_hash: RXVDp0I2sNt1MlvGNqQbhpslBz02vHIZGh_hSsRzkAM
 id: person
 label: Person
 type: 'canonical_entities:node'

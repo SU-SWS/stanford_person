@@ -1,10 +1,11 @@
+uuid: 5d766e10-0928-493c-b968-d7a70e4a34a5
 langcode: en
 status: true
 dependencies:
   config:
     - node.type.stanford_person
 _core:
-  default_config_hash: eaJhA8iH5u6DZv9spZPfATj_MPlq-H47T5xJI02vOdA
+  default_config_hash: YBNHUQuOFWt5bDi4quMpHR7abi3LgPNpLNyScd-QFmA
 id: node.stanford_person.title
 field_name: title
 entity_type: node

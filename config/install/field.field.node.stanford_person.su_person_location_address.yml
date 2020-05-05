@@ -1,3 +1,4 @@
+uuid: 7a3c44cb-afcc-4943-a8ad-03e783c021dc
 langcode: en
 status: true
 dependencies:
@@ -13,7 +14,7 @@ third_party_settings:
     stanford_minimal_html: '0'
     plain_text: '0'
 _core:
-  default_config_hash: r1gAZd_Wwd_MlVA3YPatQPAwfzdb8FNTwB0P_a5G9SU
+  default_config_hash: o9KXDuWyeZDEPvNg6erMwx-_DZ_qXgWQAp797XyWNA4
 id: node.stanford_person.su_person_location_address
 field_name: su_person_location_address
 entity_type: node

@@ -1,10 +1,11 @@
+uuid: c15595e7-9723-44b4-8fcc-34ef763ad6ec
 langcode: en
 status: true
 dependencies:
   module:
     - node
 _core:
-  default_config_hash: kr-SnWbv2ebJ-CE7mXKx5DkvWcNXg2YEhosCM8dpFww
+  default_config_hash: WCEz51dxXUeLJNkOVRg1PHSHkw6Sz2utDpEPQaeWckQ
 id: node.su_person_education
 field_name: su_person_education
 entity_type: node

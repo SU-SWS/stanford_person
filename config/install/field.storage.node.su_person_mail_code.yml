@@ -1,10 +1,11 @@
+uuid: 7cf3f76f-3c3c-4194-b312-63cc3ba1bd46
 langcode: en
 status: true
 dependencies:
   module:
     - node
 _core:
-  default_config_hash: A_Ph21oPHRz90d-K83LrHwde4CJhOHxTRmn_BZFIsTY
+  default_config_hash: 9WuxpjUQSAdoBtJi6qNeq008fLbhTAp07ca_1XawTmw
 id: node.su_person_mail_code
 field_name: su_person_mail_code
 entity_type: node

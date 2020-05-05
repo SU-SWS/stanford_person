@@ -1,3 +1,4 @@
+uuid: 97327b76-88e5-4e0f-b61b-79f87dc6f344
 langcode: en
 status: true
 dependencies:
@@ -5,7 +6,7 @@ dependencies:
     - field.storage.node.su_person_full_title
     - node.type.stanford_person
 _core:
-  default_config_hash: fAMzUpvqC5CfRI6uRLu2FHV4Rd_lLoqxgAi1zBH6Xks
+  default_config_hash: 4NvAw2sCcdnCRZYe2Hp-GnoWzYjywIZe3LBEI6grOQo
 id: node.stanford_person.su_person_full_title
 field_name: su_person_full_title
 entity_type: node

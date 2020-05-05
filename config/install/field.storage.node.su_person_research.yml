@@ -1,3 +1,4 @@
+uuid: 4ab97f91-d20d-4207-9f77-d2f3416a85bb
 langcode: en
 status: true
 dependencies:
@@ -5,7 +6,7 @@ dependencies:
     - node
     - text
 _core:
-  default_config_hash: VAMT-vn1UPZverHLNC1UVHHO8KVYOOTkRSuw0EQ3Stw
+  default_config_hash: vOGI0OUPzKXkc0YXazjrPvGU0HeoGzZaR2WaRuu4Xyk
 id: node.su_person_research
 field_name: su_person_research
 entity_type: node

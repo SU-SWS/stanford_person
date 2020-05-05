@@ -1,3 +1,4 @@
+uuid: 43405a2c-4332-4051-9fb9-acfd81cf4bd9
 langcode: en
 status: true
 dependencies:
@@ -7,7 +8,7 @@ dependencies:
   module:
     - entity_reference_revisions
 _core:
-  default_config_hash: cguH1-S3fM9lekQwKN-Z2kNr40ceEInSmyHE8-Iyu-A
+  default_config_hash: kxZz9NVKpjluhtJ8BM_6QDg6Y26j4RG8ECfGHCcMpWE
 id: node.stanford_person.su_person_components
 field_name: su_person_components
 entity_type: node

@@ -1,10 +1,11 @@
+uuid: efb8f1fe-edd7-42a6-8cf4-b0865d8f1717
 langcode: en
 status: true
 dependencies:
   module:
     - node
 _core:
-  default_config_hash: 4jVpeHmkAcOdIgPV_YuZJT5NAvkMXTyddA3K7wWkQKE
+  default_config_hash: LhAhLt21dioRyokE0lHn4OB_oko30XvJSzVxHgXDjDM
 id: node.su_person_location_name
 field_name: su_person_location_name
 entity_type: node

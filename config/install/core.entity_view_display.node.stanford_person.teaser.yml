@@ -1,3 +1,4 @@
+uuid: 26e63a07-9002-4e65-8220-427684b4323a
 langcode: en
 status: true
 dependencies:
@@ -17,10 +18,10 @@ dependencies:
     - field.field.node.stanford_person.su_person_location_address
     - field.field.node.stanford_person.su_person_location_name
     - field.field.node.stanford_person.su_person_mail_code
+    - field.field.node.stanford_person.su_person_map_url
     - field.field.node.stanford_person.su_person_mobile_phone
     - field.field.node.stanford_person.su_person_photo
     - field.field.node.stanford_person.su_person_research
-    - field.field.node.stanford_person.su_person_research_interests
     - field.field.node.stanford_person.su_person_short_title
     - field.field.node.stanford_person.su_person_telephone
     - field.field.node.stanford_person.su_person_type
@@ -29,7 +30,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: mllvVfWqXlxeskUSRRyC2cNQUgPfU6epiQT97JQ3Q2g
+  default_config_hash: N0EZcj0R0XgRwVP5zjvCNA97dH-fqITu_BmvQHxbhHo
 id: node.stanford_person.teaser
 targetEntityType: node
 bundle: stanford_person
@@ -62,10 +63,10 @@ hidden:
   su_person_location_address: true
   su_person_location_name: true
   su_person_mail_code: true
+  su_person_map_url: true
   su_person_mobile_phone: true
   su_person_photo: true
   su_person_research: true
-  su_person_research_interests: true
   su_person_short_title: true
   su_person_telephone: true
   su_person_type: true

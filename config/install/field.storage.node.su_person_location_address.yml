@@ -1,3 +1,4 @@
+uuid: 113602b5-835b-49a1-bad8-c2825605caad
 langcode: en
 status: true
 dependencies:
@@ -5,7 +6,7 @@ dependencies:
     - node
     - text
 _core:
-  default_config_hash: 3R0hmtHKOFx0wjNhBjGVSxdvSmMDhpVYE_H-0Abb3dA
+  default_config_hash: kURLIfoac2tkl2Ut57abM8pzVZYgqcyud8EUSLfX0es
 id: node.su_person_location_address
 field_name: su_person_location_address
 entity_type: node

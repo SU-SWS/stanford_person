@@ -1,3 +1,4 @@
+uuid: a0fa1a7e-ffc0-4192-b9a8-202489385885
 langcode: en
 status: true
 dependencies:
@@ -13,7 +14,7 @@ third_party_settings:
     plain_text: plain_text
     stanford_html: '0'
 _core:
-  default_config_hash: 4qt0EMkeoCcS50DuLx7_eD5mDIjYKeg4FKUrq5gcJVw
+  default_config_hash: gTC5D2tbIkCL0aamvr8s80YIWop7RSXdxlXoVIcPx2E
 id: node.stanford_person.su_person_research
 field_name: su_person_research
 entity_type: node

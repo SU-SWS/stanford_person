@@ -1,0 +1,20 @@
+uuid: 9c7cc362-e159-4772-9711-176b60f6115b
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+id: paragraph.su_person_type_primary
+field_name: su_person_type_primary
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

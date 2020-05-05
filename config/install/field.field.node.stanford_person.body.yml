@@ -1,3 +1,4 @@
+uuid: e58123c4-75d8-4f3c-bb85-7e929798f78e
 langcode: en
 status: true
 dependencies:
@@ -7,7 +8,7 @@ dependencies:
   module:
     - text
 _core:
-  default_config_hash: RsNfGQHaWhRVJWPC4fxdlOxjAZC3I64Eudjb5G3NO90
+  default_config_hash: YPQw1ALW8g_4k9sBo0tAu0PBW86Id2VhDXjt6-3puPk
 id: node.stanford_person.body
 field_name: body
 entity_type: node

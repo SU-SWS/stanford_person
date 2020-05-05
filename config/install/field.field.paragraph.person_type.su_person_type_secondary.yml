@@ -1,0 +1,29 @@
+uuid: 51acc0cd-192d-48d4-964f-33d518781490
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.su_person_type_secondary
+    - paragraphs.paragraphs_type.person_type
+    - taxonomy.vocabulary.person_types_groups
+id: paragraph.person_type.su_person_type_secondary
+field_name: su_person_type_secondary
+entity_type: paragraph
+bundle: person_type
+label: 'Person Type Group'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      person_types_groups: person_types_groups
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

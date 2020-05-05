@@ -1,3 +1,4 @@
+uuid: 9b9eb9bc-ea9d-46ea-b449-3c18842d85f4
 langcode: en
 status: true
 dependencies:
@@ -9,7 +10,7 @@ third_party_settings:
       - main
     parent: 'main:'
 _core:
-  default_config_hash: MhwLy4ho5djFu4-kQfNt1rzdASWiuEm5nteCwAap5hk
+  default_config_hash: 6EahYLSjieT-4rfd5ESGUyDmb4BEjrnGYRfk6cHwVn4
 name: Person
 type: stanford_person
 description: 'Stanford Person type with bio and supporting information. Content-type for syncing with CAP data.'

@@ -1,3 +1,4 @@
+uuid: 5321f9a9-28e5-4cd7-9c87-36e3ffa43e54
 langcode: en
 status: true
 dependencies:
@@ -5,7 +6,7 @@ dependencies:
     - ctools
     - taxonomy
 _core:
-  default_config_hash: nz25sVfTn8MP5R1neHbTcCZYUfhjKA7Bwp3BxheZQXo
+  default_config_hash: PVq0240LvBjIu4us8XcunpfvcxQ-sMOb-mZIt5YZOF4
 id: person_types
 label: 'Person Types'
 type: 'canonical_entities:taxonomy_term'

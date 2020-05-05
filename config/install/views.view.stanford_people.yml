@@ -1,19 +1,22 @@
+uuid: 02e6d4fa-a6a7-4163-b66c-f91ca7633571
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.su_person_photo
     - field.storage.node.su_person_short_title
+    - field.storage.paragraph.su_person_type_primary
+    - field.storage.paragraph.su_person_type_secondary
     - node.type.stanford_person
-    - taxonomy.vocabulary.stanford_person_types
   module:
     - node
+    - paragraphs
     - stanford_media
     - taxonomy
     - user
     - views_infinite_scroll
 _core:
-  default_config_hash: mDHJKsJ75TE0ZwFMigUO5qJmax5gRpDZXsoT8UGc-s0
+  default_config_hash: cdhMlVKHlvLDn38cN08Xq9fiBwQ3MJvYub-fnM_Uc5c
 id: stanford_people
 label: People
 module: views
@@ -39,7 +42,7 @@ display:
         type: views_query
         options:
           disable_sql_rewrite: false
-          distinct: false
+          distinct: true
           replica: false
           query_comment: ''
           query_tags: {  }
@@ -77,7 +80,11 @@ display:
       style:
         type: grid
         options:
-          grouping: {  }
+          grouping:
+            -
+              field: su_person_type_secondary
+              rendered: true
+              rendered_strip: false
           columns: 3
           automatic_width: true
           alignment: horizontal
@@ -385,6 +392,132 @@ display:
           absolute: false
           entity_type: node
           plugin_id: entity_link_edit
+        su_person_type_primary:
+          id: su_person_type_primary
+          table: paragraph__su_person_type_primary
+          field: su_person_type_primary
+          relationship: su_person_type
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        su_person_type_secondary:
+          id: su_person_type_secondary
+          table: paragraph__su_person_type_secondary
+          field: su_person_type_secondary
+          relationship: su_person_type
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: '0'
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
       filters:
         status:
           value: '1'
@@ -496,13 +629,69 @@ display:
           tokenize: false
           content: 'Sorry, no results found. Try another filter.'
           plugin_id: text_custom
-      relationships: {  }
-      arguments:
-        tid:
-          id: tid
-          table: taxonomy_index
-          field: tid
+      relationships:
+        su_person_type:
+          id: su_person_type
+          table: node__su_person_type
+          field: su_person_type
+          plugin_id: standard
+      arguments: {  }
+      display_extenders: {  }
+      use_ajax: true
+      css_class: 'stanford-people-grid stanford-people-grid--all'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.su_person_photo'
+        - 'config:field.storage.node.su_person_short_title'
+        - 'config:field.storage.paragraph.su_person_type_primary'
+        - 'config:field.storage.paragraph.su_person_type_secondary'
+  grid_list:
+    display_plugin: block
+    id: grid_list
+    display_title: 'People Grid Page'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      display_description: 'A list of people on a grid page view'
+      block_description: 'People Grid'
+      block_category: 'People Lists (Views)'
+      relationships:
+        su_person_type:
+          id: su_person_type
+          table: node__su_person_type
+          field: su_person_type
           relationship: none
+          group_type: group
+          admin_label: 'su_person_type: Paragraph'
+          required: true
+          plugin_id: standard
+        su_person_type_secondary:
+          id: su_person_type_secondary
+          table: paragraph__su_person_type_secondary
+          field: su_person_type_secondary
+          relationship: su_person_type
+          group_type: group
+          admin_label: 'su_person_type_secondary: Taxonomy term'
+          required: false
+          plugin_id: standard
+      defaults:
+        relationships: false
+        arguments: false
+        css_class: false
+        sorts: false
+      arguments:
+        su_person_type_primary_target_id:
+          id: su_person_type_primary_target_id
+          table: paragraph__su_person_type_primary
+          field: su_person_type_primary_target_id
+          relationship: su_person_type
           group_type: group
           admin_label: ''
           default_action: default
@@ -516,10 +705,9 @@ display:
           default_argument_options:
             term_page: '1'
             node: true
-            limit: true
-            vids:
-              stanford_person_types: stanford_person_types
             anyall: +
+            limit: false
+            vids: {  }
           default_argument_skip_url: false
           summary_options:
             base_path: ''
@@ -530,23 +718,69 @@ display:
             sort_order: asc
             number_of_records: 0
             format: default_summary
-          specify_validation: true
+          specify_validation: false
           validate:
-            type: 'entity:taxonomy_term'
-            fail: empty
-          validate_options:
-            bundles:
-              stanford_person_types: stanford_person_types
-            access: true
-            operation: view
-            multiple: 0
-          break_phrase: true
-          add_table: false
-          require_value: false
-          reduce_duplicates: false
-          plugin_id: taxonomy_index_tid
-      display_extenders: {  }
-      use_ajax: true
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          not: false
+          plugin_id: numeric
+      css_class: 'stanford-people-grid stanford-people-grid--filters'
+      sorts:
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: su_person_type_secondary
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
+          plugin_id: standard
+        su_person_last_name_value:
+          id: su_person_last_name_value
+          table: node__su_person_last_name
+          field: su_person_last_name_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
+        su_person_first_name_value:
+          id: su_person_first_name_value
+          table: node__su_person_first_name
+          field: su_person_first_name_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
     cache_metadata:
       max-age: -1
       contexts:
@@ -559,28 +793,8 @@ display:
       tags:
         - 'config:field.storage.node.su_person_photo'
         - 'config:field.storage.node.su_person_short_title'
-  grid_list:
-    display_plugin: block
-    id: grid_list
-    display_title: 'People Grid Page'
-    position: 1
-    display_options:
-      display_extenders: {  }
-      display_description: 'A list of people on a grid page view'
-      block_description: 'People Grid'
-      block_category: 'People Lists (Views)'
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - url.query_args
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.su_person_photo'
-        - 'config:field.storage.node.su_person_short_title'
+        - 'config:field.storage.paragraph.su_person_type_primary'
+        - 'config:field.storage.paragraph.su_person_type_secondary'
   grid_list_all:
     display_plugin: block
     id: grid_list_all
@@ -594,6 +808,307 @@ display:
       arguments: {  }
       defaults:
         arguments: false
+        relationships: false
+        fields: false
+      relationships: {  }
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          settings:
+            link_to_entity: true
+          plugin_id: field
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        su_person_photo:
+          id: su_person_photo
+          table: node__su_person_photo
+          field: su_person_photo
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: media_image_formatter
+          settings:
+            view_mode: default
+            image_style: stanford_circle
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        su_person_short_title:
+          id: su_person_short_title
+          table: node__su_person_short_title
+          field: su_person_short_title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        view_node:
+          id: view_node
+          table: node
+          field: view_node
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: view
+          output_url_as_text: false
+          absolute: false
+          entity_type: node
+          plugin_id: entity_link
+        edit_node:
+          id: edit_node
+          table: node
+          field: edit_node
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: edit
+          output_url_as_text: false
+          absolute: false
+          entity_type: node
+          plugin_id: entity_link_edit
     cache_metadata:
       max-age: -1
       contexts:
