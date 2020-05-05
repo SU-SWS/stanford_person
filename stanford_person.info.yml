@@ -22,7 +22,6 @@ dependencies:
   - jumpstart_ui:jumpstart_ui
   - layout_builder_restrictions:layout_builder_restrictions
   - layout_library:layout_library
-  - metatag:metatag
   - page_manager:page_manager
   - page_manager:page_manager_ui
   - stanford_media:stanford_media

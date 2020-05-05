@@ -43,7 +43,7 @@
     ],
     "revision_created": [
         {
-            "value": "2020-04-29T17:18:57+00:00",
+            "value": "2020-05-05T20:28:51+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -66,7 +66,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "b7e30b50-4bb4-4268-ac18-a03258807db3"
+                        "value": "d1eb4e35-63fe-43e4-be66-f6f66c7b0af7"
                     }
                 ],
                 "lang": "en"
@@ -143,16 +143,6 @@
         {
             "value": true,
             "lang": "en"
-        }
-    ],
-    "metatag": [
-        {
-            "value": {
-                "title": "| University",
-                "og_site_name": "University",
-                "canonical_url": "http:\/\/default\/home",
-                "og_url": "http:\/\/default\/home"
-            }
         }
     ],
     "path": [

@@ -1,0 +1,111 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/person_type"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/person_type\/su_person_type_primary": [
+            {
+                "href": "http:\/\/default\/people\/alumni?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/person_type\/su_person_type_secondary": [
+            {
+                "href": "http:\/\/default\/taxonomy\/term\/10?_format=hal_json"
+            }
+        ]
+    },
+    "uuid": [
+        {
+            "value": "b874cbd7-2742-4284-bdf4-e0bb9f89569d"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "person_type"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-05-05T21:37:32+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "6df8090b-5dca-4386-9d72-d86e0156c0a9"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "node"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "su_person_type"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/person_type\/su_person_type_primary": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/people\/alumni?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/stanford_person_types"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "6583b9b0-3a39-40b3-a354-f8a28ae45b80"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/person_type\/su_person_type_secondary": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/taxonomy\/term\/10?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/person_types_groups"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "57fe0347-c034-41c8-96c0-a69322e5d616"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -17,11 +17,6 @@
                 "lang": "en"
             }
         ],
-        "http:\/\/drupal.org\/rest\/relation\/node\/stanford_person\/su_person_components": [
-            {
-                "href": ""
-            }
-        ],
         "http:\/\/drupal.org\/rest\/relation\/node\/stanford_person\/su_person_photo": [
             {
                 "href": "http:\/\/default\/media\/12\/edit?_format=hal_json"
@@ -29,7 +24,13 @@
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/stanford_person\/su_person_type": [
             {
-                "href": "http:\/\/default\/people\/alumni?_format=hal_json"
+                "href": ""
+            },
+            {
+                "href": ""
+            },
+            {
+                "href": ""
             }
         ]
     },
@@ -51,7 +52,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2020-04-29T23:32:17+00:00",
+            "value": "2020-05-05T21:43:35+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -68,7 +69,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "b7e30b50-4bb4-4268-ac18-a03258807db3"
+                        "value": "d1eb4e35-63fe-43e4-be66-f6f66c7b0af7"
                     }
                 ]
             }
@@ -85,27 +86,10 @@
                 },
                 "uuid": [
                     {
-                        "value": "b7e30b50-4bb4-4268-ac18-a03258807db3"
+                        "value": "d1eb4e35-63fe-43e4-be66-f6f66c7b0af7"
                     }
                 ],
                 "lang": "en"
-            }
-        ],
-        "http:\/\/drupal.org\/rest\/relation\/node\/stanford_person\/su_person_components": [
-            {
-                "_links": {
-                    "self": {
-                        "href": ""
-                    },
-                    "type": {
-                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/stanford_wysiwyg"
-                    }
-                },
-                "uuid": [
-                    {
-                        "value": "3e8e3b0e-7803-4713-9f37-7c479f9b3365"
-                    }
-                ]
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/stanford_person\/su_person_photo": [
@@ -129,17 +113,50 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/default\/people\/alumni?_format=hal_json"
+                        "href": ""
                     },
                     "type": {
-                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/stanford_person_types"
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/person_type"
                     }
                 },
                 "uuid": [
                     {
-                        "value": "6583b9b0-3a39-40b3-a354-f8a28ae45b80"
+                        "value": "b874cbd7-2742-4284-bdf4-e0bb9f89569d"
                     }
-                ]
+                ],
+                "target_revision_id": "25"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/person_type"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "2d7d19d6-6942-401f-bc20-6d339faebe06"
+                    }
+                ],
+                "target_revision_id": "26"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/person_type"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "c38be6a2-68ef-4c51-a349-751e2fbe9bcc"
+                    }
+                ],
+                "target_revision_id": "27"
             }
         ]
     },
@@ -164,7 +181,7 @@
     ],
     "changed": [
         {
-            "value": "2020-04-29T23:32:17+00:00",
+            "value": "2020-05-05T21:43:35+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -193,20 +210,10 @@
             "lang": "en"
         }
     ],
-    "metatag": [
-        {
-            "value": {
-                "title": "Haley Jackson | University",
-                "og_site_name": "University",
-                "canonical_url": "http:\/\/default\/person\/haley-jackson",
-                "description": "This is a sample student bio for Sally Jacks. Nullam laoreet pulvinar nibh ut tempus. Aenean a enim in tellus mattis condimentum. Maecenas eu tristique sapien, mollis fringilla dolor. Vivamus nec laoreet metus. Praesent eu neque enim. Nam at neque sed arcu laoreet consequat. Donec feugiat sed magna tempus dignissim. Nunc pretium dolor justo, in hendrerit lectus scelerisque quis. Donec rhoncus condimentum interdum. Sed euismod varius diam quis suscipit. Vestibulum scelerisque gravida massa ut egestas. Maecenas sagittis nibh quis nibh tincidunt, a fringilla risus dictum.",
-                "og_url": "http:\/\/default\/home"
-            }
-        }
-    ],
     "path": [
         {
             "alias": "\/person\/haley-jackson",
+            "pid": null,
             "langcode": "en",
             "lang": "en"
         }
@@ -294,6 +301,13 @@
             "value": "3020"
         }
     ],
+    "su_person_map_url": [
+        {
+            "uri": "https:\/\/google.com\/",
+            "title": "",
+            "options": []
+        }
+    ],
     "su_person_mobile_phone": [
         {
             "value": "(555) 555-5555"
@@ -314,14 +328,6 @@
             "value": "research interest three",
             "format": "stanford_minimal_html",
             "processed": "research interest three"
-        }
-    ],
-    "su_person_research_interests": [
-        {
-            "value": "Environment"
-        },
-        {
-            "value": "Science"
         }
     ],
     "su_person_short_title": [

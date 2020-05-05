@@ -1,8 +1,0 @@
-status: 1
-pattern: '[node:su_person_first_name] [node:su_person_last_name]'
-escape: true
-dependencies:
-  config:
-    - node.type.stanford_person
-_core:
-  default_config_hash: 5JEX8bCx8vj5q0tBRFctFQqVa8Xf03EwlLQaBo0wD1Q

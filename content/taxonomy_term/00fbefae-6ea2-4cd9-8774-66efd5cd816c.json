@@ -1,0 +1,92 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/taxonomy\/term\/9?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/person_types_groups"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/person_types_groups\/parent": [
+            null
+        ]
+    },
+    "uuid": [
+        {
+            "value": "00fbefae-6ea2-4cd9-8774-66efd5cd816c"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "person_types_groups"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2020-05-05T21:15:39+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "name": [
+        {
+            "value": "Manager",
+            "lang": "en"
+        }
+    ],
+    "description": [
+        {
+            "value": "<p>Manager type<\/p>\r\n",
+            "format": "stanford_html",
+            "processed": "<p>Manager type<\/p>",
+            "lang": "en"
+        }
+    ],
+    "weight": [
+        {
+            "value": 0
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/person_types_groups\/parent": [
+            null
+        ]
+    },
+    "changed": [
+        {
+            "value": "2020-05-05T21:15:39+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ]
+}
