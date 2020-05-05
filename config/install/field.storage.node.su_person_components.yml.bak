@@ -1,0 +1,23 @@
+uuid: e391ea16-6a6c-4727-96c9-69bc0214388b
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - node
+    - paragraphs
+_core:
+  default_config_hash: FmAo6QNOxKpaKQ3vmJX5DN95fdD5Bz5IP7lUijJf88c
+id: node.su_person_components
+field_name: su_person_components
+entity_type: node
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

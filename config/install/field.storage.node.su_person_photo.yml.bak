@@ -1,0 +1,22 @@
+uuid: 67bdcbef-a34a-4b97-adc3-98a8a1894055
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - node
+_core:
+  default_config_hash: ZHY9EJlrhNOkpPyyvx2W3Kka9Qvddp5aoBxWnd7naJI
+id: node.su_person_photo
+field_name: su_person_photo
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

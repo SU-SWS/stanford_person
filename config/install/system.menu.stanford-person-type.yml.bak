@@ -1,0 +1,10 @@
+uuid: fc15857f-a77c-4ccb-84e8-ba98f17710ae
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1Lxb5x0ehU6EaxY-WXQOXNqV8U8Qf48rH1avEAfv_2k
+id: stanford-person-type
+label: 'Person Type'
+description: 'Taxonomy menu for person types'
+locked: false

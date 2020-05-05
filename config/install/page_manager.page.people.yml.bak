@@ -1,0 +1,14 @@
+uuid: 82f428c2-8b23-4661-aa92-84d4f8915882
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: lq45ajkgz93GP_GalinsKDayVQ1I6f2ScSt5KzmVlLE
+id: people
+label: People
+description: 'People listing page'
+use_admin_theme: false
+path: /people
+access_logic: and
+access_conditions: {  }
+parameters: {  }

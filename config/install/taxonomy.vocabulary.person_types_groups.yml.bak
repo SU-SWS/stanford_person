@@ -1,0 +1,8 @@
+uuid: 0fa5ded0-a93a-4097-a07f-ca242d2a6b43
+langcode: en
+status: true
+dependencies: {  }
+name: 'Person Types Groups'
+vid: person_types_groups
+description: 'Sub-groupings of person types.'
+weight: 0
