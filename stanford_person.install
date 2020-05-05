@@ -10,9 +10,10 @@
  */
 function stanford_person_install() {
   // Disable the core taxonomy_term view if it is enabled.
-  $core_taxonomy = \Drupal::configFactory()->getEditable('views.view.taxonomy_term');
-  if ($core_taxonomy) {
-    $core_taxonomy->set('status', FALSE);
-    $core_taxonomy->save();
+  $core_taxonomy_view = \Drupal::configFactory()->get('views.view.taxonomy_term');
+  if ($core_taxonomy_view->get('status') == TRUE) {
+    $editable = \Drupal::configFactory()->getEditable('views.view.taxonomy_term');
+    $editable->set('status', FALSE);
+    $editable->save();
   }
 }
