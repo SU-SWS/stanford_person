@@ -1,9 +1,9 @@
 langcode: en
 status: true
 dependencies: {  }
-id: taxonomy_term_overrides
-label: 'Taxonomy Term Overrides'
-description: 'Taxonomy Term Page Override'
+id: stanford_person_list
+label: 'Stanford Person List'
+description: 'Stanford Person Views'
 use_admin_theme: false
 path: '/taxonomy/term/{taxonomy_term}'
 access_logic: and

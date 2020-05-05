@@ -1,0 +1,18 @@
+<?php
+/**
+ * @file
+ *
+ * Install Tasks.
+ */
+
+/**
+ * {@inheritdoc}
+ */
+function stanford_person_install() {
+  // Disable the core taxonomy_term view if it is enabled.
+  $core_taxonomy = \Drupal::configFactory()->getEditable('views.view.taxonomy_term');
+  if ($core_taxonomy) {
+    $core_taxonomy->set('status', FALSE);
+    $core_taxonomy->save();
+  }
+}
