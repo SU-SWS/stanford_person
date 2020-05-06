@@ -2,11 +2,59 @@
 
 @import "./stanford_person.config";
 
-.content {
-  color: $su-color-bright-red;
+
+.layout--section-person-header {
+  @include modular-spacing('margin-top', 8);
+  @include modular-spacing('margin-bottom', 5);
+
+  color: $su-color-black;
+  padding: 0;
+
+  &.su-quote {
+    padding: 0;
+  }
+
+  .node-stanford-person-su-person-short-title {
+    @include modular-spacing('margin-top', 0);
+    @include subheading;
+  }
+
+  .su-person-name {
+    @include modular-spacing('margin-bottom', 3);
+  }
+
+  .su-quote__bio {
+    @include subheading;
+  }
 }
 
-// Your SASS here
-// body {
-//   background-image: url("../../assets/img/test.jpg");
-// }
+.su-person-content {
+  .su-person-body {
+    @include big-paragraph;
+    @include modular-spacing('margin-bottom', 5);
+  }
+
+  .block__title {
+    @include type-e;
+  }
+
+  .node-stanford-person-su-person-education,
+  .node-stanford-person-su-person-research,
+  .node-stanford-person-su-person-affiliations,
+  .node-stanford-person-su-person-location-name,
+  .node-stanford-person-su-person-links,
+  .node-stanford-person-su-person-map-url,
+  .node-stanford-person-su-person-mail-code {
+    @include modular-spacing('margin-bottom', 5);
+  }
+
+  .node-stanford-person-su-person-email,
+  .node-stanford-person-su-person-fax {
+    @include modular-spacing('margin-bottom', -3);
+  }
+
+}
+
+
+
+
