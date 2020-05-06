@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/block\/4?_format=hal_json"
+            "href": "http:\/\/default\/block\/1?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/block_content\/stanford_component_block"
@@ -48,7 +48,7 @@
     ],
     "changed": [
         {
-            "value": "2020-04-29T21:21:17+00:00",
+            "value": "2020-05-06T05:04:28+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -83,9 +83,10 @@
                 },
                 "uuid": [
                     {
-                        "value": "01072cf4-793d-4262-8182-b44be7287951"
+                        "value": "bd2273a4-e1f0-4fee-81b9-e98442529610"
                     }
-                ]
+                ],
+                "target_revision_id": "bd2273a4-e1f0-4fee-81b9-e98442529610"
             }
         ]
     }
