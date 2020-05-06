@@ -29,6 +29,10 @@
       "drupal/core": {
         "https://www.drupal.org/project/drupal/issues/3039185":
         "https://www.drupal.org/files/issues/2020-04-17/allow-field-blocks-to-display-label-in-layout-builder-3039185-22.patch"
+      },
+      "drupal/menu_link_weight": {
+        "https://www.drupal.org/project/menu_link_weight/issues/2956341":
+        "https://www.drupal.org/files/issues/2018-03-27/menu_link_weight-js_error_on_title_field-2956341-2.patch"
       }
     }
   }

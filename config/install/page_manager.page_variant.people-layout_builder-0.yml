@@ -1,3 +1,4 @@
+uuid: 8ea99992-a8b3-49f9-9646-5bb79a4ab82d
 langcode: en
 status: true
 dependencies:
@@ -85,13 +86,13 @@ variant_settings:
             items_per_page: none
             context_mapping: {  }
           additional: {  }
-          weight: 2
-        1aa402a8-d32e-4c0d-88c8-350e4d8e54fb:
-          uuid: 1aa402a8-d32e-4c0d-88c8-350e4d8e54fb
+          weight: 3
+        02b79daa-3558-4551-8313-5c6c65aa099c:
+          uuid: 02b79daa-3558-4551-8313-5c6c65aa099c
           region: main
           configuration:
             id: 'block_content:fb905cf3-4bd3-4bcd-ad01-92d25e46ba32'
-            label: 'People Banner'
+            label: 'People Intro'
             provider: block_content
             label_display: '0'
             status: true
@@ -99,7 +100,7 @@ variant_settings:
             view_mode: full
             context_mapping: {  }
           additional: {  }
-          weight: 1
+          weight: 2
       third_party_settings: {  }
 page: people
 weight: 0
