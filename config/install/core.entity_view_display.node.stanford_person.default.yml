@@ -524,8 +524,9 @@ third_party_settings:
         - jumpstart_ui_one_column
         - jumpstart_ui_two_column
         - jumpstart_ui_three_column
-        - ds_reset
         - stanford_person_header
+        - stanford_person_body
+        - ds_reset
 _core:
   default_config_hash: RfrWIACvQ3WTMg1KYVldVkUXDhsK7Y_JGoW1hSFpEdI
 id: node.stanford_person.default
