@@ -124,7 +124,7 @@
                         "value": "b874cbd7-2742-4284-bdf4-e0bb9f89569d"
                     }
                 ],
-                "target_revision_id": "25"
+                "target_revision_id": "b874cbd7-2742-4284-bdf4-e0bb9f89569d"
             },
             {
                 "_links": {
@@ -140,7 +140,7 @@
                         "value": "2d7d19d6-6942-401f-bc20-6d339faebe06"
                     }
                 ],
-                "target_revision_id": "26"
+                "target_revision_id": "2d7d19d6-6942-401f-bc20-6d339faebe06"
             },
             {
                 "_links": {
@@ -156,7 +156,7 @@
                         "value": "c38be6a2-68ef-4c51-a349-751e2fbe9bcc"
                     }
                 ],
-                "target_revision_id": "27"
+                "target_revision_id": "c38be6a2-68ef-4c51-a349-751e2fbe9bcc"
             }
         ]
     },

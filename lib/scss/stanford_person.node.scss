@@ -1,7 +1,5 @@
 @charset 'UTF-8';
-
 @import "./stanford_person.config";
-
 
 .layout--section-person-header {
   @include modular-spacing('margin-top', 8);
@@ -54,7 +52,3 @@
   }
 
 }
-
-
-
-
