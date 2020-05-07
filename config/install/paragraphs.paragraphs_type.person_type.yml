@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: person_type
-label: 'Person Type'
-icon_uuid: null
-icon_default: null
-description: 'For the stanford_person content type and a way to group two vocabularies.'
-behavior_plugins: {  }

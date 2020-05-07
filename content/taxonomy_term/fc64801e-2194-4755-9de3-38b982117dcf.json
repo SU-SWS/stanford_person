@@ -1,18 +1,20 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/people\/lecturers?_format=hal_json"
+            "href": "http:\/\/default\/people\/faculty\/emeritus?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/stanford_person_types"
         },
         "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/stanford_person_types\/parent": [
-            null
+            {
+                "href": "http:\/\/default\/people\/faculty?_format=hal_json"
+            }
         ]
     },
     "uuid": [
         {
-            "value": "e2d373e6-32ee-4982-b520-c24614bdee02"
+            "value": "fc64801e-2194-4755-9de3-38b982117dcf"
         }
     ],
     "langcode": [
@@ -28,7 +30,7 @@
     ],
     "revision_created": [
         {
-            "value": "2020-04-28T16:07:47+00:00",
+            "value": "2020-05-07T04:29:35+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -40,31 +42,45 @@
     ],
     "name": [
         {
-            "value": "Lecturers",
+            "value": "Emeritus",
             "lang": "en"
         }
     ],
     "description": [
         {
-            "value": "<p>Lecturers<\/p>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br \/>\r\n&nbsp;<\/p>\r\n",
+            "value": "<p>Emeritus<\/p>\r\n",
             "format": "stanford_html",
-            "processed": "<p>Lecturers<\/p>\n\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br \/>\n\u00a0<\/p>",
+            "processed": "<p>Emeritus<\/p>",
             "lang": "en"
         }
     ],
     "weight": [
         {
-            "value": 0
+            "value": 2
         }
     ],
     "_embedded": {
         "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/stanford_person_types\/parent": [
-            null
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/people\/faculty?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/stanford_person_types"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "81a712e0-b40f-4ffa-9152-2f97495ca730"
+                    }
+                ]
+            }
         ]
     },
     "changed": [
         {
-            "value": "2020-04-29T23:06:40+00:00",
+            "value": "2020-05-07T04:31:35+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -83,8 +99,8 @@
     ],
     "path": [
         {
-            "alias": "\/people\/lecturers",
-            "pid": 18,
+            "alias": "\/people\/faculty\/emeritus",
+            "pid": null,
             "langcode": "en",
             "lang": "en"
         }

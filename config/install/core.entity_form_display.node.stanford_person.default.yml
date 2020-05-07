@@ -1,3 +1,4 @@
+uuid: e9267455-a0cc-4bcc-b84f-ba44d270b1e6
 langcode: en
 status: true
 dependencies:
@@ -22,7 +23,7 @@ dependencies:
     - field.field.node.stanford_person.su_person_research
     - field.field.node.stanford_person.su_person_short_title
     - field.field.node.stanford_person.su_person_telephone
-    - field.field.node.stanford_person.su_person_type
+    - field.field.node.stanford_person.su_person_type_group
     - node.type.stanford_person
   module:
     - allowed_formats
@@ -31,6 +32,7 @@ dependencies:
     - media_library
     - paragraphs
     - path
+    - shs
     - text
 third_party_settings:
   field_group:
@@ -104,6 +106,7 @@ third_party_settings:
       label: 'Interests & Affiliations'
     group_taxonomy:
       children:
+        - su_person_type_group
         - su_person_type
       parent_name: ''
       weight: 1
@@ -261,7 +264,7 @@ content:
     type: string_textfield
     region: content
   su_person_map_url:
-    weight: 17
+    weight: 16
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -307,17 +310,15 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  su_person_type:
-    type: entity_reference_paragraphs
-    weight: 2
+  su_person_type_group:
+    weight: 17
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
+      create_new_items: false
+      create_new_levels: false
+      force_deepest: false
+      display_node_count: false
     third_party_settings: {  }
+    type: options_shs
     region: content
   title:
     type: string_textfield

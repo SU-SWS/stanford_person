@@ -1,18 +1,20 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/taxonomy\/term\/10?_format=hal_json"
+            "href": "http:\/\/default\/people\/staff\/department-administrator?_format=hal_json"
         },
         "type": {
-            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/person_types_groups"
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/stanford_person_types"
         },
-        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/person_types_groups\/parent": [
-            null
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/stanford_person_types\/parent": [
+            {
+                "href": "http:\/\/default\/people\/staff?_format=hal_json"
+            }
         ]
     },
     "uuid": [
         {
-            "value": "57fe0347-c034-41c8-96c0-a69322e5d616"
+            "value": "df47c78b-8710-48de-9712-f45b0cf65a27"
         }
     ],
     "langcode": [
@@ -23,12 +25,12 @@
     ],
     "vid": [
         {
-            "target_id": "person_types_groups"
+            "target_id": "stanford_person_types"
         }
     ],
     "revision_created": [
         {
-            "value": "2020-05-05T21:17:04+00:00",
+            "value": "2020-05-07T04:29:58+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -58,13 +60,27 @@
         }
     ],
     "_embedded": {
-        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/person_types_groups\/parent": [
-            null
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/stanford_person_types\/parent": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/people\/staff?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/stanford_person_types"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "684cfe9e-80a2-42ec-987f-e99015d00a3e"
+                    }
+                ]
+            }
         ]
     },
     "changed": [
         {
-            "value": "2020-05-05T21:17:04+00:00",
+            "value": "2020-05-07T04:29:58+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -83,7 +99,7 @@
     ],
     "path": [
         {
-            "alias": null,
+            "alias": "\/people\/staff\/department-administrator",
             "pid": null,
             "langcode": "en",
             "lang": "en"

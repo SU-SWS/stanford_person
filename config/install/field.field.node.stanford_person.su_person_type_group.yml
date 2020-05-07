@@ -1,16 +1,17 @@
+uuid: 0ddcfdb2-520f-41a0-b32b-adbd4220250c
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.su_person_type_primary
-    - paragraphs.paragraphs_type.person_type
+    - field.storage.node.su_person_type_group
+    - node.type.stanford_person
     - taxonomy.vocabulary.stanford_person_types
-id: paragraph.person_type.su_person_type_primary
-field_name: su_person_type_primary
-entity_type: paragraph
-bundle: person_type
-label: 'Person Type'
-description: ''
+id: node.stanford_person.su_person_type_group
+field_name: su_person_type_group
+entity_type: node
+bundle: stanford_person
+label: 'Person Type & Group'
+description: 'Select the type and group that this person belongs to.'
 required: false
 translatable: false
 default_value: {  }

@@ -1,18 +1,18 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/taxonomy\/term\/9?_format=hal_json"
+            "href": "http:\/\/default\/people\/other?_format=hal_json"
         },
         "type": {
-            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/person_types_groups"
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/stanford_person_types"
         },
-        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/person_types_groups\/parent": [
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/stanford_person_types\/parent": [
             null
         ]
     },
     "uuid": [
         {
-            "value": "00fbefae-6ea2-4cd9-8774-66efd5cd816c"
+            "value": "eece3edf-8823-419e-b1ff-8e622eb43bc2"
         }
     ],
     "langcode": [
@@ -23,12 +23,12 @@
     ],
     "vid": [
         {
-            "target_id": "person_types_groups"
+            "target_id": "stanford_person_types"
         }
     ],
     "revision_created": [
         {
-            "value": "2020-05-05T21:15:39+00:00",
+            "value": "2020-05-06T23:17:05+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -40,31 +40,23 @@
     ],
     "name": [
         {
-            "value": "Manager",
-            "lang": "en"
-        }
-    ],
-    "description": [
-        {
-            "value": "<p>Manager type<\/p>\r\n",
-            "format": "stanford_html",
-            "processed": "<p>Manager type<\/p>",
+            "value": "Other",
             "lang": "en"
         }
     ],
     "weight": [
         {
-            "value": 0
+            "value": 13
         }
     ],
     "_embedded": {
-        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/person_types_groups\/parent": [
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/stanford_person_types\/parent": [
             null
         ]
     },
     "changed": [
         {
-            "value": "2020-05-05T21:15:39+00:00",
+            "value": "2020-05-07T04:31:35+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -83,7 +75,7 @@
     ],
     "path": [
         {
-            "alias": null,
+            "alias": "\/people\/other",
             "pid": null,
             "langcode": "en",
             "lang": "en"

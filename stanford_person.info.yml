@@ -24,7 +24,9 @@ dependencies:
   - layout_library:layout_library
   - page_manager:page_manager
   - page_manager:page_manager_ui
+  - shs:shs
   - stanford_media:stanford_media
   - stanford_text_editor:stanford_text_editor
   - taxonomy_menu:taxonomy_menu
+  - views_contextual_filters_or:views_contextual_filters_or
   - views_infinite_scroll:views_infinite_scroll

@@ -1,17 +1,17 @@
+uuid: 00b8611b-c3d5-4700-85b3-2c5c0bb106c0
 langcode: en
 status: true
 dependencies:
   module:
-    - entity_reference_revisions
     - node
-    - paragraphs
-id: node.su_person_type
-field_name: su_person_type
+    - taxonomy
+id: node.su_person_type_group
+field_name: su_person_type_group
 entity_type: node
-type: entity_reference_revisions
+type: entity_reference
 settings:
-  target_type: paragraph
-module: entity_reference_revisions
+  target_type: taxonomy_term
+module: core
 locked: false
 cardinality: -1
 translatable: true
