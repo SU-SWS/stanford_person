@@ -1,4 +1,3 @@
-uuid: 504119e0-c512-4287-ba70-1616f23bdc33
 langcode: en
 status: true
 dependencies:
@@ -531,7 +530,20 @@ display:
       title: 'Person List'
       header: {  }
       footer: {  }
-      empty: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: '<h3>Sorry, no results found. Try another filter.</h3>'
+            format: stanford_html
+          plugin_id: text
       relationships:
         reverse__node__su_person_type_group:
           id: reverse__node__su_person_type_group
