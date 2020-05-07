@@ -21,17 +21,6 @@
             {
                 "href": "http:\/\/default\/media\/12\/edit?_format=hal_json"
             }
-        ],
-        "http:\/\/drupal.org\/rest\/relation\/node\/stanford_person\/su_person_type": [
-            {
-                "href": ""
-            },
-            {
-                "href": ""
-            },
-            {
-                "href": ""
-            }
         ]
     },
     "uuid": [
@@ -107,56 +96,6 @@
                         "value": "381f792e-24b4-4c50-b5cc-69c13702f93a"
                     }
                 ]
-            }
-        ],
-        "http:\/\/drupal.org\/rest\/relation\/node\/stanford_person\/su_person_type": [
-            {
-                "_links": {
-                    "self": {
-                        "href": ""
-                    },
-                    "type": {
-                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/person_type"
-                    }
-                },
-                "uuid": [
-                    {
-                        "value": "b874cbd7-2742-4284-bdf4-e0bb9f89569d"
-                    }
-                ],
-                "target_revision_id": "b874cbd7-2742-4284-bdf4-e0bb9f89569d"
-            },
-            {
-                "_links": {
-                    "self": {
-                        "href": ""
-                    },
-                    "type": {
-                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/person_type"
-                    }
-                },
-                "uuid": [
-                    {
-                        "value": "2d7d19d6-6942-401f-bc20-6d339faebe06"
-                    }
-                ],
-                "target_revision_id": "2d7d19d6-6942-401f-bc20-6d339faebe06"
-            },
-            {
-                "_links": {
-                    "self": {
-                        "href": ""
-                    },
-                    "type": {
-                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/person_type"
-                    }
-                },
-                "uuid": [
-                    {
-                        "value": "c38be6a2-68ef-4c51-a349-751e2fbe9bcc"
-                    }
-                ],
-                "target_revision_id": "c38be6a2-68ef-4c51-a349-751e2fbe9bcc"
             }
         ]
     },

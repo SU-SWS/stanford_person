@@ -1,3 +1,4 @@
+uuid: a9728724-1d44-4a3a-be3c-700260baf934
 langcode: en
 status: true
 dependencies:
@@ -23,7 +24,7 @@ dependencies:
     - field.field.node.stanford_person.su_person_research
     - field.field.node.stanford_person.su_person_short_title
     - field.field.node.stanford_person.su_person_telephone
-    - field.field.node.stanford_person.su_person_type
+    - field.field.node.stanford_person.su_person_type_group
     - node.type.stanford_person
   module:
     - entity_reference_revisions
@@ -699,14 +700,13 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  su_person_type:
-    type: entity_reference_revisions_entity_view
-    weight: 125
+  su_person_type_group:
+    weight: 126
     label: above
     settings:
-      view_mode: default
-      link: ''
+      link: true
     third_party_settings: {  }
+    type: entity_reference_label
     region: content
 hidden:
   layout_builder__layout: true

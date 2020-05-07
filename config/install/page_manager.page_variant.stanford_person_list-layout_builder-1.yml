@@ -1,3 +1,4 @@
+uuid: c2207e6b-eddd-491f-8f83-6873d64c10c9
 langcode: en
 status: true
 dependencies:
@@ -92,11 +93,11 @@ variant_settings:
               tid: taxonomy_term
           additional: {  }
           weight: 1
-        5e1374ad-8f54-41a9-9d83-fbcb4088d438:
-          uuid: 5e1374ad-8f54-41a9-9d83-fbcb4088d438
+        36512f24-95d8-4536-bb2b-85fc8c54c808:
+          uuid: 36512f24-95d8-4536-bb2b-85fc8c54c808
           region: main
           configuration:
-            id: 'views_block:stanford_people-grid_list'
+            id: 'views_block:stanford_person_list_terms_first-person_list_grid'
             label: ''
             provider: views
             label_display: '0'

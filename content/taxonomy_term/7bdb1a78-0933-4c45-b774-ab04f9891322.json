@@ -1,18 +1,20 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/people\/faculty?_format=hal_json"
+            "href": "http:\/\/default\/people\/faculty\/professor?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/stanford_person_types"
         },
         "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/stanford_person_types\/parent": [
-            null
+            {
+                "href": "http:\/\/default\/people\/faculty?_format=hal_json"
+            }
         ]
     },
     "uuid": [
         {
-            "value": "81a712e0-b40f-4ffa-9152-2f97495ca730"
+            "value": "7bdb1a78-0933-4c45-b774-ab04f9891322"
         }
     ],
     "langcode": [
@@ -28,7 +30,7 @@
     ],
     "revision_created": [
         {
-            "value": "2020-04-28T16:05:45+00:00",
+            "value": "2020-05-07T04:28:48+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -40,26 +42,40 @@
     ],
     "name": [
         {
-            "value": "Faculty",
+            "value": "Professor",
             "lang": "en"
         }
     ],
     "description": [
         {
-            "value": "<p>Faculty<\/p>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br \/>\r\n&nbsp;<\/p>\r\n",
+            "value": "<p>Professor<\/p>\r\n",
             "format": "stanford_html",
-            "processed": "<p>Faculty<\/p>\n\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br \/>\n\u00a0<\/p>",
+            "processed": "<p>Professor<\/p>",
             "lang": "en"
         }
     ],
     "weight": [
         {
-            "value": 9
+            "value": 4
         }
     ],
     "_embedded": {
         "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/stanford_person_types\/parent": [
-            null
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/people\/faculty?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/stanford_person_types"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "81a712e0-b40f-4ffa-9152-2f97495ca730"
+                    }
+                ]
+            }
         ]
     },
     "changed": [
@@ -83,7 +99,7 @@
     ],
     "path": [
         {
-            "alias": "\/people\/faculty",
+            "alias": "\/people\/faculty\/professor",
             "pid": null,
             "langcode": "en",
             "lang": "en"

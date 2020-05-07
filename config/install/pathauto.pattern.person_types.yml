@@ -1,3 +1,4 @@
+uuid: 5321f9a9-28e5-4cd7-9c87-36e3ffa43e54
 langcode: en
 status: true
 dependencies:
@@ -9,16 +10,16 @@ _core:
 id: person_types
 label: 'Person Types'
 type: 'canonical_entities:taxonomy_term'
-pattern: 'people/[term:name]'
+pattern: 'people/[term:parents:join-path]/[term:name]'
 selection_criteria:
-  5816938e-7493-4d3b-b129-9724bb49c0d3:
+  ca9a94b5-dbd0-42a6-9f35-05ca1f416f97:
     id: 'entity_bundle:taxonomy_term'
     bundles:
       stanford_person_types: stanford_person_types
     negate: false
     context_mapping:
       taxonomy_term: taxonomy_term
-    uuid: 5816938e-7493-4d3b-b129-9724bb49c0d3
+    uuid: ca9a94b5-dbd0-42a6-9f35-05ca1f416f97
 selection_logic: and
 weight: -5
 relationships: {  }

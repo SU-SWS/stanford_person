@@ -1,18 +1,18 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/taxonomy\/term\/8?_format=hal_json"
+            "href": "http:\/\/default\/people\/student?_format=hal_json"
         },
         "type": {
-            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/person_types_groups"
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/stanford_person_types"
         },
-        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/person_types_groups\/parent": [
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/stanford_person_types\/parent": [
             null
         ]
     },
     "uuid": [
         {
-            "value": "a890c154-dce5-465c-8b60-f4eb755d23df"
+            "value": "f3bb3c7a-90ee-42af-ae38-381a502bb30c"
         }
     ],
     "langcode": [
@@ -23,12 +23,12 @@
     ],
     "vid": [
         {
-            "target_id": "person_types_groups"
+            "target_id": "stanford_person_types"
         }
     ],
     "revision_created": [
         {
-            "value": "2020-05-05T21:15:26+00:00",
+            "value": "2020-05-07T04:35:54+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -40,15 +40,15 @@
     ],
     "name": [
         {
-            "value": "Director",
+            "value": "Student",
             "lang": "en"
         }
     ],
     "description": [
         {
-            "value": "<p>A director type.<\/p>\r\n",
+            "value": "<p>Student<\/p>\r\n",
             "format": "stanford_html",
-            "processed": "<p>A director type.<\/p>",
+            "processed": "<p>Student<\/p>",
             "lang": "en"
         }
     ],
@@ -58,13 +58,13 @@
         }
     ],
     "_embedded": {
-        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/person_types_groups\/parent": [
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/stanford_person_types\/parent": [
             null
         ]
     },
     "changed": [
         {
-            "value": "2020-05-05T21:15:26+00:00",
+            "value": "2020-05-07T04:35:54+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -83,7 +83,7 @@
     ],
     "path": [
         {
-            "alias": null,
+            "alias": "\/people\/student",
             "pid": null,
             "langcode": "en",
             "lang": "en"

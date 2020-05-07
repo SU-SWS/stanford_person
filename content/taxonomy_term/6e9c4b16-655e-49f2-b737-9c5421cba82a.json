@@ -1,18 +1,20 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/people\/alumni?_format=hal_json"
+            "href": "http:\/\/default\/people\/student\/graduate-students?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/stanford_person_types"
         },
         "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/stanford_person_types\/parent": [
-            null
+            {
+                "href": "http:\/\/default\/people\/student?_format=hal_json"
+            }
         ]
     },
     "uuid": [
         {
-            "value": "6583b9b0-3a39-40b3-a354-f8a28ae45b80"
+            "value": "6e9c4b16-655e-49f2-b737-9c5421cba82a"
         }
     ],
     "langcode": [
@@ -28,7 +30,7 @@
     ],
     "revision_created": [
         {
-            "value": "2020-04-28T16:08:02+00:00",
+            "value": "2020-05-07T04:36:13+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -40,31 +42,45 @@
     ],
     "name": [
         {
-            "value": "Alumni",
+            "value": "Graduate Students",
             "lang": "en"
         }
     ],
     "description": [
         {
-            "value": "<p>Alumni Intro<\/p>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br \/>\r\n&nbsp;<\/p>\r\n",
+            "value": "<p>Graduate Students<\/p>\r\n",
             "format": "stanford_html",
-            "processed": "<p>Alumni Intro<\/p>\n\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br \/>\n\u00a0<\/p>",
+            "processed": "<p>Graduate Students<\/p>",
             "lang": "en"
         }
     ],
     "weight": [
         {
-            "value": 2
+            "value": 0
         }
     ],
     "_embedded": {
         "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/stanford_person_types\/parent": [
-            null
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/people\/student?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/stanford_person_types"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "f3bb3c7a-90ee-42af-ae38-381a502bb30c"
+                    }
+                ]
+            }
         ]
     },
     "changed": [
         {
-            "value": "2020-05-05T20:44:05+00:00",
+            "value": "2020-05-07T04:36:13+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -81,9 +97,20 @@
             "lang": "en"
         }
     ],
+    "metatag": [
+        {
+            "value": {
+                "title": "Graduate Students | University",
+                "og_site_name": "University",
+                "canonical_url": "http:\/\/default\/people\/student\/graduate-students",
+                "description": "Graduate Students",
+                "og_url": "http:\/\/default\/"
+            }
+        }
+    ],
     "path": [
         {
-            "alias": "\/people\/alumni",
+            "alias": "\/people\/student\/graduate-students",
             "pid": null,
             "langcode": "en",
             "lang": "en"

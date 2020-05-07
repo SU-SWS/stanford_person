@@ -78,7 +78,7 @@ variant_settings:
           uuid: 342518bc-5cf6-4fa3-9141-b4d7983e0c45
           region: main
           configuration:
-            id: 'views_block:stanford_people-grid_list_all'
+            id: 'views_block:stanford_person-grid_list_all'
             label: ''
             provider: views
             label_display: '0'
