@@ -218,7 +218,7 @@ third_party_settings:
       -
         layout_id: stanford_person_body
         layout_settings:
-          label: 'Configure Person Body'
+          label: 'Content Body'
         components:
           9f1711f5-f94a-4d9f-9aee-c91ce9d123d9:
             uuid: 9f1711f5-f94a-4d9f-9aee-c91ce9d123d9
@@ -521,9 +521,9 @@ third_party_settings:
         - jumpstart_ui_one_column
         - jumpstart_ui_two_column
         - jumpstart_ui_three_column
-        - ds_reset
         - stanford_person_header
         - stanford_person_body
+        - ds_reset
 _core:
   default_config_hash: RfrWIACvQ3WTMg1KYVldVkUXDhsK7Y_JGoW1hSFpEdI
 id: node.stanford_person.default
