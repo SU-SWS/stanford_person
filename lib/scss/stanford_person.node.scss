@@ -190,6 +190,11 @@
       .block__title {
         &:before {
           content: "\f3c5"; ///* Need to switch to the SU icons.
+
+          @include grid-media-max('sm') {
+            left: -16px;
+          }
+
         }
       }
     }
@@ -198,6 +203,11 @@
         &:before {
           content: "\f095"; ///* Need to switch to the SU icons.
           transform: scaleX(-1);
+
+          @include grid-media-max('sm') {
+            left: -16px;
+          }
+
         }
       }
     }
@@ -205,6 +215,12 @@
       .block__title {
         &:before {
           content: "\f0c1"; ///* Need to switch to the SU icons.
+          transform: scaleX(-1);
+
+          @include grid-media-max('sm') {
+            left: -17px;
+          }
+
         }
       }
     }
