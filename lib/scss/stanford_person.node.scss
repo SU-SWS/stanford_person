@@ -90,15 +90,30 @@
       > div {
         display: inline-block;
         width: 50%;
+
+        @include grid-media-max('sm') {
+          display: block;
+          width: 100%;
+        }
       }
 
       > div:nth-child(odd) {
         width: 40%;
         margin-right: 12%;
+
+        @include grid-media-max('sm') {
+          display: block;
+          width: 100%;
+        }
       }
 
       > div:nth-child(even) {
         width: 40%;
+
+        @include grid-media-max('sm') {
+          display: block;
+          width: 100%;
+        }
       }
     }
   }
@@ -122,6 +137,55 @@
         }
       }
     }
+
+    .su-person-telephone {
+      &:before {
+        content: "p";
+        padding-right: 10px;
+      }
+    }
+
+    .su-person-mobile {
+      &:before {
+        content: "m";
+        padding-right: 5px;
+      }
+    }
+
+    .su-person-fax {
+      &:before {
+        content: "f";
+        padding-right: 15px;
+      }
+    }
+
+    .su-person-email {
+      a {
+        font-weight: $su-font-regular;
+      }
+    }
+
+    .su-person-mail-code {
+      > div {
+        display: inline-block;
+      }
+      div:first-of-type {
+        &:after {
+          content: ":";
+          padding-right: 5px;
+        }
+      }
+    }
+
+    .su-person-links {
+      a {
+        @include link-icon(arrow-up-right, 10px, topright);
+
+        font-weight: $su-font-regular;
+      }
+    }
+
+    // Icon set up.
     .node-stanford-person-su-person-location-name {
       .block__title {
         &:before {
