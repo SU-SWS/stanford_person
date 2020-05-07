@@ -1,3 +1,4 @@
+uuid: 504119e0-c512-4287-ba70-1616f23bdc33
 langcode: en
 status: true
 dependencies:
@@ -552,7 +553,7 @@ display:
           relationship: none
           group_type: group
           admin_label: su_person_type_group
-          required: false
+          required: true
           entity_type: taxonomy_term
           plugin_id: entity_reverse
       arguments:
