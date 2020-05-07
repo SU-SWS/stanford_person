@@ -1,3 +1,4 @@
+uuid: e9267455-a0cc-4bcc-b84f-ba44d270b1e6
 langcode: en
 status: true
 dependencies:
@@ -62,10 +63,10 @@ third_party_settings:
       format_type: fieldset
       region: content
       format_settings:
+        description: ''
         id: ''
         classes: ''
-        description: ''
-        required_fields: true
+        required_fields: false
       label: 'Bio & Content'
     group_contact_location_informati:
       children:
@@ -106,7 +107,6 @@ third_party_settings:
     group_taxonomy:
       children:
         - su_person_type_group
-        - su_person_type
       parent_name: ''
       weight: 1
       format_type: fieldset
@@ -165,21 +165,15 @@ content:
     type: link_default
     region: content
   su_person_components:
-    type: paragraphs
+    type: entity_reference_paragraphs
     weight: 7
     settings:
       title: Paragraph
       title_plural: Paragraphs
-      edit_mode: open
+      edit_mode: closed
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: stanford_wysiwyg
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      features:
-        duplicate: duplicate
-        collapse_edit_all: collapse_edit_all
     third_party_settings: {  }
     region: content
   su_person_education:
