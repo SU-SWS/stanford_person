@@ -104,5 +104,54 @@
   // Right side contact information
   .main-region {
 
+    .node-stanford-person-su-person-telephone,
+    .node-stanford-person-su-person-mobile-phone,
+    .node-stanford-person-su-person-fax,
+    .node-stanford-person-su-person-location-name,
+    .node-stanford-person-su-person-links,
+    .node-stanford-person-su-person-location-address,
+    .node-stanford-person-su-person-map-url,
+    .node-stanford-person-su-person-mail-code {
+      //border: 1px solid lime;
+    }
+
+    .node-stanford-person-su-person-location-name,
+    .node-stanford-person-su-person-telephone,
+    .node-stanford-person-su-person-links {
+      .block__title {
+        &:before {
+          @include small-paragraph;
+
+          color: $su-color-black;
+          //content: "\f3c5"; ///* Need to switch to the SU icons.
+          font-family: 'Font Awesome 5 Free';
+          font-weight: $su-font-semi-bold; // Need this for the new version of FA. Will go away later.
+          left: -20px;
+          position: absolute;
+        }
+      }
+    }
+    .node-stanford-person-su-person-location-name {
+      .block__title {
+        &:before {
+          content: "\f3c5"; ///* Need to switch to the SU icons.
+        }
+      }
+    }
+    .node-stanford-person-su-person-telephone {
+      .block__title {
+        &:before {
+          content: "\f095"; ///* Need to switch to the SU icons.
+          transform: scaleX(-1);
+        }
+      }
+    }
+    .node-stanford-person-su-person-links {
+      .block__title {
+        &:before {
+          content: "\f0c1"; ///* Need to switch to the SU icons.
+        }
+      }
+    }
   }
 }
