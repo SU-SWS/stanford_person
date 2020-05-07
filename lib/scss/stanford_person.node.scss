@@ -69,16 +69,18 @@
         display: inherit;
         width: 100%;
 
+        &:focus,
+        &:hover {
+          &::after {
+            background-color: $su-color-white;
+          }
+        }
+
         &::after {
           background-color: $su-color-white;
           height: 1rem;
           width: 1rem;
         }
-      }
-
-      a:focus:after, // Do this differently.
-      a:hover:after {
-        background-color: $su-color-white;
       }
     }
 
@@ -102,18 +104,7 @@
   }
 
   // Right side contact information
-  .main-region {
-
-    .node-stanford-person-su-person-telephone,
-    .node-stanford-person-su-person-mobile-phone,
-    .node-stanford-person-su-person-fax,
-    .node-stanford-person-su-person-location-name,
-    .node-stanford-person-su-person-links,
-    .node-stanford-person-su-person-location-address,
-    .node-stanford-person-su-person-map-url,
-    .node-stanford-person-su-person-mail-code {
-      //border: 1px solid lime;
-    }
+  .right-region {
 
     .node-stanford-person-su-person-location-name,
     .node-stanford-person-su-person-telephone,

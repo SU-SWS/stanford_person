@@ -28,10 +28,9 @@ stanford_person_body:
   template: section-person-body-two-column
   default_region: content
   icon_map:
-    - [left, main]
+    - [main, right]
   regions:
-    left:
-      label: Left
     main:
       label: Main
-
+    right:
+      label: Right
