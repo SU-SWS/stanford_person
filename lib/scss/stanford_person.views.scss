@@ -3,8 +3,16 @@
 @import "./stanford_person.config";
 
 // Heading spacing
-.su-people-header > .main-region {
-  @include modular-spacing('margin-bottom', 8);
+.stanford-person-terms-term-name-h1 {
+  .page-title {
+    line-height: 3;
+    margin-bottom: 0;
+  }
+}
+
+.heading-h1 {
+  line-height: 3;
+  margin-bottom: 0;
 }
 
 // Spacing for the filtered terms link
