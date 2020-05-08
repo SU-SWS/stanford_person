@@ -78,7 +78,7 @@ display:
         options:
           grouping: {  }
           columns: 3
-          automatic_width: true
+          automatic_width: false
           alignment: horizontal
           col_class_default: true
           col_class_custom: flex-3-of-12

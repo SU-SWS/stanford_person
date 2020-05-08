@@ -2,32 +2,86 @@
 
 @import "./stanford_person.config";
 
-.views-row {
-  @include modular-spacing('margin-bottom', 6);
+// Heading spacing
+.su-people-header > .main-region {
+  @include modular-spacing('margin-bottom', 8);
+}
 
-  .views-col {
-    @include modular-spacing('margin-right', 3);
+// Spacing for the filtered terms link
+.views-block {
+  &.stanford-person-terms-term-link {
+    @include modular-spacing('margin-bottom', 3);
+
+    display: inline-block;
   }
+}
 
-  // Name field
-  .views-field-title {
-    a {
-      @include type-d;
+// Grid set up
+.stanford-people-grid {
 
-      color: $su-color-bright-red;
-      text-decoration: none;
+  .views-row {
+    @include modular-spacing('margin-bottom', 6);
 
-      &:focus,
-      &:hover {
-        color: $su-color-black;
-        text-decoration: underline;
+    .views-col {
+      @include modular-spacing('margin-right', 3);
+
+      // In xs display the people have a layout of image and text to the right.
+      @include grid-media-max('xs') {
+        @include modular-spacing('margin-bottom', 4);
+
+        .views-field-su-person-photo {
+          @include modular-spacing('margin-right', 0);
+
+          float: left;
+        }
+
+        .views-field-title {
+          @include modular-spacing('padding-top', 0);
+        }
       }
     }
-  }
-  // Short title
-  .views-field-su-person-short-title {
-    @include small-paragraph;
 
+    // Name field
+    .views-field-title {
+      a {
+        @include type-d;
+
+        color: $su-color-bright-red;
+        text-decoration: none;
+
+        &:focus,
+        &:hover {
+          color: $su-color-black;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    // Short title
+    .views-field-su-person-short-title {
+      @include small-paragraph;
+    }
+  }
+
+  // Load more set up
+  .views-infinite-scroll-content-wrapper {
+    &,
+    + .js-pager__items {
+      @include modular-spacing('margin-bottom', 8);
+    }
+  }
+  
+  // Load more button.
+  .js-pager__items {
+    text-align: center;
+
+    .pager__item {
+      display: inline-block;
+
+      .button {
+        @include button-big;
+      }
+    }
   }
 }
 
@@ -146,6 +200,7 @@
         left: 35px;
         position: absolute;
       }
+
       .is-active {
         color: $su-color-bright-blue;
       }
@@ -157,6 +212,7 @@
     .menu {
       display: none;
     }
+
     .person-category__collapsable-menu {
       &.show {
         & + .menu {
@@ -166,12 +222,12 @@
     }
   }
 
-
   // Filter open/close for xl
   @include grid-media('xl') {
     .menu {
       display: block;
     }
+
     .person-category__collapsable-menu {
       &.show {
         + .menu {
@@ -180,6 +236,5 @@
       }
     }
   }
-
 }
 
