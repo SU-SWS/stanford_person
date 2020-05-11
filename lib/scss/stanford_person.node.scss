@@ -15,11 +15,14 @@
 
     .node-stanford-person-su-person-short-title {
       @include modular-spacing('margin-top', 0);
-      @include subheading;
     }
 
     .su-person-name {
-      @include modular-spacing('margin-bottom', 3);
+      @include modular-spacing('margin-bottom', 2);
+
+      > h1 {
+        margin-bottom: 0;
+      }
     }
 
     .su-quote__bio {
@@ -33,15 +36,17 @@
       @include modular-spacing('margin-bottom', 5);
     }
 
-    .block__title {
-      @include type-e;
+    .main-region {
+      .block__title {
+        @include type-e;
+      }
     }
 
     // header set up
     .node-stanford-person-su-person-education,
     .node-stanford-person-su-person-research,
     .node-stanford-person-su-person-affiliations,
-    .node-stanford-person-su-person-location-name,
+    .node-stanford-person-su-person-location-address,
     .node-stanford-person-su-person-links,
     .node-stanford-person-su-person-map-url,
     .node-stanford-person-su-person-mail-code {
@@ -120,19 +125,21 @@
 
   // Right side contact information
   .right-region {
+    @include small-paragraph;
 
     .node-stanford-person-su-person-location-name,
     .node-stanford-person-su-person-telephone,
     .node-stanford-person-su-person-links {
       .block__title {
+        @include small-paragraph;
+
         &:before {
           @include small-paragraph;
 
           color: $su-color-black;
-          //content: "\f3c5"; ///* Need to switch to the SU icons.
           font-family: 'Font Awesome 5 Free';
           font-weight: $su-font-semi-bold; // Need this for the new version of FA. Will go away later.
-          left: -20px;
+          left: -25px;
           position: absolute;
         }
       }
