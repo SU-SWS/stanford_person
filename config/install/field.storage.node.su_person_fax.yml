@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: HaT2NHQNMJBKPst33aT_9GMOWPJZgSHyoajApZHmQmU
 id: node.su_person_fax
 field_name: su_person_fax
 entity_type: node

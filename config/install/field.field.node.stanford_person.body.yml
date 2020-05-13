@@ -6,8 +6,6 @@ dependencies:
     - node.type.stanford_person
   module:
     - text
-_core:
-  default_config_hash: YPQw1ALW8g_4k9sBo0tAu0PBW86Id2VhDXjt6-3puPk
 id: node.stanford_person.body
 field_name: body
 entity_type: node

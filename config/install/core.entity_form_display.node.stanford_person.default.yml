@@ -1,4 +1,3 @@
-uuid: e9267455-a0cc-4bcc-b84f-ba44d270b1e6
 langcode: en
 status: true
 dependencies:
@@ -117,8 +116,6 @@ third_party_settings:
         description: ''
         required_fields: true
       label: Taxonomy
-_core:
-  default_config_hash: VrLoLXWNx5sZE6WU4YaKi_gou6TdvYQgzCioMejGwQI
 id: node.stanford_person.default
 targetEntityType: node
 bundle: stanford_person

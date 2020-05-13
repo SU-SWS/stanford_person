@@ -6,8 +6,6 @@ dependencies:
     - node.type.stanford_person
   module:
     - link
-_core:
-  default_config_hash: faiownWBIFeZbvwnVu63e5aK0rKtAHN01JRm8MPXsQM
 id: node.stanford_person.su_person_affiliations
 field_name: su_person_affiliations
 entity_type: node

@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: lq45ajkgz93GP_GalinsKDayVQ1I6f2ScSt5KzmVlLE
 id: people
 label: People
 description: 'People listing page'

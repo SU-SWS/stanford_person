@@ -12,8 +12,6 @@ third_party_settings:
     stanford_html: '0'
     stanford_minimal_html: '0'
     plain_text: '0'
-_core:
-  default_config_hash: o9KXDuWyeZDEPvNg6erMwx-_DZ_qXgWQAp797XyWNA4
 id: node.stanford_person.su_person_location_address
 field_name: su_person_location_address
 entity_type: node

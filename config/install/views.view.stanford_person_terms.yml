@@ -7,8 +7,6 @@ dependencies:
     - taxonomy
     - text
     - user
-_core:
-  default_config_hash: YRpcvj39jSR_WEOceweBJTLwSmk7i6AmcZwyl8G8bc8
 id: stanford_person_terms
 label: 'People Terms'
 module: views

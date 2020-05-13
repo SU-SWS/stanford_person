@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: 4Fl8PHQ8ebEHle5bTUxzvKGHY1i-h51r8oqggu8J_8o
 id: node.su_person_mobile_phone
 field_name: su_person_mobile_phone
 entity_type: node

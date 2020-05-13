@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: 3NkHuoGWzL_XjASfLiQSmDrea0oPQClcYNdqjoT5HAw
 id: stanford_person_list
 label: 'Stanford Person List'
 description: 'Stanford Person Views'

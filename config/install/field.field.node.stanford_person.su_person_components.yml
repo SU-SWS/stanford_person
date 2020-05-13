@@ -6,8 +6,6 @@ dependencies:
     - node.type.stanford_person
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: kxZz9NVKpjluhtJ8BM_6QDg6Y26j4RG8ECfGHCcMpWE
 id: node.stanford_person.su_person_components
 field_name: su_person_components
 entity_type: node

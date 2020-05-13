@@ -3,8 +3,6 @@ status: true
 dependencies:
   config:
     - node.type.stanford_person
-_core:
-  default_config_hash: YBNHUQuOFWt5bDi4quMpHR7abi3LgPNpLNyScd-QFmA
 id: node.stanford_person.title
 field_name: title
 entity_type: node

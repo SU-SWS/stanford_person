@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: 3m1I-L9OoR4lI93zcbyKUQpgphmuikjrwgeWydFLO2Q
 name: 'Person Types'
 vid: stanford_person_types
 description: 'Categorization of people'

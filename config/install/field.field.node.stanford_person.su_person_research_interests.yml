@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.node.su_person_research_interests
     - node.type.stanford_person
-_core:
-  default_config_hash: 6OohU5d3EPOdnaE_4wMs-i5p1I-IdcDzh0EYAGDgjIs
 id: node.stanford_person.su_person_research_interests
 field_name: su_person_research_interests
 entity_type: node

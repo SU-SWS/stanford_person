@@ -11,22 +11,88 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor-plugin/a11ychecker",
+                "version": "1.1.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/a11ychecker/releases/a11ychecker_1.1.1.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor-plugin/balloonpanel",
+                "version": "4.14.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/balloonpanel/releases/balloonpanel_4.14.0.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor-plugin/link",
+                "version": "4.14.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/link/releases/link_4.14.0.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor-plugin/fakeobjects",
+                "version": "4.14.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.14.0.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
         }
     ],
     "require": {
+        "drupal/allowed_formats": "^1.2",
         "drupal/auto_entitylabel": "3.x-dev#1dd28579f4559cc03d09ab20143b1feb48644fac",
         "drupal/ctools": "^3.4",
         "drupal/default_content": "^1.0-alpha8",
+        "drupal/field_group": "^3.0",
+        "drupal/layout_builder_restrictions": "^2.7",
+        "drupal/menu_block": "^1.6",
         "drupal/page_manager": "dev-4.x#78b492786c841c5d2eb07f6d977275a76b79e46f",
+        "drupal/paragraphs": "^1.11",
+        "drupal/pathauto": "^1.8",
         "drupal/shs": "^1.0@alpha",
         "drupal/taxonomy_menu": "^3.4",
+        "drupal/view_unpublished": "^1.0@alpha",
         "drupal/views_block_filter_block": "^1.0",
         "drupal/views_contextual_filters_or": "^1.1",
         "drupal/views_infinite_scroll": "^1.6",
         "drupal/views_taxonomy_term_name_depth": "^6.0",
-        "su-sws/stanford_media": "dev-8.x-2.x",
         "su-sws/jumpstart_ui": "dev-8.x-1.x",
-        "drupal/allowed_formats": "^1.2"
+        "su-sws/stanford_text_editor": "dev-8.x-1.x"
     },
     "extra": {
         "enable-patching": true,

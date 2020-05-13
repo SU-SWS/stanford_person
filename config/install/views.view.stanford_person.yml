@@ -11,8 +11,6 @@ dependencies:
     - stanford_media
     - user
     - views_infinite_scroll
-_core:
-  default_config_hash: cdhMlVKHlvLDn38cN08Xq9fiBwQ3MJvYub-fnM_Uc5c
 id: stanford_person
 label: 'People Grid'
 module: views
