@@ -1,41 +1,111 @@
 {
-  "name": "su-sws/stanford_person",
-  "description": "Stanford Module Example",
-  "type": "drupal-custom-module",
-  "homepage": "https://github.com/SU-SWS/stanford_person",
-  "authors": [],
-  "license": "GPL-2.0+",
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "require": {
-    "drupal/auto_entitylabel": "3.x-dev#1dd28579f4559cc03d09ab20143b1feb48644fac",
-    "drupal/ctools": "^3.4",
-    "drupal/default_content": "^1.0-alpha8",
-    "drupal/page_manager": "dev-4.x#78b492786c841c5d2eb07f6d977275a76b79e46f",
-    "drupal/shs": "^1.0@alpha",
-    "drupal/taxonomy_menu": "^3.4",
-    "drupal/views_block_filter_block": "^1.0",
-    "drupal/views_contextual_filters_or": "^1.1",
-    "drupal/views_infinite_scroll": "^1.6",
-    "drupal/views_taxonomy_term_name_depth": "^6.0",
-    "su-sws/stanford_media": "dev-8.x-2.x",
-    "su-sws/jumpstart_ui": "dev-8.x-1.x"
-  },
-  "extra": {
-    "enable-patching": true,
-    "patches": {
-      "drupal/default_content": {
-        "https://www.drupal.org/project/default_content/issues/2698425":
-        "https://www.drupal.org/files/issues/2020-02-05/2698425--accept-content-updates--122.patch"
-      },
-      "drupal/core": {
-        "https://www.drupal.org/project/drupal/issues/3039185":
-        "https://www.drupal.org/files/issues/2020-04-17/allow-field-blocks-to-display-label-in-layout-builder-3039185-22.patch"
-      },
-      "drupal/menu_link_weight": {
-        "https://www.drupal.org/project/menu_link_weight/issues/2956341":
-        "https://www.drupal.org/files/issues/2018-03-27/menu_link_weight-js_error_on_title_field-2956341-2.patch"
-      }
+    "name": "su-sws/stanford_person",
+    "description": "Stanford Module Example",
+    "type": "drupal-custom-module",
+    "homepage": "https://github.com/SU-SWS/stanford_person",
+    "authors": [],
+    "license": "GPL-2.0+",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor-plugin/a11ychecker",
+                "version": "1.1.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/a11ychecker/releases/a11ychecker_1.1.1.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor-plugin/balloonpanel",
+                "version": "4.14.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/balloonpanel/releases/balloonpanel_4.14.0.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor-plugin/link",
+                "version": "4.14.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/link/releases/link_4.14.0.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor-plugin/fakeobjects",
+                "version": "4.14.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.14.0.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        }
+    ],
+    "require": {
+        "drupal/allowed_formats": "^1.2",
+        "drupal/auto_entitylabel": "3.x-dev#1dd28579f4559cc03d09ab20143b1feb48644fac",
+        "drupal/ctools": "^3.4",
+        "drupal/default_content": "^1.0-alpha8",
+        "drupal/field_group": "^3.0",
+        "drupal/layout_builder_restrictions": "^2.7",
+        "drupal/menu_block": "^1.6",
+        "drupal/page_manager": "dev-4.x#78b492786c841c5d2eb07f6d977275a76b79e46f",
+        "drupal/paragraphs": "^1.11",
+        "drupal/pathauto": "^1.8",
+        "drupal/shs": "^1.0@alpha",
+        "drupal/taxonomy_menu": "^3.4",
+        "drupal/view_unpublished": "^1.0@alpha",
+        "drupal/views_block_filter_block": "^1.0",
+        "drupal/views_contextual_filters_or": "^1.1",
+        "drupal/views_infinite_scroll": "^1.6",
+        "drupal/views_taxonomy_term_name_depth": "^6.0",
+        "su-sws/jumpstart_ui": "dev-8.x-1.x",
+        "su-sws/stanford_text_editor": "dev-8.x-1.x"
+    },
+    "extra": {
+        "enable-patching": true,
+        "patches": {
+            "drupal/default_content": {
+                "https://www.drupal.org/project/default_content/issues/2698425": "https://www.drupal.org/files/issues/2020-02-05/2698425--accept-content-updates--122.patch"
+            },
+            "drupal/core": {
+                "https://www.drupal.org/project/drupal/issues/3039185": "https://www.drupal.org/files/issues/2020-04-17/allow-field-blocks-to-display-label-in-layout-builder-3039185-22.patch"
+            },
+            "drupal/menu_link_weight": {
+                "https://www.drupal.org/project/menu_link_weight/issues/2956341": "https://www.drupal.org/files/issues/2018-03-27/menu_link_weight-js_error_on_title_field-2956341-2.patch"
+            }
+        }
     }
-  }
 }

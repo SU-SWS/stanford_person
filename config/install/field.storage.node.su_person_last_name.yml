@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: '-79E5YcoQK9uFezdsQ9d1gjQ5fmWyz83y0toeSkOBgY'
 id: node.su_person_last_name
 field_name: su_person_last_name
 entity_type: node

@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: WCEz51dxXUeLJNkOVRg1PHSHkw6Sz2utDpEPQaeWckQ
 id: node.su_person_education
 field_name: su_person_education
 entity_type: node

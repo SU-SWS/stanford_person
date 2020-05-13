@@ -5,8 +5,6 @@ dependencies:
     - entity_reference_revisions
     - node
     - paragraphs
-_core:
-  default_config_hash: FmAo6QNOxKpaKQ3vmJX5DN95fdD5Bz5IP7lUijJf88c
 id: node.su_person_components
 field_name: su_person_components
 entity_type: node

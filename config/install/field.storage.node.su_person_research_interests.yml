@@ -3,8 +3,6 @@ status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: fWh7T4T7EFX_8twn_yddnqJZOHfhESfh7qyFyACKT04
 id: node.su_person_research_interests
 field_name: su_person_research_interests
 entity_type: node

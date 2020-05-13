@@ -3,8 +3,6 @@ status: true
 dependencies:
   config:
     - page_manager.page.people
-_core:
-  default_config_hash: 7Sjh2NsMrqnGl1fngQhrA6QiPfNe5Aeu-77aeG87zWA
 id: people-layout_builder-0
 label: 'People - Layout Builder'
 variant: layout_builder

@@ -4,8 +4,6 @@ dependencies:
   module:
     - media
     - node
-_core:
-  default_config_hash: ZHY9EJlrhNOkpPyyvx2W3Kka9Qvddp5aoBxWnd7naJI
 id: node.su_person_photo
 field_name: su_person_photo
 entity_type: node

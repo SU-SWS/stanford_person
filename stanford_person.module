@@ -20,20 +20,9 @@ function stanford_person_theme() {
   return [
     'block__menu_block__stanford_person_type' => [
       'template' => 'block/block--menu-block--person-type',
-      'base hook' => 'block'
-    ]
+      'base hook' => 'block',
+    ],
   ];
-}
-
-
-/**
- * Implements hook_views_pre_render().
- */
-function stanford_person_views_pre_render(ViewExecutable $view) {
-  if (isset($view) && ($view->storage->id() == 'stanford_person') ||
-    ($view->storage->id() == 'stanford_person_list_terms_first') ) {
-      $view->element['#attached']['library'][] = 'stanford_person/views';
-  }
 }
 
 /**
@@ -44,12 +33,8 @@ function stanford_person_page_attachments(array &$attachments) {
   $node = \Drupal::routeMatch()->getParameter('node');
 
   // Not a node.. Then just continue.
-  if (!$node instanceof NodeInterface) {
-    return;
-  }
-
-  // Check for our type and add library if a match.
-  if ($node->getType() == "stanford_person") {
+  if ($node instanceof NodeInterface && $node->getType() == 'stanford_person') {
+    // Check for our type and add library if a match.
     $attachments['#attached']['library'][] = 'stanford_person/node';
   }
 }
@@ -71,24 +56,27 @@ function stanford_person_page_attachments(array &$attachments) {
 function stanford_person_views_post_render(ViewExecutable $view, &$output, CachePluginBase $cache) {
 
   // Node Base Table Views.
-  if ($view->storage->id() == 'stanford_person') {
-    $node_list_position = array_search('node_list', $output['#cache']['tags']);
-    unset($output['#cache']['tags'][$node_list_position]);
-    foreach ($view->filter['type']->value as $node_type) {
-      $output['#cache']['tags'][] = "node_list:$node_type";
-    }
-  }
+  switch($view->id()){
+    case 'stanford_person':
+      $node_list_position = array_search('node_list', $output['#cache']['tags']);
+      unset($output['#cache']['tags'][$node_list_position]);
+      foreach ($view->filter['type']->value as $node_type) {
+        $output['#cache']['tags'][] = "node_list:$node_type";
+      }
+      $output['#attached']['library'][] = 'stanford_person/views';
+      break;
 
-  // Term Base Table Views.
-  if (
-    $view->storage->id() == 'stanford_person_terms' ||
-    $view->storage->id() == 'stanford_person_list_terms_first'
-  ) {
-    $term_list_position = array_search('term_list', $output['#cache']['tags']);
-    unset($output['#cache']['tags'][$term_list_position]);
-    foreach ($view->filter['vid']->value as $term_type) {
-      $output['#cache']['tags'][] = "term_list:$term_type";
-    }
+    case 'stanford_person_list_terms_first':
+      $output['#attached']['library'][] = 'stanford_person/views';
+
+    case 'stanford_person_terms':
+      $term_list_position = array_search('term_list', $output['#cache']['tags']);
+      unset($output['#cache']['tags'][$term_list_position]);
+      foreach ($view->filter['vid']->value as $term_type) {
+        $output['#cache']['tags'][] = "term_list:$term_type";
+      }
+      break;
+
   }
 }
 

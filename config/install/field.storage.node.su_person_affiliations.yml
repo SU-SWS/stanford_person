@@ -4,8 +4,6 @@ dependencies:
   module:
     - link
     - node
-_core:
-  default_config_hash: ZnP53JOxwdi089AX9JLZ7iExONdC3wGbdKQ2DSUqRzo
 id: node.su_person_affiliations
 field_name: su_person_affiliations
 entity_type: node

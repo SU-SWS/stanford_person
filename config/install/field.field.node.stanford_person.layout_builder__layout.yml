@@ -6,8 +6,6 @@ dependencies:
     - node.type.stanford_person
   module:
     - layout_builder
-_core:
-  default_config_hash: 2_l1D0_6FtIGRNPsvxbyHNX9E_OVwSRzdK-yVmvNHqE
 id: node.stanford_person.layout_builder__layout
 field_name: layout_builder__layout
 entity_type: node

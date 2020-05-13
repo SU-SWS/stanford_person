@@ -21,7 +21,6 @@ dependencies:
   - entity_reference_revisions:entity_reference_revisions
   - jumpstart_ui:jumpstart_ui
   - layout_builder_restrictions:layout_builder_restrictions
-  - layout_library:layout_library
   - page_manager:page_manager
   - page_manager:page_manager_ui
   - shs:shs
@@ -30,3 +29,7 @@ dependencies:
   - taxonomy_menu:taxonomy_menu
   - views_contextual_filters_or:views_contextual_filters_or
   - views_infinite_scroll:views_infinite_scroll
+  - pathauto:pathauto
+  - view_unpublished:view_unpublished
+  - field_group:field_group
+  - menu_block:menu_block

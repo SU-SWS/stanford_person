@@ -4,8 +4,6 @@ dependencies:
   module:
     - node
     - text
-_core:
-  default_config_hash: kURLIfoac2tkl2Ut57abM8pzVZYgqcyud8EUSLfX0es
 id: node.su_person_location_address
 field_name: su_person_location_address
 entity_type: node

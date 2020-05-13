@@ -4,8 +4,6 @@ dependencies:
   module:
     - node
     - text
-_core:
-  default_config_hash: vOGI0OUPzKXkc0YXazjrPvGU0HeoGzZaR2WaRuu4Xyk
 id: node.su_person_research
 field_name: su_person_research
 entity_type: node

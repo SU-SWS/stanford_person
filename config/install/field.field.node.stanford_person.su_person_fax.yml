@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.node.su_person_fax
     - node.type.stanford_person
-_core:
-  default_config_hash: lY77X2kYWS503N4FhD3edEiCcns0yI-JFhMrdx5i5iY
 id: node.stanford_person.su_person_fax
 field_name: su_person_fax
 entity_type: node

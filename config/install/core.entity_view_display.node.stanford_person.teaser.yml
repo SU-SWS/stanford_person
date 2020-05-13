@@ -28,8 +28,6 @@ dependencies:
   module:
     - text
     - user
-_core:
-  default_config_hash: N0EZcj0R0XgRwVP5zjvCNA97dH-fqITu_BmvQHxbhHo
 id: node.stanford_person.teaser
 targetEntityType: node
 bundle: stanford_person
