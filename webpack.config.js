@@ -29,6 +29,8 @@ const srcSass = path.resolve(srcDir, 'scss');
 const distSass = path.resolve(distDir, 'css');
 const srcJS = path.resolve(srcDir, 'js');
 const distJS = path.resolve(distDir, 'js');
+const srcImg = path.resolve(srcDir, 'js');
+const distImg = path.resolve(distDir, 'img');
 
 // /////////////////////////////////////////////////////////////////////////////
 // Functions ///////////////////////////////////////////////////////////////////
