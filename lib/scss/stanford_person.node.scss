@@ -28,6 +28,49 @@
     .su-quote__bio {
       @include subheading;
     }
+
+    .su-quote__media {
+      &.flex-2-of-12 {
+        // Set min width.
+        min-width: 220px;
+
+        @include grid-media-between('xs', 'sm') {
+          @include margin(null $su-gutter-xs null null);
+
+          .field-media-image {
+            margin: 0 auto;
+            max-width: 220px;
+          }
+        }
+
+        @include grid-media-only('md') {
+          @include margin(null $su-gutter-md null null);
+          //Special width for the md breakpoint
+          min-width: 200px;
+        }
+
+        @include grid-media-only('lg') {
+          @include margin(null $su-gutter-lg null null);
+        }
+
+        @include grid-media-min('xl') {
+          @include margin(null $su-gutter-xl null null);
+        }
+
+        .field-media-image {
+          overflow: hidden;
+          border-radius: 50%;
+          width: 100%;
+        }
+      }
+    }
+
+    .su-quote__body {
+      &.flex-10-of-12 {
+        // Have the flex-10-of-12 auto fill the rest of the space.
+        flex: 1;
+      }
+    }
   }
 
   .su-person-content {
