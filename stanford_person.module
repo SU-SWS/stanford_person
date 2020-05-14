@@ -56,7 +56,7 @@ function stanford_person_page_attachments(array &$attachments) {
 function stanford_person_views_post_render(ViewExecutable $view, &$output, CachePluginBase $cache) {
 
   // Node Base Table Views.
-  switch($view->id()){
+  switch ($view->id()) {
     case 'stanford_person':
       $node_list_position = array_search('node_list', $output['#cache']['tags']);
       unset($output['#cache']['tags'][$node_list_position]);
@@ -76,7 +76,6 @@ function stanford_person_views_post_render(ViewExecutable $view, &$output, Cache
         $output['#cache']['tags'][] = "term_list:$term_type";
       }
       break;
-
   }
 }
 

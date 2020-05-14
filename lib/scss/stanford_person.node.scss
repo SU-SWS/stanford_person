@@ -42,7 +42,7 @@
       }
     }
 
-    // header set up
+    // Header set up.
     .node-stanford-person-su-person-education,
     .node-stanford-person-su-person-research,
     .node-stanford-person-su-person-affiliations,
@@ -133,12 +133,13 @@
       .block__title {
         @include small-paragraph;
 
-        &:before {
+        &::before {
           @include small-paragraph;
 
           color: $su-color-black;
           font-family: 'Font Awesome 5 Free';
-          font-weight: $su-font-semi-bold; // Need this for the new version of FA. Will go away later.
+          // Need this for the new version of FA. Will go away later.
+          font-weight: $su-font-semi-bold;
           left: -25px;
           position: absolute;
         }
@@ -146,21 +147,21 @@
     }
 
     .su-person-telephone {
-      &:before {
+      &::before {
         content: "p";
         padding-right: 10px;
       }
     }
 
     .su-person-mobile {
-      &:before {
+      &::before {
         content: "m";
         padding-right: 5px;
       }
     }
 
     .su-person-fax {
-      &:before {
+      &::before {
         content: "f";
         padding-right: 15px;
       }
@@ -176,8 +177,9 @@
       > div {
         display: inline-block;
       }
+
       div:first-of-type {
-        &:after {
+        &::after {
           content: ":";
           padding-right: 5px;
         }
@@ -195,39 +197,41 @@
     // Icon set up.
     .node-stanford-person-su-person-location-name {
       .block__title {
-        &:before {
-          content: "\f3c5"; ///* Need to switch to the SU icons.
+        &::before {
+          // Need to switch to the SU icons.
+          content: "\f3c5";
 
           @include grid-media-max('sm') {
             left: -16px;
           }
-
         }
       }
     }
+
     .node-stanford-person-su-person-telephone {
       .block__title {
-        &:before {
-          content: "\f095"; ///* Need to switch to the SU icons.
+        &::before {
+          // Need to switch to the SU icons.
+          content: "\f095";
           transform: scaleX(-1);
 
           @include grid-media-max('sm') {
             left: -16px;
           }
-
         }
       }
     }
+
     .node-stanford-person-su-person-links {
       .block__title {
-        &:before {
-          content: "\f0c1"; ///* Need to switch to the SU icons.
+        &::before {
+          // Need to switch to the SU icons.
+          content: "\f0c1";
           transform: scaleX(-1);
 
           @include grid-media-max('sm') {
             left: -17px;
           }
-
         }
       }
     }
