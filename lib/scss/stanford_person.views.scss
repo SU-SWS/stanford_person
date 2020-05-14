@@ -157,7 +157,7 @@
     }
 
     @include grid-media-max('lg') {
-      &:before {
+      &::before {
         @include small-paragraph;
         @include padding(null 15px null null);
 
@@ -198,7 +198,7 @@
     }
 
     .menu-item--active-trail {
-      &:before {
+      &::before {
         @include small-paragraph;
 
         color: $su-color-bright-blue;
@@ -245,4 +245,3 @@
     }
   }
 }
-
