@@ -30,6 +30,7 @@ dependencies:
     - jumpstart_ui
     - layout_builder
     - layout_builder_restrictions
+    - layout_library
     - link
     - stanford_person
     - text
@@ -203,7 +204,7 @@ third_party_settings:
                 type: media_image_formatter
                 settings:
                   view_mode: default
-                  image_style: stanford_circle
+                  image_style: medium_circle
                   link: false
                 third_party_settings:
                   field_formatter_class:
@@ -509,6 +510,8 @@ third_party_settings:
             additional: {  }
             weight: 0
         third_party_settings: {  }
+  layout_library:
+    enable: false
   layout_builder_restrictions:
     allowed_block_categories: {  }
     entity_view_mode_restriction:
@@ -521,6 +524,8 @@ third_party_settings:
         - stanford_person_header
         - stanford_person_body
         - ds_reset
+_core:
+  default_config_hash: RfrWIACvQ3WTMg1KYVldVkUXDhsK7Y_JGoW1hSFpEdI
 id: node.stanford_person.default
 targetEntityType: node
 bundle: stanford_person

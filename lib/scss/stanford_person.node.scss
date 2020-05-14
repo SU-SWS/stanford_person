@@ -28,6 +28,36 @@
     .su-quote__bio {
       @include subheading;
     }
+
+    .su-quote__media.flex-2-of-12 {
+      min-width: 220px;
+
+      @include grid-media-between('xs','sm') {
+        @include margin(null $su-gutter-xs null null);
+
+        img {
+          margin: 0 auto;
+        }
+      }
+
+      @include grid-media-only('md') {
+        @include margin(null $su-gutter-md null null);
+        min-width: 200px;
+      }
+
+      @include grid-media-only('lg') {
+        @include margin(null $su-gutter-lg null null);
+      }
+
+      @include grid-media-min('xl') {
+        @include margin(null $su-gutter-xl null null);
+      }
+    }
+
+
+    section.su-quote__body.flex-10-of-12 {
+      flex: 1;
+    }
   }
 
   .su-person-content {
