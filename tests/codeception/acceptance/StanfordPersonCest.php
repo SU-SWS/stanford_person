@@ -25,17 +25,15 @@ class StanfordPersonCest {
    */
   public function testViewPagesExist(AcceptanceTester $I) {
     $I->createEntity([
-      'type' => 'taxonomy_term',
       'vid' => 'stanford_person_types',
       'name' => "Student",
       'description' => "Student",
-    ]);    
+    ], 'taxonomy_term');    
     $I->createEntity([
-      'type' => 'taxonomy_term',
       'vid' => 'stanford_person_types',
       'name' => "Staff",
       'description' => "Staff",
-    ]);
+    ], 'taxonomy_term');
     $I->amOnPage("/people");
     $I->canSeeResponseCodeIs(200);
     $I->see("Sorry, no results found");
