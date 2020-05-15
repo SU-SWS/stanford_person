@@ -10,17 +10,6 @@ class StanfordPersonCest {
     $I->amOnPage('/node/add/stanford_person');
     $I->canSee('First Name');
   }
-  
-  /**
-   * Test that the default content has installed and is unpublished.
-   */
-  public function testDefaultContentExists(AcceptanceTester $I) {
-    $I->logInWithRole('administrator');
-    $I->amOnPage("/admin/content");
-    $I->see("Haley Jackson");
-    $I->amOnPage("/person/haley-jackson");
-    $I->see("Haley Jackson");
-  }
 
   /**
    * Test that the vocabulary and terms exist.
@@ -28,17 +17,29 @@ class StanfordPersonCest {
   public function testVocabularyTermsExists(AcceptanceTester $I) {
     $I->logInWithRole('administrator');
     $I->amOnPage("/admin/structure/taxonomy/manage/stanford_person_types/overview");
-    $I->canSeeNumberOfElements(".term-id", 14);
+    $I->canSeeResponseCodeIs(200);
   }
 
   /**
    * Test that the view pages exist.
    */
   public function testViewPagesExist(AcceptanceTester $I) {
+    $I->createEntity([
+      'type' => 'taxonomy_term',
+      'vid' => 'stanford_person_types',
+      'name' => "Student",
+      'description' => "Student",
+    ]);    
+    $I->createEntity([
+      'type' => 'taxonomy_term',
+      'vid' => 'stanford_person_types',
+      'name' => "Staff",
+      'description' => "Staff",
+    ]);
     $I->amOnPage("/people");
+    $I->canSeeResponseCodeIs(200);
     $I->see("Sorry, no results found");
-    $I->seeLink('Student');
-    $I->click("a[href='/people/staff']");
+    $I->amOnPage("/people/staff");
     $I->canSeeResponseCodeIs(200);
     $I->see("Sorry, no results found");
     $I->see("Filter By Person Type");
