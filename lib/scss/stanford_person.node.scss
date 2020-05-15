@@ -38,14 +38,14 @@
           @include margin(null $su-gutter-xs null null);
 
           .field-media-image {
-            margin: 0 auto;
+            @include margin(0 auto);
             max-width: 220px;
           }
         }
 
         @include grid-media-only('md') {
           @include margin(null $su-gutter-md null null);
-          //Special width for the md breakpoint
+          // Special width for the md breakpoint.
           min-width: 200px;
         }
 
