@@ -55,6 +55,7 @@ class StanfordPersonCest {
     ]);
     $I->amOnPage("/person/john-wick");
     $I->see("John Wick");
+    $I->runDrush('cr');
     $I->amOnPage("/people");
     $I->see("John Wick");
   }
