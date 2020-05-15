@@ -1,5 +1,5 @@
 # [Stanford Person](https://github.com/SU-SWS/stanford_person)
-##### Version: 8.x
+##### Version: 8.x-1.x
 
 [![CircleCI](https://circleci.com/gh/SU-SWS/stanford_person.svg?style=shield)](https://circleci.com/gh/SU-SWS/stanford_person)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/86a60eec15bd9da6d5c3/test_coverage)](https://codeclimate.com/github/SU-SWS/stanford_person/test_coverage)
