@@ -1,4 +1,0 @@
-services:
-  stanford_cap:
-    class: Drupal\stanford_person_service\Cap
-    arguments: ['@cache.default', '@database',  '@logger.factory', '@config.factory', '@entity_type.manager']

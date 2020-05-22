@@ -20,20 +20,20 @@ interface CapInterface {
   const CAP_URL = 'https://cap.stanford.edu/cap-api/api/profiles/v1';
 
   /**
-   * Set the CAPx Username.
+   * Set the CAP Client ID.
    *
-   * @param string $username
-   *   Username.
+   * @param string $client_id
+   *   Client ID.
    */
-  public function setUsername($username);
+  public function setClientId($client_id);
 
   /**
-   * Set the CAPx Password.
+   * Set the CAP Password.
    *
-   * @param string $password
+   * @param string $secret
    *   Password.
    */
-  public function setPassword($password);
+  public function setClientSecret($secret);
 
   /**
    * Get the url for CAPx for the given organizations.
@@ -46,7 +46,7 @@ interface CapInterface {
    * @return string
    *   CAPx URLs.
    */
-  public static function getOrganizationUrl($organizations, $children = FALSE);
+  public function getOrganizationUrl($organizations, $children = FALSE);
 
   /**
    * Get the url for CAPx for given workgroups.
@@ -57,7 +57,7 @@ interface CapInterface {
    * @return string
    *   CAPx URLs.
    */
-  public static function getWorkgroupUrl($workgroups);
+  public function getWorkgroupUrl($workgroups);
 
   /**
    * Get the total number of profiles for the given cap url.
@@ -81,6 +81,6 @@ interface CapInterface {
   /**
    * Sync the organization database with the api data from CAP.
    */
-  public function syncOrganizations();
+  public function updateOrganizations();
 
 }

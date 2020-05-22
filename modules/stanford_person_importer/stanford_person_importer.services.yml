@@ -1,0 +1,4 @@
+services:
+  stanford_cap:
+    class: Drupal\stanford_person_importer\Cap
+    arguments: ['@http_client', '@cache.default', '@database',  '@logger.factory']
