@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * stanford_person_importer.install
+ */
+
+/**
+ * Implements hook_install().
+ */
+function stanford_person_importer_install() {
+
+}

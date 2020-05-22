@@ -1,0 +1,12 @@
+name: 'Stanford Person Importer'
+type: module
+description: 'Migration support for importing of profile information from stanford.edu.'
+core_version_requirement: ^8 || ^9
+package: Stanford
+version: 8.x-1.1-dev
+dependencies:
+  - drupal:migrate
+  - migrate_file:migrate_file
+  - migrate_plus:migrate_plus
+  - migrate_tools:migrate_tools
+  - stanford_person
