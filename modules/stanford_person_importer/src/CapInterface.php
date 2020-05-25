@@ -24,6 +24,8 @@ interface CapInterface {
    *
    * @param string $client_id
    *   Client ID.
+   *
+   * @return self
    */
   public function setClientId($client_id);
 
@@ -32,6 +34,8 @@ interface CapInterface {
    *
    * @param string $secret
    *   Password.
+   *
+   * @return self
    */
   public function setClientSecret($secret);
 

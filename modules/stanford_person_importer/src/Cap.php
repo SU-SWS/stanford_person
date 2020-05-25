@@ -144,7 +144,6 @@ class Cap implements CapInterface {
     $token = $this->getAccessToken();
     $response = $this->getApiResponse("$url&ps=1&access_token=$token");
     if ($response) {
-      $response = json_decode($response, TRUE);
       return $response['totalCount'] ?? 0;
     }
   }
@@ -238,7 +237,7 @@ class Cap implements CapInterface {
    */
   protected function getAccessToken() {
     if ($cache = $this->cache->get('cap:access_token')) {
-      return $cache->data['access_token'];
+//      return $cache->data['access_token'];
     }
 
     $options = [
