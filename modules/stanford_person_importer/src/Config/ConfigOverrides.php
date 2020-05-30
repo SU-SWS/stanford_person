@@ -38,8 +38,17 @@ class ConfigOverrides implements ConfigFactoryOverrideInterface {
   public function __construct(ConfigPagesLoaderServiceInterface $config_pages, EntityTypeManagerInterface $entity_type_manager, CapInterface $cap) {
     $this->configPages = $config_pages;
     $this->entityTypeManager = $entity_type_manager;
-    $this->cap = $cap->setClientId(Settings::get('cap_client_id'))
-      ->setClientSecret(Settings::get('cap_client_secret'));
+    $this->cap = $cap;
+  }
+
+  protected function getCapClientId() {
+    $field_value = $this->configPages->getValue('stanford_person_importer', 'su_person_cap_username');
+    return $field_value[0]['value'] ?? NULL;
+  }
+
+  protected function getCapClientSecret() {
+    $field_value = $this->configPages->getValue('stanford_person_importer', 'su_person_cap_password');
+    return $field_value[0]['value'] ?? NULL;
   }
 
   /**
@@ -48,18 +57,29 @@ class ConfigOverrides implements ConfigFactoryOverrideInterface {
   public function loadOverrides($names) {
     $overrides = [];
     if (in_array('migrate_plus.migration.su_stanford_person', $names)) {
+      $this->cap->setClientId($this->getCapClientId());
+      $this->cap->setClientSecret($this->getCapClientSecret());
+
       $urls = $this->getOrgsUrls();
       $urls = array_merge($urls, $this->getWorkgroupUrls());
       $overrides['migrate_plus.migration.su_stanford_person']['source']['urls'] = $urls;
+      $overrides['migrate_plus.migration.su_stanford_person']['source']['authentication']['client_id'] = $this->getCapClientId();
+      $overrides['migrate_plus.migration.su_stanford_person']['source']['authentication']['client_secret'] = $this->getCapClientSecret();
     }
     return $overrides;
   }
 
   protected function getOrgsUrls() {
     $orgs = $this->configPages->getValue('stanford_person_importer', 'su_person_orgs');
+    if (empty($orgs)) {
+      return [];
+    }
+
     $term_storage = $this->entityTypeManager->getStorage('taxonomy_term');
     foreach ($orgs as &$value) {
-      $value = $term_storage->load($value['target_id'])->get('su_cap_org_code')->getString();
+      $value = $term_storage->load($value['target_id'])
+        ->get('su_cap_org_code')
+        ->getString();
       $value = str_replace(' ', '', $value);
     }
     $orgs = implode(',', $orgs);
@@ -69,6 +89,9 @@ class ConfigOverrides implements ConfigFactoryOverrideInterface {
 
   protected function getWorkgroupUrls() {
     $workgroups = $this->configPages->getValue('stanford_person_importer', 'su_person_workgroup');
+    if (empty($workgroups)) {
+      return [];
+    }
     foreach ($workgroups as &$value) {
       $value = reset($value);
     }

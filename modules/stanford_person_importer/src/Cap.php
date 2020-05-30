@@ -108,8 +108,7 @@ class Cap implements CapInterface {
   protected function getApiResponse($url, array $options = []) {
     try {
       $response = $this->client->request('GET', $url, $options);
-    }
-    catch (GuzzleException $e) {
+    } catch (GuzzleException $e) {
       // Most errors originate from the API itself.
       $this->logger->error($e->getMessage());
       return FALSE;
@@ -183,10 +182,11 @@ class Cap implements CapInterface {
     if (empty($tids)) {
       /** @var \Drupal\taxonomy\TermInterface $term */
       $term = $term_storage->create([
-        'name' => $org_data['name'],
+        'name' => $org_data['name'] . '(' . implode(', ', $org_data['orgCodes']) . ')',
         'vid' => 'cap_org_codes',
         'su_cap_org_code' => $org_data['orgCodes'],
       ]);
+
       if ($parent) {
         $term->set('parent', $parent->id());
       }
@@ -237,7 +237,7 @@ class Cap implements CapInterface {
    */
   protected function getAccessToken() {
     if ($cache = $this->cache->get('cap:access_token')) {
-//      return $cache->data['access_token'];
+      //      return $cache->data['access_token'];
     }
 
     $options = [

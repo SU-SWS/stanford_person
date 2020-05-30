@@ -50,6 +50,17 @@ function _stanford_profile_person_get_time($arg = NULL) {
  */
 function stanford_person_importer_config_pages_presave(ConfigPagesInterface $entity) {
   if ($entity->bundle() == 'stanford_person_importer') {
+    $terms = \Drupal::entityTypeManager()
+      ->getStorage('taxonomy_term')
+      ->getQuery()
+      ->condition('vid', 'cap_org_codes')
+      ->execute();
+    if (empty($terms)) {
+      \Drupal::service('stanford_person_importer.cap')
+        ->setClientId($entity->get('su_person_cap_username')->getString())
+        ->setClientSecret($entity->get('su_person_cap_password')->getString())
+        ->updateOrganizations();
+    }
     Cache::invalidateTags(['migration_plugins']);
   }
 }
