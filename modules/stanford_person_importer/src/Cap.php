@@ -4,6 +4,7 @@ namespace Drupal\stanford_person_importer;
 
 use Drupal\Core\Cache\CacheBackendInterface;
 use Drupal\Core\Database\Connection;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
 use Drupal\taxonomy\TermInterface;
 use GuzzleHttp\ClientInterface;
@@ -57,6 +58,30 @@ class Cap implements CapInterface {
    * @var \Drupal\Core\Logger\LoggerChannelInterface
    */
   protected $logger;
+
+  /**
+   * Validate the form submission credentials are valid.
+   *
+   * @param array $element
+   *   Password form element.
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *   Current form state.
+   * @param array $form
+   *   Complete form render array.
+   */
+  public static function validateCredentials(array $element, FormStateInterface $form_state, array $form) {
+    $username = $form_state->getValue(['su_person_cap_username', 0, 'value']);
+    $password = $form_state->getValue(['su_person_cap_password', 0, 'value']);
+
+    // Call the service to test the connection.
+    $success = \Drupal::service('stanford_person_importer.cap')
+      ->setClientId($username)
+      ->setClientSecret($password)
+      ->testConnection();
+    if (!$success) {
+      $form_state->setError($element, 'Invalid CAP credentials.');
+    }
+  }
 
   /**
    * Capx constructor.
@@ -167,7 +192,7 @@ class Cap implements CapInterface {
    *
    * @param array $org_data
    *   Keyed array of organization data.
-   * @param array $parent
+   * @param \Drupal\taxonomy\TermInterface $parent
    *   The organization parent if one exists.
    *
    * @throws \Exception
@@ -182,7 +207,7 @@ class Cap implements CapInterface {
     if (empty($tids)) {
       /** @var \Drupal\taxonomy\TermInterface $term */
       $term = $term_storage->create([
-        'name' => $org_data['name'] . '(' . implode(', ', $org_data['orgCodes']) . ')',
+        'name' => $org_data['name'] . ' (' . implode(', ', $org_data['orgCodes']) . ')',
         'vid' => 'cap_org_codes',
         'su_cap_org_code' => $org_data['orgCodes'],
       ]);
@@ -237,7 +262,7 @@ class Cap implements CapInterface {
    */
   protected function getAccessToken() {
     if ($cache = $this->cache->get('cap:access_token')) {
-      //      return $cache->data['access_token'];
+      return $cache->data['access_token'];
     }
 
     $options = [
@@ -252,6 +277,5 @@ class Cap implements CapInterface {
       return $result['access_token'];
     }
   }
-
 
 }

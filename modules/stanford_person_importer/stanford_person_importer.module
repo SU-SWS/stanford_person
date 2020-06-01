@@ -5,9 +5,10 @@
  * Contains stanford_person_importer.module.
  */
 
+use Drupal\Core\Cache\Cache;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\config_pages\ConfigPagesInterface;
-use Drupal\Core\Cache\Cache;
 
 /**
  * Implements hook_help().
@@ -43,6 +44,34 @@ function stanford_person_importer_help($route_name, RouteMatchInterface $route_m
  */
 function _stanford_profile_person_get_time($arg = NULL) {
   return time();
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function stanford_person_importer_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  //  dpm($form_id);
+  //  dpm($form);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function stanford_person_importer_form_config_pages_stanford_person_importer_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  //$form['su_person_cap_password']['widget'][]
+}
+
+/**
+ * Implements hook_field_widget_form_alter().
+ */
+function stanford_person_importer_field_widget_form_alter(&$element, \Drupal\Core\Form\FormStateInterface $form_state, $context) {
+  if ($context['items']->getFieldDefinition()
+      ->getName() == 'su_person_cap_password') {
+    $element['#element_validate'][] = [
+      'Drupal\stanford_person_importer\Cap',
+      'validateCredentials',
+    ];
+  }
 }
 
 /**

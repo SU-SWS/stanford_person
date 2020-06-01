@@ -3,12 +3,11 @@
 namespace Drupal\stanford_person_importer\Config;
 
 use Drupal\config_pages\ConfigPagesLoaderServiceInterface;
-use Drupal\Core\Cache\Cache;
 use Drupal\Core\Cache\CacheableMetadata;
+use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Config\ConfigFactoryOverrideInterface;
 use Drupal\Core\Config\StorageInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
-use Drupal\Core\Site\Settings;
 use Drupal\stanford_person_importer\CapInterface;
 
 /**
@@ -18,37 +17,77 @@ use Drupal\stanford_person_importer\CapInterface;
  */
 class ConfigOverrides implements ConfigFactoryOverrideInterface {
 
+  /**
+   * How many profiles are returned in each url.
+   */
   const URL_CHUNKS = 15;
 
   /**
+   * Config pages loader service.
+   *
    * @var \Drupal\config_pages\ConfigPagesLoaderServiceInterface
    */
   protected $configPages;
 
   /**
+   * Entity type manager service.
+   *
    * @var \Drupal\Core\Entity\EntityTypeManagerInterface
    */
   protected $entityTypeManager;
 
   /**
+   * Cap API service
+   *
    * @var \Drupal\stanford_person_importer\CapInterface
    */
   protected $cap;
 
-  public function __construct(ConfigPagesLoaderServiceInterface $config_pages, EntityTypeManagerInterface $entity_type_manager, CapInterface $cap) {
+  /**
+   * Config factory service.
+   *
+   * @var \Drupal\Core\Config\ConfigFactoryInterface
+   */
+  protected $configFactory;
+
+  /**
+   * ConfigOverrides constructor.
+   *
+   * @param \Drupal\config_pages\ConfigPagesLoaderServiceInterface $config_pages
+   *   Config pages loader service.
+   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
+   *   Entity type manager service.
+   * @param \Drupal\stanford_person_importer\CapInterface $cap
+   *   Cap API service.
+   * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
+   *   Config factory service.
+   */
+  public function __construct(ConfigPagesLoaderServiceInterface $config_pages, EntityTypeManagerInterface $entity_type_manager, CapInterface $cap, ConfigFactoryInterface $config_factory) {
     $this->configPages = $config_pages;
     $this->entityTypeManager = $entity_type_manager;
     $this->cap = $cap;
+    $this->configFactory = $config_factory;
   }
 
-  protected function getCapClientId() {
-    $field_value = $this->configPages->getValue('stanford_person_importer', 'su_person_cap_username');
-    return $field_value[0]['value'] ?? NULL;
+  /**
+   * {@inheritDoc}
+   */
+  public function createConfigObject($name, $collection = StorageInterface::DEFAULT_COLLECTION) {
+    return NULL;
   }
 
-  protected function getCapClientSecret() {
-    $field_value = $this->configPages->getValue('stanford_person_importer', 'su_person_cap_password');
-    return $field_value[0]['value'] ?? NULL;
+  /**
+   * {@inheritDoc}
+   */
+  public function getCacheSuffix() {
+    return 'StanfordPersonImporterConfigOverride';
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  public function getCacheableMetadata($name) {
+    return new CacheableMetadata();
   }
 
   /**
@@ -62,6 +101,11 @@ class ConfigOverrides implements ConfigFactoryOverrideInterface {
 
       $urls = $this->getOrgsUrls();
       $urls = array_merge($urls, $this->getWorkgroupUrls());
+
+      $allowed_fields = $this->getAllowedFields();
+      foreach ($urls as &$url) {
+        $url .= '&whitelist=' . implode(',', $allowed_fields);
+      }
       $overrides['migrate_plus.migration.su_stanford_person']['source']['urls'] = $urls;
       $overrides['migrate_plus.migration.su_stanford_person']['source']['authentication']['client_id'] = $this->getCapClientId();
       $overrides['migrate_plus.migration.su_stanford_person']['source']['authentication']['client_secret'] = $this->getCapClientSecret();
@@ -69,35 +113,68 @@ class ConfigOverrides implements ConfigFactoryOverrideInterface {
     return $overrides;
   }
 
-  protected function getOrgsUrls() {
-    $orgs = $this->configPages->getValue('stanford_person_importer', 'su_person_orgs');
-    if (empty($orgs)) {
-      return [];
+  /**
+   * Get a list of the fields from CAP that should be fetched.
+   *
+   * @return string[]
+   *   Array of CAP selectors.
+   */
+  protected function getAllowedFields() {
+    $allowed_fields = $this->configFactory->getEditable('migrate_plus.migration.su_stanford_person')
+      ->getOriginal('source.fields');
+    foreach ($allowed_fields as &$field) {
+      $field = $field['selector'];
+      if ($slash_position = strpos($field, '/')) {
+        $field = substr($field, 0, $slash_position);
+      }
     }
-
-    $term_storage = $this->entityTypeManager->getStorage('taxonomy_term');
-    foreach ($orgs as &$value) {
-      $value = $term_storage->load($value['target_id'])
-        ->get('su_cap_org_code')
-        ->getString();
-      $value = str_replace(' ', '', $value);
-    }
-    $orgs = implode(',', $orgs);
-
-    return $this->getUrlChunks($this->cap->getOrganizationUrl($orgs));
+    return $allowed_fields;
   }
 
-  protected function getWorkgroupUrls() {
-    $workgroups = $this->configPages->getValue('stanford_person_importer', 'su_person_workgroup');
-    if (empty($workgroups)) {
+  /**
+   * Get a list of CAP urls that have an org code specified.
+   *
+   * @return string[]
+   *   List of urls.
+   *
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+   */
+  protected function getOrgsUrls() {
+    $org_tids = $this->configPages->getValue('stanford_person_importer', 'su_person_orgs', [], 'target_id');
+
+    // No field values populated.
+    if (empty($org_tids)) {
       return [];
     }
-    foreach ($workgroups as &$value) {
-      $value = reset($value);
-    }
-    $workgroups = implode(',', $workgroups);
+    $org_codes = [];
 
-    return $this->getUrlChunks($this->cap->getWorkgroupUrl($workgroups));
+    // Load the taxonomy term that the field is pointing at and use the org code
+    // field on the term entity.
+    $term_storage = $this->entityTypeManager->getStorage('taxonomy_term');
+    foreach ($org_tids as &$tid) {
+      if ($term = $term_storage->load($tid)) {
+        $org_code = $term->get('su_cap_org_code')
+          ->getString();
+        $org_codes[] = str_replace(' ', '', $org_code);
+      }
+    }
+    $org_codes = implode(',', $org_codes);
+    return $this->getUrlChunks($this->cap->getOrganizationUrl($org_codes));
+  }
+
+  /**
+   * Get a list of CAP urls that have a workgroup filter.
+   *
+   * @return string[]
+   *   List of urls.
+   */
+  protected function getWorkgroupUrls() {
+    $workgroups = $this->configPages->getValue('stanford_person_importer', 'su_person_workgroup', [], 'value');
+    if ($workgroups) {
+      return $this->getUrlChunks($this->cap->getWorkgroupUrl(implode(',', $workgroups)));
+    }
+    return [];
   }
 
   /**
@@ -125,24 +202,25 @@ class ConfigOverrides implements ConfigFactoryOverrideInterface {
   }
 
   /**
-   * {@inheritDoc}
+   * Get the username from the config pages field.
+   *
+   * @return string|null
+   *   Client ID string.
    */
-  public function createConfigObject($name, $collection = StorageInterface::DEFAULT_COLLECTION) {
-    return NULL;
+  protected function getCapClientId() {
+    $field_value = $this->configPages->getValue('stanford_person_importer', 'su_person_cap_username');
+    return $field_value[0]['value'] ?? NULL;
   }
 
   /**
-   * {@inheritDoc}
+   * Get the password from the config pages field.
+   *
+   * @return string|null
+   *   Client secret string.
    */
-  public function getCacheSuffix() {
-    return 'StanfordPersonImporterConfigOverride';
-  }
-
-  /**
-   * {@inheritDoc}
-   */
-  public function getCacheableMetadata($name) {
-    return new CacheableMetadata();
+  protected function getCapClientSecret() {
+    $field_value = $this->configPages->getValue('stanford_person_importer', 'su_person_cap_password');
+    return $field_value[0]['value'] ?? NULL;
   }
 
 }

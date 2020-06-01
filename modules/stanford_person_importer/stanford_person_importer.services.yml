@@ -4,6 +4,6 @@ services:
     arguments: ['@http_client', '@cache.default', '@database',  '@logger.factory']
   stanford_person_importer.config_overrider:
     class: Drupal\stanford_person_importer\Config\ConfigOverrides
-    arguments: ['@config_pages.loader', '@entity_type.manager', '@stanford_person_importer.cap']
+    arguments: ['@config_pages.loader', '@entity_type.manager', '@stanford_person_importer.cap', '@config.factory']
     tags:
       - {name: config.factory.override, priority: 5}
