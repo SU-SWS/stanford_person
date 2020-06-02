@@ -4,6 +4,7 @@ namespace Drupal\stanford_person_importer;
 
 use Drupal\Core\Cache\CacheBackendInterface;
 use Drupal\Core\Database\Connection;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
 use Drupal\taxonomy\TermInterface;
@@ -37,6 +38,13 @@ class Cap implements CapInterface {
    * @var \GuzzleHttp\ClientInterface
    */
   protected $client;
+
+  /**
+   * Entity type manager service
+   *
+   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
+   */
+  protected $entityTypeManager;
 
   /**
    * Cache service.
@@ -95,8 +103,9 @@ class Cap implements CapInterface {
    * @param \Drupal\Core\Logger\LoggerChannelFactoryInterface $logger_factory
    *   Database logging service.
    */
-  public function __construct(ClientInterface $guzzle, CacheBackendInterface $cache, Connection $database, LoggerChannelFactoryInterface $logger_factory) {
+  public function __construct(ClientInterface $guzzle, EntityTypeManagerInterface $entity_type_manager, CacheBackendInterface $cache, Connection $database, LoggerChannelFactoryInterface $logger_factory) {
     $this->client = $guzzle;
+    $this->entityTypeManager = $entity_type_manager;
     $this->cache = $cache;
     $this->database = $database;
     $this->logger = $logger_factory->get('stanford_person_importer');
@@ -196,7 +205,11 @@ class Cap implements CapInterface {
    * @throws \Exception
    */
   protected function insertOrgData(array $org_data, TermInterface $parent = NULL) {
-    $term_storage = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
+    if (!isset($org_data['orgCodes'])) {
+      return;
+    }
+
+    $term_storage = $this->entityTypeManager->getStorage('taxonomy_term');
     $tids = $term_storage->getQuery()
       ->condition('vid', 'cap_org_codes')
       ->condition('su_cap_org_code', $org_data['orgCodes'], 'IN')
