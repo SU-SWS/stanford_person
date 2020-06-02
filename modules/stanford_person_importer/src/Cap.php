@@ -127,13 +127,13 @@ class Cap implements CapInterface {
    * @param array $options
    *   Guzzle request options.
    *
-   * @return bool|string
+   * @return bool|array
    *   Response string or false if failed.
    */
   protected function getApiResponse($url, array $options = []) {
     try {
       $response = $this->client->request('GET', $url, $options);
-    } catch (GuzzleException $e) {
+    } catch (GuzzleException | \Exception $e) {
       // Most errors originate from the API itself.
       $this->logger->error($e->getMessage());
       return FALSE;
@@ -167,9 +167,7 @@ class Cap implements CapInterface {
   public function getTotalProfileCount($url) {
     $token = $this->getAccessToken();
     $response = $this->getApiResponse("$url&ps=1&access_token=$token");
-    if ($response) {
-      return $response['totalCount'] ?? 0;
-    }
+    return $response['totalCount'] ?? 0;
   }
 
   /**
