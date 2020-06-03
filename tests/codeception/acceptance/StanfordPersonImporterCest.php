@@ -10,6 +10,7 @@ class StanfordPersonImporterCest {
    */
   public function testImporter(AcceptanceTester $I) {
     $I->runDrush('pm:enable stanford_person_importer');
+    $I->runDrush('cr');
     $I->logInWithRole('administrator');
     $I->amOnPage('/admin/config/people/person-importer');
     $I->fillField('CAP Username', getenv('CAP_USERNAME'));
