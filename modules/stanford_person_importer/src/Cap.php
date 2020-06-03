@@ -12,7 +12,7 @@ use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
 
 /**
- * Class Cap
+ * Stanford CAP API helper service.
  *
  * @package Drupal\stanford_person_importer
  */
@@ -40,7 +40,7 @@ class Cap implements CapInterface {
   protected $client;
 
   /**
-   * Entity type manager service
+   * Entity type manager service.
    *
    * @var \Drupal\Core\Entity\EntityTypeManagerInterface
    */
@@ -96,6 +96,8 @@ class Cap implements CapInterface {
    *
    * @param \GuzzleHttp\ClientInterface $guzzle
    *   Guzzle http service.
+   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
+   *   Entity Type Manager Service.
    * @param \Drupal\Core\Cache\CacheBackendInterface $cache
    *   Cache service.
    * @param \Drupal\Core\Database\Connection $database
@@ -110,7 +112,6 @@ class Cap implements CapInterface {
     $this->database = $database;
     $this->logger = $logger_factory->get('stanford_person_importer');
   }
-
 
   /**
    * {@inheritDoc}
@@ -142,7 +143,8 @@ class Cap implements CapInterface {
   protected function getApiResponse($url, array $options = []) {
     try {
       $response = $this->client->request('GET', $url, $options);
-    } catch (GuzzleException | \Exception $e) {
+    }
+    catch (GuzzleException | \Exception $e) {
       // Most errors originate from the API itself.
       $this->logger->error($e->getMessage());
       return FALSE;
@@ -199,7 +201,7 @@ class Cap implements CapInterface {
    *
    * @param array $org_data
    *   Keyed array of organization data.
-   * @param \Drupal\taxonomy\TermInterface $parent
+   * @param \Drupal\taxonomy\TermInterface|null $parent
    *   The organization parent if one exists.
    *
    * @throws \Exception

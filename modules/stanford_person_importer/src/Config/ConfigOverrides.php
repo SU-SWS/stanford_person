@@ -11,7 +11,7 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\stanford_person_importer\CapInterface;
 
 /**
- * Class ConfigOverrides
+ * Configuration overrides for stanford person importer migration entity.
  *
  * @package Drupal\stanford_person_importer\Config
  */
@@ -37,7 +37,7 @@ class ConfigOverrides implements ConfigFactoryOverrideInterface {
   protected $entityTypeManager;
 
   /**
-   * Cap API service
+   * Cap API service.
    *
    * @var \Drupal\stanford_person_importer\CapInterface
    */

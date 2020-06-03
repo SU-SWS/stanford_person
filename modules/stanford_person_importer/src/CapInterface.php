@@ -2,6 +2,11 @@
 
 namespace Drupal\stanford_person_importer;
 
+/**
+ * Stanford CAP API interface for CAP service.
+ *
+ * @package Drupal\stanford_person_importer
+ */
 interface CapInterface {
 
   /**
@@ -26,6 +31,7 @@ interface CapInterface {
    *   Client ID.
    *
    * @return self
+   *   CAP service with client ID saved.
    */
   public function setClientId($client_id);
 
@@ -36,6 +42,7 @@ interface CapInterface {
    *   Password.
    *
    * @return self
+   *   CAP service with client secret saved.
    */
   public function setClientSecret($secret);
 
