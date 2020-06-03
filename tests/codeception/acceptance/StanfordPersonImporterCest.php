@@ -27,9 +27,13 @@ class StanfordPersonImporterCest {
     $I->click('Save');
     $I->runDrush('migrate:import su_stanford_person');
     $I->amOnPage('/admin/content');
-    $I->selectOption('Person', 'Content type');
+    $I->selectOption('Content type', 'Person');
     $I->click('Filter');
     $I->seeNumberOfElements('.views-table tr', [5, 50]);
+
+    $I->amOnPage('/admin/structure/migrate/manage/su_stanford_person/migrations');
+    $imported_count = (int) $I->grabTextFrom('table tbody td:nth-child(5)');
+    $I->assertTrue($imported_count > 0);
   }
 
 }
