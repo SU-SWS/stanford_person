@@ -97,11 +97,9 @@
     "require-dev": {
         "drupal/config_pages": "^2.7",
         "drupal/field_encrypt": "^2.0@alpha",
-        "drupal/migrate_file": "^1.1",
-        "drupal/migrate_plus": "^5.1",
-        "drupal/migrate_tools": "^5.0",
         "drupal/real_aes": "^2.3",
-        "sainsburys/guzzle-oauth2-plugin": "^3.0"
+        "sainsburys/guzzle-oauth2-plugin": "^3.0",
+        "su-sws/stanford_migrate": "dev-D8CORE-1736"
     },
     "extra": {
         "enable-patching": true,
