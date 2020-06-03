@@ -5,10 +5,10 @@
 #}
 
 {%- set attributes = attributes.addClass(['centered-container', 'layout--section-person-header']) -%}
-{%- set figure_attributes = create_attribute() -%}
+{%- set quote_attributes = create_attribute() -%}
 
 <div {{ attributes }}>
-  <figure {{ figure_attributes.addClass(['su-quote', 'flex-10-of-12', 'flex-container']) }}>
+  <div {{ quote_attributes.addClass(['su-quote', 'flex-10-of-12', 'flex-container']) }}>
     <div {{ region_attributes.quote_media.addClass(['su-quote__media', 'flex-2-of-12']) }}>
       {{- content.quote_media -}}
     </div>
@@ -34,5 +34,5 @@
       {{- content.content -}}
     </div>
     {%- endif -%}
-  </figure>
+  </div>
 </div>
