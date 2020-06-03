@@ -121,7 +121,7 @@ class ConfigOverrides implements ConfigFactoryOverrideInterface {
    */
   protected function getAllowedFields() {
     $allowed_fields = $this->configFactory->getEditable('migrate_plus.migration.su_stanford_person')
-      ->getOriginal('source.fields');
+      ->getOriginal('source.fields') ?: [];
     foreach ($allowed_fields as &$field) {
       $field = $field['selector'];
       if ($slash_position = strpos($field, '/')) {

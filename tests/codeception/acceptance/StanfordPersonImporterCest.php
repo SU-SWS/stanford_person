@@ -21,8 +21,8 @@ class StanfordPersonImporterCest {
       'name' => 'Web Services',
       'su_cap_org_code' => 'BSWS',
     ], 'taxonomy_term');
-    $I->fillField('Organizations', 'Web Services');
-    $I->fillField('Workgroup', 'uit:sws');
+    $I->fillField('su_person_orgs[0][target_id]', 'Web Services');
+    $I->fillField('su_person_workgroup[0][value]', 'uit:sws');
     $I->click('Save');
     $I->runDrush('migrate:import su_stanford_person');
     $I->amOnPage('/admin/content');
