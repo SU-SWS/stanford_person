@@ -15,6 +15,7 @@ class StanfordPersonImporterCest {
     $I->amOnPage('/admin/structure/taxonomy/manage/cap_org_codes/add');
     $I->fillField('Name', 'Web Services');
     $I->fillField('su_cap_org_code[0][value]', 'BSWS');
+    $I->click('Save');
 
     $I->amOnPage('/admin/config/people/person-importer');
     $I->fillField('CAP Username', getenv('CAP_USERNAME'));
