@@ -3,27 +3,21 @@
 namespace Drupal\Tests\stanford_person_importer\Unit\Config;
 
 use Drupal\config_pages\ConfigPagesLoaderServiceInterface;
-
-use Drupal\Core\Cache\CacheBackendInterface;
 use Drupal\Core\Config\Config;
 use Drupal\Core\Config\ConfigFactoryInterface;
-use Drupal\Core\Database\Connection;
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Field\FieldItemListInterface;
-use Drupal\Core\Logger\LoggerChannelFactoryInterface;
-use Drupal\stanford_person_importer\Cap;
 use Drupal\stanford_person_importer\CapInterface;
 use Drupal\stanford_person_importer\Config\ConfigOverrides;
 use Drupal\Tests\UnitTestCase;
-use GuzzleHttp\ClientInterface;
-use Psr\Http\Message\ResponseInterface;
 
 /**
  * Class ConfigOverridesTest.
  *
  * @group stanford_person_importer
+ * @coversDefaultClass \Drupal\stanford_person_importer\Config\ConfigOverrides
  */
 class ConfigOverridesTest extends UnitTestCase {
 
