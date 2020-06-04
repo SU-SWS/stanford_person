@@ -215,7 +215,7 @@ process:
         uri:
           plugin: str_replace
           source: url
-          search: '/^(?![a-zA-Z]).*:\/\/.*?$/'
+          search: '/^(?![a-z][a-z0-9]*:\/\/).*?$/i'
           replace: ''
           regex: true
         title: label/text

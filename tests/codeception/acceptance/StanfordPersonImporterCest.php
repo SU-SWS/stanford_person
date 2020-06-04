@@ -10,14 +10,13 @@ class StanfordPersonImporterCest {
    */
   public function testImporter(AcceptanceTester $I) {
     $I->runDrush('pm:enable stanford_person_importer');
-    $I->runDrush('cr');
     $I->logInWithRole('administrator');
     $I->amOnPage('/admin/structure/taxonomy/manage/cap_org_codes/add');
     $I->fillField('Name', 'Web Services');
     $I->fillField('su_cap_org_code[0][value]', 'BSWS');
     $I->click('Save');
 
-    $I->amOnPage('/admin/config/people/person-importer');
+    $I->amOnPage('/admin/config/importers/person-importer');
     $I->fillField('CAP Username', getenv('CAP_USERNAME'));
     $I->fillField('CAP Password', getenv('CAP_PASSWORD'));
     $I->click('Save');
