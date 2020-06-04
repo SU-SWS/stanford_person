@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - null
+    - stanford_migrate
 title: 'Importer: Stanford Person Importer'
 id: stanford_migrate_su_stanford_person
 weight: 0
