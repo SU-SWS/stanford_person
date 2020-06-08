@@ -180,7 +180,10 @@ class ConfigOverrides implements ConfigFactoryOverrideInterface {
   }
 
   /**
-   * @return array
+   * Get the list of CAP urls for a sunetid filter.
+   *
+   * @return string[]
+   *   List of urls.
    */
   protected function getSunetUrls() {
     $sunets = $this->configPages->getValue('stanford_person_importer', 'su_person_sunetid', [], 'value');
