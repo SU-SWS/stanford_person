@@ -156,14 +156,12 @@ class Cap implements CapInterface {
    * {@inheritDoc}
    */
   public function getOrganizationUrl($organizations, $children = FALSE) {
-    if ($organizations) {
-      $organizations = preg_replace('/[^A-Z,]/', '', strtoupper($organizations));
-      $url = self::CAP_URL . "?orgCodes=$organizations";
-      if ($children) {
-        $url .= '&includeChildren=true';
-      }
-      return $url;
+    $organizations = preg_replace('/[^A-Z,]/', '', strtoupper($organizations));
+    $url = self::CAP_URL . "?orgCodes=$organizations";
+    if ($children) {
+      $url .= '&includeChildren=true';
     }
+    return $url;
   }
 
   /**
@@ -178,9 +176,7 @@ class Cap implements CapInterface {
    * {@inheritDoc}
    */
   public function getSunetUrl($sunetids) {
-    if ($sunetids) {
-      return self::CAP_URL . "?uids=$sunetids";
-    }
+    return self::CAP_URL . "?uids=$sunetids";
   }
 
   /**

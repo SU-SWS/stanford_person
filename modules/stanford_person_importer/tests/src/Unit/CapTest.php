@@ -166,6 +166,9 @@ class CapTest extends UnitTestCase {
 
     $url = $this->service->getWorkgroupUrl('foo:bar_-baz');
     $this->assertEquals('https://cap.stanford.edu/cap-api/api/profiles/v1?privGroups=FOO:BAR_-BAZ', $url);
+
+    $url = $this->service->getSunetUrl('foobarbaz');
+    $this->assertEquals('https://cap.stanford.edu/cap-api/api/profiles/v1?uids=foobarbaz', $url);
   }
 
   /**

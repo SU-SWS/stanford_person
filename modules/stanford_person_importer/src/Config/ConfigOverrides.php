@@ -186,7 +186,7 @@ class ConfigOverrides implements ConfigFactoryOverrideInterface {
    *   List of urls.
    */
   protected function getSunetUrls() {
-    $sunets = $this->configPages->getValue('stanford_person_importer', 'su_person_sunetid', [], 'value');
+    $sunets = $this->configPages->getValue('stanford_person_importer', 'su_person_sunetid', [], 'value') ?: [];
 
     $urls = [];
     foreach (array_chunk($sunets, self::URL_CHUNKS) as $chunk) {
