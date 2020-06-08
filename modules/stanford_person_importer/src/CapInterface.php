@@ -60,7 +60,7 @@ interface CapInterface {
   public function getOrganizationUrl($organizations, $children = FALSE);
 
   /**
-   * Get the url for CAPx for given workgroups.
+   * Get the url for CAP for given workgroups.
    *
    * @param string $workgroups
    *   Commas separated list of workgroups.
@@ -69,6 +69,17 @@ interface CapInterface {
    *   CAPx URLs.
    */
   public function getWorkgroupUrl($workgroups);
+
+  /**
+   * Get the url for CAP with the given list of SunetIDs.
+   *
+   * @param string $sunetids
+   *   Comma delimited list of sunetIDs.
+   *
+   * @return string
+   *   CAPx URLs.
+   */
+  public function getSunetUrl($sunetids);
 
   /**
    * Get the total number of profiles for the given cap url.

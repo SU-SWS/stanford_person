@@ -101,6 +101,7 @@ class ConfigOverrides implements ConfigFactoryOverrideInterface {
 
       $urls = $this->getOrgsUrls();
       $urls = array_merge($urls, $this->getWorkgroupUrls());
+      $urls = array_merge($urls, $this->getSunetUrls());
 
       $allowed_fields = $this->getAllowedFields();
       foreach ($urls as &$url) {
@@ -171,10 +172,24 @@ class ConfigOverrides implements ConfigFactoryOverrideInterface {
    */
   protected function getWorkgroupUrls() {
     $workgroups = $this->configPages->getValue('stanford_person_importer', 'su_person_workgroup', [], 'value');
+
     if ($workgroups) {
       return $this->getUrlChunks($this->cap->getWorkgroupUrl(implode(',', $workgroups)));
     }
     return [];
+  }
+
+  /**
+   * @return array
+   */
+  protected function getSunetUrls() {
+    $sunets = $this->configPages->getValue('stanford_person_importer', 'su_person_sunetid', [], 'value');
+
+    $urls = [];
+    foreach (array_chunk($sunets, self::URL_CHUNKS) as $chunk) {
+      $urls[] = $this->cap->getSunetUrl(implode(',', $chunk));
+    }
+    return $urls;
   }
 
   /**
