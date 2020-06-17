@@ -1,35 +1,35 @@
 name: 'Stanford Person'
 type: module
 description: 'A person bio and supporting information content type'
-core_version_requirement: ^8 || ^9
+core_version_requirement: '^8 || ^9'
 package: Stanford
-version: 8.x-1.1-dev
+version: 8.x-1.1
 dependencies:
-  - allowed_formats:allowed_formats
-  - auto_entitylabel:auto_entitylabel
-  - ctools:ctools
-  - drupal:layout_builder
-  - drupal:link
-  - drupal:media_library
-  - drupal:menu_ui
-  - drupal:node
-  - drupal:paragraphs
-  - drupal:path
-  - drupal:taxonomy
-  - drupal:text
-  - drupal:views
-  - entity_reference_revisions:entity_reference_revisions
-  - field_group:field_group
-  - jumpstart_ui:jumpstart_ui
-  - layout_builder_restrictions:layout_builder_restrictions
-  - menu_block:menu_block
-  - page_manager:page_manager
-  - page_manager:page_manager_ui
-  - pathauto:pathauto
-  - shs:shs
-  - stanford_media:stanford_media
-  - stanford_text_editor:stanford_text_editor
-  - taxonomy_menu:taxonomy_menu
-  - view_unpublished:view_unpublished
-  - views_contextual_filters_or:views_contextual_filters_or
-  - views_infinite_scroll:views_infinite_scroll
+    - 'allowed_formats:allowed_formats'
+    - 'auto_entitylabel:auto_entitylabel'
+    - 'ctools:ctools'
+    - 'drupal:layout_builder'
+    - 'drupal:link'
+    - 'drupal:media_library'
+    - 'drupal:menu_ui'
+    - 'drupal:node'
+    - 'drupal:paragraphs'
+    - 'drupal:path'
+    - 'drupal:taxonomy'
+    - 'drupal:text'
+    - 'drupal:views'
+    - 'entity_reference_revisions:entity_reference_revisions'
+    - 'field_group:field_group'
+    - 'jumpstart_ui:jumpstart_ui'
+    - 'layout_builder_restrictions:layout_builder_restrictions'
+    - 'menu_block:menu_block'
+    - 'page_manager:page_manager'
+    - 'page_manager:page_manager_ui'
+    - 'pathauto:pathauto'
+    - 'shs:shs'
+    - 'stanford_media:stanford_media'
+    - 'stanford_text_editor:stanford_text_editor'
+    - 'taxonomy_menu:taxonomy_menu'
+    - 'view_unpublished:view_unpublished'
+    - 'views_contextual_filters_or:views_contextual_filters_or'
+    - 'views_infinite_scroll:views_infinite_scroll'
