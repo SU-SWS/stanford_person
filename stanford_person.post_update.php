@@ -12,8 +12,9 @@ use Drupal\file\Entity\File;
 use Drupal\media\Entity\Media;
 
 /**
- * Install the default profile image to the media library and add the entities
- * to the DB.
+ * Install the default profile image.
+ *
+ * Add the image to the media library and add the entities to the DB.
  */
 function stanford_person_post_update_8100() {
 

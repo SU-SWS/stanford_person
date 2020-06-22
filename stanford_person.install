@@ -1,8 +1,11 @@
 <?php
-/*
+
+/**
  * @file
- * Install Tasks.
- **/
+ * File description.
+ *
+ * Long description.
+ */
 
 use Drupal\views\Entity\View;
 use Drupal\Core\File\FileSystemInterface;
@@ -22,5 +25,5 @@ function stanford_person_install() {
   $source = drupal_get_path("module", "stanford_person") . "/lib/assets/img/stanford-person-default-profile-image.png";
   $destination = 'public://media/image';
   $file_system = \Drupal::service('file_system');
-  $saved = $file_system->copy($source, $destination, FileSystemInterface::EXISTS_REPLACE);
+  $file_system->copy($source, $destination, FileSystemInterface::EXISTS_REPLACE);
 }
