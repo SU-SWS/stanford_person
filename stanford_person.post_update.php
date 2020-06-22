@@ -7,7 +7,7 @@
  * Long description.
  */
 
-use \Drupal\Core\File\FileSystemInterface;
+use Drupal\Core\File\FileSystemInterface;
 use Drupal\file\Entity\File;
 use Drupal\media\Entity\Media;
 
