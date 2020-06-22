@@ -50,6 +50,3 @@ function stanford_person_post_update_8100() {
   $image_media->save();
 
 }
-
-
-stanford_person_post_update_8100();
