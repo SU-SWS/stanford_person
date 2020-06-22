@@ -41,7 +41,6 @@ function stanford_person_post_update_8100() {
     'uuid' => 'a4660e7f-d4bf-4a28-8030-9dc8576b1c9a',
     'uid' => \Drupal::currentUser()->id(),
     'langcode' => \Drupal::languageManager()->getDefaultLanguage()->getId(),
-    'status' => Media::PUBLISHED,
     'field_media_image' => [
       'target_id' => $image->id(),
       'alt' => t('Placeholder image'),
@@ -51,3 +50,5 @@ function stanford_person_post_update_8100() {
   $image_media->save();
 
 }
+
+stanford_person_post_update_8100();
