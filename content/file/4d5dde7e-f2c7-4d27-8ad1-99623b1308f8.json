@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/appserver\/sites\/default\/files\/media\/image\/default-profile-image.png"
+            "href": "http:\/\/appserver\/sites\/default\/files\/media\/image\/stanford-person-default-profile-image.png"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
@@ -43,13 +43,13 @@
     },
     "filename": [
         {
-            "value": "default-profile-image.png"
+            "value": "stanford-person-default-profile-image.png"
         }
     ],
     "uri": [
         {
-            "value": "public:\/\/media\/image\/default-profile-image.png",
-            "url": "\/sites\/default\/files\/media\/image\/default-profile-image.png"
+            "value": "public:\/\/media\/image\/stanford-person-default-profile-image.png",
+            "url": "\/sites\/default\/files\/media\/image\/stanford-person-default-profile-image.png"
         }
     ],
     "filemime": [
