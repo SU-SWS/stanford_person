@@ -1,7 +1,7 @@
 <?php
 
 class StanfordPersonCest {
-  
+
   /**
    * People
    */
@@ -28,7 +28,7 @@ class StanfordPersonCest {
       'vid' => 'stanford_person_types',
       'name' => "Student",
       'description' => "Student",
-    ], 'taxonomy_term');    
+    ], 'taxonomy_term');
     $I->createEntity([
       'vid' => 'stanford_person_types',
       'name' => "Staff",
@@ -52,12 +52,29 @@ class StanfordPersonCest {
       'type' => 'stanford_person',
       'su_person_first_name' => "John",
       'su_person_last_name' => "Wick",
+      'su_person_full_title' => 'Finisher of contracts',
     ]);
     $I->amOnPage("/person/john-wick");
     $I->see("John Wick");
+    $I->see("Finisher of contracts");
     $I->runDrush('cr');
     $I->amOnPage("/people");
     $I->see("John Wick");
+  }
+
+  /**
+   * Test for the default image.
+   */
+  public function testDefaultImage() {
+    $I->createEntity([
+      'type' => 'stanford_person',
+      'su_person_first_name' => "John",
+      'su_person_last_name' => "Wayne",
+      'su_person_full_title' => 'Cowboy',
+    ]);
+    $I->amOnPage("/person/john-wayne");
+    $I->see("John Wayne");
+    $I->seeNumberOfElements(['css' => '.su-person-photo img'], 1);
   }
 
 }
