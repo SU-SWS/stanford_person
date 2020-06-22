@@ -1,0 +1,82 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/appserver\/sites\/default\/files\/media\/image\/default-profile-image.png"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/file\/file\/uid": [
+            {
+                "href": "http:\/\/appserver\/user\/1?_format=hal_json"
+            }
+        ]
+    },
+    "uuid": [
+        {
+            "value": "4d5dde7e-f2c7-4d27-8ad1-99623b1308f8"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/file\/file\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/appserver\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "fd0e0bde-db65-45c0-bdb9-6ef5117810b9"
+                    }
+                ]
+            }
+        ]
+    },
+    "filename": [
+        {
+            "value": "default-profile-image.png"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/media\/image\/default-profile-image.png",
+            "url": "\/sites\/default\/files\/media\/image\/default-profile-image.png"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/png"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 4653
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-06-22T21:23:04+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2020-06-22T21:23:09+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ]
+}
