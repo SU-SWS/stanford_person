@@ -19,9 +19,12 @@ use Drupal\media\Entity\Media;
 function stanford_person_post_update_8100() {
 
   // Save the file to public.
-  $source = drupal_get_path("module", "stanford_person") . "/lib/assets/img/stanford-person-default-profile-image.png";
-  $destination = 'public://media/image';
   $file_system = \Drupal::service('file_system');
+  $destination = 'public://media/image';
+  $source = $file_system->realpath(
+    drupal_get_path("module", "stanford_person") .
+    "/lib/assets/img/stanford-person-default-profile-image.png"
+  );
   $file_system->prepareDirectory($destination, FileSystemInterface::CREATE_DIRECTORY);
   $saved = $file_system->copy($source, $destination, FileSystemInterface::EXISTS_REPLACE);
 
