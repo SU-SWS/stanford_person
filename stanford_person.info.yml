@@ -20,6 +20,7 @@ dependencies:
   - drupal:views
   - entity_reference_revisions:entity_reference_revisions
   - field_group:field_group
+  - field_permissions:field_permissions
   - jumpstart_ui:jumpstart_ui
   - layout_builder_restrictions:layout_builder_restrictions
   - menu_block:menu_block
