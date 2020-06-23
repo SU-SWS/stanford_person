@@ -74,7 +74,7 @@ class StanfordPersonCest {
     $I->amOnPage("/person/john-wayne");
     $I->see("John Wayne");
     $I->see("Cowboy");
-    $I->seeNumberOfElements(['css' => '.su-person-photo'], 1);
+    $I->seeElement('.su-person-photo');
   }
 
 }
