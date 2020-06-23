@@ -65,7 +65,7 @@ class StanfordPersonCest {
   /**
    * Test for the default image.
    */
-  public function testDefaultImage() {
+  public function testDefaultImage(AcceptanceTester $I) {
     $I->createEntity([
       'type' => 'stanford_person',
       'su_person_first_name' => "John",
