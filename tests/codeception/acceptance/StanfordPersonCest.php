@@ -36,10 +36,9 @@ class StanfordPersonCest {
     ], 'taxonomy_term');
     $I->amOnPage("/people");
     $I->canSeeResponseCodeIs(200);
-    $I->see("Sorry, no results found");
+    $I->see("Filter By Person Type");
     $I->amOnPage("/people/staff");
     $I->canSeeResponseCodeIs(200);
-    $I->see("Sorry, no results found");
     $I->see("Filter By Person Type");
   }
 
@@ -66,15 +65,16 @@ class StanfordPersonCest {
    * Test for the default image.
    */
   public function testDefaultImage(AcceptanceTester $I) {
-    $I->createEntity([
-      'type' => 'stanford_person',
-      'su_person_first_name' => "John",
-      'su_person_last_name' => "Wayne",
-      'su_person_full_title' => 'Cowboy',
-    ]);
+    $I->logInWithRole("administrator");
+    $I->amOnPage('/node/add/stanford_person');
+    $I->fillField("First Name", "John");
+    $I->fillField("Last Name", "Wayne");
+    $I->fillField("Full Title", "Cowboy");
+    $I->click("Save");
     $I->amOnPage("/person/john-wayne");
     $I->see("John Wayne");
-    $I->seeNumberOfElements(['css' => '.su-person-photo img'], 1);
+    $I->see("Cowboy");
+    $I->seeNumberOfElements(['css' => '.su-person-photo'], 1);
   }
 
 }
