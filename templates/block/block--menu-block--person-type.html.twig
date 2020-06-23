@@ -42,15 +42,18 @@
 {% set menu_class = 'person-category__collapsable-menu' %}
 {% set heading_id = (configuration.id ~ '-menu')|clean_id %}
 {% set attributes = attributes.setAttribute('id', heading_id) %}
+{% set button_label = ('button-label')|clean_id %}
+{% set attributes = attributes.setAttribute('aria-labelledby', button_label) %}
+{% set button_id = ('button-label')|clean_id %}
 {% set attributes = attributes.addClass(classes) %}
 
-<nav{{ attributes }} aria-labelledby="button-label">
+<nav{{ attributes }}>
   {# Label. If not displayed, we still provide it for screen readers. #}
   {% if not configuration.label_display %}
     {% set title_attributes = title_attributes.addClass('visually-hidden') %}
   {% endif %}
   {{ title_prefix }}
-  <button{{ title_attributes.setAttribute('class', menu_class) }} id="button-label">
+  <button{{ title_attributes.setAttribute('class', menu_class).setAttribute('id', button_id) }}>
     {{ configuration.label }}
     <span class="su-link su-link--jump"></span>
   </button>
