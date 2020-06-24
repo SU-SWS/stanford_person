@@ -51,7 +51,7 @@ class StanfordPersonCest {
       'type' => 'stanford_person',
       'su_person_first_name' => "John",
       'su_person_last_name' => "Wick",
-      'su_person_full_title' => 'Finisher of contracts',
+      'su_person_short_title' => 'Finisher of contracts',
     ]);
     $I->amOnPage("/person/john-wick");
     $I->see("John Wick");
@@ -69,7 +69,7 @@ class StanfordPersonCest {
     $I->amOnPage('/node/add/stanford_person');
     $I->fillField("First Name", "John");
     $I->fillField("Last Name", "Wayne");
-    $I->fillField("Full Title", "Cowboy");
+    $I->fillField("Short Title", "Cowboy");
     $I->click("Save");
     $I->amOnPage("/person/john-wayne");
     $I->see("John Wayne");
