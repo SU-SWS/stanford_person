@@ -1,26 +1,26 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/appserver\/media\/16\/edit?_format=hal_json"
+            "href": "http:\/\/localhost\/media\/16\/edit?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
         },
         "http:\/\/drupal.org\/rest\/relation\/media\/image\/uid": [
             {
-                "href": "http:\/\/appserver\/user\/1?_format=hal_json",
+                "href": "http:\/\/localhost\/user\/1?_format=hal_json",
                 "lang": "en"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/media\/image\/thumbnail": [
             {
-                "href": "http:\/\/appserver\/sites\/default\/files\/media\/image\/stanford-person-default-profile-image.png",
+                "href": "http:\/\/localhost\/sites\/default\/files\/media\/image\/stanford-person-default-profile-image.png",
                 "lang": "en"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/media\/image\/field_media_image": [
             {
-                "href": "http:\/\/appserver\/sites\/default\/files\/media\/image\/stanford-person-default-profile-image.png",
+                "href": "http:\/\/localhost\/sites\/default\/files\/media\/image\/stanford-person-default-profile-image.png",
                 "lang": "en"
             }
         ]
@@ -58,7 +58,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/appserver\/user\/1?_format=hal_json"
+                        "href": "http:\/\/localhost\/user\/1?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
@@ -76,7 +76,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/appserver\/sites\/default\/files\/media\/image\/stanford-person-default-profile-image.png"
+                        "href": "http:\/\/localhost\/sites\/default\/files\/media\/image\/stanford-person-default-profile-image.png"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
@@ -96,7 +96,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/appserver\/sites\/default\/files\/media\/image\/stanford-person-default-profile-image.png"
+                        "href": "http:\/\/localhost\/sites\/default\/files\/media\/image\/stanford-person-default-profile-image.png"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
@@ -150,8 +150,8 @@
             "value": {
                 "title": "| University",
                 "og_site_name": "University",
-                "canonical_url": "http:\/\/appserver\/home",
-                "og_url": "http:\/\/appserver\/home"
+                "canonical_url": "http:\/\/localhost\/home",
+                "og_url": "http:\/\/localhost\/home"
             }
         }
     ],

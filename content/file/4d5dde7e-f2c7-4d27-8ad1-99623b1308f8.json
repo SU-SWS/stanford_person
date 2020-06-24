@@ -1,14 +1,14 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/appserver\/sites\/default\/files\/media\/image\/stanford-person-default-profile-image.png"
+            "href": "http:\/\/localhost\/sites\/default\/files\/media\/image\/stanford-person-default-profile-image.png"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
         },
         "http:\/\/drupal.org\/rest\/relation\/file\/file\/uid": [
             {
-                "href": "http:\/\/appserver\/user\/1?_format=hal_json"
+                "href": "http:\/\/localhost\/user\/1?_format=hal_json"
             }
         ]
     },
@@ -27,7 +27,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/appserver\/user\/1?_format=hal_json"
+                        "href": "http:\/\/localhost\/user\/1?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
