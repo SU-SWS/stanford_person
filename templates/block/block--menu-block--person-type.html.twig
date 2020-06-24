@@ -44,7 +44,6 @@
 {% set attributes = attributes.setAttribute('id', heading_id) %}
 {% set button_label = ('button-label')|clean_id %}
 {% set attributes = attributes.setAttribute('aria-labelledby', button_label) %}
-{% set button_id = ('button-label')|clean_id %}
 {% set attributes = attributes.addClass(classes) %}
 
 <nav{{ attributes }}>
@@ -53,7 +52,7 @@
     {% set title_attributes = title_attributes.addClass('visually-hidden') %}
   {% endif %}
   {{ title_prefix }}
-  <button{{ title_attributes.setAttribute('class', menu_class).setAttribute('id', button_id) }}>
+  <button{{ title_attributes.setAttribute('class', menu_class).setAttribute('id', button_label) }}>
     {{ configuration.label }}
     <span class="su-link su-link--jump"></span>
   </button>
