@@ -24,19 +24,26 @@ class StanfordPersonCest {
    * Test that the view pages exist.
    */
   public function testViewPagesExist(AcceptanceTester $I) {
+    $I->runDrush('cache-rebuild');
+
     $I->createEntity([
       'vid' => 'stanford_person_types',
       'name' => "Student",
       'description' => "Student",
     ], 'taxonomy_term');
+
     $I->createEntity([
       'vid' => 'stanford_person_types',
       'name' => "Staff",
       'description' => "Staff",
     ], 'taxonomy_term');
+
+    $I->runDrush('cache-rebuild');
+
     $I->amOnPage("/people");
     $I->canSeeResponseCodeIs(200);
     $I->see("Filter By Person Type");
+
     $I->amOnPage("/people/staff");
     $I->canSeeResponseCodeIs(200);
     $I->see("Filter By Person Type");

@@ -89,7 +89,7 @@
         "drupal/real_aes": "^2.3",
         "drupal/shs": "^1.0@alpha",
         "drupal/taxonomy_menu": "dev-3.x",
-        "drupal/view_unpublished": "^1.0@alpha",
+        "drupal/view_unpublished": "dev-1.x#d3f72872dd8dd3f288dc9d63d65a740ce7d0ba9a",
         "drupal/views_block_filter_block": "^1.0",
         "drupal/views_contextual_filters_or": "^1.1",
         "drupal/views_infinite_scroll": "^1.6",
