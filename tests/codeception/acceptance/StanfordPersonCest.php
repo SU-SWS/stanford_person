@@ -24,19 +24,26 @@ class StanfordPersonCest {
    * Test that the view pages exist.
    */
   public function testViewPagesExist(AcceptanceTester $I) {
+    $I->runDrush('cache-rebuild');
+
     $I->createEntity([
       'vid' => 'stanford_person_types',
       'name' => "Student",
       'description' => "Student",
     ], 'taxonomy_term');
+
     $I->createEntity([
       'vid' => 'stanford_person_types',
       'name' => "Staff",
       'description' => "Staff",
     ], 'taxonomy_term');
+
+    $I->runDrush('cache-rebuild');
+
     $I->amOnPage("/people");
     $I->canSeeResponseCodeIs(200);
     $I->see("Filter By Person Type");
+
     $I->amOnPage("/people/staff");
     $I->canSeeResponseCodeIs(200);
     $I->see("Filter By Person Type");
@@ -53,10 +60,10 @@ class StanfordPersonCest {
       'su_person_last_name' => "Wick",
       'su_person_short_title' => 'Finisher of contracts',
     ]);
+    $I->runDrush('cache-rebuild');
     $I->amOnPage("/person/john-wick");
     $I->see("John Wick");
     $I->see("Finisher of contracts");
-    $I->runDrush('cr');
     $I->amOnPage("/people");
     $I->see("John Wick");
   }
@@ -72,6 +79,7 @@ class StanfordPersonCest {
     $I->fillField("Short Title", "Cowboy");
     $I->click("Save");
     $I->amOnPage("/person/john-wayne");
+    $I->runDrush('cache-rebuild');
     $I->see("John Wayne");
     $I->see("Cowboy");
     $I->seeElement('.field--name-su-person-photo');
