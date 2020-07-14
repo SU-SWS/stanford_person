@@ -1,7 +1,7 @@
 <?php
 
 class StanfordPersonCest {
-  
+
   /**
    * People
    */
@@ -24,22 +24,28 @@ class StanfordPersonCest {
    * Test that the view pages exist.
    */
   public function testViewPagesExist(AcceptanceTester $I) {
+    $I->runDrush('cache-rebuild');
+
     $I->createEntity([
       'vid' => 'stanford_person_types',
       'name' => "Student",
       'description' => "Student",
-    ], 'taxonomy_term');    
+    ], 'taxonomy_term');
+
     $I->createEntity([
       'vid' => 'stanford_person_types',
       'name' => "Staff",
       'description' => "Staff",
     ], 'taxonomy_term');
+
+    $I->runDrush('cache-rebuild');
+
     $I->amOnPage("/people");
     $I->canSeeResponseCodeIs(200);
-    $I->see("Sorry, no results found");
+    $I->see("Filter By Person Type");
+
     $I->amOnPage("/people/staff");
     $I->canSeeResponseCodeIs(200);
-    $I->see("Sorry, no results found");
     $I->see("Filter By Person Type");
   }
 
@@ -52,12 +58,31 @@ class StanfordPersonCest {
       'type' => 'stanford_person',
       'su_person_first_name' => "John",
       'su_person_last_name' => "Wick",
+      'su_person_short_title' => 'Finisher of contracts',
     ]);
+    $I->runDrush('cache-rebuild');
     $I->amOnPage("/person/john-wick");
     $I->see("John Wick");
-    $I->runDrush('cr');
+    $I->see("Finisher of contracts");
     $I->amOnPage("/people");
     $I->see("John Wick");
+  }
+
+  /**
+   * Test for the default image.
+   */
+  public function testDefaultImage(AcceptanceTester $I) {
+    $I->logInWithRole("administrator");
+    $I->amOnPage('/node/add/stanford_person');
+    $I->fillField("First Name", "John");
+    $I->fillField("Last Name", "Wayne");
+    $I->fillField("Short Title", "Cowboy");
+    $I->click("Save");
+    $I->amOnPage("/person/john-wayne");
+    $I->runDrush('cache-rebuild');
+    $I->see("John Wayne");
+    $I->see("Cowboy");
+    $I->seeElement('.field--name-su-person-photo');
   }
 
 }
