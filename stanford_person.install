@@ -25,4 +25,9 @@ function stanford_person_install() {
   if (!\Drupal::service('module_handler')->moduleExists('default_content')) {
     _stanford_person_install_default_photo();
   }
+  else {
+    // Just put the file in place.
+    _stanford_person_install_default_photo_file();
+  }
+
 }

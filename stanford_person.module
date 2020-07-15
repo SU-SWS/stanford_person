@@ -118,15 +118,7 @@ function _stanford_person_install_default_photo() {
   // Media UUID.
   $muuid = 'a4660e7f-d4bf-4a28-8030-9dc8576b1c9a';
 
-  // Save the file to public.
-  $destination = 'public://media/image';
-  $source = $file_system->realpath(
-    drupal_get_path("module", "stanford_person") .
-    "/lib/assets/img/stanford-person-default-profile-image.png"
-  );
-  $file_system->prepareDirectory($destination, FileSystemInterface::CREATE_DIRECTORY);
-  $saved = $file_system->copy($source, $destination, FileSystemInterface::EXISTS_REPLACE);
-
+  $saved = _stanford_person_install_default_photo_file();
   // Try to get the image first.
   $image = $erepo->loadEntityByUuid('file', $fuuid);
 
@@ -162,4 +154,26 @@ function _stanford_person_install_default_photo() {
     $image_media->save();
   }
 
+}
+
+/**
+ * Move the file into the file system.
+ *
+ * @return string
+ *   The file uri.
+ */
+function _stanford_person_install_default_photo_file() {
+  // Services.
+  $file_system = \Drupal::service('file_system');
+
+  // Save the file to public.
+  $destination = 'public://media/image';
+  $source = $file_system->realpath(
+    drupal_get_path("module", "stanford_person") .
+    "/lib/assets/img/stanford-person-default-profile-image.png"
+  );
+  $file_system->prepareDirectory($destination, FileSystemInterface::CREATE_DIRECTORY);
+  $saved = $file_system->copy($source, $destination, FileSystemInterface::EXISTS_REPLACE);
+
+  return $saved;
 }
