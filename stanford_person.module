@@ -117,7 +117,9 @@ function _stanford_person_install_default_photo() {
   // Media UUID.
   $muuid = 'a4660e7f-d4bf-4a28-8030-9dc8576b1c9a';
 
+  // Move the physical file in to place.
   $saved = _stanford_person_install_default_photo_file();
+
   // Try to get the image first.
   $image = $erepo->loadEntityByUuid('file', $fuuid);
 
