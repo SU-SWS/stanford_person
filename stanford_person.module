@@ -110,7 +110,6 @@ function stanford_person_taxonomy_term_presave(TermInterface $entity) {
 function _stanford_person_install_default_photo() {
   // Services.
   $file_system = \Drupal::service('file_system');
-  $logger = \Drupal::logger('stanford_person');
   $erepo = \Drupal::service('entity.repository');
 
   // File UUID.
