@@ -132,6 +132,14 @@
       }
     }
 
+    // Education & Research padding
+    .su-person-education,
+    .su-person-research {
+      div:not(:last-child) {
+        @include modular-spacing('margin', null null 0 null);
+      }
+    }
+
     // Two column setup for Research and Affiliations
     .su-person-research,
     .su-person-affiliations {
@@ -148,6 +156,7 @@
       > div:nth-child(odd) {
         width: 40%;
         margin-right: 12%;
+        vertical-align: top;
 
         @include grid-media-max('sm') {
           display: block;
@@ -169,6 +178,8 @@
   // Right side contact information
   .right-region {
     @include small-paragraph;
+
+    overflow-wrap: break-word;
 
     .node-stanford-person-su-person-location-name,
     .node-stanford-person-su-person-telephone,
