@@ -1,5 +1,12 @@
 # Stanford News
 
+8.x-1.4
+--------------------------------------------------------------------------------
+_Release Date: 2020-08-07_
+
+- D8ORE-2368 D8CORE-2367: fixing spacing on the people node (#103) (a7d4a8f)
+- Removed views_taxonomy_term_name_depth thats not used (#102) (cb6c6bc)
+
 8.x-1.3
 --------------------------------------------------------------------------------
 _Release Date: 2020-07-15_
