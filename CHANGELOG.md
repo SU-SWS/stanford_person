@@ -1,5 +1,13 @@
 # Stanford News
 
+8.x-1.5
+--------------------------------------------------------------------------------
+_Release Date: 2020-09-09_
+
+- D8CORE-2535: Change sort on interior pages to be by last name first (#107) (b283467)
+- D8CORE-000 Adjusted regext to retain numbers in workgroups and org codes (#106) (70e30d8)
+- D8CORE-2499 Updated composer license (#105) (016ab46)
+
 8.x-1.4
 --------------------------------------------------------------------------------
 _Release Date: 2020-08-07_
