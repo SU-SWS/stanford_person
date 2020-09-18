@@ -108,6 +108,10 @@
 
   border: 1px solid $su-color-cool-grey-25;
 
+  @include grid-media-min('xl') {
+    @include modular-spacing('margin-bottom', 8);
+  }
+
   .person-category__collapsable-menu {
     @include type-e;
     @include padding(0);
