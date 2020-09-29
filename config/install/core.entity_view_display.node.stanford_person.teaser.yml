@@ -67,3 +67,6 @@ hidden:
   su_person_short_title: true
   su_person_telephone: true
   su_person_type_group: true
+  su_person_academic_appt: true
+  su_person_admin_appts: true
+  su_person_scholarly_interests: true

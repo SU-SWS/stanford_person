@@ -67,6 +67,16 @@
     }
   }
 
+  // Edit this person node link
+  .su-people-edit-article {
+
+    a {
+      @include modular-spacing('margin-top', 0);
+      @include button-secondary;
+      text-align: right;
+    }
+  }
+
   // Load more set up
   .views-infinite-scroll-content-wrapper {
     &,

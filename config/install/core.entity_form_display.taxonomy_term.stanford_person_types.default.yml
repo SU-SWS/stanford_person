@@ -44,4 +44,7 @@ content:
     weight: 100
     region: content
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  su_person_academic_appt: true
+  su_person_admin_appts: true
+  su_person_scholarly_interests: true
