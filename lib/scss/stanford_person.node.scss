@@ -10,6 +10,7 @@
     padding: 0;
 
     .su-quote {
+      align-items: center;
       padding: 0;
     }
 
@@ -89,11 +90,22 @@
     .node-stanford-person-su-person-education,
     .node-stanford-person-su-person-research,
     .node-stanford-person-su-person-affiliations,
-    .node-stanford-person-su-person-location-address,
     .node-stanford-person-su-person-links,
     .node-stanford-person-su-person-map-url,
     .node-stanford-person-su-person-mail-code {
       @include modular-spacing('margin-bottom', 5);
+    }
+
+    .node-stanford-person-su-person-location-address {
+      + .node-stanford-person-su-person-map-url {
+        @include modular-spacing('margin-bottom', 5);
+      }
+    }
+
+    .node-stanford-person-su-person-location-address {
+      + .node-stanford-person-su-person-links {
+        @include modular-spacing('padding-top', 5);
+      }
     }
 
     .node-stanford-person-su-person-email,

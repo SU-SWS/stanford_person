@@ -67,6 +67,16 @@
     }
   }
 
+  // Edit this person node link
+  .su-people-edit-article {
+
+    a {
+      @include modular-spacing('margin-top', 0);
+      @include button-secondary;
+      text-align: right;
+    }
+  }
+
   // Load more set up
   .views-infinite-scroll-content-wrapper {
     &,
@@ -107,6 +117,10 @@
   @include modular-spacing('padding', 3);
 
   border: 1px solid $su-color-cool-grey-25;
+
+  @include grid-media-min('xl') {
+    @include modular-spacing('margin-bottom', 8);
+  }
 
   .person-category__collapsable-menu {
     @include type-e;
