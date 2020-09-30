@@ -195,6 +195,7 @@
 
     .node-stanford-person-su-person-location-name,
     .node-stanford-person-su-person-telephone,
+    .node-stanford-person-su-person-contact,
     .node-stanford-person-su-person-links {
       .block__title {
         @include small-paragraph;
@@ -274,12 +275,13 @@
       }
     }
 
-    .node-stanford-person-su-person-telephone {
+    .node-stanford-person-su-person-contact {
       .block__title {
         &::before {
           // Need to switch to the SU icons.
           content: "\f095";
           transform: scaleX(-1);
+          color: $su-color-white;
 
           @include grid-media-max('sm') {
             left: -16px;
