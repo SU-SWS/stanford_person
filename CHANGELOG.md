@@ -1,5 +1,16 @@
 # Stanford News
 
+8.x-1.7
+--------------------------------------------------------------------------------
+_Release Date: 2020-10-05_
+
+- D8CORE-2531: Fixing the header for the people node (#114) (c9957fd)
+- D8CORE-2650: Fixing the spacing on the node for SOE and Basic (#115) (a49e3ca)
+- D8CORE-2651: adding spacing below filter menu so does not touch (#112) (c02dabd)
+- D8CORE-2185: matching the people edit button to the same as news (#113) (0c96985)
+- D8CORE-2349: updating person list view to a single link (#111) (6e28a3a)
+- CAP-52 Map 4 more fields from cap API (#110) (6bd8ba4)
+
 8.x-1.5
 --------------------------------------------------------------------------------
 _Release Date: 2020-09-09_
