@@ -281,7 +281,6 @@
           // Need to switch to the SU icons.
           content: "\f095";
           transform: scaleX(-1);
-          color: $su-color-white;
 
           @include grid-media-max('sm') {
             left: -16px;
