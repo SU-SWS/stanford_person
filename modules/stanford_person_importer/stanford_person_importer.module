@@ -96,7 +96,7 @@ function stanford_person_importer_field_widget_form_alter(&$element, FormStateIn
  */
 function stanford_person_importer_node_presave(NodeInterface $entity) {
   // Don't worry about nodes that were manually created or if the field is gone.
-  if(!_stanford_person_importer_node_imported($entity) || !$entity->hasField('su_person_photo')){
+  if (!_stanford_person_importer_node_imported($entity) || !$entity->hasField('su_person_photo')) {
     return;
   }
   $photo_values = $entity->get('su_person_photo')->getValue();
