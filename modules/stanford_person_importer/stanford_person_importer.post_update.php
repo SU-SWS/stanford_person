@@ -22,8 +22,10 @@ function stanford_person_importer_post_update_8001(&$sandbox) {
     ->condition('su_person_photo', NULL, 'IS NULL')
     ->execute();
 
-  \Drupal::database()->update('migrate_map_su_stanford_person')
-    ->fields(['hash' => ''])
-    ->condition('destid1', array_values($nids), 'IN')
-    ->execute();
+  if ($nids) {
+    \Drupal::database()->update('migrate_map_su_stanford_person')
+      ->fields(['hash' => ''])
+      ->condition('destid1', array_values($nids), 'IN')
+      ->execute();
+  }
 }
