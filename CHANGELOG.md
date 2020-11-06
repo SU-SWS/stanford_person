@@ -1,5 +1,16 @@
 # Stanford News
 
+8.x-1.8
+--------------------------------------------------------------------------------
+_Release Date: 2020-11-06_
+
+- D8CORE-2002: unset "required" attribute on interests and affiliations field group. (#121) (e3bdb53)
+- D8CORE-2664: Delete 1x1 profile images and invalidate the content to reimport (#120) (beef624)
+- Adjusted the person importer to update the media item correctly (#119) (2ba9609)
+- D8CORE-2829: removing the white from the the icon (#117) (72232a4)
+- Fixed post update hook (212d790)
+- D8CORE-2470 Use the default image on any imported content without an image (#118) (5a97677)
+
 8.x-1.7
 --------------------------------------------------------------------------------
 _Release Date: 2020-10-05_
