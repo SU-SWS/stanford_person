@@ -89,6 +89,33 @@ function stanford_person_importer_field_widget_form_alter(&$element, FormStateIn
 }
 
 /**
+ * Implements hook_ENTITY_TYPE_presave().
+ *
+ * Before saving imported nodes, set the photo field to a default value if it
+ * doesn't have any legitimate media items.
+ */
+function stanford_person_importer_node_presave(NodeInterface $entity) {
+  // Don't worry about nodes that were manually created or if the field is gone.
+  if (!_stanford_person_importer_node_imported($entity) || !$entity->hasField('su_person_photo')) {
+    return;
+  }
+  $photo_values = $entity->get('su_person_photo')->getValue();
+  $media_storage = \Drupal::entityTypeManager()->getStorage('media');
+  foreach ($photo_values as $value) {
+    // If any delta value has a valid media entity, we don't need to set the
+    // default field value.
+    if ($media_storage->load($value['target_id'])) {
+      return;
+    }
+  }
+
+  $default_photo = $entity->getFieldDefinition('su_person_photo')
+    ->getDefaultValue($entity);
+  // Set the default value of the photo field.
+  $entity->set('su_person_photo', $default_photo);
+}
+
+/**
  * Implements hook_entity_field_access().
  */
 function stanford_person_importer_entity_field_access($operation, FieldDefinitionInterface $field_definition, AccountInterface $account, FieldItemListInterface $items = NULL) {
@@ -113,7 +140,7 @@ function stanford_person_importer_entity_field_access($operation, FieldDefinitio
     // The field or a column of the field was mapped with data from migrate.
     // Mark it as forbidden.
     if ($processing || $migration_config->get("process.$field_name")) {
-      return AccessResult::forbidden(t('Field is mapped by the importer'));
+      return AccessResult::forbidden((string) t('Field is mapped by the importer'));
     }
   }
   return AccessResult::neutral();
