@@ -56,7 +56,7 @@ class CapTest extends UnitTestCase {
   /**
    * {@inheritDoc}
    */
-  protected function setUp() {
+  protected function setUp(): void {
     parent::setUp();
     $guzzle = $this->createMock(ClientInterface::class);
     $guzzle->method('request')
