@@ -20,13 +20,6 @@
   }
 }
 
-// Only show the first taxonomy term
-h3 {
-  &:not([class^="0:"]) {
-    display: none;
-  }
-}
-
 // Grid set up
 .stanford-people-grid {
 
