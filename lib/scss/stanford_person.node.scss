@@ -102,6 +102,18 @@
       }
     }
 
+    .node-stanford-person-su-person-telephone {
+      + .node-stanford-person-su-person-links {
+        @include modular-spacing('padding-top', 5);
+      }
+    }
+
+    .node-stanford-person-su-person-email {
+      + .node-stanford-person-su-person-links {
+        @include modular-spacing('padding-top', 5);
+      }
+    }
+
     .node-stanford-person-su-person-location-address {
       + .node-stanford-person-su-person-links {
         @include modular-spacing('padding-top', 5);
