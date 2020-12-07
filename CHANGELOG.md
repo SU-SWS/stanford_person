@@ -1,5 +1,15 @@
 # Stanford News
 
+8.x-1.9
+--------------------------------------------------------------------------------
+_Release Date: 2020-12-04_
+
+- D8CORE-2727: js solution for the repeating label issue. (#127) (f814bde)
+- Updated default content module (#126) (1c7e189)
+- D8CORE-2851: fixup for the person node col. (#124) (998c10c)
+- Update tests for D9 phpunit (#125) (20b82c7)
+- phpunit void return annoation (51242cb)
+
 8.x-1.8
 --------------------------------------------------------------------------------
 _Release Date: 2020-11-06_

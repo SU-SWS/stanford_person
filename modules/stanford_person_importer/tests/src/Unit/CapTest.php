@@ -56,7 +56,7 @@ class CapTest extends UnitTestCase {
   /**
    * {@inheritDoc}
    */
-  protected function setUp() {
+  protected function setUp(): void {
     parent::setUp();
     $guzzle = $this->createMock(ClientInterface::class);
     $guzzle->method('request')
@@ -224,8 +224,8 @@ class CapTest extends UnitTestCase {
    * Retain the numbers in the workgroups and organizations.
    */
   public function testNumbers() {
-    $this->assertContains('FOO:BAR123', $this->service->getWorkgroupUrl('foo:bar123'));
-    $this->assertContains('FOOBAR123', $this->service->getOrganizationUrl('foo:bar123'));
+    $this->assertStringContainsString('FOO:BAR123', $this->service->getWorkgroupUrl('foo:bar123'));
+    $this->assertStringContainsString('FOOBAR123', $this->service->getOrganizationUrl('foo:bar123'));
   }
 
 }

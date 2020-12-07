@@ -78,7 +78,7 @@
         "drupal/auto_entitylabel": "3.x-dev#1dd28579f4559cc03d09ab20143b1feb48644fac",
         "drupal/config_pages": "^2.7",
         "drupal/ctools": "^3.4",
-        "drupal/default_content": "^1.0-alpha8",
+        "drupal/default_content": "^2.0",
         "drupal/field_encrypt": "^2.0@alpha",
         "drupal/field_group": "^3.0",
         "drupal/layout_builder_restrictions": "^2.7",
@@ -102,7 +102,7 @@
         "enable-patching": true,
         "patches": {
             "drupal/default_content": {
-                "https://www.drupal.org/project/default_content/issues/2698425": "https://www.drupal.org/files/issues/2020-02-05/2698425--accept-content-updates--122.patch"
+                "https://www.drupal.org/project/default_content/issues/2698425": "https://www.drupal.org/files/issues/2020-09-02/default_content-integrity_constrait_violation-3162987-2.patch"
             },
             "drupal/core": {
                 "https://www.drupal.org/project/drupal/issues/3039185": "https://www.drupal.org/files/issues/2020-04-17/allow-field-blocks-to-display-label-in-layout-builder-3039185-22.patch"

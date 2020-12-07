@@ -37,3 +37,7 @@ node_modules
 
 # DB Dumbs don't belong in modules.
 *.sql
+
+content/**/*.jpg
+content/**/*.png
+content/**/*.gif
