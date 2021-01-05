@@ -3,12 +3,9 @@
 @import "./stanford_person.config";
 
 // Header spacing for Person
-.su-people-header {
-  .jumpstart-ui-page-heading {
-    .heading-h1 {
-      @include modular-spacing('margin', 7 null 7 null);
-    }
-  }
+.heading-h1,
+.page-title {
+  @include modular-spacing('margin', 7 null 7 null);
 }
 
 // Spacing for the filtered terms link
