@@ -5,7 +5,7 @@
 // Header spacing for Person
 .heading-h1,
 .page-title {
-  @include modular-spacing('margin', 6 null);
+  @include modular-spacing('margin', 6 null 5);
 }
 
 // Spacing for the filtered terms link
