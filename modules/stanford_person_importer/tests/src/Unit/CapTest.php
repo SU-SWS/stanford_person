@@ -169,6 +169,10 @@ class CapTest extends UnitTestCase {
 
     $url = $this->service->getSunetUrl('foobarbaz');
     $this->assertEquals('https://cap.stanford.edu/cap-api/api/profiles/v1?uids=foobarbaz', $url);
+
+    $sunets = implode(',', array_fill(0, 20, 'foo'));
+    $url = $this->service->getSunetUrl($sunets);
+    $this->assertEquals("https://cap.stanford.edu/cap-api/api/profiles/v1?uids=$sunets?ps=20", $url);
   }
 
   /**
