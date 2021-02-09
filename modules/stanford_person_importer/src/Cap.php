@@ -176,7 +176,14 @@ class Cap implements CapInterface {
    * {@inheritDoc}
    */
   public function getSunetUrl($sunetids) {
-    return self::CAP_URL . "?uids=$sunetids";
+    $count = substr_count($sunetids, ',') + 1;
+    $url = self::CAP_URL . "?uids=$sunetids";
+    // Cap API default to 10 results. Send the argument to collect more if
+    // there are more sunets to get results for.
+    if ($count > 10) {
+      $url .= "?ps=$count";
+    }
+    return $url;
   }
 
   /**

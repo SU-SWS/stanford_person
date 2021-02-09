@@ -1,5 +1,14 @@
 # Stanford News
 
+8.x-1.10
+--------------------------------------------------------------------------------
+_Release Date: 2021-02-08_
+
+- D8CORE-3452: removing extra space when putting the view in a paragraph list (#133) (aba0569)
+- D8CORE-2750: fixing the heading spacing (#132) (ddf9cce)
+- Pass the ps parameter when alot of sunets are to be imported (#131) (687d231)
+- Updated circleci testing (#130) (bfb7587)
+
 8.x-1.9
 --------------------------------------------------------------------------------
 _Release Date: 2020-12-04_

@@ -3,12 +3,9 @@
 @import "./stanford_person.config";
 
 // Header spacing for Person
-.su-people-header {
-  .jumpstart-ui-page-heading {
-    .heading-h1 {
-      @include modular-spacing('margin', 7 null 7 null);
-    }
-  }
+.heading-h1,
+.page-title {
+  @include modular-spacing('margin', 6 null 5);
 }
 
 // Spacing for the filtered terms link
@@ -25,6 +22,10 @@
 
   .views-row {
     @include modular-spacing('margin-bottom', 6);
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
 
     .views-col {
       @include modular-spacing('margin-right', 3);
@@ -94,6 +95,22 @@
 
       .button {
         @include button-big;
+      }
+    }
+  }
+}
+
+
+// Removing extra space for a Person list in a paragraph
+.paragraph {
+  .stanford-people-grid {
+    .views-infinite-scroll-content-wrapper {
+      margin-bottom: 0;
+    }
+
+    .views-row {
+      &:last-of-type {
+        margin-bottom: 0;
       }
     }
   }
