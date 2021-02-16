@@ -23,10 +23,6 @@
   .views-row {
     @include modular-spacing('margin-bottom', 6);
 
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-
     .views-col {
       @include modular-spacing('margin-right', 3);
 
@@ -95,6 +91,17 @@
 
       .button {
         @include button-big;
+      }
+    }
+  }
+}
+
+.paragraph {
+  .stanford-people-grid {
+    .views-row {
+
+      &:last-of-type {
+        margin-bottom: 0;
       }
     }
   }
