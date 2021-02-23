@@ -56,6 +56,10 @@
           text-decoration: underline;
         }
       }
+
+      .field-media-image {
+        @include responsive-spacing('padding-bottom', 0);
+      }
     }
 
     // Short title
