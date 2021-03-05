@@ -143,6 +143,7 @@ class ConfigOverrides implements ConfigFactoryOverrideInterface {
    */
   protected function getOrgsUrls() {
     $org_tids = $this->configPages->getValue('stanford_person_importer', 'su_person_orgs', [], 'target_id');
+    $include_children = $this->configPages->getValue('stanford_person_importer', 'su_person_child_orgs', 0, 'value');
 
     // No field values populated.
     if (empty($org_tids)) {
@@ -161,7 +162,7 @@ class ConfigOverrides implements ConfigFactoryOverrideInterface {
       }
     }
     $org_codes = implode(',', $org_codes);
-    return $this->getUrlChunks($this->cap->getOrganizationUrl($org_codes));
+    return $this->getUrlChunks($this->cap->getOrganizationUrl($org_codes, $include_children));
   }
 
   /**
