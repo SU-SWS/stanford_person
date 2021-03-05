@@ -1,5 +1,12 @@
 # Stanford News
 
+8.x-1.12
+--------------------------------------------------------------------------------
+_Release Date: 2021-03-05_
+
+- Add "include child orgs" checkbox for cap org importer (#139) (81a8c3e)
+- D8C0RE-2954: adding a little padding between image and name (#137) (6dfec9d)
+
 8.x-1.11
 --------------------------------------------------------------------------------
 _Release Date: 2021-02-16_
