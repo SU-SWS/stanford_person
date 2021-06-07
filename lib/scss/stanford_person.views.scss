@@ -17,17 +17,39 @@
   }
 }
 
+.su-person-grid-view,
+.section-grid-view {
+  .main-region {
+    @include grid-media-min(xl) {
+      @include modular-spacing('padding-left', 2);
+    }
+  }
+}
+
 // Grid set up
 .stanford-people-grid {
+
+  // Changing to a Css Grid
+  .flex-container {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+
+    @include grid-media-max('xs') {
+      display: unset;
+    }
+
+    > .views-col {
+      max-width: 100%;
+    }
+  }
 
   .views-row {
     @include modular-spacing('margin-bottom', 6);
 
     .views-col {
-      @include modular-spacing('margin-right', 3);
 
       // In xs display the people have a layout of image and text to the right.
-      @include grid-media-max('xs') {
+      @include grid-media-max('lg') {
         @include modular-spacing('margin-bottom', 4);
 
         .views-field-su-person-photo {
@@ -100,6 +122,18 @@
   }
 }
 
+// Grid removal for people lists in cols
+.ptype-stanford-lists {
+  &[data-react-columns='4'],
+  &[data-react-columns='6'] {
+    .stanford-people-grid {
+      .flex-container {
+        display: unset;
+      }
+    }
+  }
+}
+
 .paragraph {
   .stanford-people-grid {
     .views-row {
@@ -110,7 +144,6 @@
     }
   }
 }
-
 
 // Removing extra space for a Person list in a paragraph
 .paragraph {
