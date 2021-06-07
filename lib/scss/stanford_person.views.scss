@@ -32,7 +32,8 @@
   // Changing to a Css Grid
   .flex-container {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1em;
 
     @include grid-media-max('xs') {
       display: unset;
@@ -71,6 +72,8 @@
 
         color: $su-color-bright-red;
         text-decoration: none;
+        word-break: break-word;
+        word-wrap: break-word;
 
         &:focus,
         &:hover {
