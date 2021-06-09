@@ -17,17 +17,40 @@
   }
 }
 
+.su-person-grid-view,
+.section-grid-view {
+  .main-region {
+    @include grid-media-min(xl) {
+      @include modular-spacing('padding-left', 2);
+    }
+  }
+}
+
 // Grid set up
 .stanford-people-grid {
+
+  // Changing to a Css Grid
+  .flex-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1em;
+
+    @include grid-media-max('xs') {
+      display: unset;
+    }
+
+    > .views-col {
+      max-width: 100%;
+    }
+  }
 
   .views-row {
     @include modular-spacing('margin-bottom', 6);
 
     .views-col {
-      @include modular-spacing('margin-right', 3);
 
       // In xs display the people have a layout of image and text to the right.
-      @include grid-media-max('xs') {
+      @include grid-media-max('lg') {
         @include modular-spacing('margin-bottom', 4);
 
         .views-field-su-person-photo {
@@ -49,6 +72,8 @@
 
         color: $su-color-bright-red;
         text-decoration: none;
+        word-break: break-word;
+        word-wrap: break-word;
 
         &:focus,
         &:hover {
@@ -110,7 +135,6 @@
     }
   }
 }
-
 
 // Removing extra space for a Person list in a paragraph
 .paragraph {
