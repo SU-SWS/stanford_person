@@ -125,18 +125,6 @@
   }
 }
 
-// Grid removal for people lists in cols
-.ptype-stanford-lists {
-  &[data-react-columns='4'],
-  &[data-react-columns='6'] {
-    .stanford-people-grid {
-      .flex-container {
-        display: unset;
-      }
-    }
-  }
-}
-
 .paragraph {
   .stanford-people-grid {
     .views-row {
