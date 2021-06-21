@@ -30,6 +30,7 @@
 .stanford-people-grid {
 
   // Changing to a Css Grid
+  .views-row,
   .flex-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
