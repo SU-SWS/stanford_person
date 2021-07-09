@@ -1,5 +1,13 @@
 # Stanford News
 
+8.x-1.15
+--------------------------------------------------------------------------------
+_Release Date: 2021-07-09_
+
+- D8CORE-4508: adding skip to main on the topic menu (#147) (93a9842)
+- D8CORE-4393: fixing the filtered people list (#146) (df631c3)
+- D8CORE-4378: adding the skip to secondary link on person (#145) (a248a08)
+
 8.x-1.14
 --------------------------------------------------------------------------------
 _Release Date: 2021-06-11_
