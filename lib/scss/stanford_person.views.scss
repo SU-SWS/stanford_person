@@ -29,6 +29,19 @@
 // Grid set up
 .stanford-people-grid {
 
+  // Name size
+  h4 {
+    @include type-d;
+
+    margin-bottom: 0;
+
+    &:focus,
+    &:hover {
+      color: $su-color-black;
+      text-decoration: underline;
+    }
+  }
+
   // Changing to a Css Grid
   .views-row,
   .flex-container {
