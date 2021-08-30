@@ -282,14 +282,11 @@ class Cap implements CapInterface {
   }
 
   /**
-   * Get the API token for CAP.
-   *
-   * @return string
-   *   API Token.
+   * {@inheritDoc}
    */
-  protected function getAccessToken() {
+  public function getAccessToken() {
     if ($cache = $this->cache->get('cap:access_token')) {
-      return $cache->data['access_token'];
+//      return $cache->data['access_token'];
     }
 
     $options = [

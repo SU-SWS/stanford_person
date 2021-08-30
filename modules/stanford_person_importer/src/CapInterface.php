@@ -105,4 +105,12 @@ interface CapInterface {
    */
   public function updateOrganizations();
 
+  /**
+   * Get the API token for CAP.
+   *
+   * @return string
+   *   API Token.
+   */
+  public function getAccessToken();
+
 }
