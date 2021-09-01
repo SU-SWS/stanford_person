@@ -17,18 +17,6 @@ use Drupal\file\Entity\File;
 use Drupal\media\Entity\Media;
 
 /**
- * Implements hook_theme().
- */
-function stanford_person_theme() {
-  return [
-    'block__menu_block__stanford_person_type' => [
-      'template' => 'block/block--menu-block--person-type',
-      'base hook' => 'block',
-    ],
-  ];
-}
-
-/**
  * Implements hook_preprocess_node().
  */
 function stanford_person_page_attachments(array &$attachments) {
