@@ -1,5 +1,13 @@
 # Stanford News
 
+
+8.x-1.16
+--------------------------------------------------------------------------------
+_Release Date: 2021-09-03
+
+- D8CORE-3161: change the load more button to primary (#151)
+- D8CORE-4643: updating the skip links and moving to one filter by menu (#150)
+
 8.x-1.15
 --------------------------------------------------------------------------------
 _Release Date: 2021-07-09_
