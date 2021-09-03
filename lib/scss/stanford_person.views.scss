@@ -111,19 +111,6 @@
       @include modular-spacing('margin-bottom', 8);
     }
   }
-
-  // Load more button.
-  .js-pager__items {
-    text-align: center;
-
-    .pager__item {
-      display: inline-block;
-
-      .button {
-        @include button-big;
-      }
-    }
-  }
 }
 
 .paragraph {
