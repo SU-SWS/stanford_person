@@ -1,6 +1,13 @@
 # Stanford News
 
 
+8.x-1.17
+--------------------------------------------------------------------------------
+_Release Date: 2021-11-19_
+
+- D8CORE-4864: making the selector more specific to only get the /people list page rather than paragraph lists (#153)
+
+
 8.x-1.16
 --------------------------------------------------------------------------------
 _Release Date: 2021-09-03
