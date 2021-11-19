@@ -142,12 +142,15 @@
 // Collapsible menu
 // Changing the layout for the filtered pages.
 @include grid-media-max('lg') {
-  .left-region {
-    &.flex-lg-3-of-12 {
-      @include modular-spacing('margin-bottom', 4);
+  .su-person-grid-view,
+  .section-grid-view {
+    .left-region {
+      &.flex-lg-3-of-12 {
+        @include modular-spacing('margin-bottom', 4);
 
-      flex: auto;
-      max-width: 100%;
+        flex: auto;
+        max-width: 100%;
+      }
     }
   }
 }
