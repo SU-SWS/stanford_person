@@ -87,7 +87,7 @@
         "drupal/paragraphs": "^1.11",
         "drupal/pathauto": "^1.8",
         "drupal/real_aes": "^2.3",
-        "drupal/shs": "^1.0@alpha",
+        "drupal/shs": "^2.0@RC",
         "drupal/taxonomy_menu": "dev-3.x",
         "drupal/view_unpublished": "^1.0",
         "drupal/views_block_filter_block": "^1.0",
