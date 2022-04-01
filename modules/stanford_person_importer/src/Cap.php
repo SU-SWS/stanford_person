@@ -168,7 +168,7 @@ class Cap implements CapInterface {
    * {@inheritDoc}
    */
   public function getWorkgroupUrl($workgroups) {
-    $workgroups = preg_replace('/[^A-Z,:\-_0-9]/', '', strtoupper($workgroups));
+    $workgroups = preg_replace('/[^A-Z,:~\-_0-9]/', '', strtoupper($workgroups));
     return self::CAP_URL . "?privGroups=$workgroups";
   }
 
