@@ -1,4 +1,4 @@
-# Stanford News
+# Stanford Person
 
 
 8.x-1.18
