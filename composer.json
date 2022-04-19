@@ -96,7 +96,8 @@
         "sainsburys/guzzle-oauth2-plugin": "^3.0",
         "su-sws/jumpstart_ui": "dev-8.x-1.x",
         "su-sws/stanford_migrate": "dev-8.x-1.x",
-        "su-sws/stanford_text_editor": "dev-8.x-1.x"
+        "su-sws/stanford_text_editor": "dev-8.x-1.x",
+        "su-sws/drupal-patches": "^8.0"
     },
     "extra": {
         "enable-patching": true,
