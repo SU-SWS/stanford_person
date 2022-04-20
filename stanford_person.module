@@ -16,6 +16,7 @@ use Drupal\Core\File\FileSystemInterface;
 use Drupal\file\Entity\File;
 use Drupal\media\Entity\Media;
 
+
 /**
  * Implements hook_preprocess_node().
  */
@@ -165,4 +166,13 @@ function _stanford_person_install_default_photo_file() {
   $saved = $file_system->copy($source, $destination, FileSystemInterface::EXISTS_REPLACE);
 
   return $saved;
+}
+
+/**
+* Implements hook_views_pre_render().
+*/
+function stanford_person_views_pre_render(ViewExecutable $view) {
+  if (isset($view) && ($view->storage->id() == 'taxonomy_term_pages')) {
+    $view->element['#attached']['library'][] = 'stanford_person/views';
+  }
 }
