@@ -166,12 +166,3 @@ function _stanford_person_install_default_photo_file() {
 
   return $saved;
 }
-
-/**
- * Implements hook_views_pre_render().
- */
-function stanford_person_views_pre_render(ViewExecutable $view) {
-  if (isset($view) && ($view->storage->id() == 'taxonomy_term_pages')) {
-    $view->element['#attached']['library'][] = 'stanford_person/views';
-  }
-}
