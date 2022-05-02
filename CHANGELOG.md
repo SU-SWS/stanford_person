@@ -1,4 +1,15 @@
-# Stanford News
+# Stanford Person
+
+
+8.x-1.19
+--------------------------------------------------------------------------------
+_Release Date: 2022-05-02_
+
+- Updated dev dependencies (#166)
+- D8CORE-5729: People list style updates (#165)
+- Update CHANGELOG.md (#162)
+- D8CORE-5758: updating styles to match change to a list (#163)
+- Fix: dont remove ~ in workgroups for the importer.
 
 
 8.x-1.18
