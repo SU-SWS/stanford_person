@@ -94,9 +94,9 @@
         "drupal/views_contextual_filters_or": "^1.1",
         "drupal/views_infinite_scroll": "^2.0",
         "sainsburys/guzzle-oauth2-plugin": "^3.0",
-        "su-sws/jumpstart_ui": "8.x-dev",
-        "su-sws/stanford_migrate": "8.x-dev",
-        "su-sws/stanford_text_editor": "8.x-dev",
+        "su-sws/jumpstart_ui": "^8.1",
+        "su-sws/stanford_migrate": "^8.1",
+        "su-sws/stanford_text_editor": "^8.1",
         "su-sws/drupal-patches": "^8.0"
     },
     "extra": {
