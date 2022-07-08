@@ -17,6 +17,11 @@ class StanfordPersonImporterCest {
     $I->click('Save');
 
     $I->amOnPage('/admin/config/importers/person-importer');
+
+    // Make sure environment variables exist.
+    $I->assertNotEmpty(getenv('CAP_USERNAME'));
+    $I->assertNotEmpty(getenv('CAP_PASSWORD'));
+
     $I->fillField('CAP Username', getenv('CAP_USERNAME'));
     $I->fillField('CAP Password', getenv('CAP_PASSWORD'));
     $I->click('Save');
