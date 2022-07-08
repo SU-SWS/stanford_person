@@ -1,5 +1,15 @@
 # Stanford Person
 
+
+8.1.21
+--------------------------------------------------------------------------------
+_Release Date: 2022-07-08_
+
+- fixed composer namespace to lowercase
+- Fix API calls when the token is invalid (#169)
+- Removing fixed patch
+- Merge branch 'master' into 8.x
+
 8.x-1.20
 --------------------------------------------------------------------------------
 _Release Date: 2022-05-12_
