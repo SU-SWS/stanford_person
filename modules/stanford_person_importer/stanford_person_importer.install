@@ -18,3 +18,13 @@ function stanford_person_importer_requirements($phase) {
   ];
   return $requirements;
 }
+
+/**
+ * Implements hook_install().
+ */
+function stanford_person_importer_install() {
+  \Drupal::configFactory()
+    ->getEditable('field_encrypt.settings')
+    ->set('encryption_profile', 'stanford_real_aes')
+    ->save();
+}
