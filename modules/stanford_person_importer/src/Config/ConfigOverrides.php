@@ -145,9 +145,10 @@ class ConfigOverrides implements ConfigFactoryOverrideInterface {
    * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    */
   protected function getOrgsUrls() {
-    $org_tids = $this->configPages->getValue('stanford_person_importer', 'su_person_orgs', [], 'target_id');
+    $org_tids = $this->configPages->getValue('stanford_person_importer', 'su_person_orgs', [], 'target_id') ?: [];
     $include_children = (bool) $this->configPages->getValue('stanford_person_importer', 'su_person_child_orgs', 0, 'value');
 
+    $org_tids = array_filter($org_tids);
     // No field values populated.
     if (empty($org_tids)) {
       return [];
